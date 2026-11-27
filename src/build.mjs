@@ -1,6 +1,8 @@
 import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { renderBars, renderStatus, renderTrend } from './charts.mjs';
+import { dateLabel, escape, number, requireCondition } from './html.mjs';
 
 const root = new URL('../', import.meta.url);
 const content = new URL('content/', root);
@@ -9,30 +11,7 @@ const dist = new URL('dist/', root);
 const readJson = async (base, path) => JSON.parse(await readFile(new URL(path, base), 'utf8'));
 const site = await readJson(root, 'site.json');
 const actors = await readJson(content, 'actors.json');
-const number = new Intl.NumberFormat('en-GB');
-const date = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeZone: 'UTC' });
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-
-function escape(value) {
-  return String(value).replace(/[&<>"']/g, character => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  })[character]);
-}
-
-function requireCondition(condition, message) {
-  if (!condition) throw new Error(message);
-}
-
-function dateLabel(value) {
-  const parsed = new Date(value);
-  requireCondition(
-    /^\d{4}-\d{2}-\d{2}$/.test(value) &&
-      Number.isFinite(parsed.getTime()) &&
-      parsed.toISOString().slice(0, 10) === value,
-    `Invalid date: ${value}`,
-  );
-  return `<time datetime="${value}">${date.format(parsed)}</time>`;
-}
 
 function page({ title, description, prefix, body }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
@@ -113,20 +92,21 @@ async function loadTopic(filename) {
       );
     }
   }
-  return { ...topic, sectionOrder: template.sections };
+  return { ...topic, sectionOrder: template.sections, requiredMetricFields: template.requiredMetricFields ?? [] };
 }
 
 async function renderTopic(topic) {
   const allBlocks = Object.values(topic.sections).flat();
   const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
   const visualIds = listed('visual');
+  const chartIds = listed('chart');
   const metricIds = listed('metrics');
   const issueIds = listed('issues');
   const improvementIds = listed('improvements');
-  for (const ids of [visualIds, metricIds, issueIds, improvementIds]) {
+  for (const ids of [visualIds, chartIds, metricIds, issueIds, improvementIds]) {
     requireCondition(
       ids.every(id => typeof id === 'string' && slug.test(id)) && new Set(ids).size === ids.length,
-      `${topic.id}: invalid or duplicate visual, metric, issue or improvement reference`,
+      `${topic.id}: invalid or duplicate visual, chart, metric, issue or improvement reference`,
     );
   }
   requireCondition(
@@ -151,6 +131,23 @@ async function renderTopic(topic) {
 
   const stepAnchor = (visual, step) => `step-${visual}--${step}`;
 
+  function evidenceLinks({ charts = [], metrics = [] }) {
+    requireCondition(Array.isArray(charts) && Array.isArray(metrics), `${topic.id}: invalid evidence references`);
+    const links = [
+      ...charts.map(id => {
+        requireCondition(chartIds.includes(id) && Object.hasOwn(topic.charts ?? {}, id),
+          `${topic.id}: evidence links to an unpublished chart ${id}`);
+        return `<li><a href="#chart-${id}">${escape(topic.charts[id].title)}</a></li>`;
+      }),
+      ...metrics.map(id => {
+        requireCondition(metricIds.includes(id) && Object.hasOwn(topic.metrics ?? {}, id),
+          `${topic.id}: evidence links to an unpublished metric ${id}`);
+        return `<li><a href="#metric-${id}">${escape(topic.metrics[id].label)}</a></li>`;
+      }),
+    ];
+    return links.length ? `<ul class="evidence-links" aria-label="Related figures">${links.join('')}</ul>` : '';
+  }
+
   function renderFlow(id) {
     requireCondition(Object.hasOwn(topic.visuals, id), `${topic.id}: unknown visual ${id}`);
     const visual = topic.visuals[id];
@@ -166,7 +163,7 @@ async function renderTopic(topic) {
       });
       const anchor = step.id ? ` id="${stepAnchor(id, step.id)}"` : '';
       return `<li${anchor}><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
-        <p>${escape(step.text)} ${citations(step.citations)}</p></li>`;
+        <p>${escape(step.text)} ${citations(step.citations)}</p>${evidenceLinks(step)}</li>`;
     });
     return `<figure class="figure process"><figcaption>${escape(visual.title)}</figcaption>
       <ol class="flow">${steps.join('')}</ol></figure>`;
@@ -177,24 +174,24 @@ async function renderTopic(topic) {
     const chart = topic.charts[id];
     requireCondition(/^[a-z0-9]+(?:-[a-z0-9]+)*\.json$/.test(chart.data), `${topic.id}: invalid chart filename`);
     const data = await readJson(content, `data/${chart.data}`);
-    requireCondition(data.series.length && data.series.every(row =>
-      typeof row.label === 'string' && Number.isSafeInteger(row.value) && row.value >= 0),
-      `${chart.data}: invalid series`,
-    );
-    const max = Math.max(1, ...data.series.map(row => row.value));
-    const total = data.series.reduce((sum, row) => sum + row.value, 0);
-    const rows = data.series.map(({ label, value }) => `<tr>
-      <th scope="row">${escape(label)}</th>
-      <td><span class="bar-track" aria-hidden="true"><span class="bar" style="--value:${100 * value / max}%"></span></span></td>
-      <td>${number.format(value)}</td>
-    </tr>`).join('');
-    return `<figure class="figure chart">
+    let body;
+    switch (chart.type ?? 'bars') {
+      case 'bars':
+        body = renderBars(chart, data);
+        break;
+      case 'status':
+        body = renderStatus(chart, data);
+        break;
+      case 'trend':
+        body = renderTrend(chart, data, citations);
+        break;
+      default:
+        throw new Error(`${topic.id}: unknown chart type ${chart.type}`);
+    }
+    return `<figure class="figure chart" id="chart-${id}">
       <figcaption>${escape(chart.title)} ${citations(chart.citations)}</figcaption>
-      <p class="chart-date">As at ${dateLabel(data.asOf)}</p>
-      ${chart.showTotal ? `<div class="chart-total"><strong>${number.format(total)}</strong> <span>${escape(data.unit)}</span></div>` : ''}
-      <table aria-label="${escape(chart.title)}"><thead class="visually-hidden">
-        <tr><th scope="col">${escape(data.groupLabel)}</th><th scope="col">Relative bar</th><th scope="col">${escape(data.unit)}</th></tr></thead>
-        <tbody>${rows}</tbody></table>
+      ${chart.description ? `<p class="chart-description">${escape(chart.description)}</p>` : ''}
+      ${body}
       ${chart.note ? `<p class="chart-note">${escape(chart.note)}</p>` : ''}
     </figure>`;
   }
@@ -212,14 +209,15 @@ async function renderTopic(topic) {
           : Number.isSafeInteger(count) && Number.isSafeInteger(denominator) && count >= 0 && denominator > 0 && count <= denominator,
         `${topic.id}: invalid value or denominator for metric ${id}`,
       );
-      for (const field of ['label', 'basis', 'type']) {
+      for (const field of ['label', 'basis', 'type', ...topic.requiredMetricFields]) {
         requireCondition(typeof metric[field] === 'string' && metric[field].trim(), `${topic.id}: metric ${id} needs ${field}`);
       }
       const value = reportedPercentage ? `${number.format(percentage)}%` : `${number.format(count)} of ${number.format(denominator)}`;
       return `<div class="metric" id="metric-${id}">
         <dt>${escape(metric.label)}</dt>
         <dd><strong class="metric-value">${value}</strong>
-          <p class="metric-source">${escape(metric.type)}${metric.asOf ? ` · ${dateLabel(metric.asOf)}` : ''} ${citations(metric.citations)}</p>
+          <p class="metric-source">${escape(metric.type)}${metric.asOf ? ` · ${dateLabel(metric.asOf)}` : ''}${metric.period ? ` · ${escape(metric.period)}` : ''} ${citations(metric.citations)}</p>
+          ${metric.population ? `<p class="metric-population">${escape(metric.population)}.</p>` : ''}
           <p>${escape(metric.basis)}</p>
         </dd>
       </div>`;
@@ -237,25 +235,18 @@ async function renderTopic(topic) {
         ? topic.visuals[visual]?.steps.find(step => step.id && step.id === issue.step.id)
         : undefined;
       requireCondition(step, `${topic.id}: issue ${id} needs a published process step`);
-      const evidence = issue.metrics ?? [];
+      const links = evidenceLinks(issue);
       requireCondition(
-        Array.isArray(evidence) && (evidence.length || issue.improvement?.evidenceGap?.trim()),
-        `${topic.id}: issue ${id} needs a metric or an explicit evidence gap`,
+        links || issue.improvement?.evidenceGap?.trim(),
+        `${topic.id}: issue ${id} needs a figure or an explicit evidence gap`,
       );
-      const metricLinks = evidence.map(metric => {
-        requireCondition(
-          metricIds.includes(metric) && Object.hasOwn(topic.metrics ?? {}, metric),
-          `${topic.id}: issue ${id} links to an unpublished metric ${metric}`,
-        );
-        return `<li><a href="#metric-${metric}">${escape(topic.metrics[metric].label)}</a></li>`;
-      });
       const fix = `<a href="#improvement-${id}">Response and what to track</a>`;
       requireCondition(issue.title?.trim() && issue.text?.trim(), `${topic.id}: issue ${id} needs a title and finding`);
       return `<div class="finding">
         <h3>${escape(issue.title)}</h3>
         <p class="finding-step"><a href="#${stepAnchor(visual, step.id)}">${escape(step.label)}</a></p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
-        ${metricLinks.length ? `<ul class="evidence-links" aria-label="Related figures">${metricLinks.join('')}</ul>` : ''}
+        ${links}
         <p class="finding-next">${fix}</p>
       </div>`;
     }).join('');

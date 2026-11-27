@@ -1,0 +1,31 @@
+{
+  "stages": ["No equipment", "Equipment, no signal", "Equipment, signal received"],
+  "groups": [
+    {
+      "label": "Post-release",
+      "snapshots": [
+        {
+          "asOf": "2026-06-30",
+          "counts": [1585, 293, 10551]
+        },
+        {
+          "asOf": "2026-09-30",
+          "counts": [1657, 345, 9945]
+        }
+      ]
+    },
+    {
+      "label": "Court bail",
+      "snapshots": [
+        {
+          "asOf": "2026-06-30",
+          "counts": [2704, 609, 8361]
+        },
+        {
+          "asOf": "2026-09-30",
+          "counts": [2577, 672, 8388]
+        }
+      ]
+    }
+  ]
+}

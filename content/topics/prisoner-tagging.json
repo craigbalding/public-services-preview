@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v2",
+  "template": "topic-v3",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -75,6 +75,27 @@
       "url": "https://www.gov.uk/government/publications/hmpps-response-to-the-electronic-monitoring-in-practice-criminal-justice-joint-inspection",
       "date": "2026-10-29",
       "reference": "Action plan, recommendation 16"
+    },
+    "june-status-annex": {
+      "publisher": "Ministry of Justice",
+      "title": "Electronic monitoring status statistics, June 2026",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-june-2026/annex-management-information-electronic-monitoring-status-statistics-june-2026",
+      "date": "2026-07-23",
+      "reference": "Management information, tables 5.1 and 5.2"
+    },
+    "earlier-statistics": {
+      "publisher": "Ministry of Justice",
+      "title": "Electronic monitoring statistics, June 2024",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-june-2024",
+      "date": "2024-07-18",
+      "reference": "Data tables, table 1.1"
+    },
+    "methodology": {
+      "publisher": "Ministry of Justice",
+      "title": "Electronic monitoring statistics technical note",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-september-2026/technical-note",
+      "date": "2026-10-22",
+      "reference": "Sections 2.1 to 2.4 and 3.3"
     }
   },
   "actors": {
@@ -135,21 +156,25 @@
           "label": "Fit and activate the equipment",
           "text": "The provider fits the tag and installs any other equipment needed. For prison leavers, that has usually meant a visit to their accommodation after release. The prison pilot fits tags before people leave.",
           "actors": ["serco"],
-          "citations": ["guidance", "audit", "commons-answer"]
+          "citations": ["guidance", "audit", "commons-answer"],
+          "charts": ["status-by-stage", "post-release-trend"],
+          "metrics": ["prompt-fitting"]
         },
         {
           "id": "monitor-condition",
           "label": "Monitor the condition",
           "text": "The equipment checks the specified condition, such as a curfew, location restriction or alcohol requirement. The monitoring service reviews possible breaches.",
           "actors": ["serco"],
-          "citations": ["guidance", "inspection"]
+          "citations": ["guidance", "inspection"],
+          "charts": ["status-by-stage"]
         },
         {
           "id": "respond-to-alert",
           "label": "Assess and respond to an alert",
           "text": "The monitoring service passes on suspected breaches when required. Probation handles responses to release-licence breaches, while police assess suspected breaches of electronically monitored court bail.",
           "actors": ["probation-service", "police-forces"],
-          "citations": ["inspection"]
+          "citations": ["inspection"],
+          "metrics": ["bail-breach-follow-through"]
         }
       ]
     }
@@ -160,7 +185,24 @@
       "data": "electronic-monitoring-by-order.json",
       "showTotal": true,
       "citations": ["statistics"],
-      "note": "The total includes all published order groups, including a small number in the immigration group who live in Scotland or Northern Ireland. The Ministry of Justice advises against comparing the figures with publications issued before June 2025 because the definition and counting method changed. The figures predate the release changes that began on 1 October 2026."
+      "note": "The total includes all published order groups, including a small number in the immigration group who live in Scotland or Northern Ireland. The Ministry of Justice advises against comparing the figures with publications issued before June 2025 because the definition and counting method changed. The figures predate the release changes that began on 1 October 2026.",
+      "details": true
+    },
+    "status-by-stage": {
+      "type": "status",
+      "title": "Who had equipment, and was it sending a signal?",
+      "data": "electronic-monitoring-status.json",
+      "description": "Two snapshots of people with an active monitoring order in England and Wales. Each bar shows the share of everyone in that group at the date shown.",
+      "note": "A signal means the monitoring system received a communication in the previous 14 days. The post-release group includes people recorded as being back in custody. The Ministry removed additional expired court bail orders in September, which affected the recorded change for that group.",
+      "citations": ["june-status-annex", "status-annex"]
+    },
+    "post-release-trend": {
+      "type": "trend",
+      "title": "People counted in the post-release monitoring caseload",
+      "data": "electronic-monitoring-post-release-trend.json",
+      "description": "England and Wales, at month end. Counts rose within the current series before falling from 10,924 in July to 10,290 in September 2026.",
+      "note": "July to September 2026 figures are provisional. The October 2026 release reforms began after the latest observation.",
+      "citations": ["earlier-statistics", "statistics", "methodology"]
     }
   },
   "sections": {
@@ -201,56 +243,60 @@
     ],
     "in-numbers": [
       {
-        "chart": "by-order"
+        "text": "Fewer people in the post-release group had equipment in September than in June. At the same time, the share without equipment rose from 12.8% to 13.9%. More people were recorded as in custody and without equipment in September (526) than in June (334).",
+        "citations": ["june-status-annex", "status-annex"]
       },
       {
-        "metrics": ["post-release-without-equipment", "prompt-fitting", "equipment-not-communicating", "bail-breach-follow-through"]
+        "chart": "status-by-stage"
+      },
+      {
+        "chart": "by-order"
       }
     ],
     "what-needs-fixing": [
       {
-        "issues": ["fitting-delay", "alert-response"]
+        "issues": ["fitting-delay"]
+      },
+      {
+        "metrics": ["prompt-fitting"]
+      },
+      {
+        "issues": ["alert-response"]
+      },
+      {
+        "metrics": ["bail-breach-follow-through"]
       }
     ],
     "whats-changing": [
       {
         "improvements": ["fitting-delay", "alert-response"]
       }
+    ],
+    "trends": [
+      {
+        "chart": "post-release-trend"
+      }
     ]
   },
   "metrics": {
-    "post-release-without-equipment": {
-      "label": "Post-release cases without equipment",
-      "count": 1657,
-      "denominator": 11947,
-      "asOf": "2026-09-30",
-      "basis": "This snapshot covers people recorded in the post-release group. It includes 526 people recorded as being in custody who had no equipment.",
-      "type": "Management information",
-      "citations": ["statistics", "status-annex"]
-    },
     "prompt-fitting": {
       "label": "GPS or curfew tags fitted promptly",
       "percentage": 55,
-      "basis": "Inspector judgement in a sample of community sentences and post-release licences from September to November 2025. About one in five waited more than 14 days. The result describes the cases inspected.",
+      "basis": "Inspectors judged how promptly fitting took place in each case. About one in five individuals in the sample waited more than 14 days for GPS or curfew equipment.",
       "type": "Case-file inspection",
-      "citations": ["inspection"]
-    },
-    "equipment-not-communicating": {
-      "label": "Installed equipment not communicating",
-      "count": 1557,
-      "denominator": 27496,
-      "asOf": "2026-09-30",
-      "basis": "Across all order groups. The monitoring system had received no signal from their equipment in the previous 14 days.",
-      "type": "Management information",
-      "citations": ["status-annex"]
+      "citations": ["inspection"],
+      "population": "Relevant GPS or curfew-tag cases in the inspection sample of community sentences and post-release licences",
+      "period": "People sentenced or released September to November 2025"
     },
     "bail-breach-follow-through": {
       "label": "Court bail cases with every response step recorded",
       "count": 2,
       "denominator": 21,
-      "basis": "In case files from the forces inspected, only two showed that police had received the notification, assessed the risk, decided what to do and updated the monitoring service.",
+      "basis": "Inspectors looked for a record of four steps: receiving the alert, assessing risk, making a decision and updating the monitoring service.",
       "type": "Case-file inspection",
-      "citations": ["inspection"]
+      "citations": ["inspection"],
+      "population": "21 court bail breach cases reviewed in Lancashire and West Yorkshire",
+      "period": "Fieldwork in May and June 2026"
     }
   },
   "issues": {
@@ -262,15 +308,16 @@
       },
       "text": "Inspectors found delays when a person was unavailable or when information needed to arrange the fitting was missing or wrong. Unstable accommodation can make home fitting harder. A provider can meet its contractual target by attempting a visit on time even when the fitting does not go ahead. The September figures also show why it matters to check that installed equipment is communicating.",
       "citations": ["inspection", "inspector-evidence", "status-annex"],
-      "metrics": ["post-release-without-equipment", "prompt-fitting", "equipment-not-communicating"],
+      "metrics": ["prompt-fitting"],
       "improvement": {
         "title": "Fit tags before eligible prison leavers leave custody",
         "owner": "ministry-of-justice",
         "status": "Six-prison pilot. On 25 November 2026 the Ministry announced expansion to 16 prisons in December, 50 in January 2027 and 83 by the end of March 2027.",
-        "measure": "Track the share of prison leavers with a monitoring requirement whose equipment is working when they leave, and the time until monitoring starts for everyone else.",
-        "evidenceGap": "The September equipment snapshot predates the October release reforms. A national release-day rate is needed to judge the effect of the rollout.",
+        "measure": "For each month’s prison leavers who had a monitoring requirement, track the share with working equipment at release, then by 24 hours, 48 hours and seven days.",
+        "evidenceGap": "The available September figures show equipment status at month end. A national series that follows the same group from release through fitting is still needed to judge the rollout.",
         "citations": ["rollout", "statistics"]
-      }
+      },
+      "charts": ["status-by-stage"]
     },
     "alert-response": {
       "title": "An alert needs someone to act on it",

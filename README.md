@@ -14,3 +14,9 @@ The build validates required sections and resolves actor, citation, chart and vi
 Explain what the service is meant to achieve, then use the history to answer a specific question about today's design. In `metrics`, record the cohort and period in the basis or observation date, the kind of evidence, and the citation. Supply a count and denominator when the source gives both. Use a published percentage when the underlying counts are unavailable.
 
 For each finding, link to the relevant step by its visual and step IDs and to the figures that substantiate it. Where a figure is unavailable, state the evidence gap. Give each response an owner, a sourced status and a measure that could show progress. Publish each finding under `issues` and its response under `improvements` using the same ID.
+
+## Topic template v3
+
+Link process steps to their evidence using `charts` and `metrics` IDs. Describe the population and period for each standalone metric. Use a status chart for snapshots of the same stages. Each bar has its own dated population, and the stage counts must be mutually exclusive and add to that population.
+
+Store trend observations as `[date, count, publicationStatus?]` within comparable segments, with a definition and citing sources for each segment. Start a new segment at a collection break and use `null` for a missing observation inside a segment. Mark collection and policy events separately. Use the latest comparable historical revisions where the publisher provides them, and report when key follow-up measures are unavailable.
