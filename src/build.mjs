@@ -340,6 +340,7 @@ async function renderTopic(topic) {
     requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: scrutiny block is empty`);
     const statusLabels = {
       requested: 'Requested by the committee',
+      ordered: 'Ordered',
       promised: 'Promised by officials',
       overdue: 'Overdue',
       partial: 'Partly provided',

@@ -1,0 +1,346 @@
+{
+  "id": "social-housing-repairs",
+  "template": "topic-v7",
+  "title": "How do social landlords deal with unsafe homes?",
+  "category": "Housing",
+  "scope": "England",
+  "summary": "Follow a hazard report from the first call to a safe home. See when Awaab’s Law applies, what repairs data can tell us, and who pays when a repair takes longer or needs repeating.",
+  "reviewed": "2026-11-27",
+  "citations": ["phase-one", "phase-two", "repair-performance"],
+  "sources": {
+    "phase-one": {
+      "title": "Awaab’s Law guidance for social landlords",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords/awaabs-law-guidance-for-social-landlords-timeframes-for-repairs-in-the-social-rented-sector",
+      "reference": "Phase 1, scope and sections 2 to 9"
+    },
+    "phase-two": {
+      "title": "Awaab’s Law Phase 2 guidance for social landlords",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-phase-2-guidance-for-social-housing-landlords/awaabs-law-phase-2-guidance-for-social-landlords",
+      "date": "2026-07-31",
+      "reference": "Sections 1.4, 4 to 10 and 13, applies from 30 November 2026"
+    },
+    "amendment": {
+      "title": "Hazards in Social Housing Amendment Regulations 2026",
+      "publisher": "legislation.gov.uk",
+      "url": "https://www.legislation.gov.uk/uksi/2026/1195/made/data.html",
+      "reference": "SI 2026/1195, commencement and regulation 2"
+    },
+    "safety-standard": {
+      "title": "Safety and Quality Standard",
+      "publisher": "Regulator of Social Housing",
+      "url": "https://www.gov.uk/government/publications/safety-and-quality-standard",
+      "reference": "Sections 1.3 and 1.4, health, safety, repairs and maintenance"
+    },
+    "repair-performance": {
+      "title": "Tenant Satisfaction Measures 2025/26, headline report",
+      "publisher": "Regulator of Social Housing",
+      "url": "https://www.gov.uk/government/statistics/tenant-satisfaction-measures-202526/tenant-satisfaction-measures-202526-headline-report",
+      "date": "2026-11-05",
+      "reference": "Paragraphs 33–44, figure 9 and table 4"
+    },
+    "magna-decision": {
+      "title": "Magna Housing Limited, case 202433807",
+      "publisher": "Housing Ombudsman",
+      "url": "https://www.housing-ombudsman.org.uk/decisions/magna-housing-limited-202433807/",
+      "date": "2026-02-17",
+      "reference": "Handling of damp and mould, assessment and orders"
+    },
+    "peabody-decision": {
+      "title": "Peabody Trust, case 202530104",
+      "publisher": "Housing Ombudsman",
+      "url": "https://www.housing-ombudsman.org.uk/decisions/peabody-trust-202530104/",
+      "date": "2026-03-31",
+      "reference": "Handling of window repairs and damp and mould, orders 3 and 4"
+    },
+    "complaints-review": {
+      "title": "Annual Complaints Review 2025/26",
+      "publisher": "Housing Ombudsman",
+      "url": "https://www.housing-ombudsman.org.uk/annual-complaint-review-reports/annual-complaints-review-2025-26/",
+      "reference": "Responsive repairs and Awaab’s Law readiness"
+    },
+    "implementation-research": {
+      "title": "Awaab’s Law Phase 1 Test and Learn research, executive summary",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-phase-1-test-and-learn-research-report/awaabs-law-test-and-learn-research-report-executive-summary-accessible-version",
+      "date": "2026-07-13",
+      "reference": "Methodology, early findings and implications"
+    },
+    "housing-condition-survey": {
+      "title": "English Housing Survey 2024/25, housing quality",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/statistics/chapters-for-english-housing-survey-2024-to-2025-headline-findings-on-housing-quality-and-energy-efficiency/chapter-1-housing-quality",
+      "reference": "Damp, 2024 physical dwelling survey"
+    },
+    "provider-finances": {
+      "title": "Quarterly survey of private registered providers, July to September 2026",
+      "publisher": "Regulator of Social Housing",
+      "url": "https://www.gov.uk/government/publications/quarterly-survey-for-q2-july-to-september-2026/quarterly-survey-for-q2-july-to-september-2026",
+      "date": "2026-11-24",
+      "reference": "Paragraphs 1, 25 and 31–34, scope, grants and repairs spending"
+    },
+    "council-finances": {
+      "title": "Local authority revenue expenditure and financing in England, 2025/26 outturn",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/statistics/local-authority-revenue-expenditure-and-financing-england-2025-to-2026-individual-local-authority-data-outturn",
+      "reference": "Housing services workbook RO4, HRA worksheet, England total, lines 101 and 121"
+    },
+    "housing-revenue-account": {
+      "title": "Housing Revenue Account guidance",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/guidance/housing-revenue-account",
+      "reference": "Income, costs and the ring-fence for council housing"
+    },
+    "phase-two-impact": {
+      "title": "Awaab’s Law Phase 2 final stage impact assessment",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/publications/awaabs-law-phase-2-final-stage-impact-assessment",
+      "date": "2026-07-13",
+      "reference": "Monetised costs and table 4, ten-year appraisal in 2026 prices"
+    },
+    "committee-inquiry": {
+      "title": "Quality of social housing inquiry",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/work/10115/quality-of-social-housing/",
+      "date": "2026-11-13",
+      "reference": "Inquiry opened, planned evidence from senior housing ministry officials"
+    },
+    "audit-planned": {
+      "title": "The quality of social housing, work in progress",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/work-in-progress/the-quality-of-social-housing/",
+      "reference": "Scope and expected publication in winter 2026/27"
+    }
+  },
+  "actors": {
+    "social-housing-tenants": {
+      "role": "Report the hazard, tell the landlord about household needs and arrange access for an inspection or repair.",
+      "citations": ["phase-one", "phase-two"]
+    },
+    "social-landlords": {
+      "role": "Councils and registered housing associations assess hazards, organise repairs and remain responsible for meeting the deadlines when contractors do the work.",
+      "citations": ["phase-two", "safety-standard"]
+    },
+    "housing-ombudsman": {
+      "role": "Investigates individual complaints and can order repairs, compensation or other remedies.",
+      "citations": ["phase-two", "peabody-decision"]
+    },
+    "social-housing-regulator": {
+      "role": "Sets consumer standards and holds landlords to account for their performance across the homes they manage.",
+      "citations": ["phase-two", "safety-standard"]
+    },
+    "mhclg": {
+      "role": "Sets housing policy and oversees implementation of Awaab’s Law.",
+      "citations": ["phase-two", "audit-planned"]
+    }
+  },
+  "visuals": {
+    "hazard-response": {
+      "title": "From a report to a home that stays safe",
+      "steps": [
+        {
+          "id": "report-hazard",
+          "label": "Report the hazard",
+          "actors": ["social-housing-tenants", "social-landlords"],
+          "text": "A tenant can report the problem to the landlord, or the landlord may learn about it through a visit or another route. What the landlord knows about the hazard and the household matters from the start.",
+          "citations": ["phase-one", "phase-two"]
+        },
+        {
+          "id": "assess-risk",
+          "label": "Assess urgency and investigate",
+          "actors": ["social-landlords"],
+          "text": "The landlord assesses the risk to the household. It must investigate a potential emergency within 24 hours of becoming aware of it. For other potential significant hazards covered by the law, it has 10 working days to investigate. A written summary is generally due within three working days of the investigation ending.",
+          "citations": ["phase-one", "phase-two"],
+          "note": {
+            "heading": "Why set deadlines in law?",
+            "text": "Two-year-old Awaab Ishak died in 2020 after prolonged exposure to mould in his home. Existing repair duties applied. Awaab’s Law makes specific deadlines part of social tenancies so tenants can hold landlords to them.",
+            "citations": ["phase-one", "phase-two"]
+          }
+        },
+        {
+          "id": "make-safe",
+          "label": "Make the home safe or arrange somewhere safe to stay",
+          "actors": ["social-landlords"],
+          "text": "For a confirmed emergency, the same 24 hours cover both investigation and making the home safe. For a covered significant hazard, safety work is due within five working days after the investigation ends. If the home cannot be made safe in time, the landlord must arrange suitable alternative accommodation at its expense.",
+          "citations": ["phase-one", "phase-two"]
+        },
+        {
+          "id": "fix-cause",
+          "label": "Fix the cause and keep the tenant informed",
+          "actors": ["social-landlords"],
+          "text": "Making a home safe can involve temporary work, such as removing mould while arranging a roof repair. The landlord must start, or take steps to start, required work to prevent recurrence within five working days of the investigation ending. If it cannot start in that time, it must start as soon as reasonably practicable and within 12 weeks. The work must then finish within a reasonable time.",
+          "citations": ["phase-one", "phase-two"]
+        },
+        {
+          "id": "escalate",
+          "label": "Escalate if the landlord’s response falls short",
+          "actors": ["social-housing-tenants", "social-landlords", "housing-ombudsman"],
+          "text": "A tenant can complain to the landlord and ask the Housing Ombudsman to investigate if the complaint remains unresolved. The landlord’s duty to act on the hazard continues while a complaint is open.",
+          "citations": ["phase-two"]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "repair-timeliness": {
+      "type": "rates",
+      "title": "Completed non-emergency repairs that met landlords’ own targets",
+      "data": "social-housing-repair-timeliness.json",
+      "note": "The share for emergency repairs rose from 89.2% to 92.7% across the same financial years. The regulator’s report covers landlords with 1,000 or more homes. The measure uses the targets each landlord sets.",
+      "citations": ["repair-performance"]
+    }
+  },
+  "metrics": {
+    "closed-without-completion": {
+      "label": "Repairs closed without completion, as a share of repairs raised",
+      "percentage": 14.1,
+      "type": "Landlord returns",
+      "population": "Responsive repairs in low-cost rental homes of large registered landlords in England",
+      "period": "2025/26",
+      "basis": "Includes jobs cancelled by the landlord or tenant. The total does not establish how many homes were left unsafe.",
+      "citations": ["repair-performance"]
+    }
+  },
+  "issues": {
+    "late-assessment": {
+      "title": "A hazard can wait weeks before anyone assesses it",
+      "step": { "visual": "hazard-response", "id": "assess-risk" },
+      "text": "Large landlords reported that 82.9% of completed non-emergency repairs met their own targets in 2025/26, up from 77.3% in 2023/24. The performance measure starts with completed jobs. It leaves open how often landlords investigated a hazard within the statutory window, especially when the job was still open.",
+      "citations": ["repair-performance", "phase-one"],
+      "charts": ["repair-timeliness"],
+      "consequences": [
+        {
+          "text": "In a Magna Housing case that began before Awaab’s Law, four months passed between the landlord learning damp and mould had returned and its first inspection in June 2024. It found extensive mould in the kitchen and mould in a bedroom. The resident told the Ombudsman he was sleeping in the lounge because of it.",
+          "citations": ["magna-decision", "phase-one"]
+        }
+      ],
+      "measure": "For all hazard reports, publish time from the landlord first becoming aware to investigation and safety work, split by urgency. Include open cases, the length of overdue waits, and whether the household was offered suitable accommodation when due."
+    },
+    "repeat-repairs": {
+      "title": "A completed job can leave the underlying problem in place",
+      "step": { "visual": "hazard-response", "id": "fix-cause" },
+      "text": "The regulator counted about 15.6 million responsive repairs completed in 2025/26. Separately, it recorded more than 2.6 million jobs closed without completion during the year and over 1.2 million still in progress at year end. Those figures describe work orders. They do not show whether the same hazard returned at the same home.",
+      "citations": ["repair-performance"],
+      "metrics": ["closed-without-completion"],
+      "consequences": [
+        {
+          "text": "In a Peabody case, a mould wash and draughtproofing took place, but damp and mould reports continued. A bedroom window repair was still outstanding seven months after it was raised. The tenant told the Ombudsman that her child could not sleep in the bedroom.",
+          "citations": ["peabody-decision"]
+        }
+      ],
+      "measure": "Link jobs to the original hazard report. Track the share of homes where the cause was fixed and checked, repeat reports for the same hazard within three and six months, and time in temporary accommodation."
+    }
+  },
+  "scrutiny": {
+    "peabody-window-order": {
+      "question": "What did the Ombudsman order after the repair stalled?",
+      "step": { "visual": "hazard-response", "id": "escalate" },
+      "record": "peabody-decision",
+      "answer": "The Housing Ombudsman found maladministration in Peabody’s response to the window repairs, damp and mould. It ordered Peabody to take steps to renew the child’s bedroom window sash by 28 April 2026, or explain with evidence if it could not and give a revised timescale. It also ordered a written decision by 12 May on whether the windows needed replacing.",
+      "citations": ["peabody-decision"],
+      "watch": "The decision sets out the order. Look for confirmation of the repair, the decision on replacement and evidence that damp and mould stopped returning.",
+      "followUp": {
+        "title": "Bedroom window repair and evidence of compliance",
+        "history": [
+          {
+            "date": "2026-03-31",
+            "status": "ordered",
+            "text": "The Ombudsman set 28 April 2026 for the sash work or a documented explanation and revised timescale, and 12 May for the written decision on replacement. Completion remains unverified in the public sources reviewed.",
+            "citations": ["peabody-decision"]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The promise",
+            "text": "Under Awaab’s Law, a social landlord must investigate a potential emergency and make any confirmed emergency hazard safe within the same 24 hours.",
+            "citations": ["phase-one", "phase-two"]
+          },
+          {
+            "label": "Where it breaks down",
+            "text": "A household can wait for an inspection, or have mould come back after work is marked complete. The headline repairs figures count completed jobs against landlords’ targets.",
+            "citations": ["magna-decision", "peabody-decision", "repair-performance"]
+          },
+          {
+            "label": "What to watch",
+            "text": "From 30 November 2026 the rules extend to more significant hazards. Look for evidence on whether homes were made safe in time and stayed safe after the work.",
+            "citations": ["amendment", "phase-two", "audit-planned"]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "text": "Awaab’s Law began on 27 October 2025 for emergency hazards and significant damp and mould in social rented homes. From 30 November 2026 it extends to more significant hazards, including excess cold and heat, falls, electrical hazards and structural collapse. Other repair duties and the regulator’s standards also apply.",
+        "citations": ["phase-one", "phase-two", "amendment", "safety-standard"]
+      },
+      { "visual": "hazard-response" },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            { "actors": ["social-housing-tenants", "social-landlords", "housing-ombudsman", "social-housing-regulator", "mhclg"] }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      { "issues": ["late-assessment", "repeat-repairs"] }
+    ],
+    "outcomes": [
+      {
+        "text": "Early research for the housing ministry found that some landlords had strengthened triage, created specialist teams and begun tracking a hazard from report to resolution. Interviewees also described shortages of surveyors and trades, uneven risk assessment and pressure on planned maintenance. The study interviewed 30 tenants and 35 registered landlords between December 2025 and March 2026. It describes early implementation and cannot tell us how much the law reduced unsafe conditions nationally.",
+        "citations": ["implementation-research"]
+      },
+      {
+        "text": "In 2024, before the law took effect, English Housing Survey inspections found a damp problem in about 7% of social rented homes. Future comparable inspections can show whether damp becomes less common. Case records that link the first report, safety work and a later check would show more directly whether repairs are making affected homes safe for longer.",
+        "citations": ["housing-condition-survey", "phase-one", "implementation-research"]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "What landlords spend on existing homes",
+        "text": "The Regulator of Social Housing’s survey of 195 large private registered providers and groups recorded £9.9 billion in repairs and maintenance spending in the year to September 2026, including capital works. It forecasts £11.4 billion in the following year. The regulator also records grants for specific building safety and energy-efficiency works.",
+        "citations": ["provider-finances"]
+      },
+      {
+        "text": "Councils account for their own housing stock through ring-fenced Housing Revenue Accounts, funded mainly by rents and service charges. The 2025/26 England revenue outturn estimates £2.85 billion for council housing repairs and maintenance. This is a revenue figure for a different group of landlords and period from the regulator’s survey, which also includes capital works.",
+        "citations": ["council-finances", "housing-revenue-account", "provider-finances"]
+      },
+      {
+        "heading": "What the new requirements are expected to add",
+        "text": "The government estimates £190.2 million in additional costs to landlords over ten years, in discounted 2026 prices, for Phase 2. The estimate covers getting staff familiar with the rules, triage and preparing and sending written summaries. It treats repairs that landlords already had to make as part of the baseline. The landlord also pays for suitable temporary accommodation where safety work cannot be done in time.",
+        "citations": ["phase-two-impact", "phase-two"]
+      },
+      {
+        "text": "These sources give sector spending and estimates of the extra administrative work. A reliable cost per hazard resolved would link staff time, visits, permanent work, repeat jobs and any temporary accommodation to the same case.",
+        "citations": ["provider-finances", "phase-two-impact"]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "What the next figures need to show",
+        "text": "Phase 2 starts on 30 November 2026. Look for landlords to publish how many hazards they investigated on time, how quickly homes were made safe, and whether the repair held. The impact assessment says the existing repairs data cannot provide a Phase 2 baseline for repair timelines.",
+        "citations": ["amendment", "phase-two-impact"]
+      },
+      {
+        "heading": "What Parliament and the auditors are checking",
+        "text": "The National Audit Office expects to report in winter 2026/27 on whether government understands the quality of existing social housing in England and whether the reforms are financially sustainable. The Public Accounts Committee plans to question senior housing ministry officials after the report. The inquiry page lists no hearing date as of this review.",
+        "citations": ["audit-planned", "committee-inquiry"]
+      },
+      {
+        "heading": "What the Housing Ombudsman can require",
+        "text": "Damp, mould and condensation accounted for 34% of repair complaints the Ombudsman investigated in 2025/26. The Peabody decision shows what the Ombudsman can require in an individual case.",
+        "citations": ["complaints-review", "peabody-decision"]
+      },
+      { "scrutiny": ["peabody-window-order"], "collapseExchanges": "Read the Ombudsman’s findings" }
+    ],
+    "sources": []
+  }
+}

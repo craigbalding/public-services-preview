@@ -1,0 +1,9 @@
+{
+  "groupLabel": "Financial year",
+  "period": "England · Completed non-emergency responsive repairs in low-cost rental homes of large registered landlords",
+  "series": [
+    { "label": "2023/24", "value": 77.3 },
+    { "label": "2024/25", "value": 78.9 },
+    { "label": "2025/26", "value": 82.9 }
+  ]
+}

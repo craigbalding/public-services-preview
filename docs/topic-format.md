@@ -21,7 +21,7 @@ Use the six required section IDs from the template. Add three entries to the `ta
 
 ## Follow-up records
 
-Give each requested or promised item a `followUp.title` and a `followUp.history` array. Entries use `date` in `YYYY-MM-DD` format, `status`, `text` and `citations`. Use `requested`, `promised`, `overdue`, `partial` and `provided`. Preserve earlier entries and append dated updates in order. Describe the expected timing in `text` using the source’s precision. A publication fulfilling a request belongs in the history. Subsequent service performance belongs alongside the finding’s measure.
+Give each requested, promised or formally ordered item a `followUp.title` and a `followUp.history` array. Entries use `date` in `YYYY-MM-DD` format, `status`, `text` and `citations`. Use `requested`, `promised`, `ordered`, `overdue`, `partial` and `provided`. Preserve earlier entries and append dated updates in order. Describe the expected timing in `text` using the source’s precision. A publication fulfilling a request belongs in the history. Subsequent service performance belongs alongside the finding’s measure.
 
 ## Check the output
 
