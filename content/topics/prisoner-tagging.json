@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v3",
+  "template": "topic-v4",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -40,7 +40,7 @@
       "title": "Electronic monitoring in practice",
       "url": "https://cjji.justiceinspectorates.gov.uk/inspection-report/electronic-monitoring-in-practice-the-police-response-to-electronically-monitored-bail-conditions-and-the-use-of-electronic-monitoring-on-community-sentences-and-post-release-licences/",
       "date": "2026-10-29",
-      "reference": "Court bail case files, fitting the tag and inspection methodology"
+      "reference": "Court bail case files, pre-release work, fitting the tag and inspection methodology"
     },
     "contracts-2013": {
       "publisher": "National Audit Office",
@@ -96,6 +96,33 @@
       "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-september-2026/technical-note",
       "date": "2026-10-22",
       "reference": "Sections 2.1 to 2.4 and 3.3"
+    },
+    "gps-impact-evaluation": {
+      "publisher": "Ministry of Justice",
+      "title": "Impact evaluation of the acquisitive crime project: 12 month+ cohort",
+      "url": "https://www.gov.uk/government/publications/impact-evaluation-of-the-acquisitive-crime-project-12-month-cohort",
+      "date": "2025-08-28",
+      "reference": "Methods and results, tables 1 and 5–7 and appendix H"
+    },
+    "curfew-impact-evaluation": {
+      "publisher": "Ministry of Justice",
+      "title": "Assessing the effectiveness of radio frequency electronic monitoring",
+      "url": "https://www.gov.uk/government/publications/assessing-the-effectiveness-of-radio-frequency-electronic-monitoring",
+      "date": "2025-05-07",
+      "reference": "Research report, section 1.1 and section 4"
+    },
+    "historic-curfew-inquiry": {
+      "publisher": "HM Inspectorate of Probation",
+      "title": "Inquiry into the supervision of Peter Williams by Nottingham City Youth Offending Team",
+      "url": "https://www.justiceinspectorates.gov.uk/probation/wp-content/uploads/sites/5/2014/03/peterwilliamsenquiry-rps.pdf",
+      "reference": "2005 inquiry, sections 1 and 9"
+    },
+    "reoffending-tag-status-question": {
+      "publisher": "Ministry of Justice, written answer to Parliament",
+      "title": "Prisoners’ release: reoffending and tag status under SDS40",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2024-12-16/20396",
+      "date": "2024-12-23",
+      "reference": "Question 20396 and ministerial response"
     }
   },
   "actors": {
@@ -166,7 +193,7 @@
           "text": "The equipment checks the specified condition, such as a curfew, location restriction or alcohol requirement. The monitoring service reviews possible breaches.",
           "actors": ["serco"],
           "citations": ["guidance", "inspection"],
-          "charts": ["status-by-stage"]
+          "charts": ["status-by-stage", "gps-compliance"]
         },
         {
           "id": "respond-to-alert",
@@ -203,6 +230,20 @@
       "description": "England and Wales, at month end. Counts rose within the current series before falling from 10,924 in July to 10,290 in September 2026.",
       "note": "July to September 2026 figures are provisional. The October 2026 release reforms began after the latest observation.",
       "citations": ["earlier-statistics", "statistics", "methodology"]
+    },
+    "gps-reoffending": {
+      "type": "rates",
+      "title": "Proven reoffending in the GPS pilot",
+      "data": "gps-pilot-reoffending.json",
+      "note": "The evaluation estimated a seven percentage point reduction for men in the pilot. It matched eligible prison leavers on recorded characteristics, so differences the study could not measure may still affect the result.",
+      "citations": ["gps-impact-evaluation"]
+    },
+    "gps-compliance": {
+      "type": "rates",
+      "title": "Recorded probation compliance in the GPS pilot",
+      "data": "gps-pilot-compliance.json",
+      "note": "This measures outcomes from recorded probation contacts. The difference was statistically uncertain. Separate analyses also found no clear difference in formal warnings for licence breaches or recall to prison.",
+      "citations": ["gps-impact-evaluation"]
     }
   },
   "sections": {
@@ -276,6 +317,28 @@
       {
         "chart": "post-release-trend"
       }
+    ],
+    "outcomes": [
+      {
+        "text": "The Ministry of Justice compared people in its GPS pilot for eligible prison leavers with theft, burglary or other acquisitive offences with matched eligible people outside the pilot. It looked at new offences and at compliance with supervision as distinct outcomes.",
+        "citations": ["gps-impact-evaluation"]
+      },
+      {
+        "chart": "gps-reoffending"
+      },
+      {
+        "chart": "gps-compliance"
+      },
+      {
+        "heading": "Curfews on community orders",
+        "text": "A separate study in England and Wales compared people given an electronically monitored curfew as part of a community order with a matched group. Estimated reconviction for offences committed in the first 83 days was 17% versus 22%. People given a monitored curfew also received fewer warnings for breaking probation requirements and were more likely to complete other requirements during the order. This study assessed the monitored curfew as part of the sentence.",
+        "citations": ["curfew-impact-evaluation"]
+      },
+      {
+        "heading": "What happened while people waited for a tag?",
+        "text": "The national monitoring tables show equipment status at month end. The missing link is how many breaches or proven new offences occurred while monitoring was due but inactive. Tagging can also make a breach easier to detect, so comparing recorded breach totals alone can give a misleading picture of behaviour.",
+        "citations": ["status-annex", "inspection", "reoffending-tag-status-question"]
+      }
     ]
   },
   "metrics": {
@@ -313,11 +376,21 @@
         "title": "Fit tags before eligible prison leavers leave custody",
         "owner": "ministry-of-justice",
         "status": "Six-prison pilot. On 25 November 2026 the Ministry announced expansion to 16 prisons in December, 50 in January 2027 and 83 by the end of March 2027.",
-        "measure": "For each month’s prison leavers who had a monitoring requirement, track the share with working equipment at release, then by 24 hours, 48 hours and seven days.",
-        "evidenceGap": "The available September figures show equipment status at month end. A national series that follows the same group from release through fitting is still needed to judge the rollout.",
+        "measure": "For each month’s prison leavers with a monitoring requirement, track the share with working equipment at release and by 24 hours, 48 hours and seven days. Link fitting dates to the dates of confirmed breaches, recalls and proven new offences to see what happened during the wait.",
+        "evidenceGap": "The September snapshot predates the October release reforms. Evaluating the rollout needs comparable groups followed from release, with incidents dated to when they occurred and proven reoffending reported once follow-up is complete.",
         "citations": ["rollout", "statistics"]
       },
-      "charts": ["status-by-stage"]
+      "charts": ["status-by-stage"],
+      "consequences": [
+        {
+          "text": "In one case, an exclusion zone meant to protect identified people went unmonitored for 41 days after a person left prison. Once monitoring started, it detected entries into the zone and enforcement followed. The inspectors documented those entries after activation.",
+          "citations": ["inspection"]
+        },
+        {
+          "text": "In a historical case from 2003, a person subject to a monitored curfew took part in a fatal robbery while their tag was awaiting refitting. The inquiry also found that the monitoring provider had failed to pass on earlier evidence of curfew breaches.",
+          "citations": ["historic-curfew-inquiry"]
+        }
+      ]
     },
     "alert-response": {
       "title": "An alert needs someone to act on it",
@@ -335,7 +408,13 @@
         "measure": "Track the share of notifications with a recorded risk assessment and enforcement decision, and how long those decisions take.",
         "evidenceGap": "The inspection sample provides a starting point. A consistent national series would make it possible to track progress across forces.",
         "citations": ["action-plan", "inspection"]
-      }
+      },
+      "consequences": [
+        {
+          "text": "In a stalking case, police received repeated reports of apparent exclusion-zone breaches and the victim later reported further stalking. The defendant was eventually jailed for stalking. Inspectors found no record of a police risk assessment in the case.",
+          "citations": ["inspection"]
+        }
+      ]
     }
   }
 }

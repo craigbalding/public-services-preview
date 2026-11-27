@@ -92,6 +92,8 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
 .chart th, .chart td { padding: .37rem 0; }
 .chart th { text-align: left; font-weight: 520; width: 8rem; padding-right: .5rem; }
 .chart td:last-child { text-align: right; width: 4rem; padding-left: .5rem; font-variant-numeric: tabular-nums; }
+.rate-chart th { width: 43%; }
+.rate-chart table { margin-top: .45rem; }
 .bar-track, .bar { display: block; height: .66rem; border-radius: .09rem; }
 .bar-track { background: #e9eee8; }
 .bar { width: var(--value); min-width: 0; background: #397c63; }
@@ -143,6 +145,9 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
 .metric-population { margin-bottom: .18rem; }
 .finding + .finding, .metric-grid + .finding { margin-top: 1.35rem; padding-top: .25rem; border-top: 1px solid var(--line); }
 .finding p + p { margin-top: .55rem; }
+.consequences { border-left: 2px solid #9fb6a6; padding-left: .85rem; margin-block: .8rem; }
+.consequences h4 { font-size: .94rem; margin: 0 0 .2rem; }
+.consequences p { font-size: .95rem; }
 .finding-step, .finding-next, .evidence-links { font-size: .88rem; font-weight: 620; }
 .finding-step { margin-bottom: .45rem; }
 .finding-next { margin-top: .65rem; }
@@ -170,6 +175,7 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
   .trend-plot text { font-size: 25px; }
   .status-count { display: block; }
   .chart th { width: 6.3rem; }
+  .rate-chart th { width: 44%; }
   .chart td:last-child { width: 3.25rem; }
   .footer-inner { flex-wrap: wrap; gap: .3rem 1rem; padding-block: 1rem; }
 }

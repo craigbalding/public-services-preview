@@ -1,0 +1,14 @@
+{
+  "groupLabel": "Study group",
+  "period": "First year after release · Men released April 2021 to June 2022",
+  "series": [
+    {
+      "label": "GPS pilot (500 men)",
+      "value": 26.2
+    },
+    {
+      "label": "Matched group (1,208 men)",
+      "value": 33.2
+    }
+  ]
+}

@@ -4,20 +4,25 @@ const percent = new Intl.NumberFormat('en-GB', { style: 'percent', maximumFracti
 const integer = value => Number.isSafeInteger(value) && value >= 0;
 
 export function renderBars(chart, data) {
+  const rates = chart.type === 'rates';
+  const validValue = rates ? value => Number.isFinite(value) && value >= 0 && value <= 100 : integer;
   requireCondition(data.series.length && data.series.every(row =>
-    typeof row.label === 'string' && integer(row.value)), `${chart.data}: invalid series`);
-  const max = Math.max(1, ...data.series.map(row => row.value));
-  const total = data.series.reduce((sum, row) => sum + row.value, 0);
+    typeof row.label === 'string' && validValue(row.value)), `${chart.data}: invalid series`);
+  if (rates) requireCondition(typeof data.period === 'string' && data.period.trim(), `${chart.data}: rates need a period`);
+  const max = rates ? 100 : Math.max(1, ...data.series.map(row => row.value));
   const rows = data.series.map(({ label, value }) => `<tr>
     <th scope="row">${escape(label)}</th>
     <td><span class="bar-track" aria-hidden="true"><span class="bar" style="--value:${100 * value / max}%"></span></span></td>
-    <td>${number.format(value)}</td>
+    <td>${rates ? percent.format(value / 100) : number.format(value)}</td>
   </tr>`).join('');
   const table = `<table aria-label="${escape(chart.title)}"><thead class="visually-hidden">
-    <tr><th scope="col">${escape(data.groupLabel)}</th><th scope="col">Relative bar</th><th scope="col">${escape(data.unit)}</th></tr></thead>
+    <tr><th scope="col">${escape(data.groupLabel)}</th><th scope="col">Bar</th><th scope="col">${rates ? 'Percent' : escape(data.unit)}</th></tr></thead>
     <tbody>${rows}</tbody></table>`;
-  return `<p class="chart-date">As at ${dateLabel(data.asOf)}</p>
-    ${chart.showTotal ? `<div class="chart-total"><strong>${number.format(total)}</strong> <span>${escape(data.unit)}</span></div>` : ''}
+  const total = !rates && chart.showTotal
+    ? `<div class="chart-total"><strong>${number.format(data.series.reduce((sum, row) => sum + row.value, 0))}</strong> <span>${escape(data.unit)}</span></div>`
+    : '';
+  return `<p class="chart-date">${rates ? escape(data.period) : `As at ${dateLabel(data.asOf)}`}</p>
+    ${total}
     ${chart.details ? `<details class="chart-details"><summary>Breakdown by order type</summary>${table}</details>` : table}`;
 }
 

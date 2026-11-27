@@ -20,3 +20,7 @@ For each finding, link to the relevant step by its visual and step IDs and to th
 Link process steps to their evidence using `charts` and `metrics` IDs. Describe the population and period for each standalone metric. Use a status chart for snapshots of the same stages. Each bar has its own dated population, and the stage counts must be mutually exclusive and add to that population.
 
 Store trend observations as `[date, count, publicationStatus?]` within comparable segments, with a definition and citing sources for each segment. Start a new segment at a collection break and use `null` for a missing observation inside a segment. Mark collection and policy events separately. Use the latest comparable historical revisions where the publisher provides them, and report when key follow-up measures are unavailable.
+
+## Topic template v4
+
+Add a sourced consequence to each finding. Use case examples to explain what happened to the people affected and distinguish observed harm from potential harm. In the outcomes section, give each comparison its population, outcome definition, follow-up period and limits. Rates charts use values from 0 to 100 and the full percentage scale.

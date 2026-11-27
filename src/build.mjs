@@ -92,7 +92,12 @@ async function loadTopic(filename) {
       );
     }
   }
-  return { ...topic, sectionOrder: template.sections, requiredMetricFields: template.requiredMetricFields ?? [] };
+  return {
+    ...topic,
+    sectionOrder: template.sections,
+    requiredMetricFields: template.requiredMetricFields ?? [],
+    requireConsequences: template.requireConsequences ?? false,
+  };
 }
 
 async function renderTopic(topic) {
@@ -177,6 +182,7 @@ async function renderTopic(topic) {
     let body;
     switch (chart.type ?? 'bars') {
       case 'bars':
+      case 'rates':
         body = renderBars(chart, data);
         break;
       case 'status':
@@ -188,7 +194,7 @@ async function renderTopic(topic) {
       default:
         throw new Error(`${topic.id}: unknown chart type ${chart.type}`);
     }
-    return `<figure class="figure chart" id="chart-${id}">
+    return `<figure class="figure chart${chart.type === 'rates' ? ' rate-chart' : ''}" id="chart-${id}">
       <figcaption>${escape(chart.title)} ${citations(chart.citations)}</figcaption>
       ${chart.description ? `<p class="chart-description">${escape(chart.description)}</p>` : ''}
       ${body}
@@ -242,10 +248,19 @@ async function renderTopic(topic) {
       );
       const fix = `<a href="#improvement-${id}">Response and what to track</a>`;
       requireCondition(issue.title?.trim() && issue.text?.trim(), `${topic.id}: issue ${id} needs a title and finding`);
+      const consequences = issue.consequences ?? [];
+      requireCondition(Array.isArray(consequences) && (!topic.requireConsequences || consequences.length),
+        `${topic.id}: issue ${id} needs a consequence`);
+      const effects = consequences.map(consequence => {
+        requireCondition(typeof consequence.text === 'string' && consequence.text.trim(),
+          `${topic.id}: issue ${id} has an empty consequence`);
+        return `<p>${escape(consequence.text)} ${citations(consequence.citations)}</p>`;
+      });
       return `<div class="finding">
         <h3>${escape(issue.title)}</h3>
         <p class="finding-step"><a href="#${stepAnchor(visual, step.id)}">${escape(step.label)}</a></p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
+        ${effects.length ? `<div class="consequences"><h4>Why it matters</h4>${effects.join('')}</div>` : ''}
         ${links}
         <p class="finding-next">${fix}</p>
       </div>`;

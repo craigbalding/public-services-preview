@@ -1,0 +1,14 @@
+{
+  "groupLabel": "Study group",
+  "period": "Up to a year after release or until sentence expiry · Releases April 2021 to September 2023",
+  "series": [
+    {
+      "label": "GPS pilot (611 people)",
+      "value": 81.0
+    },
+    {
+      "label": "Matched group (611 people)",
+      "value": 81.2
+    }
+  ]
+}
