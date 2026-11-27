@@ -83,12 +83,13 @@ async function loadTopic(filename) {
   const template = await readJson(content, `templates/${topic.template}.json`);
   const sectionIds = template.sections.map(section => section.id);
   requireCondition(new Set(sectionIds).size === sectionIds.length, `${filename}: duplicate template section`);
+  const sectionOrder = template.sections.filter(({ id, optional }) => !optional || Object.hasOwn(topic.sections, id));
   requireCondition(
-    Object.keys(topic.sections).length === sectionIds.length &&
-      template.sections.every(({ id, allowEmpty }) => Array.isArray(topic.sections[id]) && (allowEmpty || topic.sections[id].length)),
+    Object.keys(topic.sections).length === sectionOrder.length &&
+      sectionOrder.every(({ id, allowEmpty }) => Array.isArray(topic.sections[id]) && (allowEmpty || topic.sections[id].length)),
     `${filename}: sections must match the template and required sections must have content`,
   );
-  for (const { id, requiredBlock } of template.sections) {
+  for (const { id, requiredBlock } of sectionOrder) {
     if (requiredBlock) {
       requireCondition(
         contentBlocks(topic.sections[id]).some(block => Object.hasOwn(block, requiredBlock)),
@@ -97,11 +98,11 @@ async function loadTopic(filename) {
     }
   }
   for (const { id } of template.mobileLinks ?? []) {
-    requireCondition(sectionIds.includes(id), `${filename}: unknown mobile link ${id}`);
+    requireCondition(sectionOrder.some(section => section.id === id), `${filename}: unknown mobile link ${id}`);
   }
   return {
     ...topic,
-    sectionOrder: template.sections,
+    sectionOrder,
     mobileLinks: template.mobileLinks ?? [],
     requiredMetricFields: template.requiredMetricFields ?? [],
     requireConsequences: template.requireConsequences ?? false,

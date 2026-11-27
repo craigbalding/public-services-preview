@@ -1,6 +1,6 @@
 # Topic format
 
-New topics use the [v7 template](../content/templates/topic-v7.json). Each topic records its template in `content/topics/<topic-id>.json`. Keep the stable topic ID and existing fragments on updates. The [tagging topic JSON](../content/topics/prisoner-tagging.json) shows the full range of build features used in the pilot and remains pinned to v6.
+New topics use the [v7 template](../content/templates/topic-v7.json). Each topic records its template in `content/topics/<topic-id>.json`. Keep the stable topic ID and existing fragments on updates. The [tagging topic JSON](../content/topics/prisoner-tagging.json) shows these fields in use.
 
 ## Where to put the material
 
@@ -12,11 +12,12 @@ New topics use the [v7 template](../content/templates/topic-v7.json). Each topic
 | Process | `visuals` with ordered, identified steps and cited text. Attach a `note` to the relevant step for a sourced design explanation. Use `visual` in the `how-it-works` section to show the flow. |
 | Findings | `issues` records with `step.visual`, `step.id`, `title`, `text`, `citations`, cited `consequences`, and a `measure` of progress. Publish the IDs in an `issues` block under `what-needs-fixing`. |
 | Figures | Define `metrics` and `charts` on the topic, with chart inputs in `content/data/`. Attach IDs to the finding to display them beside its claims. Label metric `population`, `period`, `type` and `basis`. Use an `evidenceGap` on the finding when the right figure is unavailable. |
+| Cost and funding | Add `cost-and-funding` with cited text when the cost or funding helps explain delivery. State the period, scope and basis for each figure, who pays and any parts of the journey without a published cost. |
 | Response | Add `improvement` to a finding when there is a sourced response. Give `owner`, `title`, `status` and `citations`, then publish the finding ID in an `improvements` block under `whats-changing`. |
 | Scrutiny | `scrutiny` records give `step`, `question`, `answer`, `citations`, `watch` and a `record` for a written source or `recording` for a source with a timestamp in `reference`. Publish IDs in a `scrutiny` block under `whats-changing`. A string in `collapseExchanges` supplies a disclosure title. |
 | Supporting material | Use `details` with a `title` and nested `blocks` for supplementary history or methods. `sources` may be an empty block list. The build appends the references. |
 
-Use all six section IDs from the template. Add three entries to the `takeaways` block. Summarise outcome evidence or its limits in `outcomes`. The `whats-changing` section can use cited text to explain the available record and what would show progress, including where there are no public commitments to track. A finding with only qualitative evidence still needs a source, consequence, evidence gap and measure of progress. An unannounced response needs no `improvement` object or link.
+Use the six required section IDs from the template. Add three entries to the `takeaways` block. Summarise outcome evidence or its limits in `outcomes`. The `whats-changing` section can use cited text to explain the available record and what would show progress, including where there are no public commitments to track. A finding with only qualitative evidence still needs a source, consequence, evidence gap and measure of progress. An unannounced response needs no `improvement` object or link.
 
 ## Follow-up records
 

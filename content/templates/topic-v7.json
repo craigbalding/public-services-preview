@@ -4,6 +4,7 @@
     { "id": "how-it-works", "title": "How it works", "requiredBlock": "visual" },
     { "id": "what-needs-fixing", "title": "Where it breaks down", "requiredBlock": "issues" },
     { "id": "outcomes", "title": "What difference does it make?", "requiredBlock": "text" },
+    { "id": "cost-and-funding", "title": "What it costs and who pays", "requiredBlock": "text", "optional": true },
     { "id": "whats-changing", "title": "What to watch next" },
     { "id": "sources", "title": "Sources and data", "allowEmpty": true }
   ],

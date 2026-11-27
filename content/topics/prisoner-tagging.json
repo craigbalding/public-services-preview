@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v6",
+  "template": "topic-v7",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -177,6 +177,59 @@
       "url": "https://www.nao.org.uk/wp-content/uploads/2026/07/electronic-monitoring-improving-resilience-to-meet-increasing-demand.pdf",
       "date": "2026-07-10",
       "reference": "Paragraphs 12, 13 and 2.11"
+    },
+    "direct-monitoring-cost": {
+      "publisher": "Ministry of Justice, written answer to Parliament",
+      "title": "Electronic monitoring costs",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-03-03/117283",
+      "date": "2026-03-11",
+      "reference": "Question 117283, direct monitoring and contract spend"
+    },
+    "licence-supervision-cost": {
+      "publisher": "Ministry of Justice, written answer to Parliament",
+      "title": "Estimated cost of probation supervision",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2024-08-30/3546",
+      "date": "2024-09-09",
+      "reference": "Question 3546, estimated cost of an additional person on licence in 2023/24"
+    },
+    "monitoring-annual-spend": {
+      "publisher": "HM Prison and Probation Service",
+      "title": "Annual report and accounts 2025 to 2026, performance report",
+      "url": "https://www.gov.uk/government/publications/hmpps-annual-report-and-accounts-2025-to-2026/hmpps-annual-reports-and-accounts-2025-to-26-performance",
+      "reference": "Finance function, split of resource expenditure"
+    },
+    "monitoring-goods-and-services": {
+      "publisher": "HM Prison and Probation Service",
+      "title": "Annual report and accounts 2025 to 2026, financial statements",
+      "url": "https://www.gov.uk/government/publications/hmpps-annual-report-and-accounts-2025-to-2026/hmpps-annual-reports-and-accounts-2025-to-26-financial-statements",
+      "reference": "Note 4b, purchase of goods and services"
+    },
+    "audit-expansion-cost": {
+      "publisher": "National Audit Office",
+      "title": "Electronic monitoring: funding and demand on probation and police",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2026/07/electronic-monitoring-improving-resilience-to-meet-increasing-demand.pdf",
+      "date": "2026-07-10",
+      "reference": "Paragraphs 3.2, 3.10 and 3.11"
+    },
+    "government-expansion-cost": {
+      "publisher": "Ministry of Justice, written answer to Parliament",
+      "title": "Additional electronic monitoring funding under the Sentencing Act",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/39121/",
+      "date": "2026-11-06",
+      "reference": "Question 39121"
+    },
+    "probation-funding-announcement": {
+      "publisher": "Ministry of Justice",
+      "title": "Government announces plans to tag thousands of extra offenders",
+      "url": "https://www.gov.uk/government/news/government-announces-plans-to-tag-thousands-of-extra-offenders",
+      "reference": "Notes to editors, expansion and wider probation funding"
+    },
+    "lords-funding-evidence": {
+      "publisher": "House of Lords Justice and Home Affairs Committee",
+      "title": "Investigation into electronic monitoring, evidence from the Chief Inspector of Probation",
+      "url": "https://committees.parliament.uk/oralevidence/18323/html/",
+      "date": "2026-11-10",
+      "reference": "Question 27, uncorrected transcript"
     }
   },
   "actors": {
@@ -360,8 +413,7 @@
     ],
     "what-needs-fixing": [
       {
-        "issues": ["fitting-delay", "alert-response"],
-        "inlineEvidence": true
+        "issues": ["fitting-delay", "alert-response"]
       }
     ],
     "outcomes": [
@@ -387,6 +439,35 @@
         }
       }
     ],
+    "cost-and-funding": [
+      {
+        "text": "In March 2026 the Ministry of Justice reported an average of £3,130 per person per year for direct monitoring, equivalent to about £8.60 a day. It includes contracted and internal monitoring costs. Probation and police supervision sit outside that estimate. The sources reviewed give no annual cost for the whole journey from fitting through supervision and response.",
+        "citations": ["direct-monitoring-cost", "audit-expansion-cost"]
+      },
+      {
+        "text": "The Ministry separately estimated about £4,500 in 2023/24 for an extra person on the probation licence caseload, including probation work before release. That estimate covers licence supervision generally and uses a different year and cost basis. A total for a tagged prison leaver would need both costs measured for the same group and period, plus the cost of any police response.",
+        "citations": ["licence-supervision-cost", "direct-monitoring-cost"]
+      },
+      {
+        "heading": "What the service spends",
+        "text": "HM Prison and Probation Service reported £123 million of resource spending on electronic monitoring in 2025/26. Its accounts record £110.8 million under electronic monitoring goods and services, up from £106.8 million the previous year. These are different views of spending for the service across order types.",
+        "citations": ["monitoring-annual-spend", "monitoring-goods-and-services"]
+      },
+      {
+        "heading": "What the expansion funds",
+        "text": "The National Audit Office reported up to £175 million allocated for 2026–29. That includes up to £105 million for growth linked to the Sentencing Act, £25 million for digital investment, £23 million for other growth and £22 million for enhanced supervision of the highest-risk people. The Ministry confirmed the £105 million figure in November. It also describes its prison-fitting rollout as part of a £100 million tagging investment within a wider probation funding increase of up to £700 million by 2028/29. The announcements leave the overlap between the £100 million and the £175 million allocation unclear.",
+        "citations": ["audit-expansion-cost", "government-expansion-cost", "rollout", "probation-funding-announcement"]
+      },
+      {
+        "text": "The National Police Chiefs’ Council estimated about £20 million in extra annual police costs from changes to electronic monitoring. The July audit reported that police had received no additional funding for this. That is a forecast of extra workload costs across forces, separate from the historical cost per person.",
+        "citations": ["audit-expansion-cost"]
+      },
+      {
+        "heading": "What would show value for money?",
+        "text": "The prison-fitting pilot tested the cost of a second visit, since many people still need equipment set up at home. To judge the rollout, compare costs for comparable groups of eligible prison leavers, including repeat visits and probation and police time spent acting on alerts. Check the share with working monitoring at release and the number of days the rest spent waiting.",
+        "citations": ["pac-fittings-at-release", "audit-expansion-cost"]
+      }
+    ],
     "whats-changing": [
       {
         "improvements": ["fitting-delay", "alert-response"]
@@ -394,12 +475,12 @@
       {
         "id": "scrutiny",
         "heading": "What Parliament is checking",
-        "text": "The Public Accounts Committee questioned Ministry of Justice and prison and probation officials on 26 November 2026. The fitting rollout had already been announced. The tracker records what MPs requested and what officials committed to providing.",
-        "citations": ["pac-inquiry", "rollout"]
+        "text": "The Public Accounts Committee questioned Ministry of Justice and prison and probation officials on 26 November 2026. The fitting rollout had already been announced. The House of Lords Justice and Home Affairs Committee also asked the Chief Inspector of Probation about the funding for staff who act on monitoring information.",
+        "citations": ["pac-inquiry", "rollout", "lords-funding-evidence"]
       },
       {
-        "scrutiny": ["fitting-figures", "serco-payments", "fittings-at-release", "out-of-hours"],
-        "collapseExchanges": true
+        "scrutiny": ["fitting-figures", "serco-payments", "staff-funding", "fittings-at-release", "out-of-hours"],
+        "collapseExchanges": "Questions and answers from the hearings"
       }
     ],
     "sources": [
@@ -455,6 +536,25 @@
             "status": "requested",
             "text": "The chair asked for a note before the committee prepared its report.",
             "citations": ["pac-payment-note"]
+          }
+        ]
+      }
+    },
+    "staff-funding": {
+      "question": "How much expansion funding will reach the staff who act on alerts?",
+      "step": { "visual": "monitoring-process", "id": "respond-to-alert" },
+      "record": "lords-funding-evidence",
+      "answer": "Baroness Hughes asked what would be left for probation after payments to the contractor. Chief Inspector of Probation Martin Jones said the inspectorate had not analysed the breakdown and offered to write with an analysis. The committee welcomed a prompt follow-up.",
+      "citations": ["lords-funding-evidence"],
+      "watch": "Look for the breakdown of contractor costs and front-line staffing at probation and the police. Check whether local teams then have time to assess and act on alerts.",
+      "followUp": {
+        "title": "Analysis of how tagging expansion funding supports probation staff",
+        "history": [
+          {
+            "date": "2026-11-10",
+            "status": "requested",
+            "text": "The Chief Inspector offered to write to the committee and Baroness Hughes welcomed a prompt response. No date was set.",
+            "citations": ["lords-funding-evidence"]
           }
         ]
       }

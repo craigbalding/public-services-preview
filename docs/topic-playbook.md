@@ -14,6 +14,7 @@ Open the page with three sourced takeaways on the purpose, the main weakness and
 - **Population and time.** Give the denominator, geography, observation window and data release where available. A point-in-time backlog answers how many are waiting. An entry cohort followed over time answers how long they wait. Show rates or counts in context, and keep different populations identifiable.
 - **Change over time.** Compare observations with a consistent definition. Label breaks, revisions, provisional figures and missing observations. Date policy changes separately. Identify whether the latest comparable data cover the period after a change took effect.
 - **Consequences and outcomes.** Describe what a documented case establishes and how far it generalises. A recorded incident may reflect detection as well as behaviour. Describe the population, comparison, outcome, follow-up period and limitations of any effect estimate. Explain the evidence gap when a finding lacks a figure or a reasonable comparison.
+- **Cost and funding.** Follow the costs through the same handoffs as delivery. Identify who pays for the direct service and who absorbs follow-up work. Label actual spending, funded plans, forecasts and unit costs by year and scope. Check whether figures overlap or use different populations, periods or cost bases before comparing or adding them. Say which costs the public record leaves out and connect spending to a useful result, such as the share of people who receive a working service on time.
 
 ## Track follow-up and delivery
 
