@@ -1,0 +1,19 @@
+{
+  "sections": [
+    { "id": "at-a-glance", "title": "At a glance", "requiredBlock": "takeaways" },
+    { "id": "how-it-works", "title": "How it works", "requiredBlock": "visual" },
+    { "id": "what-needs-fixing", "title": "Where it breaks down", "requiredBlock": "issues" },
+    { "id": "outcomes", "title": "What difference does it make?", "requiredBlock": "text" },
+    { "id": "whats-changing", "title": "What to watch next" },
+    { "id": "sources", "title": "Sources and data", "allowEmpty": true }
+  ],
+  "mobileLinks": [
+    { "id": "how-it-works", "title": "How it works" },
+    { "id": "what-needs-fixing", "title": "Where it breaks down" },
+    { "id": "whats-changing", "title": "What to watch" }
+  ],
+  "requiredMetricFields": ["population", "period"],
+  "requireConsequences": true,
+  "requireImprovement": false,
+  "inlineIssueEvidence": true
+}

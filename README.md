@@ -2,6 +2,8 @@
 
 Build with Node.js 24 using `node src/build.mjs`. The generated site lives in `dist/`. For local review, serve that directory with a static HTTP server, for example `python3 -m http.server 3000 --directory dist`.
 
+For new topics, start with the [editorial playbook](docs/topic-playbook.md) and the [v7 topic format](docs/topic-format.md). The repository includes skills to [draft a topic](.agents/skills/draft-public-service-topic/SKILL.md) and [review a topic](.agents/skills/review-public-service-topic/SKILL.md).
+
 - `site.json` holds the working title, description and indexing preference.
 - `content/topics/` contains each topic's content and references. Each topic pins a template in `content/templates/`.
 - `content/actors.json` gives actors a shared ID and display name.

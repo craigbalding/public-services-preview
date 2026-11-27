@@ -85,8 +85,8 @@ async function loadTopic(filename) {
   requireCondition(new Set(sectionIds).size === sectionIds.length, `${filename}: duplicate template section`);
   requireCondition(
     Object.keys(topic.sections).length === sectionIds.length &&
-      sectionIds.every(id => Array.isArray(topic.sections[id]) && topic.sections[id].length),
-    `${filename}: sections must match the template and have content`,
+      template.sections.every(({ id, allowEmpty }) => Array.isArray(topic.sections[id]) && (allowEmpty || topic.sections[id].length)),
+    `${filename}: sections must match the template and required sections must have content`,
   );
   for (const { id, requiredBlock } of template.sections) {
     if (requiredBlock) {
@@ -105,6 +105,8 @@ async function loadTopic(filename) {
     mobileLinks: template.mobileLinks ?? [],
     requiredMetricFields: template.requiredMetricFields ?? [],
     requireConsequences: template.requireConsequences ?? false,
+    requireImprovement: template.requireImprovement ?? true,
+    inlineIssueEvidence: template.inlineIssueEvidence ?? false,
   };
 }
 
@@ -113,7 +115,8 @@ async function renderTopic(topic) {
   const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
   const visualIds = listed('visual');
   const issueIds = listed('issues');
-  const inlineIssues = allBlocks.filter(block => block.issues && block.inlineEvidence).flatMap(block => block.issues);
+  const inlineIssues = topic.inlineIssueEvidence ? issueIds :
+    allBlocks.filter(block => block.issues && block.inlineEvidence).flatMap(block => block.issues);
   const chartIds = [...listed('chart'), ...inlineIssues.flatMap(id => topic.issues?.[id]?.charts ?? [])];
   const metricIds = [...listed('metrics'), ...inlineIssues.flatMap(id => topic.issues?.[id]?.metrics ?? [])];
   const improvementIds = listed('improvements');
@@ -125,7 +128,11 @@ async function renderTopic(topic) {
     );
   }
   requireCondition(
-    issueIds.length === improvementIds.length && issueIds.every(id => improvementIds.includes(id)),
+    improvementIds.every(id => issueIds.includes(id)),
+    `${topic.id}: each published improvement needs a published issue`,
+  );
+  requireCondition(
+    !topic.requireImprovement || issueIds.length === improvementIds.length,
     `${topic.id}: each issue needs a published improvement`,
   );
 
@@ -268,12 +275,15 @@ async function renderTopic(topic) {
       const issue = topic.issues[id];
       const step = processLink(issue.step, `issue ${id}`);
       const links = evidenceLinks(issue);
+      const hasResponse = improvementIds.includes(id);
       requireCondition(
-        links || issue.improvement?.evidenceGap?.trim(),
+        links || issue.evidenceGap?.trim() || (hasResponse && issue.improvement?.evidenceGap?.trim()),
         `${topic.id}: issue ${id} needs a figure or an explicit evidence gap`,
       );
       const inline = inlineIssues.includes(id);
-      const fix = `<a href="#improvement-${id}">${inline ? 'See the response and timeline' : 'Response and what to track'}</a>`;
+      const fix = hasResponse
+        ? `<p class="finding-next"><a href="#improvement-${id}">${inline ? 'See the response and timeline' : 'Response and what to track'}</a></p>`
+        : '';
       requireCondition(issue.title?.trim() && issue.text?.trim(), `${topic.id}: issue ${id} needs a title and finding`);
       const consequences = issue.consequences ?? [];
       requireCondition(Array.isArray(consequences) && (!topic.requireConsequences || consequences.length),
@@ -286,16 +296,18 @@ async function renderTopic(topic) {
       const metrics = inline && issue.metrics?.length ? renderMetrics(issue.metrics) : '';
       const charts = inline && issue.charts?.length ? (await Promise.all(issue.charts.map(renderChart))).join('') : '';
       const chartEvidence = charts && issue.chartDisclosure ? disclosure(issue.chartDisclosure, charts) : charts;
-      const progress = inline ? `<p class="finding-measure"><strong>What would show progress.</strong> ${escape(issue.improvement.measure)}</p>` : '';
+      const measure = issue.measure ?? issue.improvement?.measure;
+      requireCondition(!inline || (typeof measure === 'string' && measure.trim()), `${topic.id}: issue ${id} needs a measure of progress`);
+      const progress = inline ? `<p class="finding-measure"><strong>What would show progress.</strong> ${escape(measure)}</p>` : '';
       return `<div class="finding"${inline ? ` id="finding-${id}"` : ''}>
         <h3>${escape(issue.title)}</h3>
         <p class="finding-step">${step}</p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
         ${metrics}
         ${effects.length ? `<div class="consequences"><h4>Why it matters</h4>${effects.join('')}</div>` : ''}
-        ${progress}
+        ${issue.evidenceGap ? `<p class="evidence-gap">${escape(issue.evidenceGap)}</p>` : ''}${progress}
         ${inline ? chartEvidence : links}
-        <p class="finding-next">${fix}</p>
+        ${fix}
       </div>`;
     }));
     return findings.join('');
@@ -304,17 +316,20 @@ async function renderTopic(topic) {
   function renderImprovements(ids) {
     requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: improvements block is empty`);
     return ids.map(id => {
-      const improvement = topic.issues?.[id]?.improvement;
-      for (const field of ['title', 'status', 'measure']) {
+      const issue = topic.issues?.[id];
+      const improvement = issue?.improvement;
+      for (const field of ['title', 'status']) {
         requireCondition(typeof improvement?.[field] === 'string' && improvement[field].trim(), `${topic.id}: improvement ${id} needs ${field}`);
       }
+      const measure = issue.measure ?? improvement.measure;
+      requireCondition(typeof measure === 'string' && measure.trim(), `${topic.id}: improvement ${id} needs a measure of progress`);
       getActor(improvement.owner);
       return `<div class="finding" id="improvement-${id}">
         <h3>${escape(improvement.title)}</h3>
         <p><strong>${escape(actors[improvement.owner])}.</strong> ${escape(improvement.status)} ${citations(improvement.citations)}</p>
         ${inlineIssues.includes(id)
           ? `<p class="finding-next"><a href="#finding-${id}">See how to measure progress</a></p>`
-          : `<p><strong>What to track.</strong> ${escape(improvement.measure)}</p>`}
+          : `<p><strong>What to track.</strong> ${escape(measure)}</p>`}
         ${improvement.evidenceGap ? `<p class="evidence-gap">${escape(improvement.evidenceGap)}</p>` : ''}
       </div>`;
     }).join('');
@@ -338,9 +353,11 @@ async function renderTopic(topic) {
           `${topic.id}: scrutiny exchange ${id} needs ${field}`);
       }
       const step = processLink(exchange.step, `scrutiny exchange ${id}`);
-      const recording = topic.sources[exchange.recording];
-      requireCondition(Object.hasOwn(topic.sources, exchange.recording) && recording.reference?.trim(),
-        `${topic.id}: scrutiny exchange ${id} needs a recording reference`);
+      const recordId = exchange.recording ?? exchange.record;
+      const record = topic.sources[recordId];
+      requireCondition(Object.hasOwn(topic.sources, recordId) && (!exchange.recording || record.reference?.trim()),
+        `${topic.id}: scrutiny exchange ${id} needs a written record or a recording with a timestamp`);
+      const recordLabel = exchange.recording ? `Watch from ${record.reference}` : 'Read the official record';
       const followUp = exchange.followUp;
       if (followUp) {
         requireCondition(followUp.title?.trim() && Array.isArray(followUp.history) && followUp.history.length,
@@ -350,7 +367,8 @@ async function renderTopic(topic) {
             `${topic.id}: invalid follow-up entry for ${id}`);
           requireCondition((index === 0 || followUp.history[index - 1].date <= event.date) && event.date <= topic.reviewed,
             `${topic.id}: follow-up dates for ${id} must be ordered and within the review date`);
-          return `<li>${dateLabel(event.date)} · <strong>${statusLabels[event.status]}</strong>. ${escape(event.text)} ${citations(event.citations)}</li>`;
+          const status = event.status === 'requested' && !exchange.recording ? 'Requested' : statusLabels[event.status];
+          return `<li>${dateLabel(event.date)} · <strong>${status}</strong>. ${escape(event.text)} ${citations(event.citations)}</li>`;
         });
         followUps.push(`<li id="follow-up-${id}"><h4>${escape(followUp.title)}</h4>
           <ol class="follow-up-history">${history.join('')}</ol>
@@ -358,7 +376,7 @@ async function renderTopic(topic) {
       }
       return `<div class="finding" id="scrutiny-${id}">
         <h3>${escape(exchange.question)}</h3>
-        <p class="finding-step">${step} <span aria-hidden="true">·</span> <a href="${escape(recording.url)}">Watch from ${escape(recording.reference)}</a></p>
+        <p class="finding-step">${step} <span aria-hidden="true">·</span> <a href="${escape(record.url)}">${escape(recordLabel)}</a></p>
         <p>${escape(exchange.answer)} ${citations(exchange.citations)}</p>
         <p><strong>What to watch for.</strong> ${escape(exchange.watch)}</p>
         ${evidenceLinks(exchange)}
@@ -367,7 +385,8 @@ async function renderTopic(topic) {
     });
     const tracker = followUps.length ? `<div class="figure follow-ups" id="scrutiny-follow-up">
       <h3>Evidence to follow up</h3><ul>${followUps.join('')}</ul></div>` : '';
-    return tracker + (collapseExchanges ? disclosure('Questions and answers from the hearing', exchanges.join('')) : exchanges.join(''));
+    const summary = typeof collapseExchanges === 'string' ? collapseExchanges : 'Questions and answers from the hearing';
+    return tracker + (collapseExchanges ? disclosure(summary, exchanges.join('')) : exchanges.join(''));
   }
 
   async function renderBlock(block) {
