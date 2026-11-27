@@ -1,0 +1,371 @@
+{
+  "id": "ambulance-handover-delays",
+  "template": "topic-v7",
+  "title": "Why does an ambulance wait outside A&E?",
+  "category": "Health",
+  "scope": "England",
+  "summary": "Follow the patient from arrival at hospital through clinical handover and the crew’s return to service. The same wait can delay care for the patient on board and leave the next caller waiting for an ambulance.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "initial",
+    "winter",
+    "safety"
+  ],
+  "sources": {
+    "initial": {
+      "title": "Guidance for emergency departments: initial assessment",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/guidance-for-emergency-departments-initial-assessment/",
+      "reference": "Clinical responsibility on arrival and locally agreed assessment and handover"
+    },
+    "turnaround": {
+      "title": "NHS Standard Contract 2026/27, service conditions",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/wp-content/uploads/2026/01/03-full-length-service-conditions-2627.pdf",
+      "reference": "Clinical handover and time for the ambulance crew to clear"
+    },
+    "programme": {
+      "title": "Urgent and emergency care plan 2025/26",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/long-read/urgent-and-emergency-care-plan-2025-26/",
+      "reference": "Release to Rescue, planned capacity, hospital flow and the London example"
+    },
+    "winter": {
+      "title": "Winter planning 2026/27, expectations and assurance",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/long-read/winter-planning-2026-27-expectations-and-assurance/",
+      "reference": "2026/27 expectations and responsibilities for managing demand and emergency care"
+    },
+    "monthly": {
+      "title": "Ambulance Quality Indicators, October 2026",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/statistics/wp-content/uploads/sites/2/2026/11/20261112-AQI-Stats-Note-dgf7k.pdf",
+      "date": "2026-11-12",
+      "reference": "Figure 4, mean and 90th percentile of hospital handover time"
+    },
+    "data": {
+      "title": "Ambulance management information",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/statistics/statistical-work-areas/ambulance-quality-indicators/ambulance-management-information/",
+      "reference": "Handover data by receiving trust"
+    },
+    "cqc": {
+      "title": "State of care 2025/26, urgent and emergency care",
+      "publisher": "Care Quality Commission",
+      "url": "https://www.cqc.org.uk/publications/major-report/state-care/2025-2026/secondary/uec",
+      "reference": "Annual handover times, variation between areas and patient flow"
+    },
+    "safety": {
+      "title": "Harm caused by delays in transferring patients to the right place of care",
+      "publisher": "Healthcare Safety Investigation Branch, hosted by HSSIB",
+      "url": "https://www.hssib.org.uk/patient-safety-investigations/harm-caused-by-delays-in-transferring-patients-to-the-right-place-of-care/investigation-report/",
+      "reference": "Investigation of hospital capacity, handovers and a specific serious case"
+    },
+    "finance": {
+      "title": "Department of Health and Social Care annual report and accounts 2025/26",
+      "publisher": "Department of Health and Social Care",
+      "url": "https://assets.publishing.service.gov.uk/media/6b055dcdaa643aef2ee3b575/dhsc-annual-report-and-accounts-2025-2026-print-ready-corrected-23-november.pdf",
+      "reference": "Capital provided across the urgent and emergency care programme"
+    },
+    "parliament": {
+      "title": "Ambulance services: waiting lists",
+      "publisher": "Department of Health and Social Care, answer to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36854",
+      "reference": "Handover data and the winter standard in England"
+    }
+  },
+  "actors": {
+    "ambulance-trusts": {
+      "role": "Transport and care for the patient, communicate clinical information and return the crew to service after handover.",
+      "citations": [
+        "initial",
+        "turnaround"
+      ]
+    },
+    "acute-trusts": {
+      "role": "Are responsible for clinical assessment and treatment once an ambulance arrives at the department and organise how handover is completed.",
+      "citations": [
+        "initial",
+        "winter"
+      ]
+    },
+    "nhs-england": {
+      "role": "Sets national expectations and publishes handover, response time and trust-level information.",
+      "citations": [
+        "winter",
+        "monthly",
+        "data"
+      ]
+    },
+    "cqc": {
+      "role": "Assesses quality and safety across ambulance and emergency care services.",
+      "citations": [
+        "cqc"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From hospital arrival to a crew ready for the next call",
+      "steps": [
+        {
+          "id": "arrive",
+          "label": "Arrive at the emergency department",
+          "actors": [
+            "ambulance-trusts",
+            "acute-trusts"
+          ],
+          "text": "The crew identifies the patient and communicates immediate risk. The hospital is responsible for clinical assessment and treatment from arrival at the department. Some patients have already been flagged to a specialist team before arrival.",
+          "citations": [
+            "initial"
+          ]
+        },
+        {
+          "id": "handover",
+          "label": "Transfer the patient and clinical information",
+          "actors": [
+            "ambulance-trusts",
+            "acute-trusts"
+          ],
+          "text": "The crew hands over the patient and relevant clinical details. Local processes should make that transfer possible promptly. Winter guidance expects handover within 15 minutes, with none exceeding 45 minutes.",
+          "citations": [
+            "initial",
+            "winter",
+            "parliament"
+          ]
+        },
+        {
+          "id": "flow",
+          "label": "Find a safe space and continue care",
+          "actors": [
+            "acute-trusts",
+            "nhs-england"
+          ],
+          "text": "Crowded departments and delayed transfers to wards can leave staff and space unavailable for incoming patients. The Release to Rescue approach asks hospitals to escalate delays so that a crew can transfer the patient and return to the road.",
+          "citations": [
+            "safety",
+            "programme",
+            "winter"
+          ],
+          "note": {
+            "heading": "Why the queue can begin farther inside the hospital",
+            "text": "Occupied beds, delayed discharge and reduced movement through wards can block new admissions from A&E. Pressure then reaches the handover point even when the ambulance trip itself was quick.",
+            "citations": [
+              "safety",
+              "cqc"
+            ]
+          }
+        },
+        {
+          "id": "clear",
+          "label": "Get the crew ready for another call",
+          "actors": [
+            "ambulance-trusts"
+          ],
+          "text": "The crew prepares its vehicle and becomes available again. The contract treats this as a separate interval and expects crews to be ready for new calls within 15 minutes of clinical handover.",
+          "citations": [
+            "turnaround"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "within-45": {
+      "type": "rates",
+      "title": "Ambulance handovers completed within 45 minutes",
+      "description": "The England share was 87.6%, with a wide spread between local areas.",
+      "note": "The best and lowest areas are the extremes of the CQC integrated care board comparison. The England total is calculated across handovers, with no averaging of the two extremes.",
+      "citations": [
+        "cqc"
+      ],
+      "data": "ambulance-handover-delays-within-45.json"
+    }
+  },
+  "issues": {
+    "hospital-queue": {
+      "title": "A national average obscures long waits and local variation",
+      "step": {
+        "visual": "process",
+        "id": "handover"
+      },
+      "text": "CQC reported that the England annual mean fell from 34 minutes 57 seconds in 2024/25 to 29 minutes 52 seconds in 2025/26. In that latest financial year, 87.6% of handovers were within 45 minutes. The proportion varied widely by integrated care board area.",
+      "citations": [
+        "cqc"
+      ],
+      "consequences": [
+        {
+          "text": "Safety investigators examined the case of a patient they called Kim, who received care in an ambulance for 163 minutes before being admitted directly to intensive care because the emergency department was full. The investigation used her case to trace how a wait can delay access to hospital care.",
+          "citations": [
+            "safety",
+            "initial"
+          ]
+        }
+      ],
+      "measure": "Follow the median, 90th percentile and the share beyond 45 minutes at each receiving hospital. Check whether people received initial assessment and treatment while waiting.",
+      "charts": [
+        "within-45"
+      ]
+    },
+    "ambulance-availability": {
+      "title": "The wait can remove an ambulance from circulation",
+      "step": {
+        "visual": "process",
+        "id": "clear"
+      },
+      "text": "A crew waiting at the hospital cannot take another call. The handover timer and the post-handover time to make the crew available measure two different stages.",
+      "citations": [
+        "safety",
+        "turnaround",
+        "monthly"
+      ],
+      "consequences": [
+        {
+          "text": "The safety investigation identified knock-on delays for callers as well as for patients at hospital. Several factors influence response time, including demand and where other ambulances are available.",
+          "citations": [
+            "safety",
+            "monthly"
+          ]
+        }
+      ],
+      "measure": "Track crew hours lost, time from handover to availability and 999 response times by urgency and time of day alongside the improvements made at the hospital.",
+      "evidenceGap": "Published handover and response series cannot identify every extra minute of 999 waiting attributable to hospital delays."
+    }
+  },
+  "scrutiny": {
+    "winter-answer": {
+      "step": {
+        "visual": "process",
+        "id": "handover"
+      },
+      "question": "What standard are hospitals expected to meet this winter?",
+      "record": "parliament",
+      "answer": "In a written answer the health department identified its national and trust-level data sources and repeated the winter expectation of handovers within 15 minutes, with none exceeding 45 minutes.",
+      "citations": [
+        "parliament",
+        "winter",
+        "data"
+      ],
+      "watch": "Compare the share over 45 minutes and the slowest handovers with the stated expectation. Check which trusts account for the remaining delays."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The handover",
+            "text": "The hospital is responsible for assessment and treatment from arrival. The winter expectation is a handover within 15 minutes, with none beyond 45.",
+            "citations": [
+              "initial",
+              "winter",
+              "parliament"
+            ]
+          },
+          {
+            "label": "The wait",
+            "text": "In October 2026 the average handover time in England was 32 minutes and 11 seconds. At the 90th percentile it was 1 hour, 8 minutes and 30 seconds.",
+            "citations": [
+              "monthly"
+            ]
+          },
+          {
+            "label": "The effect",
+            "text": "While the crew waits to hand over, the patient can wait longer for treatment and the crew is unavailable for its next call.",
+            "citations": [
+              "safety",
+              "cqc"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "ambulance-trusts",
+                "acute-trusts",
+                "nhs-england",
+                "cqc"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "hospital-queue",
+          "ambulance-availability"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "A faster handover is one part of safer care",
+        "text": "The mean improved between the two financial years, while October 2026 showed the slowest mean and 90th percentile since January. Those are different reporting windows. A stronger evaluation would follow changes in time to assessment, treatment and harm reports for comparable patients alongside handover times.",
+        "citations": [
+          "cqc",
+          "monthly",
+          "safety"
+        ]
+      },
+      {
+        "heading": "Check both people waiting",
+        "text": "A policy can free crews earlier. A review should also check where patients wait after transfer, whether hospital staff can assess them promptly and whether the time to reach the next urgent caller improves.",
+        "citations": [
+          "programme",
+          "initial",
+          "safety"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Funding and staff time",
+        "text": "DHSC reported more than £450 million of capital investment across the 2025/26 urgent and emergency care programme. That wider package supports capacity and includes work beyond ambulance handovers. A handover also uses the time of staff already on duty at the ambulance trust and hospital.",
+        "citations": [
+          "finance",
+          "programme",
+          "turnaround"
+        ]
+      },
+      {
+        "heading": "Measure the cost of recovering capacity",
+        "text": "Compare investment and operating costs with hours crews are released sooner and care patients receive sooner. Include costs for hospital staff and space, so a shorter handover clock can be assessed alongside pressures elsewhere in the department.",
+        "citations": [
+          "programme",
+          "safety",
+          "cqc"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Check the winter standard against the local distribution",
+        "text": "Compare monthly handovers and 999 response times through winter with the same months a year earlier. Track hospitals with persistently long waits and check where patients receive timely care during escalation.",
+        "citations": [
+          "winter",
+          "monthly",
+          "data",
+          "safety"
+        ]
+      },
+      {
+        "scrutiny": [
+          "winter-answer"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": []
+  }
+}

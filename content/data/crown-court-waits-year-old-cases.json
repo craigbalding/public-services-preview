@@ -1,0 +1,27 @@
+{
+  "dateHeading": "Quarter end",
+  "valueHeading": "Open cases at least a year old",
+  "segments": [
+    {
+      "label": "Cases open for a year or more",
+      "definition": "A point-in-time count of the older cases, with no implied outcome for the people involved.",
+      "citations": [
+        "statistics"
+      ],
+      "points": [
+        [
+          "2025-06-30",
+          19384
+        ],
+        [
+          "2026-03-31",
+          22572
+        ],
+        [
+          "2026-06-30",
+          23706
+        ]
+      ]
+    }
+  ]
+}

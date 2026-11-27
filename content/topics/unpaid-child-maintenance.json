@@ -1,0 +1,422 @@
+{
+  "id": "unpaid-child-maintenance",
+  "template": "topic-v7",
+  "title": "What happens when child maintenance goes unpaid?",
+  "category": "Family support",
+  "scope": "Great Britain",
+  "summary": "Follow a missed payment from Direct Pay to collection and enforcement. See what the Child Maintenance Service knows about unpaid amounts and when the money reaches the receiving parent.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "payments",
+    "statistics",
+    "audit"
+  ],
+  "sources": {
+    "payments": {
+      "title": "Child Maintenance Service: making and receiving payments",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/child-maintenance-service/payments",
+      "reference": "Direct Pay, reporting shortfalls and moving to Collect and Pay"
+    },
+    "calculation": {
+      "title": "How we work out child maintenance",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/how-we-work-out-child-maintenance/how-we-work-out-child-maintenance",
+      "reference": "Calculation, fees and payment service types"
+    },
+    "fees": {
+      "title": "Paying through the Child Maintenance Service",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/guidance/child-maintenance-paying-through-the-child-maintenance-service",
+      "reference": "Current collection fees and repayment routes"
+    },
+    "statistics": {
+      "title": "Child Maintenance Service statistics to June 2026",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/statistics/child-maintenance-service-statistics-data-to-june-2026/child-maintenance-service-statistics-data-to-june-2026",
+      "date": "2026-09-29",
+      "reference": "Great Britain. Table 4 payment amounts, table 5 arrears and table 6 enforcement"
+    },
+    "method": {
+      "title": "Child Maintenance Service statistics methodology",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/child-maintenance-service-2012-scheme-experimental-statistics-background-information-and-methodology/child-maintenance-service-statistics-background-information-and-methodology",
+      "reference": "Compliance definitions, Great Britain coverage, publication changes and enforcement categories"
+    },
+    "audit": {
+      "title": "Child maintenance",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2022/03/Child-Maintenance.pdf",
+      "reference": "Direct Pay weaknesses, arrears and paragraph 3.2 on administration costs"
+    },
+    "reform": {
+      "title": "Improving the collection and transfer of payments, government response",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/consultations/child-maintenance-improving-the-collection-and-transfer-of-payments/outcome/government-response-child-maintenance-improving-the-collection-and-transfer-of-payments",
+      "reference": "Proposal to replace Direct Pay, research with parents and fee changes"
+    },
+    "enforcement": {
+      "title": "Child maintenance enforcement, written answer",
+      "publisher": "Department for Work and Pensions, answer to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24604/",
+      "date": "2026-09-15",
+      "reference": "Use of enforcement powers and amount collected in the year to March 2026"
+    },
+    "timetable": {
+      "title": "When will Direct Pay be replaced?",
+      "publisher": "Department for Work and Pensions, answer to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35872/",
+      "date": "2026-10-27",
+      "reference": "Primary legislation needed and timing dependent on parliamentary time"
+    },
+    "latest": {
+      "title": "Child Maintenance Service reform, written answer",
+      "publisher": "Department for Work and Pensions, answer to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/902181/",
+      "date": "2026-11-23",
+      "reference": "Single service, planned fees and enforcement changes"
+    }
+  },
+  "actors": {
+    "paying-parents": {
+      "role": "Pay the amount due under the maintenance calculation and report relevant changes.",
+      "citations": [
+        "calculation",
+        "payments"
+      ]
+    },
+    "receiving-parents": {
+      "role": "Receive maintenance and can flag missed or short Direct Pay payments to the service.",
+      "citations": [
+        "payments",
+        "reform"
+      ]
+    },
+    "cms": {
+      "role": "Calculates amounts, arranges the payment method, handles arrears and can enforce payment.",
+      "citations": [
+        "payments",
+        "method",
+        "enforcement"
+      ]
+    },
+    "dwp": {
+      "role": "Runs the service and is developing the proposed move to a single monitored payment route.",
+      "citations": [
+        "statistics",
+        "reform",
+        "latest"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From a missed payment to money reaching the family",
+      "steps": [
+        {
+          "id": "calculate",
+          "label": "Calculate what is due and arrange payment",
+          "actors": [
+            "cms",
+            "paying-parents",
+            "receiving-parents"
+          ],
+          "text": "The Child Maintenance Service calculates how much is due. On Direct Pay, the parents transfer the money between themselves. Under Collect and Pay, the service collects and passes on the payment.",
+          "citations": [
+            "calculation",
+            "payments"
+          ]
+        },
+        {
+          "id": "report",
+          "label": "Report the missed or short payment",
+          "actors": [
+            "receiving-parents",
+            "cms"
+          ],
+          "text": "With Direct Pay, the receiving parent can tell the service about missed payments. CMS can check what was paid and change the case to Collect and Pay where payment is not made in full and on time.",
+          "citations": [
+            "payments",
+            "reform"
+          ],
+          "note": {
+            "heading": "Why a missed Direct Pay payment can remain hidden",
+            "text": "The service sets the amount but does not routinely monitor transfers between parents. It relies on a parent raising a problem before it can investigate compliance.",
+            "citations": [
+              "statistics",
+              "audit",
+              "reform"
+            ]
+          }
+        },
+        {
+          "id": "collect",
+          "label": "Collect payments and consider enforcement",
+          "actors": [
+            "cms",
+            "paying-parents"
+          ],
+          "text": "CMS can collect regular payments, including through deductions from wages or benefits. Enforcement for arrears can include deductions from accounts or, where appropriate, civil action. The action depends on the circumstances and what is likely to recover the money.",
+          "citations": [
+            "method",
+            "enforcement",
+            "statistics"
+          ]
+        },
+        {
+          "id": "transfer",
+          "label": "Pass on the money and review arrears",
+          "actors": [
+            "cms",
+            "receiving-parents"
+          ],
+          "text": "Under Collect and Pay the service transfers collected maintenance to the receiving parent after the applicable fee. Some payments cover new maintenance and others reduce older arrears. A missed current payment can add to the balance while older debt is being recovered.",
+          "citations": [
+            "payments",
+            "fees",
+            "statistics"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "payment-coverage": {
+      "type": "rates",
+      "title": "How much paying parents paid through Collect and Pay",
+      "description": "The largest group paid more than 90% of what was due. Almost a quarter paid nothing.",
+      "note": "Denominator is paying parents due to pay through Collect and Pay that quarter. The categories are from DWP and are rounded. The top category includes partial payments above 90%.",
+      "citations": [
+        "statistics",
+        "method"
+      ],
+      "data": "unpaid-child-maintenance-payment-coverage.json"
+    }
+  },
+  "issues": {
+    "blind-spot": {
+      "title": "A parent can report a missed payment long after arrears begin",
+      "step": {
+        "visual": "process",
+        "id": "report"
+      },
+      "text": "DWP arranged £306.0 million through Direct Pay in the June 2026 quarter. It does not measure compliance on that service. Its consultation response says the process of reporting and evidencing missed payments can impede a move to Collect and Pay.",
+      "citations": [
+        "statistics",
+        "reform"
+      ],
+      "consequences": [
+        {
+          "text": "The National Audit Office found that in the September 2021 quarter, paying parents switching from Direct Pay to Collect and Pay owed £1,100 on average. This describes that historical group, while DWP also identifies the risks of requiring parents experiencing abuse to raise missed payments themselves.",
+          "citations": [
+            "audit",
+            "reform"
+          ]
+        }
+      ],
+      "measure": "Measure time from the first missed payment to identification, transfer to collection and the first payment the receiving parent can use.",
+      "evidenceGap": "Amounts arranged through Direct Pay are published. The share of those payments that are actually made on time and in full remains unmeasured in routine statistics."
+    },
+    "partial-payment": {
+      "title": "Making a payment can still leave most or some of the bill unpaid",
+      "step": {
+        "visual": "process",
+        "id": "collect"
+      },
+      "text": "In the quarter to June 2026, 77% of paying parents due to pay through Collect and Pay paid something, including 53% who paid more than 90% of the maintenance due. The parent-based figures and the amount paid answer different questions.",
+      "citations": [
+        "statistics",
+        "method"
+      ],
+      "consequences": [
+        {
+          "text": "A household can still face a shortfall when some payment is recorded. The published amount due through Collect and Pay increased by 14% between the years to June 2025 and June 2026, so separate the amount due from the share reaching families.",
+          "citations": [
+            "statistics"
+          ]
+        }
+      ],
+      "measure": "Publish on-time and full payment by arrangement alongside money recovered from older arrears. Follow households from the first missed payment and measure the size and duration of the shortfall.",
+      "charts": [
+        "payment-coverage"
+      ]
+    }
+  },
+  "scrutiny": {
+    "direct-pay-timetable": {
+      "step": {
+        "visual": "process",
+        "id": "report"
+      },
+      "question": "When will Parliament see legislation replacing Direct Pay?",
+      "record": "timetable",
+      "answer": "An October question asked for a timeframe. DWP said primary legislation was needed and timing depended on parliamentary time. On 23 November ministers reaffirmed the proposal and described planned fee and enforcement changes.",
+      "citations": [
+        "timetable",
+        "latest"
+      ],
+      "watch": "Look for the bill, commencement and the timetable for transferring existing arrangements. Follow how officials will monitor payment and protect families experiencing domestic abuse.",
+      "followUp": {
+        "title": "Timetable for replacing Direct Pay",
+        "history": [
+          {
+            "date": "2026-10-19",
+            "status": "requested",
+            "text": "An MP asked for a timeframe for legislating on a single monitored payment service.",
+            "citations": [
+              "timetable"
+            ]
+          },
+          {
+            "date": "2026-10-27",
+            "status": "partial",
+            "text": "The department confirmed it needs primary legislation and gave no date.",
+            "citations": [
+              "timetable"
+            ]
+          },
+          {
+            "date": "2026-11-23",
+            "status": "partial",
+            "text": "The department reaffirmed the proposal and described further reforms. A legislative date remained unconfirmed.",
+            "citations": [
+              "latest",
+              "timetable"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Spotting a missed payment",
+            "text": "The service calculates Direct Pay maintenance, but the money moves between parents. If something is missing, a parent may need to tell CMS.",
+            "citations": [
+              "payments",
+              "reform"
+            ]
+          },
+          {
+            "label": "How much is paid",
+            "text": "Of £117.7 million due through Collect and Pay in the quarter to June 2026, DWP recorded £89.0 million paid and £28.7 million unpaid.",
+            "citations": [
+              "statistics"
+            ]
+          },
+          {
+            "label": "The planned change",
+            "text": "Ministers intend to move to one service where CMS monitors and transfers payments. They say it requires primary legislation.",
+            "citations": [
+              "latest",
+              "timetable"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "paying-parents",
+                "receiving-parents",
+                "cms",
+                "dwp"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "blind-spot",
+          "partial-payment"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Compare enforcement activity with actual payment",
+        "text": "In September 2026 DWP told Parliament that £231 million was collected through enforcement in the year ending March 2026. The department’s national tables also show that £28.7 million of maintenance due through Collect and Pay remained unpaid in the June quarter. The periods and measures differ. A comparison of enforcement methods would need to track collection and sustained payment from similar starting balances.",
+        "citations": [
+          "enforcement",
+          "statistics",
+          "method"
+        ]
+      },
+      {
+        "heading": "What changed in the payment trend",
+        "text": "The share of paying parents paying something rose five percentage points between the March and September 2025 quarters. DWP points to a change that moved child maintenance to the top of the Universal Credit deduction order. The share was 77% in both the March and June 2026 quarters. To judge the result, also track how much reached receiving parents and how long it took.",
+        "citations": [
+          "statistics"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Current fees come from both sides of a Collect and Pay transfer",
+        "text": "The paying parent is charged 20% on top of the maintenance collected and the receiving parent has 4% deducted. Direct Pay has no collection fees. The government’s proposed single service has a different fee structure, subject to legislation.",
+        "citations": [
+          "fees",
+          "calculation",
+          "reform",
+          "timetable"
+        ]
+      },
+      {
+        "heading": "Public spending and the amount collected",
+        "text": "The National Audit Office estimated a gross annual cost of £365 million to administer child maintenance in 2020/21. That historical administration cost covers a different scope from fees and money passing between parents. Compare the cost of reform with administrative time saved, payments reaching families and recovery of old debt.",
+        "citations": [
+          "audit",
+          "reform",
+          "statistics"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Measure what the single service changes",
+        "text": "Set a baseline for how often payments arrive on time, how quickly CMS detects missed payments and how long recovery takes. Keep the effects of any change in fees visible to parents.",
+        "citations": [
+          "reform",
+          "statistics",
+          "latest"
+        ]
+      },
+      {
+        "scrutiny": [
+          "direct-pay-timetable"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "Three ways of counting payment",
+          "blocks": [
+            {
+              "text": "DWP counts parents who paid something, the amount paid toward money due that quarter, and an accumulated unpaid balance. The last measure changed method from the December 2024 quarter. Check the statistics and their methodology before comparing older arrears totals.",
+              "citations": [
+                "statistics",
+                "method"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

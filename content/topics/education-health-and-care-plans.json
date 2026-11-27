@@ -1,0 +1,422 @@
+{
+  "id": "education-health-and-care-plans",
+  "template": "topic-v7",
+  "title": "How long does it take a child to get an education, health and care plan?",
+  "category": "Education",
+  "scope": "England",
+  "summary": "Follow a request for an education, health and care plan from assessment to support in school. See how many plans miss the 20-week deadline and how to tell whether issuing a plan changes what a child receives.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "guide",
+    "stats",
+    "law"
+  ],
+  "sources": {
+    "guide": {
+      "title": "Children with special educational needs and disabilities: extra help",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/children-with-special-educational-needs/extra-SEN-help",
+      "reference": "Requests, assessments, draft plans and appeal rights"
+    },
+    "rules": {
+      "title": "Special Educational Needs and Disability Regulations 2014",
+      "publisher": "UK legislation",
+      "url": "https://www.legislation.gov.uk/uksi/2014/1530/part/2",
+      "reference": "Assessment, drafting and time limits, including exceptions"
+    },
+    "law": {
+      "title": "Children and Families Act 2014, part 3",
+      "publisher": "UK legislation",
+      "url": "https://www.legislation.gov.uk/ukpga/2014/6/part/3",
+      "reference": "Sections 42 and 44, duty to secure provision and review plans"
+    },
+    "stats": {
+      "title": "Education, health and care plans in England, 2026",
+      "publisher": "Department for Education",
+      "url": "https://explore-education-statistics.service.gov.uk/find-statistics/education-health-and-care-plans/2026",
+      "date": "2026-06-25",
+      "reference": "Headlines and the timeliness section, with local-authority tables"
+    },
+    "audit": {
+      "title": "Support for children and young people with special educational needs",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/reports/support-for-children-and-young-people-with-special-educational-needs/",
+      "date": "2024-10-24",
+      "reference": "High-needs funding, demand, outcomes and system oversight"
+    },
+    "case": {
+      "title": "Complaint 25 015 472",
+      "publisher": "Local Government and Social Care Ombudsman",
+      "url": "https://www.lgo.org.uk/decisions/education/special-educational-needs/25-015-472",
+      "date": "2026-09-01",
+      "reference": "Final decision on delays, appeal rights and missed education"
+    },
+    "case-copy": {
+      "title": "Warwickshire County Council, complaint 25-015-472",
+      "publisher": "The Accountability Index",
+      "url": "https://www.accountabilityindex.uk/sources/lgo/decisions/lgo-25-015-472-warwickshire-county-council/",
+      "reference": "Copy of the Ombudsman’s decision"
+    },
+    "funding": {
+      "title": "High needs funding, 2026 to 2027 operational guide",
+      "publisher": "Department for Education",
+      "url": "https://www.gov.uk/government/publications/high-needs-funding-arrangements-2026-to-2027/high-needs-funding-2026-to-2027-operational-guide",
+      "reference": "Dedicated Schools Grant high-needs block and reform funding"
+    },
+    "response": {
+      "title": "Government’s response on SEND reform",
+      "publisher": "House of Commons Education Committee",
+      "url": "https://committees.parliament.uk/committee/203/education-committee/news/214345/governments-response-on-send-reform-published-by-education-committee/",
+      "date": "2026-06-17",
+      "reference": "Government response to the Committee’s September 2025 report"
+    },
+    "debate": {
+      "title": "MPs will debate a petition on the legal right to SEND support",
+      "publisher": "House of Commons Petitions Committee",
+      "url": "https://committees.parliament.uk/committee/326/petitions-committee/news/219167/",
+      "date": "2026-11-25",
+      "reference": "30 November 2026 debate and the government’s June reply to the petition"
+    }
+  },
+  "actors": {
+    "families": {
+      "role": "Request assessment, provide evidence and comment on the draft. Parents and young people can challenge certain decisions.",
+      "citations": [
+        "guide",
+        "rules"
+      ]
+    },
+    "local-councils": {
+      "role": "Decide whether to assess and issue a plan, secure the special educational provision and review the plan.",
+      "citations": [
+        "rules",
+        "law"
+      ]
+    },
+    "schools": {
+      "role": "Contribute evidence and deliver agreed provision. The council remains responsible for securing the educational provision specified in the plan.",
+      "citations": [
+        "guide",
+        "law"
+      ]
+    },
+    "send-tribunal": {
+      "role": "Hears eligible appeals about refusals, the plan’s educational contents and placements.",
+      "citations": [
+        "guide",
+        "law"
+      ]
+    },
+    "department-for-education": {
+      "role": "Sets the national funding framework and publishes activity and timeliness for councils.",
+      "citations": [
+        "funding",
+        "stats"
+      ]
+    },
+    "education-committee": {
+      "role": "Examines how the government’s SEND proposals would affect services and families.",
+      "citations": ["response"]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From an assessment request to support",
+      "steps": [
+        {
+          "id": "request",
+          "label": "Request an assessment",
+          "actors": [
+            "families",
+            "local-councils"
+          ],
+          "text": "A parent, young person or someone acting for a school can ask the council for an education, health and care needs assessment. The council must normally decide whether to assess within six weeks.",
+          "citations": [
+            "guide",
+            "rules"
+          ]
+        },
+        {
+          "id": "assess",
+          "label": "Gather evidence and decide whether a plan is needed",
+          "actors": [
+            "local-councils",
+            "schools"
+          ],
+          "text": "The council gathers advice from the family, education, health and other professionals. If the council decides a plan is unnecessary after assessment, it must normally notify the family by week 16. A refusal to assess or issue can be appealed.",
+          "citations": [
+            "guide",
+            "rules"
+          ]
+        },
+        {
+          "id": "issue",
+          "label": "Consult on a draft and issue the plan",
+          "actors": [
+            "families",
+            "local-councils"
+          ],
+          "text": "The family has at least 15 days to comment on a draft and can ask for a particular school or college. Where a plan is made, the council normally has 20 weeks from the request to send the final plan, subject to statutory exceptions.",
+          "citations": [
+            "guide",
+            "rules"
+          ],
+          "note": {
+            "heading": "Why the plan matters",
+            "text": "It specifies the child’s needs, the provision to be secured and the intended outcomes. It gives the family a decision they can challenge.",
+            "citations": [
+              "guide",
+              "law"
+            ]
+          }
+        },
+        {
+          "id": "deliver",
+          "label": "Secure the support and review it",
+          "actors": [
+            "local-councils",
+            "schools",
+            "send-tribunal"
+          ],
+          "text": "The council must generally secure the special educational provision and the responsible health body must arrange the health care specified in the plan. Plans are generally reviewed at least every 12 months. The tribunal can hear eligible disputes about educational provision and placement.",
+          "citations": [
+            "law",
+            "guide"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "long-waits": {
+      "type": "rates",
+      "title": "Share of new plans taking more than a year",
+      "description": "The longest waits became more common between 2023 and 2025.",
+      "note": "England. DfE’s decision-year cohort for new plans, excluding statutory exceptions and requests or decisions to assess subject to mediation or tribunal. The denominator is eligible plans in the timeliness measure.",
+      "citations": [
+        "stats"
+      ],
+      "data": "education-health-and-care-plans-long-waits.json"
+    }
+  },
+  "issues": {
+    "long-waits": {
+      "title": "More plans are taking over a year",
+      "step": {
+        "visual": "process",
+        "id": "issue"
+      },
+      "text": "The on-time share barely changed from 46.4% in 2024 to 46.1% in 2025. Over the same period the share taking more than a year increased from 7.3% to 10.3%. DfE reports this measure by local authority and by type of need.",
+      "citations": [
+        "stats"
+      ],
+      "consequences": [
+        {
+          "text": "In September 2026 the Ombudsman found that Warwickshire County Council’s delays postponed a parent’s right to appeal and the child missed about one and a half terms of education. The council agreed to apologise, pay £2,700 and review how it considered alternative provision.",
+          "citations": [
+            "case"
+          ]
+        }
+      ],
+      "measure": "Compare the age of requests still open and the time taken at each stage. Include the waits beyond a year and record the reason when a statutory exception applies.",
+      "charts": [
+        "long-waits"
+      ]
+    },
+    "missing-support": {
+      "title": "A final plan can still leave a child waiting for support",
+      "step": {
+        "visual": "process",
+        "id": "deliver"
+      },
+      "text": "The council’s duty continues after it sends the plan. The issue date is a clear milestone in the national data. It tells families little about when therapy, specialist teaching or an agreed placement starts.",
+      "citations": [
+        "law",
+        "stats",
+        "audit"
+      ],
+      "consequences": [
+        {
+          "text": "The Ombudsman case shows that delayed decisions and missed provision can coexist. An appeal addresses eligible decisions or plan content. A complaint about administration or provision may follow a different route.",
+          "citations": [
+            "case",
+            "guide"
+          ]
+        }
+      ],
+      "measure": "Record the start date and missed hours of each specified service, and track how promptly an annual review or a complaint puts missing provision right.",
+      "evidenceGap": "The DfE timeliness return does not measure delivery of the provision in each child’s plan."
+    }
+  },
+  "scrutiny": {
+    "legal-rights": {
+      "step": {
+        "visual": "process",
+        "id": "deliver"
+      },
+      "question": "What legal rights will children and families have under the proposed reforms?",
+      "record": "response",
+      "answer": "The Education Committee published the government’s response to its SEND reform recommendations on 17 June 2026. The government subsequently told petitioners it intended to retain statutory support through plans for children with complex needs. Parliament scheduled a petition debate for 30 November 2026.",
+      "citations": [
+        "response",
+        "debate"
+      ],
+      "watch": "Read the debate and any subsequent bill for the scope of the duty, how existing plans are handled and the remedy when a school or council fails to secure support."
+    },
+    "warwickshire-remedy": {
+      "step": {
+        "visual": "process",
+        "id": "deliver"
+      },
+      "question": "What remedy did the council agree after a child missed education?",
+      "record": "case",
+      "answer": "The Ombudsman asked Warwickshire County Council to provide evidence of an apology, a £2,700 payment and an action plan on alternative education within two months of its decision. The council agreed the actions.",
+      "citations": ["case", "case-copy"],
+      "watch": "Look for evidence of compliance and of a change to how the council decides whether to arrange alternative education.",
+      "followUp": {
+        "title": "Warwickshire’s agreed remedy",
+        "history": [
+          {
+            "date": "2026-09-01",
+            "status": "promised",
+            "text": "The council agreed to the actions the Ombudsman specified, with a two-month deadline from the decision.",
+            "citations": ["case"]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The deadline",
+            "text": "The council normally has 20 weeks from an assessment request to issue a final education, health and care plan if one is needed.",
+            "citations": [
+              "guide",
+              "rules"
+            ]
+          },
+          {
+            "label": "The wait",
+            "text": "In 2025, 46.1% of new plans covered by the timeliness measure were issued within 20 weeks. The share taking more than a year rose to 10.3%.",
+            "citations": [
+              "stats"
+            ]
+          },
+          {
+            "label": "The result",
+            "text": "Families need the specified support to start. A plan issue date gives one milestone. A separate check is whether the child received the provision it set out.",
+            "citations": [
+              "law",
+              "case"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "families",
+                "local-councils",
+                "schools",
+                "send-tribunal",
+                "department-for-education",
+                "education-committee"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "long-waits",
+          "missing-support"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Measure the child’s support after the plan is issued",
+        "text": "DfE reported 718,838 active EHC plans in January 2026, 12.5% more than a year earlier. That total describes the scale of the system. Outreach, therapy or a school place can begin on different dates, so a useful outcome check would show delivery against each child’s plan and whether attendance or participation improved.",
+        "citations": [
+          "stats",
+          "law",
+          "audit"
+        ]
+      },
+      {
+        "heading": "What a complaint can establish",
+        "text": "The Ombudsman can investigate certain failures in administration or delivery. Its decision on one child is evidence of a specific missed service. Council-level rates of late plans and verified missed support would show how common those failures are.",
+        "citations": [
+          "case",
+          "stats"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "High-needs funding and reform",
+        "text": "The National Audit Office put the 2024/25 high-needs budget at £10.7 billion. This funds more than assessment and plan-writing. The DfE funding guide separately describes £4 billion of additional reform funding over three years from 2026/27 for schools and local authorities. Both figures have wider scope than an individual EHC plan.",
+        "citations": [
+          "audit",
+          "funding"
+        ]
+      },
+      {
+        "heading": "Follow the cost across the handoff",
+        "text": "Separate the council’s cost of assessment from the continuing cost of education, placement and any health provision. Compare the cost of securing those services with delivered support, particularly where delays require interim provision.",
+        "citations": [
+          "audit",
+          "law",
+          "case"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Check the deadline and the support it is meant to unlock",
+        "text": "Compare the next DfE data with 2025, including the share waiting more than a year. For reform proposals, check which legal duties and appeal routes continue and how delivery at school will be verified.",
+        "citations": [
+          "stats",
+          "response",
+          "debate"
+        ]
+      },
+      {
+        "scrutiny": [
+          "legal-rights",
+          "warwickshire-remedy"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "How the 20-week figure is measured",
+          "blocks": [
+            {
+              "text": "DfE groups plans by the year the decision to issue was made. Its clock ends when the final plan is sent. The dataset excludes statutory exceptions and some cases involving mediation or the tribunal. A separate view of open requests is needed to see children still waiting.",
+              "citations": [
+                "stats",
+                "rules"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

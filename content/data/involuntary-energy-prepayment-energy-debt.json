@@ -1,0 +1,28 @@
+{
+  "dateHeading": "Quarter end",
+  "valueHeading": "£ million",
+  "segments": [
+    {
+      "label": "Gas and electricity debt and arrears",
+      "definition": "Amounts reported in billions by Ofgem and expressed as £ million in the chart.",
+      "citations": [
+        "debt",
+        "prior_debt"
+      ],
+      "points": [
+        [
+          "2025-06-30",
+          4430
+        ],
+        [
+          "2026-03-31",
+          4790
+        ],
+        [
+          "2026-06-30",
+          5020
+        ]
+      ]
+    }
+  ]
+}

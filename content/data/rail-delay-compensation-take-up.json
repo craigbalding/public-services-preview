@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Survey year",
+  "unit": "Percent",
+  "period": "Great Britain, DfT survey waves",
+  "series": [
+    {
+      "label": "2020",
+      "value": 46
+    },
+    {
+      "label": "2023",
+      "value": 54
+    },
+    {
+      "label": "2025",
+      "value": 51
+    }
+  ]
+}

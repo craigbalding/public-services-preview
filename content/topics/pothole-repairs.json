@@ -1,0 +1,389 @@
+{
+  "id": "pothole-repairs",
+  "template": "topic-v7",
+  "title": "What happens after you report a pothole?",
+  "category": "Local infrastructure",
+  "scope": "England",
+  "summary": "Follow a pothole report from the right highway authority to inspection, risk assessment and repair. Then check whether more repair work is improving the condition of local roads.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "report",
+    "kent",
+    "condition"
+  ],
+  "sources": {
+    "report": {
+      "title": "Report a pothole",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/report-pothole",
+      "reference": "Find the authority responsible for a road"
+    },
+    "kent": {
+      "title": "What happens after you report a pothole",
+      "publisher": "Kent County Council",
+      "url": "https://www.kent.gov.uk/roads-and-travel/what-we-look-after/roads/potholes/what-happens-after-you-report-a-pothole",
+      "reference": "Local inspection, priority times and temporary repairs"
+    },
+    "southwark": {
+      "title": "Potholes and road problems",
+      "publisher": "Southwark Council",
+      "url": "https://www.southwark.gov.uk/parking-streets-and-transport/street-care/potholes-and-road-problems",
+      "reference": "Examples of local risk-based response times and excluded roads"
+    },
+    "redbridge": {
+      "title": "Highways maintenance and resurfacing information",
+      "publisher": "London Borough of Redbridge",
+      "url": "https://www.redbridge.gov.uk/roads-and-pavements/highways-maintenance-and-resurfacing-information/",
+      "reference": "2025/26 permanent and temporary repair estimates"
+    },
+    "law": {
+      "title": "Highways Act 1980",
+      "publisher": "UK legislation",
+      "url": "https://www.legislation.gov.uk/ukpga/1980/66/contents",
+      "reference": "Sections 41 and 58, duty to maintain and defence to damages claims"
+    },
+    "condition": {
+      "title": "Road conditions in England to March 2026",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/statistics/road-conditions-in-england-to-march-2026/road-conditions-in-england-to-march-2026",
+      "reference": "Condition by road class, maintenance treatments and methodology"
+    },
+    "method": {
+      "title": "Road condition statistics, quality assessment",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/road-network-size-and-condition-statistics-guidance/road-condition-statistics-a-basic-guide-and-quality-assessment",
+      "reference": "Transition to the PAS 2161 condition reporting standard"
+    },
+    "transparency": {
+      "title": "Local highway maintenance transparency reports 2026",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/local-highways-maintenance-transparency-reports/local-highway-maintenance-transparency-reports-2026",
+      "reference": "Authority reports, expenditure definitions and incentive funding"
+    },
+    "audit": {
+      "title": "The condition and maintenance of local roads in England",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2024/07/condition-and-maintenance-of-local-roads-in-england-report.pdf",
+      "reference": "Local road responsibilities and gaps in condition and spending data"
+    },
+    "committee": {
+      "title": "Local roads in England update",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/work/10120/local-roads-in-england-update/publications/",
+      "reference": "Follow-up on national monitoring and past recommendations"
+    },
+    "follow": {
+      "title": "Update on local road maintenance",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/work-in-progress/update-on-local-road-maintenance/",
+      "reference": "Scope of follow-up and national grant funding in 2024/25 and 2026/27"
+    }
+  },
+  "actors": {
+    "road-users": {
+      "role": "Report the defect with a precise location and enough detail for it to be found.",
+      "citations": [
+        "report",
+        "kent"
+      ]
+    },
+    "highway-authorities": {
+      "role": "Inspect roads, triage defects and arrange repairs on the local networks they maintain.",
+      "citations": [
+        "kent",
+        "southwark",
+        "law"
+      ]
+    },
+    "department-for-transport": {
+      "role": "Provides maintenance grants and publishes national condition statistics. Uses transparency returns to assess incentive funding.",
+      "citations": [
+        "condition",
+        "transparency",
+        "follow"
+      ]
+    },
+    "public-accounts-committee": {
+      "role": "Scrutinises national oversight and follows up whether recommendations have been implemented.",
+      "citations": [
+        "committee"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From a report to an inspected repair",
+      "steps": [
+        {
+          "id": "report",
+          "label": "Send the report to the road’s highway authority",
+          "actors": [
+            "road-users",
+            "highway-authorities"
+          ],
+          "text": "Use the road’s location to find the responsible authority. Councils look after most local roads. Most motorways and major trunk roads in England are managed by National Highways. Some roads have other arrangements.",
+          "citations": [
+            "report",
+            "condition",
+            "southwark"
+          ]
+        },
+        {
+          "id": "inspect",
+          "label": "Inspect the defect and assess the risk",
+          "actors": [
+            "highway-authorities"
+          ],
+          "text": "An inspector checks the location and its risk to road users. Size, location and the people exposed affect priority. For example, Southwark distinguishes high-risk defects from low-risk ones it will review at a later inspection.",
+          "citations": [
+            "southwark",
+            "kent"
+          ],
+          "note": {
+            "heading": "Why two similar defects get different dates",
+            "text": "The road authority has a duty to maintain its roads. A risk-based inspection considers how the defect is encountered as well as its dimensions, so the same depth can warrant different responses in different locations.",
+            "citations": [
+              "law",
+              "southwark"
+            ]
+          }
+        },
+        {
+          "id": "repair",
+          "label": "Make the road safe and carry out the repair",
+          "actors": [
+            "highway-authorities"
+          ],
+          "text": "Crews can make a defect safe with a quick repair and arrange a return visit for a permanent treatment. The authority can also group lower-risk work with planned resurfacing. Severe weather and traffic management can affect which treatment is feasible.",
+          "citations": [
+            "kent",
+            "redbridge"
+          ]
+        },
+        {
+          "id": "monitor",
+          "label": "Check repair durability and road condition",
+          "actors": [
+            "highway-authorities",
+            "department-for-transport"
+          ],
+          "text": "The authority monitors roads through surveys and inspections. Local repairs, longer resurfacing schemes and the overall condition of the network each have their own measures.",
+          "citations": [
+            "condition",
+            "transparency",
+            "audit"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "road-condition": {
+      "type": "rates",
+      "title": "Local B and C road length graded red",
+      "description": "The proportion rose from 2022 to 2025 before easing in the latest return.",
+      "note": "DfT chart 5, based on councils reporting all three condition grades. Red means the section should be considered for maintenance. The larger red-only return can differ slightly. Values are published rounded percentages of road length.",
+      "citations": [
+        "condition"
+      ],
+      "data": "pothole-repairs-road-condition.json"
+    }
+  },
+  "issues": {
+    "temporary-repairs": {
+      "title": "One report can require two visits",
+      "step": {
+        "visual": "process",
+        "id": "repair"
+      },
+      "text": "Kent matches priorities to times ranging from two hours to 90 days. It says a winter repair may be temporary and followed by a planned return. Redbridge estimated at least 2,467 potholes repaired in 2025/26, with about 24% of repairs temporary.",
+      "citations": [
+        "kent",
+        "redbridge"
+      ],
+      "consequences": [
+        {
+          "text": "A quick repair can reduce immediate risk. A road user can still face the defect again if the permanent repair is delayed or the patch fails. The two visits can also consume more crew time.",
+          "citations": [
+            "kent",
+            "redbridge",
+            "audit"
+          ]
+        }
+      ],
+      "measure": "Measure report-to-inspection, inspection-to-make-safe, time to permanent repair and subsequent repeat defects on that road section. Keep emergency repairs visible by risk band.",
+      "evidenceGap": "National condition surveys do not track the full journey of each reported pothole or how often the same defect recurs."
+    },
+    "condition": {
+      "title": "Counting more repairs leaves the condition question open",
+      "step": {
+        "visual": "process",
+        "id": "monitor"
+      },
+      "text": "Local authorities reported around 10,000 km of local road receiving a maintenance treatment in the year to March 2026, up from around 9,400 km. The condition of local B and C roads improved on the national red measure, while the local A-road red share was flat at 4%.",
+      "citations": [
+        "condition"
+      ],
+      "consequences": [
+        {
+          "text": "The proportion of local B and C roads graded red was at least 10% in 29 of the 143 authorities that provided valid data. A national average can leave drivers’ local experience unexplained.",
+          "citations": [
+            "condition"
+          ]
+        }
+      ],
+      "measure": "Check condition for the same road class and follow comparable road sections after each type of work. Show the data bridge when the condition categories change.",
+      "charts": [
+        "road-condition"
+      ]
+    }
+  },
+  "scrutiny": {
+    "funding-check": {
+      "step": {
+        "visual": "process",
+        "id": "monitor"
+      },
+      "question": "Can the Department for Transport show what the extra funding achieves?",
+      "record": "committee",
+      "answer": "The Public Accounts Committee is following up its earlier recommendations on local road maintenance. The National Audit Office’s forthcoming study will assess what DfT has changed in response to the 2024 audit.",
+      "citations": [
+        "committee",
+        "follow",
+        "audit"
+      ],
+      "watch": "Check whether the follow-up measures repair durability and condition by road type and explains which authorities improved after the funding changed."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Report and inspect",
+            "text": "The local highway authority checks the defect and gives it a priority based on risk. The response time depends on the road and on who uses it.",
+            "citations": [
+              "report",
+              "kent",
+              "southwark"
+            ]
+          },
+          {
+            "label": "Safe and permanent",
+            "text": "A quick patch may make a road safe. The next question is whether a permanent repair was needed, completed and still holds.",
+            "citations": [
+              "kent",
+              "redbridge"
+            ]
+          },
+          {
+            "label": "Network condition",
+            "text": "In the figures to March 2026, 6% of local B and C road length was classed red, down from 7% a year earlier. A change in survey standards is coming.",
+            "citations": [
+              "condition",
+              "method"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "road-users",
+                "highway-authorities",
+                "department-for-transport",
+                "public-accounts-committee"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "temporary-repairs",
+          "condition"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Has the road become safer and more reliable?",
+        "text": "The road condition data show what share of road length meets survey criteria for maintenance. A repair service also needs to know whether high-risk defects were made safe in time and whether the repaired sections stayed sound. An increase in reports may reflect easier reporting as well as more defects.",
+        "citations": [
+          "condition",
+          "kent",
+          "audit"
+        ]
+      },
+      {
+        "heading": "If a pothole causes damage",
+        "text": "The Highways Act sets a maintenance duty and a defence for authorities that took reasonable care. A damage claim therefore turns on the circumstances and on evidence such as the authority’s inspection and repair records.",
+        "citations": [
+          "law",
+          "southwark"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Central grants and local spending",
+        "text": "The National Audit Office puts Department for Transport local roads funding at £1.2 billion in 2024/25, rising to up to £1.6 billion in 2026/27. These are central grants. Maintenance spending by authorities also draws on other funding and uses accounting categories that differ from the transparency reports.",
+        "citations": [
+          "follow",
+          "transparency"
+        ]
+      },
+      {
+        "heading": "What to compare across treatment types",
+        "text": "A cost per patch can be useful for work planning. For value for money, compare the total cost of temporary and permanent visits and the life of the repair with planned treatments such as resurfacing.",
+        "citations": [
+          "audit",
+          "redbridge",
+          "kent"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Watch the condition series as its definition changes",
+        "text": "DfT says that from 2027 the new standard will use five categories in place of red, amber and green. Look for a comparison using both standards before drawing a trend across that change.",
+        "citations": [
+          "condition",
+          "method"
+        ]
+      },
+      {
+        "scrutiny": [
+          "funding-check"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "Reading condition and repair counts",
+          "blocks": [
+            {
+              "text": "Condition figures describe road length, and each class uses its own thresholds. Unclassified roads have a longer survey cycle and less stable coverage. The pothole count in the Redbridge example is local and includes temporary work.",
+              "citations": [
+                "condition",
+                "redbridge"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

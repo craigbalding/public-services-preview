@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Decision year",
+  "unit": "Percent",
+  "period": "Calendar years 2023 to 2025",
+  "series": [
+    {
+      "label": "2023",
+      "value": 5.2
+    },
+    {
+      "label": "2024",
+      "value": 7.3
+    },
+    {
+      "label": "2025",
+      "value": 10.3
+    }
+  ]
+}

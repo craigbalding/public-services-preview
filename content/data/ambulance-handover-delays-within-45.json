@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Area",
+  "unit": "Percent",
+  "period": "England, financial year 2025/26",
+  "series": [
+    {
+      "label": "Lowest ICB area",
+      "value": 62.5
+    },
+    {
+      "label": "England",
+      "value": 87.6
+    },
+    {
+      "label": "Highest ICB area",
+      "value": 98.8
+    }
+  ]
+}

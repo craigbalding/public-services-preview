@@ -1,0 +1,416 @@
+{
+  "id": "involuntary-energy-prepayment",
+  "template": "topic-v7",
+  "title": "When can an energy supplier put a household on prepayment?",
+  "category": "Energy",
+  "scope": "Great Britain",
+  "summary": "Follow an overdue energy bill from repayment options to a possible prepayment switch. See which safeguards apply, what happens when credit runs out and what Ofgem has found about the rules.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "guide",
+    "evaluation",
+    "debt"
+  ],
+  "sources": {
+    "guide": {
+      "title": "Installing a prepayment meter without your permission",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/your-energy-supply/how-manage-your-energy-supply/installing-prepayment-meter-without-your-permission",
+      "reference": "Last-resort checks, exclusions, home visit and starting credit"
+    },
+    "code": {
+      "title": "Involuntary prepayment meter energy supplier Code of Practice",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/guidance/involuntary-prepayment-meter-energy-supplier-code-practice",
+      "reference": "Applicable requirements for gas and electricity suppliers"
+    },
+    "help": {
+      "title": "Get help with your prepayment meter",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/your-energy-supply/how-manage-your-energy-supply/get-help-your-prepayment-meter",
+      "reference": "Topping up, running out of credit and help from suppliers"
+    },
+    "complaint": {
+      "title": "Complain about your energy supplier or network operator",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/your-energy-supply/problems-your-energy-supply/complain-about-your-energy-supplier-or-network-operator",
+      "reference": "Supplier complaint and Energy Ombudsman stages"
+    },
+    "permitted": {
+      "title": "Energy suppliers who can install prepayment meters without permission",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/transparency-document/energy-suppliers-who-can-install-prepayment-meters-without-permission",
+      "reference": "Approved suppliers and permitted restart dates"
+    },
+    "evaluation": {
+      "title": "Phase 1 process evaluation: involuntary prepayment meter rules",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/transparency-document/involuntary-prepayment-meter-rules-phase-1-process-evaluation",
+      "date": "2026-10-28",
+      "reference": "Early findings on safety, harms, debt and implementation"
+    },
+    "evaluation_report": {
+      "title": "Phase 1 process evaluation, full report",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/sites/default/files/2026-11/phase-1-process-evaluation-involuntary-prepayment-meter-rules.pdf",
+      "reference": "Paragraphs 3.5–3.8 and figure 4, smart prepayment self-disconnections"
+    },
+    "debt": {
+      "title": "Debt and arrears indicators",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/data/debt-and-arrears-indicators",
+      "reference": "Great Britain, domestic gas and electricity debt and arrears"
+    },
+    "prior_debt": {
+      "title": "Update on the strategy to reduce energy debt",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/policy/debt-strategy-update-supporting-reduction-energy-debt",
+      "reference": "Domestic energy debt and arrears in June 2025"
+    },
+    "settlement": {
+      "title": "British Gas settlement on prepayment meter customers",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/press-release/british-gas-agrees-settlement-relation-ofgems-investigation-unfair-treatment-prepayment-meter-customers",
+      "reference": "Findings, redress fund payment and potential debt write-off"
+    },
+    "price": {
+      "title": "Energy price cap: review of historical debt-related costs",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/sites/default/files/2026-03/Energy-price-cap-review-of-historical-debt-related-costs.pdf",
+      "reference": "Price cap allowances and types of debt-related costs"
+    },
+    "discussion": {
+      "title": "Prepayment meter protections discussion paper",
+      "publisher": "Ofgem",
+      "url": "https://www.ofgem.gov.uk/call-for-input/prepayment-meter-protections-discussion-paper",
+      "date": "2026-10-28",
+      "reference": "Questions on protections and the 23 December 2026 deadline"
+    },
+    "parliamentary": {
+      "title": "Energy: debt, written answer on disaggregated data",
+      "publisher": "Department for Energy Security and Net Zero",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/34967",
+      "reference": "National data availability and the June 2026 debt position"
+    }
+  },
+  "actors": {
+    "energy-customers": {
+      "role": "Can discuss affordable repayment, give information about circumstances and challenge a supplier’s decision.",
+      "citations": [
+        "guide",
+        "help",
+        "complaint"
+      ]
+    },
+    "energy-suppliers": {
+      "role": "Assess affordability and vulnerability, follow licence rules, decide whether a switch can safely proceed and support customers who cannot top up.",
+      "citations": [
+        "guide",
+        "code",
+        "help"
+      ]
+    },
+    "ofgem": {
+      "role": "Sets and enforces supplier requirements, monitors outcomes and decides which suppliers can restart involuntary activity.",
+      "citations": [
+        "permitted",
+        "code",
+        "evaluation"
+      ]
+    },
+    "energy-ombudsman": {
+      "role": "Independently resolves eligible disputes that suppliers cannot settle.",
+      "citations": [
+        "complaint"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From an overdue bill to a decision and follow-up",
+      "steps": [
+        {
+          "id": "debt",
+          "label": "Contact the household and discuss ways to repay",
+          "actors": [
+            "energy-customers",
+            "energy-suppliers"
+          ],
+          "text": "The supplier should make reasonable efforts to agree another way to repay the debt and offer support. Ofgem describes involuntary prepayment as a last resort.",
+          "citations": [
+            "guide",
+            "help"
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Check whether prepayment would be safe and suitable",
+          "actors": [
+            "energy-suppliers"
+          ],
+          "text": "Before going ahead the supplier must make at least ten contact attempts using different methods and visit the home to assess circumstances. Protected situations include someone depending on powered medical equipment or a child under two living in the home.",
+          "citations": [
+            "guide",
+            "code"
+          ]
+        },
+        {
+          "id": "switch",
+          "label": "Install a meter or switch a smart meter remotely",
+          "actors": [
+            "energy-suppliers",
+            "ofgem"
+          ],
+          "text": "A supplier can seek a warrant for entry to fit a meter, or remotely switch a smart meter subject to the applicable safeguards. If it proceeds it must give £30 credit after installation or switching. Ofgem publishes which suppliers can carry out involuntary work.",
+          "citations": [
+            "guide",
+            "code",
+            "permitted"
+          ]
+        },
+        {
+          "id": "support",
+          "label": "Help the household stay connected and put mistakes right",
+          "actors": [
+            "energy-customers",
+            "energy-suppliers",
+            "energy-ombudsman"
+          ],
+          "text": "The supplier can help with emergency or additional support credit and affordability. Raise a concern with the supplier. If it remains unresolved after eight weeks, or the supplier issues a deadlock letter sooner, eligible disputes can go to the Energy Ombudsman.",
+          "citations": [
+            "help",
+            "complaint",
+            "guide"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "energy-debt": {
+      "type": "trend",
+      "title": "Domestic energy debt and arrears in Great Britain (£ million)",
+      "description": "Total gas and electricity debt and arrears increased between the June 2025 and June 2026 snapshots.",
+      "note": "Selected quarters. This covers all domestic payment methods. Quarter comparisons describe the size of outstanding balances and cannot isolate the effect of prepayment rules.",
+      "citations": [
+        "debt",
+        "prior_debt"
+      ],
+      "data": "involuntary-energy-prepayment-energy-debt.json"
+    }
+  },
+  "issues": {
+    "checks": {
+      "title": "A vulnerability check can miss a household that needs protection",
+      "step": {
+        "visual": "process",
+        "id": "check"
+      },
+      "text": "Contact attempts and a visit are intended to tell the supplier whether a household can use prepayment safely. Ofgem’s investigation into British Gas found breaches of licence conditions designed to protect vulnerable customers.",
+      "citations": [
+        "guide",
+        "code",
+        "settlement"
+      ],
+      "consequences": [
+        {
+          "text": "A household that relies on a continuous supply may face serious consequences if it loses it. After its investigation, Ofgem agreed redress that included compensation for affected customers.",
+          "citations": [
+            "guide",
+            "settlement"
+          ]
+        }
+      ],
+      "measure": "Check supplier files for evidence of tailored contact, a completed welfare visit and a recorded decision. Publish the share of switches reversed or found unsuitable and time to restoration.",
+      "evidenceGap": "The published settlements describe specific failings and remedies. They do not show how often current installations miss a vulnerable household."
+    },
+    "no-credit": {
+      "title": "Running out of credit can cut off heat or power",
+      "step": {
+        "visual": "process",
+        "id": "support"
+      },
+      "text": "Ofgem’s evaluation describes self-disconnection as loss of supply when a prepayment customer runs out of credit. A loss lasting more than three hours is its significant self-disconnection measure. The regulator also tracks debt and arrears across all payment methods.",
+      "citations": [
+        "evaluation_report",
+        "debt",
+        "help"
+      ],
+      "consequences": [
+        {
+          "text": "Households can struggle to pay for ongoing use and to make repayments on the debt. A safety check at the time of switching is therefore only one point in the process.",
+          "citations": [
+            "guide",
+            "help",
+            "evaluation_report"
+          ]
+        }
+      ],
+      "measure": "Track households after switching, including length and frequency of losses of supply, support credit offered, affordability and any debt paid down.",
+      "evidenceGap": "The evaluation includes smart prepayment meters. Households using traditional meters and those who reduce energy use to avoid running out need other evidence."
+    }
+  },
+  "scrutiny": {
+    "regulatory-review": {
+      "step": {
+        "visual": "process",
+        "id": "support"
+      },
+      "question": "Will Ofgem strengthen, keep or change the protections?",
+      "record": "discussion",
+      "answer": "In October 2026 Ofgem published its process evaluation and invited views on the operation of the rules. The November supplier list shows that individual suppliers can restart at different times after meeting Ofgem’s conditions.",
+      "citations": [
+        "evaluation",
+        "discussion",
+        "permitted"
+      ],
+      "watch": "Check whether any rule change has a baseline for duration of disconnection, debt recovery and safety, and a timetable for reporting each outcome.",
+      "followUp": {
+        "title": "Evidence on the operation of the rules",
+        "history": [
+          {
+            "date": "2026-10-28",
+            "status": "requested",
+            "text": "Ofgem sought evidence and views on the rules, with responses due by 23 December 2026.",
+            "citations": [
+              "discussion"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Last resort",
+            "text": "The supplier must try other repayment options and assess household risk before using involuntary prepayment.",
+            "citations": [
+              "guide",
+              "code"
+            ]
+          },
+          {
+            "label": "What can go wrong",
+            "text": "If credit runs out, the household can lose supply until it tops up or receives support. Ofgem has found that suppliers failed to protect some vulnerable customers.",
+            "citations": [
+              "help",
+              "settlement"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Check whether safeguards reduce long losses of supply, and whether households repay debt on terms they can afford.",
+            "citations": [
+              "evaluation",
+              "debt",
+              "discussion"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "energy-customers",
+                "energy-suppliers",
+                "ofgem",
+                "energy-ombudsman"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "checks",
+          "no-credit"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Do the safeguards prevent long losses of supply?",
+        "text": "Ofgem reported an indicative 36% fall in severe self-disconnection in its October 2026 evaluation. Its monitoring covered smart prepayment and a loss of supply longer than three hours. The evaluation identifies additional support credit as another possible influence and says it cannot yet establish causality.",
+        "citations": [
+          "evaluation",
+          "evaluation_report"
+        ]
+      },
+      {
+        "heading": "What happened to debt during the same broad period",
+        "text": "Ofgem put the total stock of domestic gas and electricity debt and arrears at £5.02 billion in June 2026, about 13% higher than a year earlier. This is an industry-wide balance across payment methods.",
+        "citations": [
+          "debt",
+          "prior_debt"
+        ]
+      },
+      {
+        "chart": "energy-debt"
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Debt, credit and redress are different amounts",
+        "text": "£30 is the starting credit the supplier must give after an involuntary switch. Ofgem separately agreed a £20 million payment by British Gas to the Voluntary Redress Fund, alongside compensation and a commitment to write off up to £70 million of debt for vulnerable customers. The write-off is a ceiling in a settlement.",
+        "citations": [
+          "guide",
+          "settlement"
+        ]
+      },
+      {
+        "heading": "Costs shared through energy bills",
+        "text": "Ofgem’s price-cap review describes costs of administering debt, non-payment and financing the time between supplying energy and getting paid. Assess the cost of different repayment methods alongside sustained connection and arrears recovery.",
+        "citations": [
+          "price",
+          "debt"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "The evidence Ofgem is gathering this winter",
+        "text": "The discussion paper asks who should be protected and how the rules should operate. It closes on 23 December 2026. Look for any later proposals and for data on households that lost supply, including those using traditional meters.",
+        "citations": [
+          "discussion",
+          "evaluation",
+          "evaluation_report"
+        ]
+      },
+      {
+        "scrutiny": [
+          "regulatory-review"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "Interpreting the debt total",
+          "blocks": [
+            {
+              "text": "Ofgem’s figures are balances across gas and electricity accounts. The same household can have both. Parliament separately asked for disaggregated data by nation. Use percentage changes in balances with the same definition.",
+              "citations": [
+                "debt",
+                "parliamentary"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

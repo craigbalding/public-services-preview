@@ -1,0 +1,393 @@
+{
+  "id": "crown-court-waits",
+  "template": "topic-v7",
+  "title": "Why does a Crown Court case take so long to reach trial?",
+  "category": "Justice",
+  "scope": "England and Wales",
+  "summary": "Follow a case from the magistrates’ court to a Crown Court trial. See how many cases have been waiting more than a year, why scheduled trials can fall through and what more court time might change.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "cps",
+    "statistics",
+    "audit"
+  ],
+  "sources": {
+    "cps": {
+      "title": "How a criminal case works",
+      "publisher": "Crown Prosecution Service",
+      "url": "https://www.cps.gov.uk/about-cps/how-a-criminal-case-works",
+      "reference": "Charging, magistrates’ courts, pleas and Crown Court trials"
+    },
+    "witnesses": {
+      "title": "Information for witnesses",
+      "publisher": "Crown Prosecution Service",
+      "url": "https://www.cps.gov.uk/information-witnesses",
+      "reference": "Updates, witness support and appearing in court"
+    },
+    "statistics": {
+      "title": "Criminal court statistics, April to June 2026",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/statistics/criminal-court-statistics-quarterly-april-to-june-2026/criminal-court-statistics-quarterly-april-to-june-2026",
+      "date": "2026-09-24",
+      "reference": "Open and completed cases, age profile, listing and timeliness"
+    },
+    "definitions": {
+      "title": "A guide to criminal court statistics",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/publications/a-guide-to-criminal-court-statistics",
+      "reference": "Definitions of open, received, disposed, effective, cracked, ineffective and vacated"
+    },
+    "audit": {
+      "title": "Reducing the backlog in the Crown Court",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/reports/reducing-the-backlog-in-the-crown-court/",
+      "reference": "Capacity, consequences of long waits and modelling the backlog"
+    },
+    "funds": {
+      "title": "Ministry of Justice overview, 2024/25",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2025/12/Ministry-of-Justice-Overview-24-25.pdf",
+      "reference": "Change in funded Crown Court sitting days"
+    },
+    "accounts": {
+      "title": "Ministry of Justice annual report and accounts 2025/26, performance",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/publications/ministry-of-justice-annual-report-and-accounts-2025-to-2026/annual-report-and-accounts-2025-26-performance",
+      "reference": "Judicial capacity and HMCTS pressures"
+    },
+    "pac": {
+      "title": "Crown Court backlogs inquiry",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/work/8573/crown-court-backlogs/publications/reports-responses/",
+      "reference": "March 2025 report and formal government response"
+    },
+    "reforms": {
+      "title": "Government response to the independent review of the criminal courts",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/publications/government-response-to-the-independent-review-of-the-criminal-courts/government-response-to-the-independent-review-of-the-criminal-courts",
+      "reference": "Lord Brian Leveson’s recommendations and government proposals"
+    },
+    "letter": {
+      "title": "Update on criminal court reform",
+      "publisher": "Ministry of Justice, letter to the Justice and Home Affairs Committee",
+      "url": "https://committees.parliament.uk/publications/55667/documents/309344/default/",
+      "date": "2026-10-03",
+      "reference": "Sitting-day policy and scope of the reform package"
+    },
+    "projections": {
+      "title": "Response on the Courts and Tribunals Bill",
+      "publisher": "Ministry of Justice, letter to the House of Lords Constitution Committee",
+      "url": "https://committees.parliament.uk/publications/56028/standard/pdf/",
+      "reference": "Updated projections and their assumptions"
+    }
+  },
+  "actors": {
+    "cps": {
+      "role": "Prepares and presents the prosecution case, works with the police and supports communication with witnesses.",
+      "citations": [
+        "cps",
+        "witnesses"
+      ]
+    },
+    "judiciary": {
+      "role": "Decides case allocation and manages proceedings and listing under the applicable rules.",
+      "citations": [
+        "cps",
+        "audit"
+      ]
+    },
+    "hmcts": {
+      "role": "Administers court operations, including staff, rooms and the systems that support the judiciary.",
+      "citations": [
+        "audit",
+        "accounts"
+      ]
+    },
+    "ministry-of-justice": {
+      "role": "Funds courts, publishes criminal court statistics and leads policy changes.",
+      "citations": [
+        "statistics",
+        "accounts",
+        "reforms"
+      ]
+    },
+    "public-accounts-committee": {
+      "role": "Examines how the backlog is managed and whether plans are sufficient to reduce it.",
+      "citations": [
+        "pac"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From a first hearing to a Crown Court outcome",
+      "steps": [
+        {
+          "id": "send",
+          "label": "The magistrates’ court sends the case to the Crown Court",
+          "actors": [
+            "cps",
+            "judiciary"
+          ],
+          "text": "Criminal cases normally start in the magistrates’ court. Serious offences go to the Crown Court, and some offences can be tried in either court. Some cases go to the Crown Court for sentencing or appeal.",
+          "citations": [
+            "cps",
+            "definitions"
+          ]
+        },
+        {
+          "id": "prepare",
+          "label": "Take a plea and prepare the case",
+          "actors": [
+            "cps",
+            "judiciary",
+            "hmcts"
+          ],
+          "text": "At the Crown Court the judge deals with the plea and can give directions for trial preparation. A guilty plea can take the case to sentencing. For a contested case, staff, prosecution and defence work toward a trial date.",
+          "citations": [
+            "cps",
+            "witnesses",
+            "audit"
+          ]
+        },
+        {
+          "id": "list",
+          "label": "List the trial and make sure it can go ahead",
+          "actors": [
+            "judiciary",
+            "hmcts"
+          ],
+          "text": "Listing must match a courtroom, judge, lawyers, witnesses and other requirements such as an interpreter. A trial that fails to start as scheduled and needs another date is recorded as ineffective.",
+          "citations": [
+            "statistics",
+            "audit",
+            "definitions"
+          ]
+        },
+        {
+          "id": "resolve",
+          "label": "Hear the case and record the outcome",
+          "actors": [
+            "judiciary",
+            "hmcts"
+          ],
+          "text": "A trial resolves the contested charges by a verdict and there may be a separate sentencing hearing. Cases can close in other ways, such as a guilty plea or prosecution discontinuance. The statistics track cases closed across these routes.",
+          "citations": [
+            "cps",
+            "statistics",
+            "definitions"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "year-old-cases": {
+      "type": "trend",
+      "title": "Crown Court cases open at least a year",
+      "description": "The published queue of cases at least a year old grew over the three selected dates.",
+      "note": "England and Wales. Cases with a known age. Points are selected quarter ends from the same September 2026 release.",
+      "citations": [
+        "statistics"
+      ],
+      "data": "crown-court-waits-year-old-cases.json"
+    },
+    "trial-outcomes": {
+      "type": "rates",
+      "title": "What happened at the trial listing",
+      "description": "A quarter needed another date.",
+      "note": "The 7,766 trials in the effectiveness breakdown form the denominator. Trials vacated in advance are reported separately. Percentages are rounded.",
+      "citations": [
+        "statistics",
+        "definitions"
+      ],
+      "data": "crown-court-waits-trial-outcomes.json"
+    }
+  },
+  "issues": {
+    "old-cases": {
+      "title": "The oldest cases are growing faster than the overall queue",
+      "step": {
+        "visual": "process",
+        "id": "prepare"
+      },
+      "text": "Open cases rose 3% in the year to June 2026. Cases open for at least a year rose 22%, from 19,384 to 23,706. The median age of an open case rose from 168 to 203 days.",
+      "citations": [
+        "statistics"
+      ],
+      "consequences": [
+        {
+          "text": "The audit found that longer waits can add stress for victims, witnesses and defendants. More than half of cases open at least a year in June 2026 involved violence against the person or sexual offences.",
+          "citations": [
+            "audit",
+            "statistics"
+          ]
+        }
+      ],
+      "measure": "Publish the age distribution of the cases still open as well as time to resolution. Follow the oldest cohorts through trial or another outcome and keep offence and remand status visible.",
+      "charts": [
+        "year-old-cases"
+      ]
+    },
+    "lost-dates": {
+      "title": "A trial date can pass without the trial starting",
+      "step": {
+        "visual": "process",
+        "id": "list"
+      },
+      "text": "In April to June 2026, 25% of trials in the effectiveness measure were ineffective and needed another date. Of those, 27% were attributed to overlisting, 24% to the defence or prosecution not being ready, and 12% to defendant absence.",
+      "citations": [
+        "statistics",
+        "definitions"
+      ],
+      "consequences": [
+        {
+          "text": "Relisting adds time and can require victims and witnesses to arrange attendance again. Some defendants remain on remand while they wait. Expanding court time is only one part of making a listed date usable.",
+          "citations": [
+            "audit",
+            "statistics",
+            "witnesses"
+          ]
+        }
+      ],
+      "measure": "Follow the trial from the first booked date to the date it actually starts. Record reasons for relisting, repeat relistings and days on remand.",
+      "charts": [
+        "trial-outcomes"
+      ]
+    }
+  },
+  "scrutiny": {
+    "delivery-check": {
+      "step": {
+        "visual": "process",
+        "id": "list"
+      },
+      "question": "How will the Ministry of Justice show that reforms shorten waits?",
+      "record": "pac",
+      "answer": "The Public Accounts Committee criticised the lack of a sufficiently ambitious plan in March 2025. Ministers later reported uncapped sitting days and published updated projections linked to the Courts and Tribunals Bill. The projections are estimates under assumptions about capacity, reform and efficiency.",
+      "citations": [
+        "pac",
+        "letter",
+        "projections"
+      ],
+      "watch": "Ask for a comparison with published outcomes, including open cases a year or more old and repeated relistings. Check separately which reforms have come into force."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Cases still open",
+            "text": "The Crown Court had 80,829 open cases in June 2026. Of the cases with recorded age, 23,706 had been open a year or more.",
+            "citations": [
+              "statistics"
+            ]
+          },
+          {
+            "label": "The trial date",
+            "text": "25% of trials in the trial-effectiveness measure for April to June 2026 did not start as scheduled and needed a new date.",
+            "citations": [
+              "statistics",
+              "definitions"
+            ]
+          },
+          {
+            "label": "What progress looks like",
+            "text": "Look for fewer long-waiting cases and fewer rescheduled trials, alongside the numbers coming into and leaving the court.",
+            "citations": [
+              "statistics",
+              "audit"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "cps",
+                "judiciary",
+                "hmcts",
+                "ministry-of-justice",
+                "public-accounts-committee"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "old-cases",
+          "lost-dates"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Why completed cases tell a different story",
+        "text": "For defendants dealt with at the Crown Court in April to June 2026, the median time from case receipt to the first main hearing was 11.3 weeks. For those dealt with by jury trial following a not guilty plea it was 49.7 weeks. The measure is calculated when the case closes. The age of open cases shows how long those cases have waited so far.",
+        "citations": [
+          "statistics",
+          "definitions"
+        ]
+      },
+      {
+        "heading": "Test capacity by what happens to real cases",
+        "text": "Extra court days can help, but courtrooms, staff and lawyers have to be available at the same time. A lasting improvement would show up in completed cases, fewer ineffective trials and less time waiting for people in the longest-running cases.",
+        "citations": [
+          "audit",
+          "accounts",
+          "statistics"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Funding to sit and funding to finish cases",
+        "text": "The National Audit Office records 111,250 funded Crown Court sitting days in 2025/26, compared with 81,899 in 2019/20. The government says it has removed the cap on sitting days. The Ministry of Justice separately reported £287 million committed in 2026/27 for court estate repairs and digital upgrades across jurisdictions. Court staff, judges, legal aid, prosecution and remand create costs across different budgets.",
+        "citations": [
+          "funds",
+          "letter",
+          "audit",
+          "accounts"
+        ]
+      },
+      {
+        "heading": "What a cost per completed case should include",
+        "text": "Follow the costs of preparing the case and each listing through resolution, including time and custody costs when the trial is relisted. The sources here do not give a joined-up cost of a typical delayed case.",
+        "citations": [
+          "audit",
+          "accounts"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Use the reform baselines when the next figures arrive",
+        "text": "The government’s October response to the Leveson review sets out proposals to keep more cases in the magistrates’ courts and to permit judge-alone trials for certain technical and lengthy fraud and financial cases. Its projections depend on court capacity and estimated efficiencies. Check the age of the queue and trial effectiveness in both courts against those assumptions.",
+        "citations": [
+          "reforms",
+          "projections",
+          "statistics"
+        ]
+      },
+      {
+        "scrutiny": [
+          "delivery-check"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": []
+  }
+}

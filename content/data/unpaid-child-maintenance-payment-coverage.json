@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Share of maintenance due that the parent paid",
+  "unit": "Percent",
+  "period": "Great Britain, quarter ending June 2026",
+  "series": [
+    {
+      "label": "Paid nothing",
+      "value": 23
+    },
+    {
+      "label": "Paid some, up to 90%",
+      "value": 24
+    },
+    {
+      "label": "Paid over 90%",
+      "value": 53
+    }
+  ]
+}

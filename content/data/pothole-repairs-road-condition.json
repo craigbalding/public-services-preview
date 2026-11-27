@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Year ending March",
+  "unit": "Percent",
+  "period": "Selected financial years ending in March",
+  "series": [
+    {
+      "label": "2022",
+      "value": 5
+    },
+    {
+      "label": "2025",
+      "value": 7
+    },
+    {
+      "label": "2026",
+      "value": 6
+    }
+  ]
+}

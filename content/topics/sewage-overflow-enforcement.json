@@ -1,0 +1,412 @@
+{
+  "id": "sewage-overflow-enforcement",
+  "template": "topic-v7",
+  "title": "What happens after a sewage overflow is recorded?",
+  "category": "Environment",
+  "scope": "England",
+  "summary": "A monitor records when a storm overflow spills. Follow what the water company and the Environment Agency do with that information, and how to tell whether action has made the river or coast cleaner.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "rules",
+    "performance",
+    "committee"
+  ],
+  "sources": {
+    "rules": {
+      "title": "Storm overflows: policy and guidance",
+      "publisher": "Defra",
+      "url": "https://www.gov.uk/government/publications/storm-overflows-policy-and-guidance/storm-overflows-policy-and-guidance",
+      "reference": "Purpose of overflows, monitoring and powers of the Environment Agency and Ofwat"
+    },
+    "data": {
+      "title": "Event duration monitoring annual returns",
+      "publisher": "Environment Agency",
+      "url": "https://ckan.publishing.service.gov.uk/dataset/event-duration-monitoring-storm-overflows-annual-returns",
+      "reference": "Company returns recording spill frequency, duration and monitor operation"
+    },
+    "rainfall": {
+      "title": "Fewer and shorter storm overflow spills in 2025",
+      "publisher": "Environment Agency and Defra",
+      "url": "https://www.gov.uk/government/news/fewer-and-shorter-storm-overflow-spills-in-2025-new-monitoring-data-shows",
+      "reference": "Initial release figures and the effect of rainfall on spill levels"
+    },
+    "previous": {
+      "title": "Defra annual report and accounts 2025 to 2026",
+      "publisher": "Defra",
+      "url": "https://assets.publishing.service.gov.uk/media/6a74a43abde92a23046b24a0/Defra-ARA-2025-26-laid-15July26.pdf",
+      "reference": "Spill events and duration, including the 2024 baseline"
+    },
+    "history": {
+      "title": "Evidence annex to the Chief Regulator’s report 2023/24",
+      "publisher": "Environment Agency",
+      "url": "https://www.gov.uk/government/publications/environment-agency-chief-regulators-report-2023-24/evidence-annex-environment-agency-chief-regulators-report-2023-24",
+      "reference": "Monitoring coverage and 2023 spill total"
+    },
+    "performance": {
+      "title": "Environmental performance of England’s water and sewerage companies, 2025",
+      "publisher": "Environment Agency",
+      "url": "https://www.gov.uk/government/publications/water-and-sewerage-companies-in-england-environmental-performance-report-2025/water-and-sewerage-companies-in-england-environmental-performance-report-for-2025",
+      "reference": "Revised spill data and measured pollution incidents for the nine companies"
+    },
+    "dry": {
+      "title": "What are dry day spills?",
+      "publisher": "Environment Agency",
+      "url": "https://environmentagency.blog.gov.uk/2024/08/28/what-are-dry-day-spills/",
+      "reference": "Screening potential breaches using rainfall and operational information"
+    },
+    "case": {
+      "title": "Water company fined £900,000 after coastline sewage spill",
+      "publisher": "Environment Agency",
+      "url": "https://www.gov.uk/government/news/water-company-fined-record-900k-after-coastline-sewage-spill",
+      "reference": "United Utilities investigation and five permit offences"
+    },
+    "price": {
+      "title": "Environmental Improvement Plan 2025",
+      "publisher": "Defra",
+      "url": "https://www.gov.uk/government/publications/environmental-improvement-plan-2025/environmental-improvement-plan-eip-2025",
+      "reference": "Planned investment in storm overflow improvements in England for 2025–30"
+    },
+    "redetermination": {
+      "title": "Final decision on disputed water price controls",
+      "publisher": "Competition and Markets Authority",
+      "url": "https://www.gov.uk/government/news/final-decision-on-disputed-price-controls-for-5-water-companies",
+      "date": "2026-03-10",
+      "reference": "Later determinations for five companies and the implications for bills"
+    },
+    "committee": {
+      "title": "Reforming the water sector: protecting the environment and consumers",
+      "publisher": "House of Commons Environment, Food and Rural Affairs Committee",
+      "url": "https://publications.parliament.uk/pa/cm5902/cmselect/cmenvfru/714/report.html",
+      "date": "2026-11-04",
+      "reference": "Monitoring, inspection standards and effectiveness of enforcement"
+    },
+    "inquiry": {
+      "title": "Reforming the water sector publications",
+      "publisher": "House of Commons Environment, Food and Rural Affairs Committee",
+      "url": "https://committees.parliament.uk/work/8765/reforming-the-water-sector/publications",
+      "reference": "Inquiry reports and published responses"
+    }
+  },
+  "actors": {
+    "water-companies": {
+      "role": "Operate overflows and monitors, publish event information, report incidents and maintain and improve assets.",
+      "citations": [
+        "rules",
+        "data"
+      ]
+    },
+    "environment-agency": {
+      "role": "Sets and checks environmental permits and can investigate, accept undertakings or prosecute.",
+      "citations": [
+        "rules",
+        "dry",
+        "case"
+      ]
+    },
+    "ofwat": {
+      "role": "Sets company price controls and has separate enforcement powers for water company duties.",
+      "citations": [
+        "rules",
+        "price"
+      ]
+    },
+    "defra": {
+      "role": "Sets government water policy and the programme for reducing storm overflow discharges.",
+      "citations": [
+        "rules",
+        "previous"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From the overflow to verified action",
+      "steps": [
+        {
+          "id": "discharge",
+          "label": "A storm overflow discharges",
+          "actors": [
+            "water-companies",
+            "environment-agency"
+          ],
+          "text": "In a combined sewer, rainwater and sewage share pipes. During heavy rain or snowmelt, a storm overflow can relieve pressure so sewage is less likely to back up into homes or streets. A permit sets the conditions for using the outlet.",
+          "citations": [
+            "rules",
+            "performance"
+          ]
+        },
+        {
+          "id": "record",
+          "label": "A monitor records the event",
+          "actors": [
+            "water-companies"
+          ],
+          "text": "An event duration monitor records when discharge occurs and how long it lasts. Companies have been required to publish near-real-time storm overflow information since January 2025. An event record gives a starting point for checking what happened.",
+          "citations": [
+            "data",
+            "rules",
+            "rainfall"
+          ]
+        },
+        {
+          "id": "investigate",
+          "label": "Check the operating conditions and harm",
+          "actors": [
+            "environment-agency",
+            "water-companies"
+          ],
+          "text": "The Environment Agency can look at rainfall, flows, equipment operation and the exact permit conditions. Apparent dry-weather use or a pollution report can prompt checks, including whether the discharge was unlawful and what damage it caused.",
+          "citations": [
+            "dry",
+            "rules",
+            "performance"
+          ]
+        },
+        {
+          "id": "act",
+          "label": "Take action and verify the fix",
+          "actors": [
+            "environment-agency",
+            "ofwat",
+            "water-companies"
+          ],
+          "text": "Depending on the findings, the regulator can require improvements, accept a legally binding undertaking or prosecute. Ofwat can act under its separate duties. Monitoring the same outlet after repair can show whether a problem recurs.",
+          "citations": [
+            "rules",
+            "committee",
+            "case"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "spill-events": {
+      "type": "trend",
+      "title": "Monitored storm overflow spill events in England",
+      "description": "Events fell in both years after 2023, with a much larger fall in the drier 2025.",
+      "note": "The 2025 number is from the later Environment Agency assessment. Its initial March release used 291,492. Both show a fall of about 35% from 2024. Monitoring coverage and rainfall affect comparisons.",
+      "citations": [
+        "performance",
+        "previous",
+        "history",
+        "rainfall"
+      ],
+      "data": "sewage-overflow-enforcement-spill-events.json"
+    }
+  },
+  "issues": {
+    "spill-counts": {
+      "title": "A fall in spill count leaves several explanations open",
+      "step": {
+        "visual": "process",
+        "id": "record"
+      },
+      "text": "Monitors were fitted to all overflows by the end of 2023, although some monitors are unavailable for part of the year. Recorded events fell from 450,398 in 2024 to 292,119 in the latest 2025 assessment, about 35%. The Environment Agency flagged lower rainfall as a major influence.",
+      "citations": [
+        "history",
+        "previous",
+        "performance",
+        "rainfall"
+      ],
+      "consequences": [
+        {
+          "text": "A drier year can mean fewer discharges before any engineering work takes effect. The monitor tracks when a spill occurred and its duration. Effects on the water depend on factors such as the pollutants, volume and the receiving river or coast.",
+          "citations": [
+            "rainfall",
+            "rules",
+            "performance"
+          ]
+        }
+      ],
+      "measure": "Compare the same outlets before and after completed work, with rainfall, monitor availability and downstream water quality alongside spill frequency and duration.",
+      "charts": [
+        "spill-events"
+      ]
+    },
+    "enforcement": {
+      "title": "A recorded event can lead to very different actions",
+      "step": {
+        "visual": "process",
+        "id": "investigate"
+      },
+      "text": "A spill count covers discharge events, including permitted discharges. The Environment Agency examines the relevant evidence before deciding whether a breach occurred and how to respond. Parliament has questioned whether regulators verify enough of the information reported by companies.",
+      "citations": [
+        "rules",
+        "dry",
+        "committee"
+      ],
+      "consequences": [
+        {
+          "text": "A United Utilities case illustrates the evidence trail. The Environment Agency investigated discharges from coastal pumping stations. The company pleaded guilty to five permit offences and was fined £900,000.",
+          "citations": [
+            "case"
+          ]
+        }
+      ],
+      "measure": "Publish cases by inspection, verified breach, remedy and completed follow-up. Show the elapsed time and subsequent compliance, including for repeat breaches and lower-severity incidents with cumulative effects.",
+      "evidenceGap": "The national spill totals do not show which individual events were investigated, found unlawful or resolved."
+    }
+  },
+  "scrutiny": {
+    "inspection-standard": {
+      "step": {
+        "visual": "process",
+        "id": "investigate"
+      },
+      "question": "Will regulators set clear inspection standards and verify company data?",
+      "record": "committee",
+      "answer": "In November 2026 the Environment, Food and Rural Affairs Committee called for clearer inspection expectations, stronger verification of company information and ways to monitor cumulative harm from lower-category incidents.",
+      "citations": [
+        "committee"
+      ],
+      "watch": "Check the inquiry for the government’s response and a timetable. Look for published inspection standards, independent checks and evidence that agreed fixes are verified.",
+      "followUp": {
+        "title": "Monitoring and enforcement after the November report",
+        "history": [
+          {
+            "date": "2026-11-04",
+            "status": "requested",
+            "text": "The Committee called for a more robust inspection and monitoring regime, including clear standards and verification of company data.",
+            "citations": [
+              "committee",
+              "inquiry"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Why an overflow exists",
+            "text": "It relieves pressure in a combined sewer during wet weather. Permit conditions govern when and how it can operate.",
+            "citations": [
+              "rules",
+              "performance"
+            ]
+          },
+          {
+            "label": "What was recorded",
+            "text": "The Environment Agency’s latest assessment reports 292,119 monitored spill events in 2025. The year was substantially drier than 2024 in much of England.",
+            "citations": [
+              "performance",
+              "rainfall"
+            ]
+          },
+          {
+            "label": "What action achieved",
+            "text": "Follow the outlet from a recorded event to any confirmed breach, corrective work and later checks on the same stretch of water.",
+            "citations": [
+              "rules",
+              "committee",
+              "case"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "water-companies",
+                "environment-agency",
+                "ofwat",
+                "defra"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "spill-counts",
+          "enforcement"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Watch pollution as well as spills",
+        "text": "The Environment Agency counted 74 serious pollution incidents from the nine companies’ sewerage and water supply assets in 2025, compared with 75 in 2024 and 47 in 2023. That series covers a wider group of assets, including problems unrelated to storm overflow operation. It adds a check on harm across the network.",
+        "citations": [
+          "performance"
+        ]
+      },
+      {
+        "heading": "The result to look for at a repaired outlet",
+        "text": "Check whether repeated or unlawful discharges stopped, and whether independent samples show better water quality under comparable conditions. Fines, completed engineering projects and a change in water quality each answer a different question.",
+        "citations": [
+          "rules",
+          "committee",
+          "case"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "What bills are funding",
+        "text": "Defra’s 2025 Environmental Improvement Plan sets out over £10 billion of planned investment to improve more than 2,500 storm overflows in England in 2025–30. This is a plan for investment. To follow individual company costs and effects on bills, check the price controls, including later determinations for five companies by the Competition and Markets Authority.",
+        "citations": [
+          "price",
+          "redetermination"
+        ]
+      },
+      {
+        "heading": "Who pays for the investigation and the fix",
+        "text": "Companies fund maintenance and regulated investment through their finances, including bills. Permit and licence charges support regulatory work. Separately identify company penalties, any agreed remedial work and what customers funded through allowances.",
+        "citations": [
+          "committee",
+          "price",
+          "case"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Check whether more monitoring leads to action",
+        "text": "Compare the next annual data on the same basis. Where numbers fall, look for the outlets where improvements are complete and for evidence that the change persists in comparable weather.",
+        "citations": [
+          "performance",
+          "rules",
+          "rainfall"
+        ]
+      },
+      {
+        "scrutiny": [
+          "inspection-standard"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "Counting spills, incidents and offences",
+          "blocks": [
+            {
+              "text": "The annual monitoring return uses a consistent event-counting convention, so repeat discharges close together can be counted as one event. The Environment Agency’s incident classifications and legal findings use separate evidence. Read each series with its own scope and date.",
+              "citations": [
+                "data",
+                "performance",
+                "rules"
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "groupLabel": "Trial listing outcome",
+  "unit": "Percent",
+  "period": "England and Wales, April to June 2026",
+  "series": [
+    {
+      "label": "Started as planned",
+      "value": 44
+    },
+    {
+      "label": "No trial needed on the day",
+      "value": 31
+    },
+    {
+      "label": "Needed another date",
+      "value": 25
+    }
+  ]
+}

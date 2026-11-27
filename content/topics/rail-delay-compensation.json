@@ -1,0 +1,354 @@
+{
+  "id": "rail-delay-compensation",
+  "template": "topic-v7",
+  "title": "Do passengers get the rail delay compensation they’re owed?",
+  "category": "Rail",
+  "scope": "Great Britain",
+  "summary": "Follow a delayed journey through eligibility, claim and payment. Compare how quickly claims are processed with how often passengers who qualify get as far as claiming.",
+  "reviewed": "2026-11-27",
+  "citations": [
+    "guide",
+    "claims",
+    "survey"
+  ],
+  "sources": {
+    "guide": {
+      "title": "Rail compensation",
+      "publisher": "Office of Rail and Road",
+      "url": "https://www.orr.gov.uk/rail/passengers/complaints-compensation/rail-compensation",
+      "reference": "Eligibility, operator responsibility and the Delay Compensation Code of Practice"
+    },
+    "rights": {
+      "title": "Guidance on rail passengers’ rights and obligations",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/guidance-on-rail-passengers-rights-and-obligations-regulation-no-13712007/guidance-on-regulation-no-13712007-on-rail-passengers-right-and-obligations",
+      "reference": "Compensation and the cases where passenger rights to reimbursement apply"
+    },
+    "complaints": {
+      "title": "Complaints and compensation, annual rail consumer report 2025/26",
+      "publisher": "Office of Rail and Road",
+      "url": "https://www.orr.gov.uk/annual-rail-consumer-report-2025-2026/complaints-and-compensation",
+      "reference": "Operator monitoring, regulatory priorities and redress"
+    },
+    "claims": {
+      "title": "Delay compensation claims",
+      "publisher": "Office of Rail and Road",
+      "url": "https://dataportal.orr.gov.uk/statistics/passenger-experience/delay-compensation-claims/",
+      "reference": "Rail periods 1 to 4, 1 April to 25 July 2026, closure, approval and timeliness"
+    },
+    "survey": {
+      "title": "Rail delays and compensation 2025",
+      "publisher": "Department for Transport",
+      "url": "https://assets.publishing.service.gov.uk/media/698df9dd492ea446ea7f4358/rail-delays-and-compensation-2025.pdf",
+      "reference": "Tables 4.2 and 4.3, eligible delay, take-up and automatic or one-click compensation"
+    },
+    "survey_method": {
+      "title": "Rail delays and compensation research",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/rail-delays-and-compensation-2025",
+      "date": "2026-02-26",
+      "reference": "Online panel, sample and earlier survey waves"
+    },
+    "payouts": {
+      "title": "Rail passenger compensation paid by train operating companies",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/train-operating-companies-passengers-charter-compensation/train-operating-companies-passengers-charter-compensation",
+      "reference": "Table 1, operator payments by financial year and what is included"
+    },
+    "rail_plan": {
+      "title": "Delay Repay changes under Great British Railways",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/news/delay-repay-changes-will-make-rail-travel-easier-under-great-british-railways",
+      "date": "2026-03-17",
+      "reference": "Planned consolidated claim process and third-party retail channels"
+    }
+  },
+  "actors": {
+    "rail-passengers": {
+      "role": "Check the eligibility of the delayed journey and make or confirm a claim where needed.",
+      "citations": [
+        "guide",
+        "survey"
+      ]
+    },
+    "train-operators": {
+      "role": "Publish scheme terms, validate claims, give decisions and pay compensation.",
+      "citations": [
+        "guide",
+        "claims",
+        "complaints"
+      ]
+    },
+    "orr": {
+      "role": "Sets licence requirements and monitors claim handling, approvals and operator improvement actions.",
+      "citations": [
+        "guide",
+        "complaints",
+        "claims"
+      ]
+    },
+    "department-for-transport": {
+      "role": "Publishes research on take-up and is developing a consolidated Delay Repay service.",
+      "citations": [
+        "survey_method",
+        "rail_plan"
+      ]
+    }
+  },
+  "visuals": {
+    "process": {
+      "title": "From late arrival to money back",
+      "steps": [
+        {
+          "id": "eligibility",
+          "label": "Establish how late the passenger arrived",
+          "actors": [
+            "rail-passengers",
+            "train-operators"
+          ],
+          "text": "Operators’ published schemes specify eligible delay lengths. Delay Repay generally uses the delay to arrival at the destination and pays regardless of which organisation caused the delay. A refund for deciding not to travel is a separate route.",
+          "citations": [
+            "guide",
+            "rights",
+            "payouts"
+          ]
+        },
+        {
+          "id": "claim",
+          "label": "Find the scheme and send the claim",
+          "actors": [
+            "rail-passengers",
+            "train-operators"
+          ],
+          "text": "Use the responsible operator’s process, with ticket and journey details. Some schemes can detect the delay or send a claim prompt for eligible tickets. Under other schemes passengers start the claim themselves.",
+          "citations": [
+            "guide",
+            "survey",
+            "complaints"
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Validate the journey and give a decision",
+          "actors": [
+            "train-operators",
+            "orr"
+          ],
+          "text": "The operator checks the ticket, journey and delay and applies the scheme rules. The regulator tracks closed claims, whether they were approved and whether they were closed within 20 working days.",
+          "citations": [
+            "guide",
+            "claims",
+            "complaints"
+          ]
+        },
+        {
+          "id": "pay",
+          "label": "Pay eligible claims or explain a refusal",
+          "actors": [
+            "train-operators",
+            "rail-passengers"
+          ],
+          "text": "Approved claims go to payment. Passengers who disagree with a decision can use the operator’s appeals or complaints process and may be able to escalate an unresolved complaint to the Rail Ombudsman.",
+          "citations": [
+            "guide",
+            "complaints",
+            "rights"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "take-up": {
+      "type": "rates",
+      "title": "Take-up after an eligible delay of at least 30 minutes",
+      "description": "The survey-based share rose in 2023 and fell back in 2025.",
+      "note": "The percentage includes claims made and automatic compensation as defined in the research. It is based on respondents reporting their most recent eligible delay, including 2,976 respondents in 2025 with a delay of at least 30 minutes.",
+      "citations": [
+        "survey",
+        "survey_method"
+      ],
+      "data": "rail-delay-compensation-take-up.json"
+    }
+  },
+  "issues": {
+    "missing-claims": {
+      "title": "Many eligible passengers stop before a claim is made",
+      "step": {
+        "visual": "process",
+        "id": "claim"
+      },
+      "text": "In the DfT survey, 51% claimed or received automatic compensation for the relevant eligible delay of at least 30 minutes in 2025, down from 54% in 2023. The survey records reasons including people who did not know or think they could claim.",
+      "citations": [
+        "survey",
+        "survey_method"
+      ],
+      "consequences": [
+        {
+          "text": "If the claim depends on the passenger recognising an entitlement and finding the operator’s process, some passengers miss out. This can happen even when submitted claims are handled quickly.",
+          "citations": [
+            "survey",
+            "claims"
+          ]
+        }
+      ],
+      "measure": "Measure take-up among eligible passengers by ticket source and operator. Check separately who is prompted, who makes a claim and who actually receives payment.",
+      "charts": [
+        "take-up"
+      ]
+    },
+    "closed-claims": {
+      "title": "A fast decision leaves the payment question open",
+      "step": {
+        "visual": "process",
+        "id": "decide"
+      },
+      "text": "ORR reported 3.8 million claims closed from 1 April to 25 July 2026, up 55% on the same rail periods the previous year. Of closed claims, 99.1% were handled within 20 working days and 83.6% were approved.",
+      "citations": [
+        "claims"
+      ],
+      "consequences": [
+        {
+          "text": "A rejection can require more work from the passenger to understand or appeal it. The regulator’s closure measure includes both approvals and rejections.",
+          "citations": [
+            "claims",
+            "complaints"
+          ]
+        }
+      ],
+      "measure": "Track rejected claims by reason, outcomes after appeal and days from approval to cleared payment. Compare the take-up denominator with eligible disrupted journeys.",
+      "evidenceGap": "The claim closure series does not establish the share of all eligible passengers paid or how long a payment takes to reach each passenger."
+    }
+  },
+  "scrutiny": {
+    "regulator-check": {
+      "step": {
+        "visual": "process",
+        "id": "decide"
+      },
+      "question": "How does the regulator know operators are making compensation easier to obtain?",
+      "record": "complaints",
+      "answer": "ORR asks operators to raise awareness and identify recurring issues that lead to complaints. It uses monthly operator returns for claims handling and separate evidence on passenger experience.",
+      "citations": [
+        "complaints",
+        "claims",
+        "survey"
+      ],
+      "watch": "Look for operator-specific action and whether it improves the share of eligible journeys paid, not just the rate of decisions made on time."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The entitlement",
+            "text": "A qualifying delay can entitle a passenger to compensation. The threshold and payment depend on the operator’s scheme and the journey.",
+            "citations": [
+              "guide",
+              "payouts"
+            ]
+          },
+          {
+            "label": "Getting as far as a claim",
+            "text": "In DfT’s 2025 survey, 51% of respondents asked about an eligible delay of at least 30 minutes claimed or received automatic compensation.",
+            "citations": [
+              "survey"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Compare take-up among eligible passengers with how quickly claims are decided and paid. A fast response benefits the passengers whose claims reach the operator.",
+            "citations": [
+              "claims",
+              "survey",
+              "rail_plan"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "process"
+      },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [
+            {
+              "actors": [
+                "rail-passengers",
+                "train-operators",
+                "orr",
+                "department-for-transport"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "missing-claims",
+          "closed-claims"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "heading": "Do easier claim routes reach more passengers?",
+        "text": "For eligible delays of at least 30 minutes, the share reporting automatic or one-click compensation fell from 13% in 2023 to 9% in 2025. The survey captures the mix of journeys and claims in those waves. It cannot isolate the effect of introducing a new service for otherwise comparable journeys.",
+        "citations": [
+          "survey"
+        ]
+      },
+      {
+        "heading": "What to test when a new channel opens",
+        "text": "Compare similar delays and fares before and after a retailer or operator enables assisted claims. Track newly reached passengers, failed prompts, duplicate claims and completed payments, including people travelling with paper tickets.",
+        "citations": [
+          "survey",
+          "complaints",
+          "rail_plan"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Compensation paid is one part of the cost",
+        "text": "The DfT charter table shows that Avanti West Coast paid £40.476 million in passenger compensation in 2024/25, up from £32.914 million the year before. This is an operator example. The table can include other charter and discretionary compensation as well as Delay Repay.",
+        "citations": [
+          "payouts"
+        ]
+      },
+      {
+        "heading": "What an end-to-end comparison should cover",
+        "text": "Keep payments to passengers, operator processing costs and the cost of building new retail integrations visible. A service that pays more eligible people can increase payouts while reducing the work needed per claim.",
+        "citations": [
+          "payouts",
+          "rail_plan",
+          "complaints"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "Will the new retailer route change who gets paid?",
+        "text": "In March 2026 DfT announced plans for a consolidated Delay Repay service under Great British Railways and claims through third-party retailers. Watch for operator and retailer go-live dates, accessible routes, and a published eligible-passenger take-up measure.",
+        "citations": [
+          "rail_plan",
+          "survey",
+          "claims"
+        ]
+      },
+      {
+        "scrutiny": [
+          "regulator-check"
+        ],
+        "collapseExchanges": "Read the questions and responses"
+      }
+    ],
+    "sources": []
+  }
+}

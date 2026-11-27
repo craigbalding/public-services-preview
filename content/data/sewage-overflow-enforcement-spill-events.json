@@ -1,0 +1,30 @@
+{
+  "dateHeading": "Calendar year ending",
+  "valueHeading": "Recorded spill events",
+  "segments": [
+    {
+      "label": "England annual monitoring returns",
+      "definition": "Events recorded by water-company monitors using the Environment Agency’s counting rules. Thousands on the chart are event counts.",
+      "citations": [
+        "performance",
+        "previous",
+        "history",
+        "rainfall"
+      ],
+      "points": [
+        [
+          "2023-12-31",
+          464056
+        ],
+        [
+          "2024-12-31",
+          450398
+        ],
+        [
+          "2025-12-31",
+          292119
+        ]
+      ]
+    }
+  ]
+}
