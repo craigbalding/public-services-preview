@@ -153,7 +153,13 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
 .finding-next { margin-top: .65rem; }
 .evidence-links { padding-left: 1.2rem; margin-block: .6rem 0; }
 .evidence-gap { color: var(--muted); font-size: .9rem; }
-.metric:target, .flow > li:target, .finding:target, .chart:target { background: var(--light-green); }
+.follow-ups h3 { margin: 0 0 .65rem; }
+.follow-ups h4 { margin: 0 0 .3rem; }
+.follow-ups > ul { list-style: none; margin: 0; padding: 0; }
+.follow-ups > ul > li + li { border-top: 1px solid var(--line); margin-top: .9rem; padding-top: .85rem; }
+.follow-up-history { padding-left: 1.2rem; margin: 0; }
+.follow-up-history li + li { margin-top: .4rem; }
+.metric:target, .flow > li:target, .finding:target, .chart:target, .follow-ups li:target { background: var(--light-green); }
 .sources ol { padding-left: 1.4rem; }
 .sources li { padding-left: .3rem; }
 .sources li + li { margin-top: .8rem; }

@@ -108,10 +108,11 @@ async function renderTopic(topic) {
   const metricIds = listed('metrics');
   const issueIds = listed('issues');
   const improvementIds = listed('improvements');
-  for (const ids of [visualIds, chartIds, metricIds, issueIds, improvementIds]) {
+  const scrutinyIds = listed('scrutiny');
+  for (const ids of [visualIds, chartIds, metricIds, issueIds, improvementIds, scrutinyIds]) {
     requireCondition(
       ids.every(id => typeof id === 'string' && slug.test(id)) && new Set(ids).size === ids.length,
-      `${topic.id}: invalid or duplicate visual, chart, metric, issue or improvement reference`,
+      `${topic.id}: invalid or duplicate reference in the topic sections`,
     );
   }
   requireCondition(
@@ -135,6 +136,15 @@ async function renderTopic(topic) {
   };
 
   const stepAnchor = (visual, step) => `step-${visual}--${step}`;
+
+  function processLink(reference, label) {
+    const visual = reference?.visual;
+    const step = visualIds.includes(visual)
+      ? topic.visuals[visual]?.steps.find(step => step.id && step.id === reference.id)
+      : undefined;
+    requireCondition(step, `${topic.id}: ${label} needs a published process step`);
+    return `<a href="#${stepAnchor(visual, step.id)}">${escape(step.label)}</a>`;
+  }
 
   function evidenceLinks({ charts = [], metrics = [] }) {
     requireCondition(Array.isArray(charts) && Array.isArray(metrics), `${topic.id}: invalid evidence references`);
@@ -236,11 +246,7 @@ async function renderTopic(topic) {
     return ids.map(id => {
       requireCondition(Object.hasOwn(topic.issues ?? {}, id), `${topic.id}: unknown issue ${id}`);
       const issue = topic.issues[id];
-      const visual = issue.step?.visual;
-      const step = visualIds.includes(visual)
-        ? topic.visuals[visual]?.steps.find(step => step.id && step.id === issue.step.id)
-        : undefined;
-      requireCondition(step, `${topic.id}: issue ${id} needs a published process step`);
+      const step = processLink(issue.step, `issue ${id}`);
       const links = evidenceLinks(issue);
       requireCondition(
         links || issue.improvement?.evidenceGap?.trim(),
@@ -258,7 +264,7 @@ async function renderTopic(topic) {
       });
       return `<div class="finding">
         <h3>${escape(issue.title)}</h3>
-        <p class="finding-step"><a href="#${stepAnchor(visual, step.id)}">${escape(step.label)}</a></p>
+        <p class="finding-step">${step}</p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
         ${effects.length ? `<div class="consequences"><h4>Why it matters</h4>${effects.join('')}</div>` : ''}
         ${links}
@@ -284,8 +290,58 @@ async function renderTopic(topic) {
     }).join('');
   }
 
+  function renderScrutiny(ids) {
+    requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: scrutiny block is empty`);
+    const statusLabels = {
+      requested: 'Requested by the committee',
+      promised: 'Promised by officials',
+      overdue: 'Overdue',
+      partial: 'Partly provided',
+      provided: 'Provided',
+    };
+    const followUps = [];
+    const exchanges = ids.map(id => {
+      requireCondition(Object.hasOwn(topic.scrutiny ?? {}, id), `${topic.id}: unknown scrutiny exchange ${id}`);
+      const exchange = topic.scrutiny[id];
+      for (const field of ['question', 'answer', 'watch']) {
+        requireCondition(typeof exchange[field] === 'string' && exchange[field].trim(),
+          `${topic.id}: scrutiny exchange ${id} needs ${field}`);
+      }
+      const step = processLink(exchange.step, `scrutiny exchange ${id}`);
+      const recording = topic.sources[exchange.recording];
+      requireCondition(Object.hasOwn(topic.sources, exchange.recording) && recording.reference?.trim(),
+        `${topic.id}: scrutiny exchange ${id} needs a recording reference`);
+      const followUp = exchange.followUp;
+      if (followUp) {
+        requireCondition(followUp.title?.trim() && Array.isArray(followUp.history) && followUp.history.length,
+          `${topic.id}: scrutiny follow-up ${id} needs a title and dated history`);
+        const history = followUp.history.map((event, index) => {
+          requireCondition(Object.hasOwn(statusLabels, event.status) && event.text?.trim(),
+            `${topic.id}: invalid follow-up entry for ${id}`);
+          requireCondition((index === 0 || followUp.history[index - 1].date <= event.date) && event.date <= topic.reviewed,
+            `${topic.id}: follow-up dates for ${id} must be ordered and within the review date`);
+          return `<li>${dateLabel(event.date)} · <strong>${statusLabels[event.status]}</strong>. ${escape(event.text)} ${citations(event.citations)}</li>`;
+        });
+        followUps.push(`<li id="follow-up-${id}"><h4>${escape(followUp.title)}</h4>
+          <ol class="follow-up-history">${history.join('')}</ol>
+          <p class="finding-next"><a href="#scrutiny-${id}">Read the exchange</a></p></li>`);
+      }
+      return `<div class="finding" id="scrutiny-${id}">
+        <h3>${escape(exchange.question)}</h3>
+        <p class="finding-step">${step} <span aria-hidden="true">·</span> <a href="${escape(recording.url)}">Watch from ${escape(recording.reference)}</a></p>
+        <p>${escape(exchange.answer)} ${citations(exchange.citations)}</p>
+        <p><strong>What to watch for.</strong> ${escape(exchange.watch)}</p>
+        ${evidenceLinks(exchange)}
+        ${followUp ? `<p class="finding-next"><a href="#follow-up-${id}">Track the follow-up</a></p>` : ''}
+      </div>`;
+    });
+    const tracker = followUps.length ? `<div class="figure follow-ups" id="scrutiny-follow-up">
+      <h3>Evidence to follow up</h3><ul>${followUps.join('')}</ul></div>` : '';
+    return tracker + exchanges.join('');
+  }
+
   async function renderBlock(block) {
-    const blockKinds = ['text', 'visual', 'actors', 'chart', 'metrics', 'issues', 'improvements']
+    const blockKinds = ['text', 'visual', 'actors', 'chart', 'metrics', 'issues', 'improvements', 'scrutiny']
       .filter(kind => Object.hasOwn(block, kind));
     requireCondition(blockKinds.length === 1, `${topic.id}: each block needs one content type`);
     switch (blockKinds[0]) {
@@ -301,6 +357,8 @@ async function renderTopic(topic) {
         return renderIssues(block.issues);
       case 'improvements':
         return renderImprovements(block.improvements);
+      case 'scrutiny':
+        return renderScrutiny(block.scrutiny);
       case 'actors':
         return `<dl class="actors">${block.actors.map(id => {
           const actor = getActor(id);

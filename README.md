@@ -24,3 +24,9 @@ Store trend observations as `[date, count, publicationStatus?]` within comparabl
 ## Topic template v4
 
 Add a sourced consequence to each finding. Use case examples to explain what happened to the people affected and distinguish observed harm from potential harm. In the outcomes section, give each comparison its population, outcome definition, follow-up period and limits. Rates charts use values from 0 to 100 and the full percentage scale.
+
+## Topic template v5
+
+Use `scrutiny` to follow questions that test how well a specific process step works. Cite the official record, link to the relevant exchange using a timestamp, and explain what observable result would show progress. Add the transcript and question number when available. Link to comparable baseline figures where they exist.
+
+For each request for evidence or explicit commitment, give `followUp` a title and start a dated, cited `history` with `requested` or `promised`. Record the expected timing as precisely as the source allows. Append new evidence using `overdue`, `partial` or `provided` as appropriate and explain what the evidence establishes. As service results become available, update the relevant measures and report the periods they cover. Record changes already under way before the hearing so the chronology is clear.

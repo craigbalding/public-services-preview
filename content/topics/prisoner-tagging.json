@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v4",
+  "template": "topic-v5",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -123,6 +123,60 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2024-12-16/20396",
       "date": "2024-12-23",
       "reference": "Question 20396 and ministerial response"
+    },
+    "pac-inquiry": {
+      "publisher": "House of Commons Public Accounts Committee",
+      "title": "Electronic Monitoring: follow-up inquiry",
+      "url": "https://committees.parliament.uk/work/9912/electronic-monitoring-followup/"
+    },
+    "pac-fitting-figures": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Fitting success and the 15% threshold",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T10%3A42%3A17Z",
+      "date": "2026-11-26",
+      "reference": "38:12"
+    },
+    "pac-payments": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Challenge on payments to Serco",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T10%3A48%3A32Z",
+      "date": "2026-11-26",
+      "reference": "44:27"
+    },
+    "pac-payment-note": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Chair requests a written note on payments",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T10%3A52%3A52Z",
+      "date": "2026-11-26",
+      "reference": "48:47"
+    },
+    "pac-fittings-at-release": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Why were tags not already fitted before release?",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T10%3A53%3A16Z",
+      "date": "2026-11-26",
+      "reference": "49:11"
+    },
+    "pac-out-of-hours": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Response to a domestic abuse exclusion-zone alert outside office hours",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T11%3A03%3A22Z",
+      "date": "2026-11-26",
+      "reference": "59:17"
+    },
+    "pac-payments-correction": {
+      "publisher": "ParliamentLive, Public Accounts Committee",
+      "title": "Jim Barton corrects his evidence on payments to Serco",
+      "url": "https://parliamentlive.tv/event/index/d1c78ba9-5758-488e-b02f-3b546ca36a1d?in=2026-11-26T11%3A15%3A59Z",
+      "date": "2026-11-26",
+      "reference": "1:11:54"
+    },
+    "audit-fitting-performance": {
+      "publisher": "National Audit Office",
+      "title": "Electronic monitoring: tag-fitting performance and success rates",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2026/07/electronic-monitoring-improving-resilience-to-meet-increasing-demand.pdf",
+      "date": "2026-07-10",
+      "reference": "Paragraphs 12, 13 and 2.11"
     }
   },
   "actors": {
@@ -274,8 +328,8 @@
       },
       {
         "heading": "Why weren’t tags fitted at the prison gate?",
-        "text": "Home fitting was the established model, and some setups needed equipment at the address as well as a wearable tag. The sources describe that practical reason for a home visit. The original decision to fit the wearable device at home remains undocumented in these sources.",
-        "citations": ["contracts-2013", "inspector-evidence", "commons-answer"]
+        "text": "Asked about the old approach by the Public Accounts Committee, probation director general Jim Barton said most people with a tag also need a unit calibrated at their address. Fitting the tag during that home visit saved a visit. Fitting it in prison usually adds a second visit, and officials used the pilot to test the costs of doing both.",
+        "citations": ["pac-fittings-at-release", "contracts-2013"]
       },
       {
         "text": "In October 2025 the Ministry piloted fitting before release in six prisons so monitoring could begin as people left. The current contract calls for prison visits when a fitting is required, with Serco responsible for staffing them.",
@@ -306,6 +360,15 @@
       },
       {
         "metrics": ["bail-breach-follow-through"]
+      }
+    ],
+    "scrutiny": [
+      {
+        "text": "The Public Accounts Committee questioned Ministry of Justice and prison and probation officials on 26 November 2026. These exchanges show what MPs tested, what officials said and what evidence would show progress. The summaries are based on the hearing recording.",
+        "citations": ["pac-inquiry"]
+      },
+      {
+        "scrutiny": ["fitting-figures", "serco-payments", "fittings-at-release", "out-of-hours"]
       }
     ],
     "whats-changing": [
@@ -340,6 +403,64 @@
         "citations": ["status-annex", "inspection", "reoffending-tag-status-question"]
       }
     ]
+  },
+  "scrutiny": {
+    "fitting-figures": {
+      "question": "How often do fittings succeed, and why is 15% unmonitored considered tolerable?",
+      "step": { "visual": "monitoring-process", "id": "fit-equipment" },
+      "recording": "pac-fitting-figures",
+      "answer": "Officials said updated fitting figures would be published in January. Permanent Secretary Jo Farrar said the 15% threshold applies to a snapshot of people with an active monitoring order and can include people facing short waits. The audit had found that 45% of adult tag requests in 2025 and 62% in January to April 2026 led to a fitting within two attempts.",
+      "citations": ["pac-fitting-figures", "audit-fitting-performance"],
+      "watch": "Compare the January figures with the audit using the same definition. Alongside the share unmonitored at a point in time, check how long each release cohort waits for monitoring to start.",
+      "charts": ["status-by-stage"],
+      "followUp": {
+        "title": "Updated figures on successful fittings within two attempts",
+        "history": [
+          {
+            "date": "2026-11-26",
+            "status": "promised",
+            "text": "Officials said they would publish the figures in January 2027.",
+            "citations": ["pac-fitting-figures"]
+          }
+        ]
+      }
+    },
+    "serco-payments": {
+      "question": "Can Serco meet its target or get paid when a tag goes unfitted?",
+      "step": { "visual": "monitoring-process", "id": "fit-equipment" },
+      "recording": "pac-payments",
+      "answer": "Jim Barton corrected his earlier evidence. Serco receives no payment for the first two unsuccessful visits, and is paid for further visits if prison and probation officials commission them. The audit found that Serco met its 95% visit timeliness target in February 2026 and fitted tags within those two attempts for 62% of the people it visited.",
+      "citations": ["pac-payments", "pac-payments-correction", "audit-fitting-performance"],
+      "watch": "Check which payments depend on fitting a tag, and whether the contract measures successful fittings as well as timely attempts.",
+      "followUp": {
+        "title": "Written explanation of Serco’s payment rules and target",
+        "history": [
+          {
+            "date": "2026-11-26",
+            "status": "requested",
+            "text": "The chair asked for a note before the committee prepared its report.",
+            "citations": ["pac-payment-note"]
+          }
+        ]
+      }
+    },
+    "fittings-at-release": {
+      "question": "Why weren’t tags fitted before people left prison?",
+      "step": { "visual": "monitoring-process", "id": "fit-equipment" },
+      "recording": "pac-fittings-at-release",
+      "answer": "Barton said the old model combined fitting the tag and setting up the monitoring unit in one home visit. The pilot tested the cost of fitting in prison and then visiting the address. The Ministry had announced an expansion to 83 prisons by the end of March 2027 the day before the hearing.",
+      "citations": ["pac-fittings-at-release", "rollout"],
+      "watch": "As new prisons join, compare the share of eligible leavers with working monitoring at release and how long the rest wait. Count prisons for rollout coverage and follow release cohorts to see whether the change closes the gap.",
+      "charts": ["status-by-stage"]
+    },
+    "out-of-hours": {
+      "question": "Who acts on a domestic abuse exclusion-zone breach outside office hours?",
+      "step": { "visual": "monitoring-process", "id": "respond-to-alert" },
+      "recording": "pac-out-of-hours",
+      "answer": "Sarah Olney asked whether a victim could be left waiting overnight. Barton said a small group on enhanced monitoring gets near-instant notifications while most cases follow the ordinary timetable. A notification still needs someone to assess the risk and act.",
+      "citations": ["pac-out-of-hours", "inspection"],
+      "watch": "Look for elapsed time from breach to protective action, including how often police or probation acted and whether responses differ overnight or at weekends. Track enhanced and ordinary monitoring separately."
+    }
   },
   "metrics": {
     "prompt-fitting": {
