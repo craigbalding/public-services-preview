@@ -1,0 +1,8 @@
+{
+  "sections": [
+    { "id": "how-it-works", "title": "How it works" },
+    { "id": "who-does-what", "title": "Who does what" },
+    { "id": "in-numbers", "title": "In numbers" },
+    { "id": "what-needs-fixing", "title": "What needs fixing" }
+  ]
+}

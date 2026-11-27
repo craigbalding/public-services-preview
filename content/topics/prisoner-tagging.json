@@ -1,0 +1,78 @@
+{
+  "id": "prisoner-tagging",
+  "template": "topic-v1",
+  "title": "How does prisoner tagging work?",
+  "category": "Justice",
+  "scope": "England and Wales",
+  "summary": "An electronic tag can help check conditions such as a curfew after release from prison. The same monitoring service is also used for court orders and immigration bail.",
+  "citations": ["guidance", "statistics"],
+  "reviewed": "2026-11-27",
+  "sources": {
+    "guidance": {
+      "publisher": "GOV.UK",
+      "title": "Electronic tags",
+      "url": "https://www.gov.uk/electronic-tags",
+      "reference": "Types of tag and contact guidance"
+    },
+    "statistics": {
+      "publisher": "Ministry of Justice",
+      "title": "Electronic monitoring statistics, September 2026",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-september-2026/electronic-monitoring-statistics-publication-england-and-wales-september-2026",
+      "date": "2026-10-22",
+      "reference": "Main points, Figure 1 (Table 1.1), methodology and background"
+    },
+    "audit": {
+      "publisher": "National Audit Office",
+      "title": "Electronic monitoring: improving resilience to meet increasing demand",
+      "url": "https://www.nao.org.uk/reports/electronic-monitoring-improving-resilience-to-meet-increasing-demand/",
+      "date": "2026-07-10",
+      "reference": "Background and conclusions"
+    }
+  },
+  "actors": {
+    "courts": { "role": "Can set monitoring conditions as part of bail or a sentence.", "citations": ["guidance", "statistics"] },
+    "prison-governors": { "role": "Can decide which tag to use in the cases they oversee.", "citations": ["guidance"] },
+    "parole-board": { "role": "Can also decide which tag to use in the cases it oversees.", "citations": ["guidance"] },
+    "serco": { "role": "Fits tags and provides the monitoring service under contract.", "citations": ["audit"] },
+    "allied-universal": { "role": "Supplies tags and the monitoring system.", "citations": ["audit"] },
+    "hmpps": { "role": "Oversees work to stabilise and expand the service.", "citations": ["audit"] },
+    "ministry-of-justice": { "role": "Awards monitoring contracts and publishes official statistics.", "citations": ["audit", "statistics"] },
+    "national-audit-office": { "role": "Independently assesses how well the service is working.", "citations": ["audit"] }
+  },
+  "visuals": {
+    "curfew-process": {
+      "title": "What happens with a curfew tag",
+      "steps": [
+        { "label": "Set the condition", "text": "The relevant authority sets the monitoring requirement.", "actors": ["courts", "prison-governors", "parole-board"], "citations": ["guidance"] },
+        { "label": "Fit the equipment", "text": "The monitoring provider normally fits an ankle tag and installs a unit at the specified address.", "actors": ["serco"], "citations": ["guidance", "audit"] },
+        { "label": "Check the curfew", "text": "The equipment checks whether the wearer is at the address during curfew hours.", "citations": ["guidance"] },
+        { "label": "Send an alert", "text": "The monitoring centre receives an alert if the wearer is away during those hours.", "citations": ["guidance"] }
+      ]
+    }
+  },
+  "charts": {
+    "by-order": {
+      "title": "People assigned electronic monitoring equipment",
+      "data": "electronic-monitoring-by-order.json",
+      "showTotal": true,
+      "citations": ["statistics"],
+      "note": "The total includes all published order groups, including a small number in the immigration group who live in Scotland or Northern Ireland. The Ministry of Justice advises against comparing the figures with publications issued before June 2025 because the definition and counting method changed."
+    }
+  },
+  "sections": {
+    "how-it-works": [
+      { "text": "A curfew tag checks whether someone is at a specified address during set hours. Location tags can check a wider set of conditions, such as whether someone entered an exclusion zone. Alcohol tags detect alcohol through the skin.", "citations": ["guidance"] },
+      { "visual": "curfew-process" }
+    ],
+    "who-does-what": [
+      { "actors": ["courts", "prison-governors", "parole-board", "serco", "allied-universal", "hmpps", "ministry-of-justice", "national-audit-office"] }
+    ],
+    "in-numbers": [
+      { "chart": "by-order" }
+    ],
+    "what-needs-fixing": [
+      { "text": "In July 2026 the National Audit Office found that fitting backlogs had fallen, but police and probation teams still faced gaps in the information or capacity they needed to respond quickly to breaches.", "citations": ["audit"] },
+      { "text": "The auditors called for the Ministry of Justice and HM Prison and Probation Service to address weaknesses in oversight and data quality as they expand the service.", "citations": ["audit"] }
+    ]
+  }
+}

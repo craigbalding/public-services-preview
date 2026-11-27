@@ -1,0 +1,12 @@
+{
+  "asOf": "2026-09-30",
+  "groupLabel": "Order group",
+  "unit": "people assigned equipment",
+  "series": [
+    { "label": "Post-release", "value": 10290 },
+    { "label": "Court bail", "value": 9060 },
+    { "label": "Immigration", "value": 4041 },
+    { "label": "Court sentences", "value": 4003 },
+    { "label": "Specials", "value": 102 }
+  ]
+}
