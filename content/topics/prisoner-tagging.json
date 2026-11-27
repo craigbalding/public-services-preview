@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v1",
+  "template": "topic-v2",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -27,26 +27,130 @@
       "url": "https://www.nao.org.uk/reports/electronic-monitoring-improving-resilience-to-meet-increasing-demand/",
       "date": "2026-07-10",
       "reference": "Background and conclusions"
+    },
+    "status-annex": {
+      "publisher": "Ministry of Justice",
+      "title": "Electronic monitoring status statistics, September 2026",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-september-2026/annex-management-information-electronic-monitoring-status-statistics-september-2026",
+      "date": "2026-10-22",
+      "reference": "Management information, tables 6.1 and 6.2"
+    },
+    "inspection": {
+      "publisher": "Criminal Justice Joint Inspectorates",
+      "title": "Electronic monitoring in practice",
+      "url": "https://cjji.justiceinspectorates.gov.uk/inspection-report/electronic-monitoring-in-practice-the-police-response-to-electronically-monitored-bail-conditions-and-the-use-of-electronic-monitoring-on-community-sentences-and-post-release-licences/",
+      "date": "2026-10-29",
+      "reference": "Court bail case files, fitting the tag and inspection methodology"
+    },
+    "contracts-2013": {
+      "publisher": "National Audit Office",
+      "title": "The Ministry of Justice’s electronic monitoring contracts",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2013/11/10294-001-MoJ-Electronic-Monitoring_final.pdf",
+      "reference": "Part One, paragraph 1.7"
+    },
+    "commons-answer": {
+      "publisher": "Ministry of Justice, written answer to Parliament",
+      "title": "Prisoners’ release: electronic tagging",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37449/",
+      "date": "2026-10-30",
+      "reference": "Install at Source and Serco’s contract"
+    },
+    "rollout": {
+      "publisher": "Ministry of Justice",
+      "title": "Thousands more tags to be fitted in prison in major expansion",
+      "url": "https://www.gov.uk/government/news/thousands-more-tags-to-be-fitted-in-prison-in-major-expansion",
+      "date": "2026-11-25",
+      "reference": "Pilot and prison expansion timetable"
+    },
+    "inspector-evidence": {
+      "publisher": "House of Lords Justice and Home Affairs Committee",
+      "title": "Electronic monitoring of offenders: oral evidence",
+      "url": "https://committees.parliament.uk/oralevidence/18323/html/",
+      "date": "2026-11-10",
+      "reference": "Chief Inspector of Probation on home fitting and contract targets"
+    },
+    "action-plan": {
+      "publisher": "Ministry of Justice and HM Prison and Probation Service",
+      "title": "Response to the joint inspection of electronic monitoring",
+      "url": "https://www.gov.uk/government/publications/hmpps-response-to-the-electronic-monitoring-in-practice-criminal-justice-joint-inspection",
+      "date": "2026-10-29",
+      "reference": "Action plan, recommendation 16"
     }
   },
   "actors": {
-    "courts": { "role": "Can set monitoring conditions as part of bail or a sentence.", "citations": ["guidance", "statistics"] },
-    "prison-governors": { "role": "Can decide which tag to use in the cases they oversee.", "citations": ["guidance"] },
-    "parole-board": { "role": "Can also decide which tag to use in the cases it oversees.", "citations": ["guidance"] },
-    "serco": { "role": "Fits tags and provides the monitoring service under contract.", "citations": ["audit"] },
-    "allied-universal": { "role": "Supplies tags and the monitoring system.", "citations": ["audit"] },
-    "hmpps": { "role": "Oversees work to stabilise and expand the service.", "citations": ["audit"] },
-    "ministry-of-justice": { "role": "Awards monitoring contracts and publishes official statistics.", "citations": ["audit", "statistics"] },
-    "national-audit-office": { "role": "Independently assesses how well the service is working.", "citations": ["audit"] }
+    "courts": {
+      "role": "Can set monitoring conditions as part of bail or a sentence.",
+      "citations": ["guidance", "statistics"]
+    },
+    "prison-governors": {
+      "role": "Can decide which tag to use in the cases they oversee.",
+      "citations": ["guidance"]
+    },
+    "parole-board": {
+      "role": "Can also decide which tag to use in the cases it oversees.",
+      "citations": ["guidance"]
+    },
+    "serco": {
+      "role": "Fits tags and provides the monitoring service under contract.",
+      "citations": ["audit"]
+    },
+    "allied-universal": {
+      "role": "Supplies tags and the monitoring system.",
+      "citations": ["audit"]
+    },
+    "hmpps": {
+      "role": "Oversees work to stabilise and expand the service.",
+      "citations": ["audit"]
+    },
+    "ministry-of-justice": {
+      "role": "Awards monitoring contracts and publishes official statistics.",
+      "citations": ["audit", "statistics"]
+    },
+    "national-audit-office": {
+      "role": "Independently assesses how well the service is working.",
+      "citations": ["audit"]
+    },
+    "probation-service": {
+      "role": "Uses monitoring alongside supervision in the community and responds to suspected breaches of release licences.",
+      "citations": ["inspection"]
+    },
+    "police-forces": {
+      "role": "Assess suspected breaches of electronically monitored court bail and decide what police action to take.",
+      "citations": ["inspection"]
+    }
   },
   "visuals": {
-    "curfew-process": {
-      "title": "What happens with a curfew tag",
+    "monitoring-process": {
+      "title": "From a monitoring condition to a response",
       "steps": [
-        { "label": "Set the condition", "text": "The relevant authority sets the monitoring requirement.", "actors": ["courts", "prison-governors", "parole-board"], "citations": ["guidance"] },
-        { "label": "Fit the equipment", "text": "The monitoring provider normally fits an ankle tag and installs a unit at the specified address.", "actors": ["serco"], "citations": ["guidance", "audit"] },
-        { "label": "Check the curfew", "text": "The equipment checks whether the wearer is at the address during curfew hours.", "citations": ["guidance"] },
-        { "label": "Send an alert", "text": "The monitoring centre receives an alert if the wearer is away during those hours.", "citations": ["guidance"] }
+        {
+          "id": "set-condition",
+          "label": "Set the condition",
+          "text": "The relevant authority sets the monitoring requirement and specifies what the person must do.",
+          "actors": ["courts", "prison-governors", "parole-board"],
+          "citations": ["guidance", "statistics"]
+        },
+        {
+          "id": "fit-equipment",
+          "label": "Fit and activate the equipment",
+          "text": "The provider fits the tag and installs any other equipment needed. For prison leavers, that has usually meant a visit to their accommodation after release. The prison pilot fits tags before people leave.",
+          "actors": ["serco"],
+          "citations": ["guidance", "audit", "commons-answer"]
+        },
+        {
+          "id": "monitor-condition",
+          "label": "Monitor the condition",
+          "text": "The equipment checks the specified condition, such as a curfew, location restriction or alcohol requirement. The monitoring service reviews possible breaches.",
+          "actors": ["serco"],
+          "citations": ["guidance", "inspection"]
+        },
+        {
+          "id": "respond-to-alert",
+          "label": "Assess and respond to an alert",
+          "text": "The monitoring service passes on suspected breaches when required. Probation handles responses to release-licence breaches, while police assess suspected breaches of electronically monitored court bail.",
+          "actors": ["probation-service", "police-forces"],
+          "citations": ["inspection"]
+        }
       ]
     }
   },
@@ -56,23 +160,135 @@
       "data": "electronic-monitoring-by-order.json",
       "showTotal": true,
       "citations": ["statistics"],
-      "note": "The total includes all published order groups, including a small number in the immigration group who live in Scotland or Northern Ireland. The Ministry of Justice advises against comparing the figures with publications issued before June 2025 because the definition and counting method changed."
+      "note": "The total includes all published order groups, including a small number in the immigration group who live in Scotland or Northern Ireland. The Ministry of Justice advises against comparing the figures with publications issued before June 2025 because the definition and counting method changed. The figures predate the release changes that began on 1 October 2026."
     }
   },
   "sections": {
+    "purpose": [
+      {
+        "text": "After prison, tagging helps probation check whether someone follows conditions such as a curfew or staying away from a specified area. It is intended to support supervision in the community, manage risks to victims and the public, and make it possible to manage some people outside custody.",
+        "citations": ["statistics", "audit", "inspection"]
+      }
+    ],
     "how-it-works": [
-      { "text": "A curfew tag checks whether someone is at a specified address during set hours. Location tags can check a wider set of conditions, such as whether someone entered an exclusion zone. Alcohol tags detect alcohol through the skin.", "citations": ["guidance"] },
-      { "visual": "curfew-process" }
+      {
+        "text": "A curfew tag checks whether someone is at a specified address during set hours. Location tags can check a wider set of conditions, such as whether someone entered an exclusion zone. Alcohol tags detect alcohol through the skin.",
+        "citations": ["guidance"]
+      },
+      {
+        "visual": "monitoring-process"
+      }
     ],
     "who-does-what": [
-      { "actors": ["courts", "prison-governors", "parole-board", "serco", "allied-universal", "hmpps", "ministry-of-justice", "national-audit-office"] }
+      {
+        "actors": ["courts", "prison-governors", "parole-board", "serco", "allied-universal", "hmpps", "ministry-of-justice", "national-audit-office", "probation-service", "police-forces"]
+      }
+    ],
+    "how-it-came-to-be": [
+      {
+        "text": "The National Audit Office documented home fitting in 2013. The curfew service paired an ankle tag with a monitoring unit at the person’s address. The current service went live under new contracts in May 2024. In October 2026, changes under the Sentencing Act introduced a presumption of tagging for eligible prison leavers under the new release arrangements.",
+        "citations": ["contracts-2013", "audit", "statistics"]
+      },
+      {
+        "heading": "Why weren’t tags fitted at the prison gate?",
+        "text": "Home fitting was the established model, and some setups needed equipment at the address as well as a wearable tag. The sources describe that practical reason for a home visit. The original decision to fit the wearable device at home remains undocumented in these sources.",
+        "citations": ["contracts-2013", "inspector-evidence", "commons-answer"]
+      },
+      {
+        "text": "In October 2025 the Ministry piloted fitting before release in six prisons so monitoring could begin as people left. The current contract calls for prison visits when a fitting is required, with Serco responsible for staffing them.",
+        "citations": ["rollout", "commons-answer"]
+      }
     ],
     "in-numbers": [
-      { "chart": "by-order" }
+      {
+        "chart": "by-order"
+      },
+      {
+        "metrics": ["post-release-without-equipment", "prompt-fitting", "equipment-not-communicating", "bail-breach-follow-through"]
+      }
     ],
     "what-needs-fixing": [
-      { "text": "In July 2026 the National Audit Office found that fitting backlogs had fallen, but police and probation teams still faced gaps in the information or capacity they needed to respond quickly to breaches.", "citations": ["audit"] },
-      { "text": "The auditors called for the Ministry of Justice and HM Prison and Probation Service to address weaknesses in oversight and data quality as they expand the service.", "citations": ["audit"] }
+      {
+        "issues": ["fitting-delay", "alert-response"]
+      }
+    ],
+    "whats-changing": [
+      {
+        "improvements": ["fitting-delay", "alert-response"]
+      }
     ]
+  },
+  "metrics": {
+    "post-release-without-equipment": {
+      "label": "Post-release cases without equipment",
+      "count": 1657,
+      "denominator": 11947,
+      "asOf": "2026-09-30",
+      "basis": "This snapshot covers people recorded in the post-release group. It includes 526 people recorded as being in custody who had no equipment.",
+      "type": "Management information",
+      "citations": ["statistics", "status-annex"]
+    },
+    "prompt-fitting": {
+      "label": "GPS or curfew tags fitted promptly",
+      "percentage": 55,
+      "basis": "Inspector judgement in a sample of community sentences and post-release licences from September to November 2025. About one in five waited more than 14 days. The result describes the cases inspected.",
+      "type": "Case-file inspection",
+      "citations": ["inspection"]
+    },
+    "equipment-not-communicating": {
+      "label": "Installed equipment not communicating",
+      "count": 1557,
+      "denominator": 27496,
+      "asOf": "2026-09-30",
+      "basis": "Across all order groups. The monitoring system had received no signal from their equipment in the previous 14 days.",
+      "type": "Management information",
+      "citations": ["status-annex"]
+    },
+    "bail-breach-follow-through": {
+      "label": "Court bail cases with every response step recorded",
+      "count": 2,
+      "denominator": 21,
+      "basis": "In case files from the forces inspected, only two showed that police had received the notification, assessed the risk, decided what to do and updated the monitoring service.",
+      "type": "Case-file inspection",
+      "citations": ["inspection"]
+    }
+  },
+  "issues": {
+    "fitting-delay": {
+      "title": "Monitoring can start late or fail to start",
+      "step": {
+        "visual": "monitoring-process",
+        "id": "fit-equipment"
+      },
+      "text": "Inspectors found delays when a person was unavailable or when information needed to arrange the fitting was missing or wrong. Unstable accommodation can make home fitting harder. A provider can meet its contractual target by attempting a visit on time even when the fitting does not go ahead. The September figures also show why it matters to check that installed equipment is communicating.",
+      "citations": ["inspection", "inspector-evidence", "status-annex"],
+      "metrics": ["post-release-without-equipment", "prompt-fitting", "equipment-not-communicating"],
+      "improvement": {
+        "title": "Fit tags before eligible prison leavers leave custody",
+        "owner": "ministry-of-justice",
+        "status": "Six-prison pilot. On 25 November 2026 the Ministry announced expansion to 16 prisons in December, 50 in January 2027 and 83 by the end of March 2027.",
+        "measure": "Track the share of prison leavers with a monitoring requirement whose equipment is working when they leave, and the time until monitoring starts for everyone else.",
+        "evidenceGap": "The September equipment snapshot predates the October release reforms. A national release-day rate is needed to judge the effect of the rollout.",
+        "citations": ["rollout", "statistics"]
+      }
+    },
+    "alert-response": {
+      "title": "An alert needs someone to act on it",
+      "step": {
+        "visual": "monitoring-process",
+        "id": "respond-to-alert"
+      },
+      "text": "The National Audit Office found that police and probation staff often lacked the information or capacity to respond quickly. Inspectors looking specifically at court bail found avoidable delays in some cases and incomplete records of what happened after a notification.",
+      "citations": ["audit", "inspection"],
+      "metrics": ["bail-breach-follow-through"],
+      "improvement": {
+        "title": "Improve records of what happens after a court bail alert",
+        "owner": "ministry-of-justice",
+        "status": "The Ministry partly accepted the recommendation to publish more detail. Its October action plan targets March 2027 for completing a data quality review.",
+        "measure": "Track the share of notifications with a recorded risk assessment and enforcement decision, and how long those decisions take.",
+        "evidenceGap": "The inspection sample provides a starting point. A consistent national series would make it possible to track progress across forces.",
+        "citations": ["action-plan", "inspection"]
+      }
+    }
   }
 }

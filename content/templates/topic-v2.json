@@ -1,0 +1,11 @@
+{
+  "sections": [
+    { "id": "purpose", "title": "What it is meant to achieve", "requiredBlock": "text" },
+    { "id": "how-it-works", "title": "How it works", "requiredBlock": "visual" },
+    { "id": "who-does-what", "title": "Who does what", "requiredBlock": "actors" },
+    { "id": "how-it-came-to-be", "title": "How it came to be", "requiredBlock": "text" },
+    { "id": "in-numbers", "title": "In numbers", "requiredBlock": "metrics" },
+    { "id": "what-needs-fixing", "title": "What needs fixing", "requiredBlock": "issues" },
+    { "id": "whats-changing", "title": "What’s changing", "requiredBlock": "improvements" }
+  ]
+}

@@ -11,6 +11,7 @@ const site = await readJson(root, 'site.json');
 const actors = await readJson(content, 'actors.json');
 const number = new Intl.NumberFormat('en-GB');
 const date = new Intl.DateTimeFormat('en-GB', { dateStyle: 'long', timeZone: 'UTC' });
+const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function escape(value) {
   return String(value).replace(/[&<>"']/g, character => ({
@@ -93,7 +94,7 @@ function renderIndex(topics) {
 async function loadTopic(filename) {
   const topic = await readJson(content, `topics/${filename}`);
   for (const [kind, value] of [['topic ID', topic.id], ['template', topic.template]]) {
-    requireCondition(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value), `${filename}: invalid ${kind}`);
+    requireCondition(typeof value === 'string' && slug.test(value), `${filename}: invalid ${kind}`);
   }
   requireCondition(basename(filename, '.json') === topic.id, `${filename}: filename must match topic ID`);
   const template = await readJson(content, `templates/${topic.template}.json`);
@@ -104,10 +105,35 @@ async function loadTopic(filename) {
       sectionIds.every(id => Array.isArray(topic.sections[id]) && topic.sections[id].length),
     `${filename}: sections must match the template and have content`,
   );
+  for (const { id, requiredBlock } of template.sections) {
+    if (requiredBlock) {
+      requireCondition(
+        topic.sections[id].some(block => Object.hasOwn(block, requiredBlock)),
+        `${filename}: ${id} requires a ${requiredBlock} block`,
+      );
+    }
+  }
   return { ...topic, sectionOrder: template.sections };
 }
 
 async function renderTopic(topic) {
+  const allBlocks = Object.values(topic.sections).flat();
+  const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
+  const visualIds = listed('visual');
+  const metricIds = listed('metrics');
+  const issueIds = listed('issues');
+  const improvementIds = listed('improvements');
+  for (const ids of [visualIds, metricIds, issueIds, improvementIds]) {
+    requireCondition(
+      ids.every(id => typeof id === 'string' && slug.test(id)) && new Set(ids).size === ids.length,
+      `${topic.id}: invalid or duplicate visual, metric, issue or improvement reference`,
+    );
+  }
+  requireCondition(
+    issueIds.length === improvementIds.length && issueIds.every(id => improvementIds.includes(id)),
+    `${topic.id}: each issue needs a published improvement`,
+  );
+
   const sourceIds = Object.keys(topic.sources);
   const citations = ids => {
     requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: missing citation`);
@@ -123,15 +149,23 @@ async function renderTopic(topic) {
     return topic.actors[id];
   };
 
+  const stepAnchor = (visual, step) => `step-${visual}--${step}`;
+
   function renderFlow(id) {
     requireCondition(Object.hasOwn(topic.visuals, id), `${topic.id}: unknown visual ${id}`);
     const visual = topic.visuals[id];
+    const stepIds = visual.steps.flatMap(step => step.id === undefined ? [] : [step.id]);
+    requireCondition(
+      stepIds.every(id => typeof id === 'string' && slug.test(id)) && new Set(stepIds).size === stepIds.length,
+      `${topic.id}: invalid or duplicate step ID in ${id}`,
+    );
     const steps = visual.steps.map(step => {
       const labels = (step.actors ?? []).map(id => {
         getActor(id);
         return escape(actors[id]);
       });
-      return `<li><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
+      const anchor = step.id ? ` id="${stepAnchor(id, step.id)}"` : '';
+      return `<li${anchor}><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
         <p>${escape(step.text)} ${citations(step.citations)}</p></li>`;
     });
     return `<figure class="figure process"><figcaption>${escape(visual.title)}</figcaption>
@@ -165,16 +199,102 @@ async function renderTopic(topic) {
     </figure>`;
   }
 
+  function renderMetrics(ids) {
+    requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: metrics block is empty`);
+    const cards = ids.map(id => {
+      requireCondition(Object.hasOwn(topic.metrics ?? {}, id), `${topic.id}: unknown metric ${id}`);
+      const metric = topic.metrics[id];
+      const { percentage, count, denominator } = metric;
+      const reportedPercentage = percentage !== undefined;
+      requireCondition(
+        reportedPercentage
+          ? Number.isFinite(percentage) && percentage >= 0 && percentage <= 100 && count === undefined && denominator === undefined
+          : Number.isSafeInteger(count) && Number.isSafeInteger(denominator) && count >= 0 && denominator > 0 && count <= denominator,
+        `${topic.id}: invalid value or denominator for metric ${id}`,
+      );
+      for (const field of ['label', 'basis', 'type']) {
+        requireCondition(typeof metric[field] === 'string' && metric[field].trim(), `${topic.id}: metric ${id} needs ${field}`);
+      }
+      const value = reportedPercentage ? `${number.format(percentage)}%` : `${number.format(count)} of ${number.format(denominator)}`;
+      return `<div class="metric" id="metric-${id}">
+        <dt>${escape(metric.label)}</dt>
+        <dd><strong class="metric-value">${value}</strong>
+          <p class="metric-source">${escape(metric.type)}${metric.asOf ? ` · ${dateLabel(metric.asOf)}` : ''} ${citations(metric.citations)}</p>
+          <p>${escape(metric.basis)}</p>
+        </dd>
+      </div>`;
+    });
+    return `<dl class="metric-grid">${cards.join('')}</dl>`;
+  }
+
+  function renderIssues(ids) {
+    requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: issues block is empty`);
+    return ids.map(id => {
+      requireCondition(Object.hasOwn(topic.issues ?? {}, id), `${topic.id}: unknown issue ${id}`);
+      const issue = topic.issues[id];
+      const visual = issue.step?.visual;
+      const step = visualIds.includes(visual)
+        ? topic.visuals[visual]?.steps.find(step => step.id && step.id === issue.step.id)
+        : undefined;
+      requireCondition(step, `${topic.id}: issue ${id} needs a published process step`);
+      const evidence = issue.metrics ?? [];
+      requireCondition(
+        Array.isArray(evidence) && (evidence.length || issue.improvement?.evidenceGap?.trim()),
+        `${topic.id}: issue ${id} needs a metric or an explicit evidence gap`,
+      );
+      const metricLinks = evidence.map(metric => {
+        requireCondition(
+          metricIds.includes(metric) && Object.hasOwn(topic.metrics ?? {}, metric),
+          `${topic.id}: issue ${id} links to an unpublished metric ${metric}`,
+        );
+        return `<li><a href="#metric-${metric}">${escape(topic.metrics[metric].label)}</a></li>`;
+      });
+      const fix = `<a href="#improvement-${id}">Response and what to track</a>`;
+      requireCondition(issue.title?.trim() && issue.text?.trim(), `${topic.id}: issue ${id} needs a title and finding`);
+      return `<div class="finding">
+        <h3>${escape(issue.title)}</h3>
+        <p class="finding-step"><a href="#${stepAnchor(visual, step.id)}">${escape(step.label)}</a></p>
+        <p>${escape(issue.text)} ${citations(issue.citations)}</p>
+        ${metricLinks.length ? `<ul class="evidence-links" aria-label="Related figures">${metricLinks.join('')}</ul>` : ''}
+        <p class="finding-next">${fix}</p>
+      </div>`;
+    }).join('');
+  }
+
+  function renderImprovements(ids) {
+    requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: improvements block is empty`);
+    return ids.map(id => {
+      const improvement = topic.issues?.[id]?.improvement;
+      for (const field of ['title', 'status', 'measure']) {
+        requireCondition(typeof improvement?.[field] === 'string' && improvement[field].trim(), `${topic.id}: improvement ${id} needs ${field}`);
+      }
+      getActor(improvement.owner);
+      return `<div class="finding" id="improvement-${id}">
+        <h3>${escape(improvement.title)}</h3>
+        <p><strong>${escape(actors[improvement.owner])}.</strong> ${escape(improvement.status)} ${citations(improvement.citations)}</p>
+        <p><strong>What to track.</strong> ${escape(improvement.measure)}</p>
+        ${improvement.evidenceGap ? `<p class="evidence-gap">${escape(improvement.evidenceGap)}</p>` : ''}
+      </div>`;
+    }).join('');
+  }
+
   async function renderBlock(block) {
-    const blockKinds = ['text', 'visual', 'actors', 'chart'].filter(kind => Object.hasOwn(block, kind));
+    const blockKinds = ['text', 'visual', 'actors', 'chart', 'metrics', 'issues', 'improvements']
+      .filter(kind => Object.hasOwn(block, kind));
     requireCondition(blockKinds.length === 1, `${topic.id}: each block needs one content type`);
     switch (blockKinds[0]) {
       case 'text':
-        return `<p>${escape(block.text)} ${citations(block.citations)}</p>`;
+        return `${block.heading ? `<h3>${escape(block.heading)}</h3>` : ''}<p>${escape(block.text)} ${citations(block.citations)}</p>`;
       case 'visual':
         return renderFlow(block.visual);
       case 'chart':
         return renderChart(block.chart);
+      case 'metrics':
+        return renderMetrics(block.metrics);
+      case 'issues':
+        return renderIssues(block.issues);
+      case 'improvements':
+        return renderImprovements(block.improvements);
       case 'actors':
         return `<dl class="actors">${block.actors.map(id => {
           const actor = getActor(id);
