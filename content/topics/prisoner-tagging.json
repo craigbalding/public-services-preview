@@ -1,6 +1,6 @@
 {
   "id": "prisoner-tagging",
-  "template": "topic-v5",
+  "template": "topic-v6",
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
@@ -238,24 +238,25 @@
           "text": "The provider fits the tag and installs any other equipment needed. For prison leavers, that has usually meant a visit to their accommodation after release. The prison pilot fits tags before people leave.",
           "actors": ["serco"],
           "citations": ["guidance", "audit", "commons-answer"],
-          "charts": ["status-by-stage", "post-release-trend"],
-          "metrics": ["prompt-fitting"]
+          "note": {
+            "heading": "Why fit tags at home?",
+            "text": "Probation director general Jim Barton told MPs that most people with a tag also need a unit calibrated at their address. Fitting the tag at home combined both jobs in one visit. The prison pilot tested the cost of making two visits.",
+            "citations": ["pac-fittings-at-release", "contracts-2013"]
+          }
         },
         {
           "id": "monitor-condition",
           "label": "Monitor the condition",
           "text": "The equipment checks the specified condition, such as a curfew, location restriction or alcohol requirement. The monitoring service reviews possible breaches.",
           "actors": ["serco"],
-          "citations": ["guidance", "inspection"],
-          "charts": ["status-by-stage", "gps-compliance"]
+          "citations": ["guidance", "inspection"]
         },
         {
           "id": "respond-to-alert",
           "label": "Assess and respond to an alert",
           "text": "The monitoring service passes on suspected breaches when required. Probation handles responses to release-licence breaches, while police assess suspected breaches of electronically monitored court bail.",
           "actors": ["probation-service", "police-forces"],
-          "citations": ["inspection"],
-          "metrics": ["bail-breach-follow-through"]
+          "citations": ["inspection"]
         }
       ]
     }
@@ -301,10 +302,26 @@
     }
   },
   "sections": {
-    "purpose": [
+    "at-a-glance": [
       {
-        "text": "After prison, tagging helps probation check whether someone follows conditions such as a curfew or staying away from a specified area. It is intended to support supervision in the community, manage risks to victims and the public, and make it possible to manage some people outside custody.",
-        "citations": ["statistics", "audit", "inspection"]
+        "id": "purpose",
+        "takeaways": [
+          {
+            "label": "How tagging helps",
+            "text": "Probation can use tags to check curfews and exclusion zones, helping to manage risks while supervising people in the community.",
+            "citations": ["guidance", "inspection"]
+          },
+          {
+            "label": "Where protection can fail",
+            "text": "Monitoring can start days or weeks after release, and alerts still need someone to assess the risk and act.",
+            "citations": ["audit", "inspection"]
+          },
+          {
+            "label": "What to watch",
+            "text": "As prison fitting expands, check whether more people leave with working tags. Officials told MPs they would publish updated fitting figures in January 2027.",
+            "citations": ["rollout", "pac-fitting-figures"]
+          }
+        ]
       }
     ],
     "how-it-works": [
@@ -314,76 +331,42 @@
       },
       {
         "visual": "monitoring-process"
-      }
-    ],
-    "who-does-what": [
-      {
-        "actors": ["courts", "prison-governors", "parole-board", "serco", "allied-universal", "hmpps", "ministry-of-justice", "national-audit-office", "probation-service", "police-forces"]
-      }
-    ],
-    "how-it-came-to-be": [
-      {
-        "text": "The National Audit Office documented home fitting in 2013. The curfew service paired an ankle tag with a monitoring unit at the person’s address. The current service went live under new contracts in May 2024. In October 2026, changes under the Sentencing Act introduced a presumption of tagging for eligible prison leavers under the new release arrangements.",
-        "citations": ["contracts-2013", "audit", "statistics"]
       },
       {
-        "heading": "Why weren’t tags fitted at the prison gate?",
-        "text": "Asked about the old approach by the Public Accounts Committee, probation director general Jim Barton said most people with a tag also need a unit calibrated at their address. Fitting the tag during that home visit saved a visit. Fitting it in prison usually adds a second visit, and officials used the pilot to test the costs of doing both.",
-        "citations": ["pac-fittings-at-release", "contracts-2013"]
+        "id": "who-does-what",
+        "details": {
+          "title": "Who is responsible at each stage?",
+          "blocks": [
+            { "actors": ["courts", "prison-governors", "parole-board", "serco", "allied-universal", "hmpps", "ministry-of-justice", "national-audit-office", "probation-service", "police-forces"] }
+          ]
+        }
       },
       {
-        "text": "In October 2025 the Ministry piloted fitting before release in six prisons so monitoring could begin as people left. The current contract calls for prison visits when a fitting is required, with Serco responsible for staffing them.",
-        "citations": ["rollout", "commons-answer"]
-      }
-    ],
-    "in-numbers": [
-      {
-        "text": "Fewer people in the post-release group had equipment in September than in June. At the same time, the share without equipment rose from 12.8% to 13.9%. More people were recorded as in custody and without equipment in September (526) than in June (334).",
-        "citations": ["june-status-annex", "status-annex"]
-      },
-      {
-        "chart": "status-by-stage"
-      },
-      {
-        "chart": "by-order"
+        "id": "how-it-came-to-be",
+        "details": {
+          "title": "How the service got here",
+          "blocks": [
+            {
+              "text": "The National Audit Office documented home fitting in 2013. The curfew service paired an ankle tag with a monitoring unit at the person’s address. The current service went live under new contracts in May 2024.",
+              "citations": ["contracts-2013", "audit"]
+            },
+            {
+              "text": "In October 2025 the Ministry piloted fitting before release in six prisons so monitoring could begin as people left. The current contract calls for prison visits when a fitting is required, with Serco responsible for staffing them. In October 2026, changes under the Sentencing Act introduced a presumption of tagging for eligible prison leavers under the new release arrangements.",
+              "citations": ["rollout", "commons-answer", "statistics"]
+            }
+          ]
+        }
       }
     ],
     "what-needs-fixing": [
       {
-        "issues": ["fitting-delay"]
-      },
-      {
-        "metrics": ["prompt-fitting"]
-      },
-      {
-        "issues": ["alert-response"]
-      },
-      {
-        "metrics": ["bail-breach-follow-through"]
-      }
-    ],
-    "scrutiny": [
-      {
-        "text": "The Public Accounts Committee questioned Ministry of Justice and prison and probation officials on 26 November 2026. These exchanges show what MPs tested, what officials said and what evidence would show progress. The summaries are based on the hearing recording.",
-        "citations": ["pac-inquiry"]
-      },
-      {
-        "scrutiny": ["fitting-figures", "serco-payments", "fittings-at-release", "out-of-hours"]
-      }
-    ],
-    "whats-changing": [
-      {
-        "improvements": ["fitting-delay", "alert-response"]
-      }
-    ],
-    "trends": [
-      {
-        "chart": "post-release-trend"
+        "issues": ["fitting-delay", "alert-response"],
+        "inlineEvidence": true
       }
     ],
     "outcomes": [
       {
-        "text": "The Ministry of Justice compared people in its GPS pilot for eligible prison leavers with theft, burglary or other acquisitive offences with matched eligible people outside the pilot. It looked at new offences and at compliance with supervision as distinct outcomes.",
+        "text": "Men in the GPS pilot had lower proven reoffending in the first year after release than matched men outside the pilot (26.2% versus 33.2%). The evaluation found no clear difference in recorded probation compliance. It covered eligible prison leavers with theft, burglary or other acquisitive offences.",
         "citations": ["gps-impact-evaluation"]
       },
       {
@@ -393,14 +376,46 @@
         "chart": "gps-compliance"
       },
       {
-        "heading": "Curfews on community orders",
-        "text": "A separate study in England and Wales compared people given an electronically monitored curfew as part of a community order with a matched group. Estimated reconviction for offences committed in the first 83 days was 17% versus 22%. People given a monitored curfew also received fewer warnings for breaking probation requirements and were more likely to complete other requirements during the order. This study assessed the monitored curfew as part of the sentence.",
-        "citations": ["curfew-impact-evaluation"]
+        "details": {
+          "title": "Evidence on curfews under community orders",
+          "blocks": [
+            {
+              "text": "A separate study in England and Wales compared people given an electronically monitored curfew as part of a community order with a matched group. Estimated reconviction for offences committed in the first 83 days was 17% versus 22%. People given a monitored curfew also received fewer warnings for breaking probation requirements and were more likely to complete other requirements during the order. This study assessed the monitored curfew as part of the sentence.",
+              "citations": ["curfew-impact-evaluation"]
+            }
+          ]
+        }
+      }
+    ],
+    "whats-changing": [
+      {
+        "improvements": ["fitting-delay", "alert-response"]
       },
       {
-        "heading": "What happened while people waited for a tag?",
-        "text": "The national monitoring tables show equipment status at month end. The missing link is how many breaches or proven new offences occurred while monitoring was due but inactive. Tagging can also make a breach easier to detect, so comparing recorded breach totals alone can give a misleading picture of behaviour.",
-        "citations": ["status-annex", "inspection", "reoffending-tag-status-question"]
+        "id": "scrutiny",
+        "heading": "What Parliament is checking",
+        "text": "The Public Accounts Committee questioned Ministry of Justice and prison and probation officials on 26 November 2026. The fitting rollout had already been announced. The tracker records what MPs requested and what officials committed to providing.",
+        "citations": ["pac-inquiry", "rollout"]
+      },
+      {
+        "scrutiny": ["fitting-figures", "serco-payments", "fittings-at-release", "out-of-hours"],
+        "collapseExchanges": true
+      }
+    ],
+    "sources": [
+      {
+        "id": "trends",
+        "details": {
+          "title": "Post-release caseload over time",
+          "blocks": [{ "chart": "post-release-trend" }]
+        }
+      },
+      {
+        "id": "in-numbers",
+        "details": {
+          "title": "How many people are tagged under each type of order?",
+          "blocks": [{ "chart": "by-order" }]
+        }
       }
     ]
   },
@@ -490,18 +505,19 @@
         "visual": "monitoring-process",
         "id": "fit-equipment"
       },
-      "text": "Inspectors found delays when a person was unavailable or when information needed to arrange the fitting was missing or wrong. Unstable accommodation can make home fitting harder. A provider can meet its contractual target by attempting a visit on time even when the fitting does not go ahead. The September figures also show why it matters to check that installed equipment is communicating.",
-      "citations": ["inspection", "inspector-evidence", "status-annex"],
+      "text": "In the post-release monitoring group, the share without equipment rose from 12.8% in June to 13.9% in September 2026. The number recorded as in custody and without equipment also rose, from 334 to 526. Inspectors found delays when people were unavailable or when the information needed to arrange home fitting was missing or wrong. Unstable accommodation can also make fitting harder.",
+      "citations": ["june-status-annex", "status-annex", "inspection", "inspector-evidence"],
       "metrics": ["prompt-fitting"],
       "improvement": {
         "title": "Fit tags before eligible prison leavers leave custody",
         "owner": "ministry-of-justice",
         "status": "Six-prison pilot. On 25 November 2026 the Ministry announced expansion to 16 prisons in December, 50 in January 2027 and 83 by the end of March 2027.",
         "measure": "For each month’s prison leavers with a monitoring requirement, track the share with working equipment at release and by 24 hours, 48 hours and seven days. Link fitting dates to the dates of confirmed breaches, recalls and proven new offences to see what happened during the wait.",
-        "evidenceGap": "The September snapshot predates the October release reforms. Evaluating the rollout needs comparable groups followed from release, with incidents dated to when they occurred and proven reoffending reported once follow-up is complete.",
-        "citations": ["rollout", "statistics"]
+        "evidenceGap": "The national tables give month-end equipment status and cannot tell us how many breaches or proven new offences happened during the wait. Follow comparable groups from release and date incidents to when they occurred. Monitoring also makes some breaches easier to detect, so recorded breaches alone can mislead.",
+        "citations": ["rollout", "statistics", "reoffending-tag-status-question"]
       },
       "charts": ["status-by-stage"],
+      "chartDisclosure": "See equipment and signal status by group",
       "consequences": [
         {
           "text": "In one case, an exclusion zone meant to protect identified people went unmonitored for 41 days after a person left prison. Once monitoring started, it detected entries into the zone and enforcement followed. The inspectors documented those entries after activation.",

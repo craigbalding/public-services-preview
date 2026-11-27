@@ -30,3 +30,9 @@ Add a sourced consequence to each finding. Use case examples to explain what hap
 Use `scrutiny` to follow questions that test how well a specific process step works. Cite the official record, link to the relevant exchange using a timestamp, and explain what observable result would show progress. Add the transcript and question number when available. Link to comparable baseline figures where they exist.
 
 For each request for evidence or explicit commitment, give `followUp` a title and start a dated, cited `history` with `requested` or `promised`. Record the expected timing as precisely as the source allows. Append new evidence using `overdue`, `partial` or `provided` as appropriate and explain what the evidence establishes. As service results become available, update the relevant measures and report the periods they cover. Record changes already under way before the hearing so the chronology is clear.
+
+## Topic template v6
+
+Open with three sourced `takeaways` on purpose, what can go wrong and what to watch. Explain the reason for a design choice beside the relevant process step using its `note`. Use `details` blocks with a title and nested content for supporting history, data or methods. A block ID on a disclosure gives readers a link to its contents.
+
+Set `inlineEvidence` on an `issues` block to show each finding’s charts, metrics, consequences and measure of progress together. Define those chart and metric references on the finding itself. Use the response and scrutiny blocks together under “What to watch next” to show what has been announced and what still needs evidence. `collapseExchanges` keeps the committee tracker visible with the full hearing exchanges available to open. The template lists the three jumps shown on smaller screens.

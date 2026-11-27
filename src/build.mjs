@@ -13,6 +13,10 @@ const site = await readJson(root, 'site.json');
 const actors = await readJson(content, 'actors.json');
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
+function contentBlocks(blocks) {
+  return blocks.flatMap(block => block.details ? [block, ...contentBlocks(block.details.blocks)] : [block]);
+}
+
 function page({ title, description, prefix, body }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
   return `<!doctype html>
@@ -87,26 +91,31 @@ async function loadTopic(filename) {
   for (const { id, requiredBlock } of template.sections) {
     if (requiredBlock) {
       requireCondition(
-        topic.sections[id].some(block => Object.hasOwn(block, requiredBlock)),
+        contentBlocks(topic.sections[id]).some(block => Object.hasOwn(block, requiredBlock)),
         `${filename}: ${id} requires a ${requiredBlock} block`,
       );
     }
   }
+  for (const { id } of template.mobileLinks ?? []) {
+    requireCondition(sectionIds.includes(id), `${filename}: unknown mobile link ${id}`);
+  }
   return {
     ...topic,
     sectionOrder: template.sections,
+    mobileLinks: template.mobileLinks ?? [],
     requiredMetricFields: template.requiredMetricFields ?? [],
     requireConsequences: template.requireConsequences ?? false,
   };
 }
 
 async function renderTopic(topic) {
-  const allBlocks = Object.values(topic.sections).flat();
+  const allBlocks = contentBlocks(Object.values(topic.sections).flat());
   const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
   const visualIds = listed('visual');
-  const chartIds = listed('chart');
-  const metricIds = listed('metrics');
   const issueIds = listed('issues');
+  const inlineIssues = allBlocks.filter(block => block.issues && block.inlineEvidence).flatMap(block => block.issues);
+  const chartIds = [...listed('chart'), ...inlineIssues.flatMap(id => topic.issues?.[id]?.charts ?? [])];
+  const metricIds = [...listed('metrics'), ...inlineIssues.flatMap(id => topic.issues?.[id]?.metrics ?? [])];
   const improvementIds = listed('improvements');
   const scrutinyIds = listed('scrutiny');
   for (const ids of [visualIds, chartIds, metricIds, issueIds, improvementIds, scrutinyIds]) {
@@ -136,6 +145,15 @@ async function renderTopic(topic) {
   };
 
   const stepAnchor = (visual, step) => `step-${visual}--${step}`;
+
+  const blockIds = allBlocks.flatMap(block => block.id === undefined ? [] : [block.id]);
+  const anchors = [...blockIds, ...topic.sectionOrder.map(section => section.id)];
+  requireCondition(anchors.every(id => typeof id === 'string' && slug.test(id)) && new Set(anchors).size === anchors.length,
+    `${topic.id}: invalid or duplicate block or section anchor`);
+
+  function disclosure(title, body) {
+    return `<details class="article-details"><summary>${escape(title)}</summary>${body}</details>`;
+  }
 
   function processLink(reference, label) {
     const visual = reference?.visual;
@@ -177,8 +195,10 @@ async function renderTopic(topic) {
         return escape(actors[id]);
       });
       const anchor = step.id ? ` id="${stepAnchor(id, step.id)}"` : '';
+      const note = step.note ? `<div class="flow-note"><strong>${escape(step.note.heading)}</strong>
+        <p>${escape(step.note.text)} ${citations(step.note.citations)}</p></div>` : '';
       return `<li${anchor}><span class="flow-number" aria-hidden="true">${index + 1}</span><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
-        <p>${escape(step.text)} ${citations(step.citations)}</p>${evidenceLinks(step)}</li>`;
+        <p>${escape(step.text)} ${citations(step.citations)}</p>${note}${evidenceLinks(step)}</li>`;
     });
     return `<figure class="figure process"><figcaption>${escape(visual.title)}</figcaption>
       <ol class="flow">${steps.join('')}</ol></figure>`;
@@ -241,9 +261,9 @@ async function renderTopic(topic) {
     return `<dl class="metric-grid">${cards.join('')}</dl>`;
   }
 
-  function renderIssues(ids) {
+  async function renderIssues(ids) {
     requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: issues block is empty`);
-    return ids.map(id => {
+    const findings = await Promise.all(ids.map(async id => {
       requireCondition(Object.hasOwn(topic.issues ?? {}, id), `${topic.id}: unknown issue ${id}`);
       const issue = topic.issues[id];
       const step = processLink(issue.step, `issue ${id}`);
@@ -252,7 +272,8 @@ async function renderTopic(topic) {
         links || issue.improvement?.evidenceGap?.trim(),
         `${topic.id}: issue ${id} needs a figure or an explicit evidence gap`,
       );
-      const fix = `<a href="#improvement-${id}">Response and what to track</a>`;
+      const inline = inlineIssues.includes(id);
+      const fix = `<a href="#improvement-${id}">${inline ? 'See the response and timeline' : 'Response and what to track'}</a>`;
       requireCondition(issue.title?.trim() && issue.text?.trim(), `${topic.id}: issue ${id} needs a title and finding`);
       const consequences = issue.consequences ?? [];
       requireCondition(Array.isArray(consequences) && (!topic.requireConsequences || consequences.length),
@@ -262,15 +283,22 @@ async function renderTopic(topic) {
           `${topic.id}: issue ${id} has an empty consequence`);
         return `<p>${escape(consequence.text)} ${citations(consequence.citations)}</p>`;
       });
-      return `<div class="finding">
+      const metrics = inline && issue.metrics?.length ? renderMetrics(issue.metrics) : '';
+      const charts = inline && issue.charts?.length ? (await Promise.all(issue.charts.map(renderChart))).join('') : '';
+      const chartEvidence = charts && issue.chartDisclosure ? disclosure(issue.chartDisclosure, charts) : charts;
+      const progress = inline ? `<p class="finding-measure"><strong>What would show progress.</strong> ${escape(issue.improvement.measure)}</p>` : '';
+      return `<div class="finding"${inline ? ` id="finding-${id}"` : ''}>
         <h3>${escape(issue.title)}</h3>
         <p class="finding-step">${step}</p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
+        ${metrics}
         ${effects.length ? `<div class="consequences"><h4>Why it matters</h4>${effects.join('')}</div>` : ''}
-        ${links}
+        ${progress}
+        ${inline ? chartEvidence : links}
         <p class="finding-next">${fix}</p>
       </div>`;
-    }).join('');
+    }));
+    return findings.join('');
   }
 
   function renderImprovements(ids) {
@@ -284,13 +312,15 @@ async function renderTopic(topic) {
       return `<div class="finding" id="improvement-${id}">
         <h3>${escape(improvement.title)}</h3>
         <p><strong>${escape(actors[improvement.owner])}.</strong> ${escape(improvement.status)} ${citations(improvement.citations)}</p>
-        <p><strong>What to track.</strong> ${escape(improvement.measure)}</p>
+        ${inlineIssues.includes(id)
+          ? `<p class="finding-next"><a href="#finding-${id}">See how to measure progress</a></p>`
+          : `<p><strong>What to track.</strong> ${escape(improvement.measure)}</p>`}
         ${improvement.evidenceGap ? `<p class="evidence-gap">${escape(improvement.evidenceGap)}</p>` : ''}
       </div>`;
     }).join('');
   }
 
-  function renderScrutiny(ids) {
+  function renderScrutiny(ids, collapseExchanges) {
     requireCondition(Array.isArray(ids) && ids.length, `${topic.id}: scrutiny block is empty`);
     const statusLabels = {
       requested: 'Requested by the committee',
@@ -337,16 +367,17 @@ async function renderTopic(topic) {
     });
     const tracker = followUps.length ? `<div class="figure follow-ups" id="scrutiny-follow-up">
       <h3>Evidence to follow up</h3><ul>${followUps.join('')}</ul></div>` : '';
-    return tracker + exchanges.join('');
+    return tracker + (collapseExchanges ? disclosure('Questions and answers from the hearing', exchanges.join('')) : exchanges.join(''));
   }
 
   async function renderBlock(block) {
-    const blockKinds = ['text', 'visual', 'actors', 'chart', 'metrics', 'issues', 'improvements', 'scrutiny']
+    const blockKinds = ['text', 'visual', 'actors', 'chart', 'metrics', 'issues', 'improvements', 'scrutiny', 'takeaways', 'details']
       .filter(kind => Object.hasOwn(block, kind));
     requireCondition(blockKinds.length === 1, `${topic.id}: each block needs one content type`);
+    const anchor = block.id ? ` id="${escape(block.id)}"` : '';
     switch (blockKinds[0]) {
       case 'text':
-        return `${block.heading ? `<h3>${escape(block.heading)}</h3>` : ''}<p>${escape(block.text)} ${citations(block.citations)}</p>`;
+        return `${block.heading ? `<h3${anchor}>${escape(block.heading)}</h3>` : ''}<p${block.heading ? '' : anchor}>${escape(block.text)} ${citations(block.citations)}</p>`;
       case 'visual':
         return renderFlow(block.visual);
       case 'chart':
@@ -358,7 +389,19 @@ async function renderTopic(topic) {
       case 'improvements':
         return renderImprovements(block.improvements);
       case 'scrutiny':
-        return renderScrutiny(block.scrutiny);
+        return renderScrutiny(block.scrutiny, block.collapseExchanges);
+      case 'takeaways':
+        requireCondition(Array.isArray(block.takeaways) && block.takeaways.length === 3, `${topic.id}: provide three takeaways`);
+        return `<ul class="takeaways"${anchor}>${block.takeaways.map(item => {
+          requireCondition(item.label?.trim() && item.text?.trim(), `${topic.id}: each takeaway needs a label and text`);
+          return `<li><strong>${escape(item.label)}.</strong> ${escape(item.text)} ${citations(item.citations)}</li>`;
+        }).join('')}</ul>`;
+      case 'details': {
+        const { title, blocks } = block.details;
+        requireCondition(title?.trim() && blocks.length, `${topic.id}: details need a title and content`);
+        const body = await Promise.all(blocks.map(renderBlock));
+        return disclosure(title, `<div${anchor}>${body.join('')}</div>`);
+      }
       case 'actors':
         return `<dl class="actors">${block.actors.map(id => {
           const actor = getActor(id);
@@ -367,10 +410,6 @@ async function renderTopic(topic) {
     }
   }
 
-  const sections = await Promise.all(topic.sectionOrder.map(async ({ id, title }) => {
-    const blocks = await Promise.all(topic.sections[id].map(renderBlock));
-    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)}</h2>${blocks.join('')}</section>`;
-  }));
   const sources = Object.values(topic.sources).map((source, index) => {
     requireCondition(new URL(source.url).protocol === 'https:', `${topic.id}: source URLs must use HTTPS`);
     return `<li id="source-${index + 1}">
@@ -378,14 +417,24 @@ async function renderTopic(topic) {
       <div class="source-detail">${escape(source.publisher)}${source.date ? ` · ${dateLabel(source.date)}` : ''}${source.reference ? ` · ${escape(source.reference)}` : ''}</div>
     </li>`;
   });
-  const links = topic.sectionOrder.map(({ id, title }) =>
+  const sourceList = `<ol>${sources.join('')}</ol>`;
+  const includesSources = topic.sectionOrder.some(section => section.id === 'sources');
+  const sections = await Promise.all(topic.sectionOrder.map(async ({ id, title }) => {
+    const blocks = await Promise.all(topic.sections[id].map(renderBlock));
+    const references = id === 'sources' ? `<div class="sources"><h3>References</h3>${sourceList}</div>` : '';
+    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)}</h2>${blocks.join('')}${references}</section>`;
+  }));
+  const navigationLinks = entries => entries.map(({ id, title }) =>
     `<li><a href="#${escape(id)}">${escape(title)}</a></li>`).join('');
+  const links = navigationLinks(topic.sectionOrder);
+  const mobileLinks = topic.mobileLinks.length ? `<nav class="mobile-contents" aria-label="Jump to a section">
+    <ul>${navigationLinks(topic.mobileLinks)}</ul></nav>` : '';
 
   return page({
     title: topic.title,
     description: topic.summary,
     prefix: '../../',
-    body: `<header class="article-hero">
+    body: `<header class="article-hero${mobileLinks ? ' article-hero--compact' : ''}">
       <div class="wrap">
         <a class="back" href="../../#topics"><span aria-hidden="true">←</span> All topics</a>
         <p class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</p>
@@ -394,13 +443,13 @@ async function renderTopic(topic) {
         <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
       </div>
     </header>
-    <div class="wrap article-layout">
+    <div class="wrap article-layout${mobileLinks ? ' has-mobile-contents' : ''}">
       <aside><nav class="contents" aria-label="On this page">
-        <p>On this page</p><ul>${links}<li><a href="#sources">Sources</a></li></ul>
-      </nav></aside>
+        <p>On this page</p><ul>${links}${includesSources ? '' : '<li><a href="#sources">Sources</a></li>'}</ul>
+      </nav>${mobileLinks}</aside>
       <article>
         ${sections.join('')}
-        <section class="article-section sources" id="sources"><h2>Sources</h2><ol>${sources.join('')}</ol></section>
+        ${includesSources ? '' : `<section class="article-section sources" id="sources"><h2>Sources</h2>${sourceList}</section>`}
       </article>
     </div>`,
   });

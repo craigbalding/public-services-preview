@@ -1,0 +1,17 @@
+{
+  "sections": [
+    { "id": "at-a-glance", "title": "At a glance", "requiredBlock": "takeaways" },
+    { "id": "how-it-works", "title": "How it works", "requiredBlock": "visual" },
+    { "id": "what-needs-fixing", "title": "Where it breaks down", "requiredBlock": "issues" },
+    { "id": "outcomes", "title": "Does tagging improve outcomes?", "requiredBlock": "text" },
+    { "id": "whats-changing", "title": "What to watch next", "requiredBlock": "scrutiny" },
+    { "id": "sources", "title": "Sources and data", "requiredBlock": "chart" }
+  ],
+  "mobileLinks": [
+    { "id": "how-it-works", "title": "How it works" },
+    { "id": "what-needs-fixing", "title": "Where it breaks down" },
+    { "id": "whats-changing", "title": "What to watch" }
+  ],
+  "requiredMetricFields": ["population", "period"],
+  "requireConsequences": true
+}
