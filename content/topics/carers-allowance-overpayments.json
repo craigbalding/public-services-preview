@@ -1,0 +1,354 @@
+{
+  "id": "carers-allowance-overpayments",
+  "template": "topic-v7",
+  "title": "How are Carer’s Allowance overpayments corrected?",
+  "category": "Social security",
+  "scope": "England and Wales",
+  "summary": "A small change in earnings can turn weeks of Carer’s Allowance into debt. Follow how the department spots a possible overpayment, decides what is owed and reviews past decisions.",
+  "reviewed": "2026-11-27",
+  "citations": ["eligibility", "sayce-review", "reassessment-progress"],
+  "sources": {
+    "eligibility": {
+      "title": "Carer’s Allowance eligibility",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/carers-allowance/eligibility",
+      "reference": "Caring hours, earnings and allowable deductions"
+    },
+    "benefit-rates": {
+      "title": "Benefit and pension rates 2026 to 2027",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/benefit-and-pension-rates-2026-to-2027/proposed-benefit-and-pension-rates-2026-to-2027",
+      "reference": "Carer’s Allowance weekly rate and earnings limit"
+    },
+    "report-a-change": {
+      "title": "Carer’s Allowance: report changes",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/carers-allowance-report-change",
+      "reference": "Changes in earnings and other circumstances"
+    },
+    "sayce-review": {
+      "title": "Independent Review of Carer’s Allowance Overpayments",
+      "publisher": "Liz Sayce, published by the Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/review-of-carers-allowance-overpayments/independent-review-of-carers-allowance-overpayments",
+      "date": "2025-11-25",
+      "reference": "Chapters 3 to 6, especially sections 5.1–5.2 and 6.9"
+    },
+    "audit-2024": {
+      "title": "Carer’s Allowance",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2024/12/carers-allowance.pdf",
+      "reference": "Paragraphs 1.7–1.10 and 2.12–2.18, parts two and three, and figure 11"
+    },
+    "government-response": {
+      "title": "Government response to the Independent Review of Carer’s Allowance Overpayments",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/review-of-carers-allowance-overpayments/government-response-to-the-independent-review-of-carers-allowance-overpayments",
+      "date": "2025-11-25",
+      "reference": "Averaging guidance, repayment and responses to recommendations 1 and 10, updated April 2026"
+    },
+    "reassessment-launch": {
+      "title": "Written statement on the start of the reassessment exercise",
+      "publisher": "Department for Work and Pensions, written statement to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-04-13/hlws1492",
+      "date": "2026-04-13",
+      "reference": "HLWS1492"
+    },
+    "carers-allowance-unit": {
+      "title": "Contact the Carer’s Allowance Unit",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/carers-allowance-unit",
+      "reference": "Information for people awaiting reassessment"
+    },
+    "recovery-question": {
+      "title": "Debt recovery during the Carer’s Allowance reassessment",
+      "publisher": "Department for Work and Pensions, written answer to Parliament",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-01-28/109366",
+      "date": "2026-02-26",
+      "reference": "Question 109366, deductions and repayment terms"
+    },
+    "reassessment-progress": {
+      "title": "Carer’s Allowance reassessment management information to September 2026",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/sayce-review-into-carers-allowance-earnings-related-overpayments-reassessment-exercise-management-information-to-september-2026/sayce-review-into-carers-allowance-earnings-related-overpayments-reassessment-exercise-management-information-to-september-2026",
+      "date": "2026-10-14",
+      "reference": "Progress table, rounding notes and publication timetable"
+    },
+    "committee-report": {
+      "title": "Tackling fraud and error in benefit expenditure 2024–25",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://publications.parliament.uk/pa/cm5901/cmselect/cmpubacc/1231/report.html",
+      "date": "2026-02-11",
+      "reference": "Recommendation 7 and paragraphs 27–30, progress and funding"
+    },
+    "minister-progress-letter": {
+      "title": "First written update on commitments following the Sayce review",
+      "publisher": "Department for Work and Pensions, letter published by the Work and Pensions Committee",
+      "url": "https://committees.parliament.uk/publications/55461/standard/pdf/",
+      "date": "2026-10-14",
+      "reference": "Pages 1–4 and annex, first update and next report"
+    },
+    "committee-inquiry": {
+      "title": "Fixing Carer’s Allowance inquiry",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/work/10118/fixing-carers-allowance/",
+      "date": "2026-11-13",
+      "reference": "Inquiry opened, scope and planned evidence"
+    },
+    "audit-update": {
+      "title": "Update on Carer’s Allowance, work in progress",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/work-in-progress/update-on-carers-allowance/",
+      "reference": "Scope of planned follow-up"
+    },
+    "earnings-limit-evaluation": {
+      "title": "Evaluation of the increase in the Carer’s Allowance earnings limit",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/carers-allowance-increased-earnings-limit-evaluation/carers-allowance-increased-earnings-limit-evaluation",
+      "date": "2026-10-29",
+      "reference": "Methodology and chapter 6, changes in working hours"
+    },
+    "benefit-expenditure": {
+      "title": "Benefit expenditure and caseload tables, autumn 2026",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://www.gov.uk/government/publications/benefit-expenditure-and-caseload-tables-2026",
+      "date": "2026-11-24",
+      "reference": "Autumn workbook, table 4(ii), Carer’s Allowance in England and Wales, nominal £ million"
+    },
+    "dwp-accounts": {
+      "title": "Department for Work and Pensions annual report and accounts 2025 to 2026",
+      "publisher": "Department for Work and Pensions",
+      "url": "https://assets.publishing.service.gov.uk/media/6a4e3a53895317eadc35459e/dwp_annual_report_and_accounts_2025_to_2026.pdf",
+      "reference": "Performance report, Carer’s Allowance reassessment funding and geographic scope"
+    },
+    "budget-2026": {
+      "title": "Budget 2026",
+      "publisher": "HM Treasury",
+      "url": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+      "reference": "Paragraph 6.13 and the policy decisions table, Carer’s Allowance taper"
+    }
+  },
+  "actors": {
+    "unpaid-carers": {
+      "role": "Claim the allowance, report relevant changes and provide evidence of earnings or expenses when asked.",
+      "citations": ["eligibility", "report-a-change", "audit-2024"]
+    },
+    "dwp": {
+      "role": "Decides entitlement, pays the benefit, investigates potential overpayments, manages recovery and runs the reassessment exercise.",
+      "citations": ["audit-2024", "reassessment-launch"]
+    },
+    "hmrc": {
+      "role": "Passes earnings data to DWP so it can check whether a claimant’s entitlement may have changed.",
+      "citations": ["audit-2024"]
+    },
+    "national-audit-office": {
+      "role": "Examines how DWP administers the allowance and whether it is addressing problems with overpayments.",
+      "citations": ["audit-2024", "audit-update"]
+    }
+  },
+  "visuals": {
+    "overpayment-process": {
+      "title": "From a change in earnings to a corrected decision",
+      "steps": [
+        {
+          "id": "claim-and-report",
+          "label": "Claim the allowance and report changes",
+          "actors": ["unpaid-carers", "dwp"],
+          "text": "In 2026/27 the weekly rate is £86.45 and the earnings limit is £204 after tax, National Insurance and allowable expenses. Claimants must report changes that may affect their award, including earnings above the limit.",
+          "citations": ["eligibility", "benefit-rates", "report-a-change"],
+          "note": {
+            "heading": "Why a small change can create a large debt",
+            "text": "The earnings limit was designed as a proxy for whether someone could provide 35 hours of care a week alongside paid work. Under the current rule, exceeding the limit after the relevant deductions and averaging can remove the whole week’s payment. This is the cliff edge.",
+            "citations": ["sayce-review", "eligibility", "budget-2026"]
+          }
+        },
+        {
+          "id": "check-earnings",
+          "label": "Check earnings and decide whether entitlement changed",
+          "actors": ["hmrc", "dwp"],
+          "text": "Earnings data from HMRC can flag a case for DWP to investigate. Staff check pay, allowable expenses and whether variable earnings should be averaged. They can ask the carer for information before deciding whether the allowance should change.",
+          "citations": ["audit-2024", "government-response"]
+        },
+        {
+          "id": "notify-and-recover",
+          "label": "Notify the carer and handle any recovery",
+          "actors": ["dwp", "unpaid-carers"],
+          "text": "If DWP decides there was an overpayment, it tells the carer the amount and may seek to recover it where the law allows. DWP told Parliament it would continue recovery work during the reassessment exercise. Its Debt Management Service can discuss repayment terms.",
+          "citations": ["audit-2024", "recovery-question"]
+        },
+        {
+          "id": "reassess-and-correct",
+          "label": "Reassess eligible past cases and put the decision right",
+          "actors": ["dwp"],
+          "text": "In the special exercise that started on 13 April 2026, DWP reviews past earnings-related cases that may have been affected by its averaging guidance. If the decision changes, DWP can reduce or cancel the debt and repay amounts already recovered. DWP says it will contact people if it needs information and tell them the outcome.",
+          "citations": ["reassessment-launch", "carers-allowance-unit", "reassessment-progress"]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "outstanding-debt": {
+      "type": "trend",
+      "title": "People with outstanding Carer’s Allowance overpayment debt",
+      "data": "carers-allowance-overpayment-debt.json",
+      "description": "DWP records, financial year end. The number rose from about 80,000 in 2018/19 to 137,000 in 2023/24.",
+      "note": "This series covers all causes of overpayment and counts people with debt still owed. The 2026 reassessment counts cases linked to earnings, including cases where money has already been recovered.",
+      "citations": ["audit-2024", "reassessment-progress"]
+    },
+    "reassessment-status": {
+      "type": "bars",
+      "title": "Where the reassessment stood at its first update",
+      "data": "carers-allowance-reassessment.json",
+      "description": "Cases cleared since the exercise began in April, and identified cases still awaiting review or clearance at the end of the week to 13 September.",
+      "note": "These are rounded case counts. A carer can have more than one case, and DWP may identify more cases as the exercise proceeds.",
+      "citations": ["reassessment-progress"]
+    }
+  },
+  "issues": {
+    "debt-build-up": {
+      "title": "Debt can build up before a carer knows there is a problem",
+      "step": { "visual": "overpayment-process", "id": "check-earnings" },
+      "text": "The Sayce review found that DWP’s 2015 to 2025 guidance did not properly allow staff to consider averaging irregular earnings in some cases. It also found that delays acting on earnings alerts let debts grow. The audit found more people owed debt at each year end from 2018/19 to 2023/24. Its figures cover overpayments from all causes.",
+      "citations": ["sayce-review", "government-response", "audit-2024"],
+      "charts": ["outstanding-debt"],
+      "consequences": [
+        {
+          "text": "The Sayce review heard about a carer whose minimum-wage rise put her 15p a week over the earnings limit without a change in hours. By the time the overpayment was identified, it was more than £2,000. Her total earnings above the limit were less than £5.",
+          "citations": ["sayce-review"]
+        }
+      ],
+      "measure": "Track time from the first relevant earnings alert to a decision and notification to the carer. Check the number and size of new debts alongside the share of alerts that were acted on.",
+      "improvement": {
+        "title": "Act sooner on earnings alerts",
+        "owner": "dwp",
+        "status": "In October 2026 the minister reported that DWP had assigned more staff to checking earnings alerts and cleared the backlog. DWP processed nearly 100,000 alerts in 2025/26, about 50% more than the previous year.",
+        "evidenceGap": "The number of alerts processed tells us how much checking was done. Time to notify carers and the size of newly identified debts would show whether those checks are preventing large overpayments.",
+        "citations": ["minister-progress-letter"]
+      }
+    },
+    "reassessment-wait": {
+      "title": "A case can still be waiting while repayments continue",
+      "step": { "visual": "overpayment-process", "id": "reassess-and-correct" },
+      "text": "DWP cleared 2,400 cases in the five months to 13 September 2026. It reported 230,900 identified cases still awaiting review or clearance. The minister said the exercise started slowly while staff were recruited and trained, and DWP expects to finish by March 2029.",
+      "citations": ["reassessment-progress", "minister-progress-letter"],
+      "charts": ["reassessment-status"],
+      "consequences": [
+        {
+          "text": "A carer subject to recovery can still be paying a debt while waiting for DWP to reconsider it. If the decision changes, the debt adjustment and any refund are what change that carer’s finances. The first release reports about £20,000 in debt reductions and £40,000 paid back.",
+          "citations": ["recovery-question", "reassessment-progress"]
+        }
+      ],
+      "measure": "Follow cases from review to a notified decision and any debt adjustment or refund. Publish the backlog by age, time to payment, and how many people still have active recovery while waiting."
+    }
+  },
+  "scrutiny": {
+    "reassessment-updates": {
+      "question": "What evidence will Parliament get on the reassessment?",
+      "step": { "visual": "overpayment-process", "id": "reassess-and-correct" },
+      "record": "committee-report",
+      "answer": "In February 2026 the Public Accounts Committee asked DWP to write within six months on identifying and resolving cases affected by the inaccurate guidance. The first public ministerial update was dated 14 October, addressed to the Work and Pensions Committee and copied to the Public Accounts Committee. It gives the first figures and says the next written update will come in spring 2027.",
+      "citations": ["committee-report", "minister-progress-letter", "reassessment-progress"],
+      "watch": "Compare spring figures with the September baseline. Check the pace of clearance and whether decisions reach carers as reduced debts or refunds, as well as the number of staff deployed.",
+      "followUp": {
+        "title": "Progress updates on the reassessment",
+        "history": [
+          {
+            "date": "2026-02-11",
+            "status": "requested",
+            "text": "The Public Accounts Committee asked for a written progress update within six months.",
+            "citations": ["committee-report"]
+          },
+          {
+            "date": "2026-10-14",
+            "status": "provided",
+            "text": "DWP published the first progress figures and sent a written update to the Work and Pensions Committee, copied to the Public Accounts Committee.",
+            "citations": ["reassessment-progress", "minister-progress-letter"]
+          },
+          {
+            "date": "2026-10-14",
+            "status": "promised",
+            "text": "DWP said the next written update and the next set of public figures would come in spring 2027.",
+            "citations": ["minister-progress-letter", "reassessment-progress"]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "What the allowance does",
+            "text": "It gives financial support to people who provide at least 35 hours of care a week and meet the other conditions, including an earnings limit if they work.",
+            "citations": ["eligibility"]
+          },
+          {
+            "label": "How debts built up",
+            "text": "Going over the earnings limit can cost a carer the whole week’s allowance. Faulty guidance on averaging irregular earnings and delays in checking pay made the problem worse.",
+            "citations": ["sayce-review", "government-response"]
+          },
+          {
+            "label": "What to watch",
+            "text": "DWP is reviewing past earnings cases. Its first release showed 2,400 cleared by mid-September 2026 and 230,900 still awaiting review or clearance.",
+            "citations": ["reassessment-progress"]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "text": "This guide follows the current rules in England and Wales. The historical reassessment covers earnings-related cases from 10 April 2015 to 2 September 2025, including some Scottish cases from when DWP administered the benefit there. The published reassessment totals cover that wider exercise.",
+        "citations": ["government-response", "carers-allowance-unit", "dwp-accounts"]
+      },
+      { "visual": "overpayment-process" },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [{ "actors": ["unpaid-carers", "dwp", "hmrc", "national-audit-office"] }]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      { "issues": ["debt-build-up", "reassessment-wait"] }
+    ],
+    "outcomes": [
+      {
+        "heading": "What the first reviews changed",
+        "text": "DWP changed 200 of the original decisions in the 2,400 cleared cases. It reported debt reductions for around 100 carers and repayments for around 100. These are rounded figures and the department says outcomes may change as it gets to different types of cases. The first results cannot tell us how many people will ultimately get redress.",
+        "citations": ["reassessment-progress"]
+      },
+      {
+        "heading": "Did a higher earnings limit help carers work more?",
+        "text": "The weekly earnings limit rose from £151 to £196 in April 2025. A DWP evaluation interviewed 1,382 people who had claimed before the change. Among respondents in paid work, median reported hours were 10 per week both before the change and in early 2026. Some worked more and others less. That survey comparison cannot isolate the effect of the higher limit.",
+        "citations": ["earnings-limit-evaluation"]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Benefit payments and running costs",
+        "text": "DWP’s autumn 2026 tables put Carer’s Allowance payments in England and Wales at £4.56 billion in 2025/26 and forecast £4.95 billion for 2026/27. Separately, the National Audit Office reported DWP’s estimate of £27.2 million for day-to-day administration in 2023/24. The audit found DWP lacked a robust cost for investigation and debt staff because they work across several benefits.",
+        "citations": ["benefit-expenditure", "audit-2024"]
+      },
+      {
+        "heading": "Funding to correct old cases",
+        "text": "Autumn Budget 2025 set aside £75 million from April 2026 to March 2029 for the reassessment. DWP told the committee the funding covers setting up and running the teams and payments to carers. The minister said around 250 staff would work on the exercise from April 2027. A reliable cost per case would require actual administration costs and comparable numbers of cases resolved.",
+        "citations": ["dwp-accounts", "committee-report", "minister-progress-letter"]
+      }
+    ],
+    "whats-changing": [
+      { "improvements": ["debt-build-up"] },
+      {
+        "heading": "The next audit and hearing",
+        "text": "The National Audit Office expects to publish its follow-up in winter 2026/27. The Public Accounts Committee has opened a new inquiry and plans to hear from senior DWP officials after the audit. The next DWP figures are due in spring 2027.",
+        "citations": ["audit-update", "committee-inquiry", "reassessment-progress"]
+      },
+      {
+        "heading": "Replacing the cliff edge",
+        "text": "The October 2026 Budget plans to introduce a taper in England and Wales in 2030/31. Under the plan, each £1 earned above the limit would cut the allowance by £1. Until the change takes effect, the current earnings rule applies.",
+        "citations": ["budget-2026", "eligibility"]
+      },
+      { "scrutiny": ["reassessment-updates"], "collapseExchanges": "Read the committee’s challenge and DWP’s response" }
+    ],
+    "sources": []
+  }
+}

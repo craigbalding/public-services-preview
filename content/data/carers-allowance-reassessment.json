@@ -1,0 +1,9 @@
+{
+  "groupLabel": "Review stage",
+  "unit": "Cases, rounded to the nearest 100",
+  "asOf": "2026-09-13",
+  "series": [
+    { "label": "Awaiting review or clearance", "value": 230900 },
+    { "label": "Reviewed and cleared", "value": 2400 }
+  ]
+}

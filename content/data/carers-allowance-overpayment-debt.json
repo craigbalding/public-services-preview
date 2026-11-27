@@ -1,0 +1,17 @@
+{
+  "segments": [
+    {
+      "label": "People with outstanding debt",
+      "definition": "People in DWP records with outstanding Carer’s Allowance overpayment debt from any cause at the end of each financial year, after recoveries and write-offs.",
+      "citations": ["audit-2024"],
+      "points": [
+        ["2019-03-31", 80169],
+        ["2020-03-31", 104406],
+        ["2021-03-31", 112535],
+        ["2022-03-31", 128133],
+        ["2023-03-31", 131743],
+        ["2024-03-31", 136730]
+      ]
+    }
+  ]
+}
