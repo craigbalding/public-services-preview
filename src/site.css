@@ -71,11 +71,11 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
 
 .figure { border: 1px solid var(--line); padding: clamp(1rem, 3vw, 1.65rem); margin-top: 1.25rem; background: #fcfcf8; }
 .figure figcaption { font-weight: 680; font-size: 1.05rem; }
-.flow { list-style: none; counter-reset: step; padding: 0; margin: 1.1rem 0 0; }
-.flow li { position: relative; counter-increment: step; padding: 0 0 1rem 2.5rem; }
-.flow li:last-child { padding-bottom: 0; }
-.flow li:not(:last-child)::after { content: ''; position: absolute; top: 1.74rem; bottom: .2rem; left: .85rem; width: 1px; background: #9fb6a6; }
-.flow li::before { content: counter(step); position: absolute; display: grid; place-items: center; left: 0; top: .03rem; width: 1.72rem; height: 1.72rem; border-radius: 50%; background: var(--light-green); color: var(--green); font-weight: 700; font-size: .8rem; }
+.flow { list-style: none; padding: 0; margin: 1.1rem 0 0; }
+.flow > li { position: relative; padding: 0 0 1rem 2.5rem; }
+.flow > li:last-child { padding-bottom: 0; }
+.flow > li:not(:last-child)::after { content: ''; position: absolute; top: 1.74rem; bottom: .2rem; left: .85rem; width: 1px; background: #9fb6a6; }
+.flow-number { position: absolute; display: grid; place-items: center; left: 0; top: .03rem; width: 1.72rem; height: 1.72rem; border-radius: 50%; background: var(--light-green); color: var(--green); font-weight: 700; font-size: .8rem; }
 .flow strong, .step-actors { display: block; }
 .step-actors { color: var(--green); font-size: .8rem; }
 .flow p { margin-top: .16rem; color: var(--muted); }
@@ -148,7 +148,7 @@ section[id], li[id], .metric[id], .finding[id], figure[id] { scroll-margin-top: 
 .finding-next { margin-top: .65rem; }
 .evidence-links { padding-left: 1.2rem; margin-block: .6rem 0; }
 .evidence-gap { color: var(--muted); font-size: .9rem; }
-.metric:target, .flow li:target, .finding:target, .chart:target { background: var(--light-green); }
+.metric:target, .flow > li:target, .finding:target, .chart:target { background: var(--light-green); }
 .sources ol { padding-left: 1.4rem; }
 .sources li { padding-left: .3rem; }
 .sources li + li { margin-top: .8rem; }

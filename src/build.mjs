@@ -156,13 +156,13 @@ async function renderTopic(topic) {
       stepIds.every(id => typeof id === 'string' && slug.test(id)) && new Set(stepIds).size === stepIds.length,
       `${topic.id}: invalid or duplicate step ID in ${id}`,
     );
-    const steps = visual.steps.map(step => {
+    const steps = visual.steps.map((step, index) => {
       const labels = (step.actors ?? []).map(id => {
         getActor(id);
         return escape(actors[id]);
       });
       const anchor = step.id ? ` id="${stepAnchor(id, step.id)}"` : '';
-      return `<li${anchor}><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
+      return `<li${anchor}><span class="flow-number" aria-hidden="true">${index + 1}</span><strong>${escape(step.label)}</strong>${labels.length ? `<span class="step-actors">${labels.join(' · ')}</span>` : ''}
         <p>${escape(step.text)} ${citations(step.citations)}</p>${evidenceLinks(step)}</li>`;
     });
     return `<figure class="figure process"><figcaption>${escape(visual.title)}</figcaption>

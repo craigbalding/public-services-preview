@@ -193,7 +193,7 @@
       "title": "Who had equipment, and was it sending a signal?",
       "data": "electronic-monitoring-status.json",
       "description": "Two snapshots of people with an active monitoring order in England and Wales. Each bar shows the share of everyone in that group at the date shown.",
-      "note": "A signal means the monitoring system received a communication in the previous 14 days. The post-release group includes people recorded as being back in custody. The Ministry removed additional expired court bail orders in September, which affected the recorded change for that group.",
+      "note": "Shares are rounded. A signal means the monitoring system received a communication in the previous 14 days. The post-release group includes people recorded as being back in custody. The Ministry removed additional expired court bail orders in September, which affected the recorded change for that group.",
       "citations": ["june-status-annex", "status-annex"]
     },
     "post-release-trend": {
