@@ -138,7 +138,7 @@ export function renderTrend(chart, data, citations) {
   });
   const tables = segments.map(segment => `<p><strong>${escape(segment.label)}.</strong> ${escape(segment.definition)} ${citations(segment.citations)}</p>
     <table aria-label="${escape(segment.label)}">
-      <thead><tr><th scope="col">Month ending</th><th scope="col">People</th><th scope="col">Publication status</th></tr></thead>
+      <thead><tr><th scope="col">${escape(data.dateHeading ?? 'Month ending')}</th><th scope="col">${escape(data.valueHeading ?? 'People')}</th><th scope="col">Publication status</th></tr></thead>
       <tbody>${segment.points.map(point => `<tr><th scope="row">${dateLabel(point.asOf)}</th><td>${point.value === null ? 'Unavailable' : number.format(point.value)}</td><td>${point.status ?? '—'}</td></tr>`).join('')}</tbody>
     </table>`);
   return `<ul class="chart-legend" aria-label="Trend legend">${legend.join('')}</ul>
@@ -146,5 +146,5 @@ export function renderTrend(chart, data, citations) {
       ${gaps.join('')}${rules.join('')}${years.join('')}${policyLines.join('')}${marks.join('')}
     </svg>
     ${notes.length ? `<ul class="trend-events">${notes.join('')}</ul>` : ''}
-    <details class="chart-details"><summary>View monthly figures and definitions</summary>${tables.join('')}</details>`;
+    <details class="chart-details"><summary>View ${data.dateHeading ? '' : 'monthly '}figures and definitions</summary>${tables.join('')}</details>`;
 }

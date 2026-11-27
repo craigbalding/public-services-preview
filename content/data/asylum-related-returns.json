@@ -1,0 +1,39 @@
+{
+  "dateHeading": "Year ending",
+  "valueHeading": "Recorded returns",
+  "segments": [
+    {
+      "label": "Earlier asylum matching",
+      "definition": "UK, twelve months ending in September. Sum of enforced and voluntary returns across all nationalities in table Ret_D05, excluding returns in the separate port category. An asylum history was identified from flags recorded by caseworkers.",
+      "citations": ["returns-tables", "statistics-method"],
+      "points": [
+        ["2016-09-30", 5173],
+        ["2017-09-30", 5264],
+        ["2018-09-30", 4345],
+        ["2019-09-30", 3244],
+        ["2020-09-30", 1906]
+      ]
+    },
+    {
+      "label": "Linked asylum and returns records",
+      "definition": "Same UK period and return categories. The Home Office revised the data from October 2020 to June 2022 using its later matching method.",
+      "citations": ["returns-tables", "statistics-method"],
+      "points": [
+        ["2021-09-30", 1487],
+        ["2022-09-30", 2453],
+        ["2023-09-30", 5445],
+        ["2024-09-30", 8769],
+        ["2025-09-30", 11822],
+        ["2026-09-30", 13039, "Provisional"]
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "2020-10-01",
+      "kind": "collection",
+      "text": "The Home Office introduced automated matching in 2023 and revised earlier figures from October 2020. The September 2021 point is the first full year covered by the later method.",
+      "citations": ["statistics-method"]
+    }
+  ]
+}

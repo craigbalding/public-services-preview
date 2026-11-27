@@ -1,0 +1,593 @@
+{
+  "id": "asylum-refusals",
+  "template": "topic-v7",
+  "title": "What happens after the Home Office refuses an asylum claim?",
+  "category": "Immigration",
+  "scope": "United Kingdom",
+  "summary": "How many people are still in the UK after a final refusal, and how long do they stay? Follow the decision through appeals, Immigration Enforcement and departure, and see where the public record runs out.",
+  "reviewed": "2026-11-27",
+  "citations": ["asylum-guide", "asylum-system", "october-letter"],
+  "sources": {
+    "asylum-guide": {
+      "title": "Information booklet about your asylum application",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/information-booklet-for-asylum-applications/information-booklet-about-your-asylum-application",
+      "reference": "Refusal letters, appeals and leaving the UK"
+    },
+    "appeal-rights": {
+      "title": "Rights of appeal",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/immigration-act-2014-appeals-caseworker-guidance/rights-of-appeal-accessible",
+      "reference": "Protection and human rights claims, pending appeals and reconsiderations"
+    },
+    "appeal-tribunal": {
+      "title": "Appeal against a visa or immigration decision",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/immigration-asylum-tribunal/overview",
+      "reference": "First-tier Tribunal and onward appeal on a point of law"
+    },
+    "further-submissions": {
+      "title": "Further submissions",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/further-submissions/asylum-policy-instruction-further-submissions-accessible",
+      "reference": "New evidence, paragraph 353 and the fresh-claim test"
+    },
+    "reporting": {
+      "title": "Reporting and offender management",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/offender-management-caseworker-guidance/reporting-and-offender-management-accessible",
+      "reference": "How reporting supports contact, case progression and return"
+    },
+    "voluntary-return": {
+      "title": "Get help to return home if you’re a migrant in the UK",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/return-home-voluntarily",
+      "reference": "Travel arrangements, documents and eligibility for financial help"
+    },
+    "asylum-system": {
+      "title": "How many people are in the UK asylum system?",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-september-2026/how-many-people-are-in-the-uk-asylum-system",
+      "date": "2026-11-26",
+      "reference": "Initial decision and tribunal queues, and the missing split after June 2024"
+    },
+    "tribunals": {
+      "title": "Tribunal statistics quarterly, April to June 2026",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/statistics/tribunals-statistics-quarterly-april-to-june-2026/tribunal-statistics-quarterly-april-to-june-2026",
+      "reference": "First-tier Tribunal Immigration and Asylum Chamber, caseload and mean time to close"
+    },
+    "tribunal-tables": {
+      "title": "Tribunal statistics quarterly, accessible main tables",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/statistics/tribunals-statistics-quarterly-april-to-june-2026",
+      "reference": "April to June 2026 tables FIA_3 and FIA_4, determined outcomes and open caseload"
+    },
+    "returns": {
+      "title": "How many people are returned from the UK?",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-september-2026/how-many-people-are-returned-from-the-uk",
+      "date": "2026-11-26",
+      "reference": "Sections 3 and 6, voluntary and asylum-related returns"
+    },
+    "returns-tables": {
+      "title": "Immigration system statistics data tables",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/statistical-data-sets/immigration-system-statistics-data-tables",
+      "reference": "November 2026 returns workbook, table Ret_D05"
+    },
+    "statistics-method": {
+      "title": "User guide to immigration system statistics",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/user-guide-to-home-office-immigration-statistics--9/user-guide-to-immigration-statistics",
+      "reference": "Returns sources, verification, revisions and change in asylum matching"
+    },
+    "audit": {
+      "title": "An analysis of the asylum system",
+      "publisher": "National Audit Office",
+      "url": "https://www.nao.org.uk/wp-content/uploads/2025/12/an-analysis-of-the-asylum-system.pdf",
+      "date": "2025-12-10",
+      "reference": "Figure 5, paragraphs 2.5–2.13 and Appendix One paragraphs 22–23"
+    },
+    "hearing": {
+      "title": "Oral evidence on the asylum system",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/oralevidence/17184/html/",
+      "date": "2026-01-19",
+      "reference": "Q59–Q72, Clive Betts and Home Office Second Permanent Secretary Simon Ridley"
+    },
+    "committee-report": {
+      "title": "An analysis of the asylum system",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://publications.parliament.uk/pa/cm5902/cmselect/cmpubacc/89/report.html",
+      "date": "2026-06-05",
+      "reference": "Recommendations 2, 3 and 7, and section 3 on monitoring and returns"
+    },
+    "treasury-minutes": {
+      "title": "Government response to the Public Accounts Committee report",
+      "publisher": "HM Treasury",
+      "url": "https://assets.publishing.service.gov.uk/media/6abfbecac9bd185c481ec96c/E03677598_-_CP_1668_Treasury_Minutes_Web_Accessible.pdf",
+      "date": "2026-09-14",
+      "reference": "CP 1668, responses 2, 3 and 7 on delivery risk, data and contact"
+    },
+    "october-letter": {
+      "title": "Home Office reply on people who have exhausted their appeal rights",
+      "publisher": "Home Office, published by the Public Accounts Committee",
+      "url": "https://committees.parliament.uk/publications/55512/standard/pdf/",
+      "date": "2026-10-07",
+      "reference": "Response to recommendation 7, pages 1–2 on the count, timetable and funding"
+    },
+    "inquiry-record": {
+      "title": "Asylum system inquiry correspondence",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/work/9508/an-analysis-of-the-asylum-system/publications/3/correspondence/",
+      "reference": "Published letters checked through 27 November 2026"
+    },
+    "census-form": {
+      "title": "Census 2021 individual questionnaire",
+      "publisher": "Office for National Statistics",
+      "url": "https://www.ons.gov.uk/file?uri=%2Fcensus%2Fcensustransformationprogramme%2Fquestiondevelopment%2Fcensus2021paperquestionnaires%2Fenglishindividual.pdf",
+      "reference": "England questionnaire, country of birth, residence and passports"
+    },
+    "census-coverage": {
+      "title": "Coverage estimation for Census 2021 in England and Wales",
+      "publisher": "Office for National Statistics",
+      "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/methodologies/coverageestimationforcensus2021inenglandandwales",
+      "date": "2022-11-09",
+      "reference": "Coverage Survey and adjustment for missed and duplicate records"
+    },
+    "ons-irregular": {
+      "title": "Measuring illegal migration: our current view",
+      "publisher": "Office for National Statistics",
+      "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration/articles/measuringillegalmigrationourcurrentview/2019-06-21",
+      "date": "2019-06-21",
+      "reference": "Definitions and limits of estimating an irregular population"
+    },
+    "oxford-returns": {
+      "title": "Why do asylum seekers come to the UK?",
+      "publisher": "Migration Observatory, University of Oxford",
+      "url": "https://migrationobservatory.ox.ac.uk/resources/commentaries/qa-why-do-asylum-seekers-come-to-the-uk/",
+      "reference": "Recorded returns by March 2026 for refused applicants who first applied in 2013–2022"
+    },
+    "oxford-population": {
+      "title": "Unauthorised migration in the UK",
+      "publisher": "Migration Observatory, University of Oxford",
+      "url": "https://migrationobservatory.ox.ac.uk/resources/briefings/unauthorised-migration-in-the-uk/",
+      "reference": "Figure 5, people with refused or withdrawn claims and no recorded departure"
+    },
+    "inspector-contact": {
+      "title": "Inspection of Home Office contact with migrants without leave",
+      "publisher": "Independent Chief Inspector of Borders and Immigration",
+      "url": "https://assets.publishing.service.gov.uk/media/6a3d06dada47783d87723a75/An_inspection_of_Home_Office_management_of_contact_with_migrants_who_are_without_leave_to_enter_or_remain__September_2024___February_2025_.pdf",
+      "reference": "Paragraphs 2.3–2.9 and 4.41–4.42, reliability of contact and bail records"
+    },
+    "contact-response": {
+      "title": "Response to the inspection of contact with migrants",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/response-to-an-inspection-of-management-of-contact-with-migrants/response-to-an-inspection-of-management-of-contact-with-migrants",
+      "date": "2026-06-25",
+      "reference": "Recommendations 2–4, contact mapping, data quality and Atlas"
+    },
+    "working-enforcement": {
+      "title": "Illegal working and enforcement activity to June 2026",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/returns-from-the-uk-and-illegal-working-activity-since-july-2024/illegal-working-and-enforcement-activity-to-the-end-of-june-2026",
+      "reference": "Visits, arrests and civil penalties across immigration categories"
+    },
+    "working-research": {
+      "title": "Worker and employer perspectives of illegal working",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/worker-and-employer-perspectives-of-illegal-working/worker-and-employer-perspectives-of-illegal-working",
+      "reference": "Qualitative research on platform work, worker vulnerability and employer compliance"
+    },
+    "working-impact": {
+      "title": "Economic note on the 2026 support regulations",
+      "publisher": "Home Office, published by Parliament",
+      "url": "https://commonsbusiness.parliament.uk/Document/104479/Pdf?subType=Standard",
+      "reference": "Expected effects on work, tax, support and wider costs"
+    },
+    "support-policy": {
+      "title": "Illegal working as a breach of asylum support conditions",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/illegal-working-as-a-breach-of-conditions-caseworker-guidance/illegal-working-as-a-breach-of-asylum-support-conditions-accessible",
+      "date": "2026-11-18",
+      "reference": "Sections 4, 95 and 98, evidence, safeguards and review"
+    },
+    "support-eligibility": {
+      "title": "Asylum support, section 4(2) policy",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/asylum-support-section-42-policy/asylum-support-section-42-policy-accessible",
+      "reference": "Destitution and eligibility while arranging departure or facing a barrier"
+    },
+    "lord-scrutiny": {
+      "title": "Scrutiny of the asylum support regulations",
+      "publisher": "House of Lords Secondary Legislation Scrutiny Committee",
+      "url": "https://publications.parliament.uk/pa/ld5901/ldselect/ldsecleg/277/27704.htm",
+      "reference": "Section on illegal working and risks of withdrawing support"
+    },
+    "charity-survey": {
+      "title": "Understanding destitution and homelessness in the asylum and immigration system",
+      "publisher": "NACCOM",
+      "url": "https://naccom.org.uk/annual-survey-data-briefing-2025/",
+      "reference": "Accommodation provided by member organisations in 2024/25"
+    },
+    "rough-sleeping": {
+      "title": "Rough sleeping data framework, July to September 2026",
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "url": "https://www.gov.uk/government/publications/rough-sleeping-data-framework-july-to-september-2026/rough-sleeping-data-framework-july-to-september-2026-release",
+      "reference": "Figure 6, people in England sleeping rough after recently leaving asylum support"
+    },
+    "crime-answer": {
+      "title": "Asylum and migrants: offenders",
+      "publisher": "Home Office, written answer to the House of Commons",
+      "url": "https://qna.files.parliament.uk/qnadailyreports/Written-Questions-Answers-Statements-Daily-Report-Commons-2026-11-03.pdf",
+      "date": "2026-11-03",
+      "reference": "Question 38664, published crime statistics and immigration status"
+    },
+    "bill-stages": {
+      "title": "Immigration and Asylum Bill stages",
+      "publisher": "UK Parliament",
+      "url": "https://bills.parliament.uk/bills/4254/stages/",
+      "reference": "Commons third reading and Lords first reading"
+    },
+    "appeals-proposal": {
+      "title": "Immigration and Asylum Bill: Independent Immigration Appeals Authority",
+      "publisher": "Home Office",
+      "url": "https://www.gov.uk/government/publications/immigration-and-asylum-bill-2026-factsheets/immigration-and-asylum-bill-independent-immigration-appeals-authority",
+      "reference": "Proposed first-instance appeal arrangements and purpose"
+    }
+  },
+  "actors": {
+    "asylum-applicants": {
+      "role": "Receive the decision, may challenge it, and are expected to leave once appeal rights end if they have no other permission to stay.",
+      "citations": ["asylum-guide", "appeal-tribunal"]
+    },
+    "home-office": {
+      "role": "Decides asylum claims and further submissions, administers asylum support and publishes case and returns statistics.",
+      "citations": ["asylum-guide", "asylum-system", "returns", "further-submissions"]
+    },
+    "immigration-tribunal": {
+      "role": "Judges hear eligible challenges independently. The Upper Tribunal can consider appeals on points of law where permission is given.",
+      "citations": ["appeal-tribunal", "audit"]
+    },
+    "immigration-enforcement": {
+      "role": "Part of the Home Office. Manages reporting and contact with people liable to removal, helps arrange voluntary returns and carries out enforced removals.",
+      "citations": ["reporting", "october-letter", "returns"]
+    },
+    "public-accounts-committee": {
+      "role": "Examines whether the departments can account for cases, spending and results across the system.",
+      "citations": ["committee-report", "hearing"]
+    }
+  },
+  "visuals": {
+    "after-refusal": {
+      "title": "From the first refusal to the outcome",
+      "steps": [
+        {
+          "id": "first-refusal",
+          "label": "The Home Office issues a decision",
+          "actors": ["home-office", "asylum-applicants"],
+          "text": "The refusal letter gives the reasons and says whether there is a right of appeal. A refusal of protection can come with permission to stay on another basis. If a person has no other permission and does not have or use a right of appeal, the case can move to departure.",
+          "citations": ["asylum-guide", "appeal-rights"]
+        },
+        {
+          "id": "appeal",
+          "label": "An independent tribunal can review the refusal",
+          "actors": ["immigration-tribunal", "asylum-applicants"],
+          "text": "A person eligible to appeal from inside the UK can usually remain while that appeal is pending. The First-tier Tribunal can allow or dismiss the appeal. In some cases a party can seek permission to appeal to the Upper Tribunal on a point of law.",
+          "citations": ["appeal-tribunal", "appeal-rights"],
+          "note": {
+            "heading": "Why an appeal is a separate step",
+            "text": "The statutory appeal gives an independent judge the chance to review the Home Office’s decision before a person with a pending in-country appeal can be removed. The Home Office presents the department’s case. The tribunal decides it.",
+            "citations": ["appeal-rights", "appeal-tribunal", "audit"]
+          }
+        },
+        {
+          "id": "final-refusal",
+          "label": "Appeal rights end and the person is expected to leave",
+          "actors": ["home-office", "immigration-enforcement"],
+          "text": "This is the point this guide calls a final refusal. It includes cases where the appeal deadline passes unused. A person with no other permission to stay is expected to leave. Valid further submissions can bring genuinely new evidence for the Home Office to assess under the fresh-claim rules.",
+          "citations": ["asylum-guide", "appeal-rights", "further-submissions"]
+        },
+        {
+          "id": "arrange-departure",
+          "label": "The person leaves voluntarily or Immigration Enforcement arranges removal",
+          "actors": ["asylum-applicants", "immigration-enforcement"],
+          "text": "People can arrange their own departure. If eligible, the Voluntary Returns Service can help with travel documents and travel. For enforced removal, the Home Office needs a lawful route, the required documents and a country that will accept the person. Reporting conditions can keep a case in contact while arrangements are made.",
+          "citations": ["voluntary-return", "reporting", "audit", "october-letter"]
+        },
+        {
+          "id": "record-outcome",
+          "label": "The Home Office records the outcome it can verify",
+          "actors": ["home-office", "immigration-enforcement"],
+          "text": "Records include enforced removals, assisted departures and voluntary departures identified from passenger data or other checks. Some people are still in contact waiting to leave. Others fall out of contact, or leave without a departure being matched to their case. Their latest status may remain uncertain.",
+          "citations": ["returns", "statistics-method", "hearing", "contact-response"]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "appeal-queue": {
+      "type": "trend",
+      "title": "Open asylum and protection cases at the First-tier Tribunal",
+      "data": "asylum-appeal-caseload.json",
+      "description": "The queue rose from 6,319 at the end of June 2022 to 90,341 at the end of June 2026 as more cases came through from the Home Office.",
+      "note": "Includes revocation of protection. Counts tribunal cases open at quarter end. A case can cover more than one person, and these are cases awaiting a tribunal outcome.",
+      "citations": ["tribunals", "tribunal-tables", "asylum-system"]
+    },
+    "returns-trend": {
+      "type": "trend",
+      "title": "Recorded asylum-related returns rose after 2021",
+      "data": "asylum-related-returns.json",
+      "description": "Annual returns fell to 1,487 in the year to September 2021, rose to 11,822 in 2025 and reached 13,039 in 2026. The latest total includes 8,829 voluntary departures and 4,210 enforced returns.",
+      "note": "Includes other cases with an asylum history, such as withdrawals and third-country returns. Each point counts departures in that year. Recent voluntary figures can rise as departures are verified. The break marks a change in how the Home Office identifies an asylum history.",
+      "citations": ["returns", "returns-tables", "statistics-method"]
+    }
+  },
+  "metrics": {
+    "appeals-allowed": {
+      "label": "Asylum and protection appeals allowed by a judge",
+      "percentage": 39,
+      "type": "Tribunal outcome",
+      "period": "April to June 2026",
+      "population": "4,828 First-tier Tribunal asylum, protection and revocation of protection appeals decided at a hearing or on the papers",
+      "basis": "The denominator includes appeals a judge determined. Withdrawals and other closures are outside it. The Ministry of Justice reports a rounded percentage.",
+      "citations": ["tribunal-tables"]
+    }
+  },
+  "issues": {
+    "presence-unknown": {
+      "title": "How many people are still here after a final refusal?",
+      "step": { "visual": "after-refusal", "id": "record-outcome" },
+      "text": "In October 2026, the Home Office told MPs its last published figure was just over 41,000 main applicants in the immigration system at the end of June 2023. The figure comes from case records. The census records residents and has no question on asylum decisions or permission to stay. The November asylum release still reports a gap in the split between cases awaiting appeal and cases awaiting removal after June 2024, following a move to the Atlas caseworking system.",
+      "citations": ["october-letter", "asylum-system", "census-form", "census-coverage"],
+      "consequences": [
+        {
+          "text": "An in-person reporting appointment confirms someone was here on that date. A verified departure shows they left on a given date. A case with no recorded departure could involve someone still here, someone who left without a match, or someone whose immigration status has since changed. The Home Office acknowledged to MPs that its departure records are incomplete.",
+          "citations": ["hearing", "returns", "oxford-population"]
+        },
+        {
+          "text": "The Independent Chief Inspector checked 75 records that showed someone on immigration bail in August 2024. Eighteen should have been removed from that list, mostly because the person had left or been granted permission to stay. This was a check of bail records across immigration categories.",
+          "citations": ["inspector-contact"]
+        }
+      ],
+      "evidenceGap": "The public record reviewed through 27 November 2026 leaves the current number confirmed present, the number out of contact and the typical time from final refusal to departure unresolved.",
+      "measure": "Publish a dated count that includes dependants and distinguishes confirmed presence, a verified departure, permission on another basis and unknown status. For each quarter in which appeal rights end, publish outcomes at 3, 6 and 12 months and the age of unresolved cases.",
+      "improvement": {
+        "title": "Restore the count and improve contact records",
+        "owner": "home-office",
+        "status": "The Home Office said in October that updated figures would be published later in 2026. In a separate response to the Independent Chief Inspector, it acknowledged gaps in contact records and committed to complete a review and implement improvements by July 2027.",
+        "citations": ["october-letter", "contact-response"]
+      }
+    },
+    "appeal-delay": {
+      "title": "Faster first decisions moved pressure into the appeal queue",
+      "step": { "visual": "after-refusal", "id": "appeal" },
+      "text": "The National Audit Office traced this handoff to the push to clear older asylum claims. The Home Office made more than four times as many initial decisions in 2023 as in 2022. Tribunal and legal capacity constrained the next stage. Asylum and protection appeals closed in April to June 2026 took a mean 72 weeks from lodging to closure.",
+      "citations": ["audit", "tribunals"],
+      "consequences": [
+        {
+          "text": "A long appeal queue prolongs uncertainty and can extend eligible asylum support. Both people whose refusals are later overturned and people who will eventually be expected to leave spend longer waiting for a final decision.",
+          "citations": ["audit", "appeal-rights", "asylum-guide"]
+        }
+      ],
+      "charts": ["appeal-queue"],
+      "measure": "Follow time from first refusal to final decision alongside new appeals, appeals closed and the age of open cases. Check the share of appeals allowed and decision-quality findings as well as speed."
+    },
+    "departure-barriers": {
+      "title": "A final refusal can still leave a case unresolved",
+      "step": { "visual": "after-refusal", "id": "arrange-departure" },
+      "text": "The National Audit Office found that missing identity and travel documents and limited cooperation from receiving countries can prevent timely returns. The Home Office also cited legal barriers and pending trials. When a person cannot be removed within a reasonable period, detention for the purpose of removal has a legal limit.",
+      "citations": ["audit", "october-letter"],
+      "consequences": [
+        {
+          "text": "The audit followed 5,000 people who first applied in January 2023. When the Home Office supplied the data in September 2025, the auditors found that 41% of the sample had open claims with neither an appeal decision nor a decision on further submissions pending. This illustrates unresolved cases in one application cohort. It gives no current UK-wide rate or typical wait after final refusal.",
+          "citations": ["audit"]
+        }
+      ],
+      "evidenceGap": "There is no published breakdown of the time lost to each barrier for the people waiting after final refusal.",
+      "measure": "Report how many cases are held up by travel documents, receiving-country agreement, a legal barrier or loss of contact, and how long cases stay at each stage."
+    },
+    "work-and-housing": {
+      "title": "Unresolved cases can leave people without lawful work or stable housing",
+      "step": { "visual": "after-refusal", "id": "final-refusal" },
+      "text": "Permission to work granted through the asylum process ends when the claim is finally determined and appeal rights are exhausted. Some destitute people can still qualify for accommodation and subsistence, for example while taking steps to leave or facing a temporary barrier. Since June 2026, continued section 4 support can be made conditional on the person refraining from illegal work.",
+      "citations": ["support-policy", "support-eligibility"],
+      "consequences": [
+        {
+          "text": "Off-the-books work can leave income tax and National Insurance unpaid, undercut employers that follow the rules and expose workers to exploitation. Immigration Enforcement publishes visits, arrests and penalties across immigration categories. These figures describe enforcement activity.",
+          "citations": ["working-impact", "working-enforcement", "working-research"]
+        },
+        {
+          "text": "NACCOM member organisations accommodated 912 adults in 2024/25 whose claims had been refused and whose appeal rights had ended. The figure counts people served by that charity network. England’s rough sleeping release uses a broader measure of people recently leaving asylum support, including people granted protection.",
+          "citations": ["charity-survey", "rough-sleeping"]
+        }
+      ],
+      "evidenceGap": "Published figures leave the prevalence of unauthorised work, unpaid tax and homelessness after final refusal uncertain. Service and enforcement counts capture the people encountered.",
+      "measure": "Track outcomes after enforcement or support withdrawal, including confirmed departures, employer penalties collected, repeat breaches, homelessness referrals and costs to councils."
+    }
+  },
+  "scrutiny": {
+    "remaining-count": {
+      "question": "How many are still here, and how much of that number can the Home Office verify?",
+      "step": { "visual": "after-refusal", "id": "record-outcome" },
+      "record": "hearing",
+      "answer": "In questions 59–72, Clive Betts MP pressed Home Office Second Permanent Secretary Simon Ridley on what happened when someone stopped reporting, how the department knew who had left, and what he meant by “the vast majority” being in contact. Ridley described reporting, tracing and passenger data and acknowledged incomplete departure coverage. In June the Committee asked for a current estimate, the proportion actively engaged with and a timetable for returning most of those still here. The October letter gave an old count, described the department’s operations and said case-by-case barriers made a set timetable impossible. It gave no current count or proportion.",
+      "citations": ["hearing", "committee-report", "october-letter"],
+      "watch": "Check the inquiry correspondence and the next asylum release. Ask for the dated denominator behind any claim about the share in contact, including how the department verified that someone was here.",
+      "followUp": {
+        "title": "Current count, contact rate and timetable",
+        "history": [
+          {
+            "date": "2026-06-05",
+            "status": "requested",
+            "text": "The Committee asked the Home Office for its best estimate, how many it was actively engaged with, and when most would be returned.",
+            "citations": ["committee-report"]
+          },
+          {
+            "date": "2026-10-07",
+            "status": "partial",
+            "text": "The reply cited June 2023 figures and described tracing and returns work. The current count, proportion in contact and timetable were still missing.",
+            "citations": ["october-letter"]
+          },
+          {
+            "date": "2026-10-07",
+            "status": "promised",
+            "text": "The Home Office said it would publish updated figures later in 2026 once the statistical datasets were restored.",
+            "citations": ["october-letter"]
+          },
+          {
+            "date": "2026-11-26",
+            "status": "partial",
+            "text": "The latest release provides fresh asylum and returns figures. It still flags the gap in the appeal and removal breakdown after June 2024.",
+            "citations": ["asylum-system", "returns", "inquiry-record"]
+          }
+        ]
+      }
+    },
+    "shared-data": {
+      "question": "Can departments follow a case through decisions, appeals and departure?",
+      "step": { "visual": "after-refusal", "id": "record-outcome" },
+      "record": "committee-report",
+      "answer": "The Public Accounts Committee asked for a system-wide data plan including milestones, costs and what information departments and councils require. The government agreed. Its response says an initial review is due by December 2026, with delivery continuing beyond that date.",
+      "citations": ["committee-report", "treasury-minutes"],
+      "watch": "Look for owners, dates and a baseline that links the stages. Check whether the plan measures the time from final refusal to verified departure and tracks the effects of delays on councils.",
+      "followUp": {
+        "title": "Data improvement plan and initial review",
+        "history": [
+          {
+            "date": "2026-06-05",
+            "status": "requested",
+            "text": "Recommendation 3 asked for a timetable, costs and a shared data framework covering the whole service.",
+            "citations": ["committee-report"]
+          },
+          {
+            "date": "2026-09-14",
+            "status": "promised",
+            "text": "The government’s Treasury Minutes set December 2026 for the initial review, with further delivery to follow.",
+            "citations": ["treasury-minutes"]
+          }
+        ]
+      }
+    },
+    "support-effect": {
+      "question": "What happens after support is withdrawn for illegal working?",
+      "step": { "visual": "after-refusal", "id": "final-refusal" },
+      "record": "lord-scrutiny",
+      "answer": "The Lords Secondary Legislation Scrutiny Committee warned that someone losing both their income and their accommodation could face destitution, homelessness or a return to illegal work. The Home Office said people who became destitute could reapply for support. The November guidance sets out how officials should investigate cases and consider safeguards.",
+      "citations": ["lord-scrutiny", "support-policy"],
+      "watch": "Ask how many section 4 cases were investigated, how often support ended and how many of those people subsequently left the UK, regained support or needed help from councils or charities."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "How many remain",
+            "text": "The public figures leave the current number and the typical wait after final refusal unanswered. The Home Office cited just over 41,000 main applicants in its system in June 2023. Its November 2026 release still has a gap in the published caseload breakdown.",
+            "citations": ["october-letter", "asylum-system"]
+          },
+          {
+            "label": "What a final refusal means",
+            "text": "A first refusal can go to an independent tribunal. Once appeal rights end, people with no other permission to stay are expected to leave. Travel documents, legal barriers and other countries’ cooperation can delay that outcome.",
+            "citations": ["asylum-guide", "appeal-rights", "audit", "october-letter"]
+          },
+          {
+            "label": "What to watch",
+            "text": "MPs asked how many remain, how many are in touch with officials and when most will be returned. Watch for a current count and follow each group from final refusal to verified departure or another recorded outcome.",
+            "citations": ["committee-report", "october-letter"]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "text": "This guide follows the UK process from first refusal. It focuses on people with no remaining appeal rights and no other permission to stay when asking who is expected to leave. Housing evidence has its own geographic and service limits.",
+        "citations": ["asylum-guide", "appeal-rights", "rough-sleeping", "charity-survey"]
+      },
+      { "visual": "after-refusal" },
+      {
+        "details": {
+          "title": "Who does what",
+          "blocks": [{ "actors": ["asylum-applicants", "home-office", "immigration-tribunal", "immigration-enforcement", "public-accounts-committee"] }]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      { "issues": ["presence-unknown", "appeal-delay", "departure-barriers", "work-and-housing"] }
+    ],
+    "outcomes": [
+      {
+        "heading": "Appeals can change the decision",
+        "text": "A successful appeal changes who goes on to the returns stage. To see how well the appeal process works, track the outcomes alongside the time it takes to reach them.",
+        "citations": ["tribunal-tables", "appeal-rights"]
+      },
+      { "metrics": ["appeals-allowed"] },
+      {
+        "heading": "More departures are recorded",
+        "text": "In the year to September 2026 recorded asylum-related returns rose 10% year on year. The Home Office’s series includes people with withdrawn claims, some who were returned to a third country, and a small number previously granted protection. It records activity throughout the year across those groups.",
+        "citations": ["returns", "returns-tables"]
+      },
+      { "chart": "returns-trend" },
+      {
+        "heading": "How many of those refused went on to leave?",
+        "text": "Oxford’s Migration Observatory found a recorded voluntary or enforced return by March 2026 for 46% of refused applicants who first applied between 2013 and 2022. People in that group had differing amounts of time to leave. To measure whether departure is getting faster, follow people from the date their appeal rights end and compare outcomes at the same intervals.",
+        "citations": ["oxford-returns", "oxford-population"]
+      },
+      {
+        "heading": "What can we say about public safety?",
+        "text": "Lee Anderson MP asked for five years of crime figures for asylum seekers and people with indefinite leave to remain. In November the Home Office said the figures were unavailable in published statistics and would be disproportionately costly to compile and verify. Police and justice systems record nationality. The offending rate after final refusal remains unknown.",
+        "citations": ["crime-answer"]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "heading": "Appeals, detention and voluntary returns",
+        "text": "The National Audit Office estimated around £102 million for asylum appeals in 2024/25, drawing on Home Office costs and the tribunal chamber’s operating costs, which also cover other immigration work. The audit’s separate £46 million estimate for asylum detention and removals combines £15.2 million for detention beds and £30.4 million for assisted voluntary removals. It leaves the full cost of enforced removal and the cost per case from refusal to departure unresolved.",
+        "citations": ["audit"]
+      },
+      {
+        "heading": "Funding and costs outside the returns budget",
+        "text": "In October the Home Office reported that the 2026/27 Immigration Enforcement budget had risen by £122 million, or 13%, across its wider work. People eligible for assisted voluntary return can receive help with travel and up to £3,000 in financial support. The audit could only partly capture local authority costs. A fuller account would follow the cost of continued asylum support, councils’ response to destitution, and voluntary and enforced departures for comparable cases.",
+        "citations": ["october-letter", "voluntary-return", "audit", "support-eligibility", "lord-scrutiny"]
+      }
+    ],
+    "whats-changing": [
+      {
+        "heading": "The appeals proposal and the current baseline",
+        "text": "The Immigration and Asylum Bill reached the House of Lords on 18 November 2026. It proposes a new independent appeals authority intended to speed up decisions. The bill is still before Parliament. Check eventual waiting times against the current appeal queue and follow through to decisions overturned, departures and the age of unresolved cases.",
+        "citations": ["bill-stages", "appeals-proposal", "tribunals"]
+      },
+      { "improvements": ["presence-unknown"] },
+      {
+        "scrutiny": ["remaining-count", "shared-data", "support-effect"],
+        "collapseExchanges": "Read the questions Parliament put to officials"
+      }
+    ],
+    "sources": [
+      {
+        "details": {
+          "title": "What the census and other records can tell us",
+          "blocks": [
+            {
+              "heading": "The census measures residents",
+              "text": "The 2021 Census questionnaire in England and Wales asks about matters such as country of birth and passports. It has no question identifying immigration permission or a final asylum refusal. The Office for National Statistics used a separate Census Coverage Survey to estimate and adjust for people missed in the census. That adjustment improves the population total. It cannot identify this group.",
+              "citations": ["census-form", "census-coverage", "ons-irregular"]
+            },
+            {
+              "heading": "The Home Office counts case records and verified events",
+              "text": "The caseload figures come from administrative records. The returns series includes government-arranged departures and independently arranged departures the Home Office can verify, including by matching passenger records. The Chief Inspector examined how the Home Office keeps in contact with people without leave. The department accepted that records were inconsistent at several stages and said it would improve how contact and bail are recorded.",
+              "citations": ["asylum-system", "statistics-method", "inspector-contact", "contact-response"]
+            },
+            {
+              "heading": "People with no recorded departure",
+              "text": "Oxford’s Migration Observatory counted around 193,000 people with a refused or withdrawn application made from 2010 to 2024 and no recorded departure by January 2026. This is a broader historical group than the one MPs asked about. Oxford treats the figure as an upper bound for those cohorts because some people may have secured lawful status or left without a matching travel record, for example via Ireland.",
+              "citations": ["oxford-population", "committee-report"]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

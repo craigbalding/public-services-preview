@@ -1,0 +1,30 @@
+{
+  "dateHeading": "Quarter end",
+  "valueHeading": "Open cases",
+  "segments": [
+    {
+      "label": "First-tier Tribunal open caseload",
+      "definition": "England, Wales, Scotland and Northern Ireland. Asylum, Protection and Revocation of Protection cases open at the end of the quarter, from table FIA_4.",
+      "citations": ["tribunal-tables"],
+      "points": [
+        ["2022-06-30", 6319],
+        ["2022-09-30", 6386],
+        ["2022-12-31", 7173],
+        ["2023-03-31", 7510],
+        ["2023-06-30", 7601],
+        ["2023-09-30", 9380],
+        ["2023-12-31", 19459],
+        ["2024-03-31", 27133],
+        ["2024-06-30", 33227],
+        ["2024-09-30", 34234],
+        ["2024-12-31", 41987],
+        ["2025-03-31", 50976],
+        ["2025-06-30", 59925],
+        ["2025-09-30", 69670],
+        ["2025-12-31", 80333],
+        ["2026-03-31", 87450],
+        ["2026-06-30", 90341]
+      ]
+    }
+  ]
+}
