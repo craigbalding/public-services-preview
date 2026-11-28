@@ -13,4 +13,6 @@ Read the [editorial playbook](../../../docs/topic-playbook.md) and the draft wit
 4. Check the dates and precise commitment behind every scrutiny change. Confirm the difference between a request and a promise, and between evidence supplied and service improvement. Check whether a cited change was already under way before the challenge.
 5. Run `node src/build.mjs`. Check the lead, the section order, the closest figure to each finding, and the navigation from claims to sources. Check existing deep links on updates. Inspect both desktop and narrow layouts when presentation changes.
 
+When a share card is supplied, verify its fact and scope against the source. Follow its guide link and check that the cited passage answers the exact question on the card. Apply the [share-card evidence check](../create-public-service-share-cards/SKILL.md) before approving it.
+
 Return **Ready** or **Needs revision**, giving the evidence for that decision. List any necessary corrections with the affected topic field or chart, original source and the specific change needed. Record unresolved gaps and checks you could not complete, including when they limit what the page can claim.

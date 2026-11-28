@@ -16,3 +16,5 @@ For key figures, follow the playbook’s [source release check](../../../docs/to
 5. Edit the topic and linked datasets. Keep source, actor, step, finding and follow-up IDs stable when updating the same item. Run `node src/build.mjs` and check the generated reading path, evidence links and expanded details.
 
 Hand off the topic path, changed claims, source references, open evidence gaps and build result. For an update, identify what changed since the previous review and what each change in status means for the reader. Follow the publication scope of the current request.
+
+When preparing or refreshing a share card, use the [share-card skill](../create-public-service-share-cards/SKILL.md) to verify the fact and the guide’s answer to the proposed question before designing the card.
