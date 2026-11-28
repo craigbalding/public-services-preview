@@ -25,8 +25,10 @@ function permalink(id, label) {
   return `<a class="permalink" href="#${escape(id)}" aria-label="Link to ${escape(label)}" title="Link to this passage">#</a>`;
 }
 
-function page({ title, description, prefix, body }) {
+function page({ title, description, prefix, body, guideId }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
+  const contactPath = `${prefix}corrections/`;
+  const correctionPath = guideId ? `${contactPath}?guide=${encodeURIComponent(guideId)}` : contactPath;
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -50,7 +52,10 @@ function page({ title, description, prefix, body }) {
     <div class="wrap footer-inner">
       <a class="brand" href="${prefix}"><span class="brand-mark" aria-hidden="true"></span>${escape(site.name)}</a>
       <p>Independent guides to public services.</p>
-      ${correctionsFormId ? `<a class="footer-corrections" href="${prefix}corrections/">Send a correction or suggest a topic</a>` : ''}
+      ${correctionsFormId ? `<div class="footer-corrections">
+        <a href="${correctionPath}">Send a correction or update</a> <span aria-hidden="true">·</span>
+        <a href="${contactPath}">Suggest a topic</a>
+      </div>` : ''}
     </div>
   </footer>
 </body>
@@ -91,7 +96,7 @@ function renderIndex(topics) {
   });
 }
 
-function renderCorrections(formId) {
+function renderCorrections(formId, topics) {
   const embed = new URL(`https://tally.so/embed/${formId}`);
   embed.search = new URLSearchParams({
     alignLeft: '1',
@@ -99,6 +104,7 @@ function renderCorrections(formId) {
     transparentBackground: '1',
     dynamicHeight: '1',
   });
+  const guideTitles = Object.fromEntries(topics.map(({ id, title }) => [id, title]));
   const prompt = 'Send a correction, suggest a topic or share a source that could help update a guide.';
 
   return page({
@@ -111,12 +117,13 @@ function renderCorrections(formId) {
         <p class="article-summary">${escape(prompt)}</p>
       </div>
     </header>
-    <div class="wrap corrections-form">
-      <p>To suggest a topic, choose <strong>Question</strong> and enter the proposed topic in <strong>Page or topic</strong>. For a correction or source update, choose <strong>Correction</strong> and give the guide’s title or link.</p>
+    <div class="wrap corrections-form" data-guide-titles="${escape(JSON.stringify(guideTitles))}">
+      <p>To suggest a topic, choose <strong>Question</strong> and enter the proposed topic in <strong>Page or topic</strong>. For a correction or source update, choose <strong>Correction</strong> and give the guide’s title or link. You can edit any title already filled in.</p>
       <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive personal information. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
-      <p><a href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
-      <iframe title="Contact form" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      <p><a id="tally-form-link" href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
+      <iframe id="tally-form" title="Contact form" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
     </div>
+    <script src="../assets/contact-prefill.js" defer></script>
     <script src="https://tally.so/widgets/embed.js" defer></script>`,
   });
 }
@@ -511,6 +518,7 @@ async function renderTopic(topic, topicsById) {
     title: topic.title,
     description: topic.summary,
     prefix: '../../',
+    guideId: topic.id,
     body: `<header class="article-hero${mobileLinks ? ' article-hero--compact' : ''}">
       <div class="wrap">
         <a class="back" href="../../#topics"><span aria-hidden="true">←</span> All topics</a>
@@ -548,7 +556,8 @@ await writeFile(new URL('index.html', dist), renderIndex(topics));
 if (correctionsFormId) {
   const directory = new URL('corrections/', dist);
   await mkdir(directory, { recursive: true });
-  await writeFile(new URL('index.html', directory), renderCorrections(correctionsFormId));
+  await copyFile(new URL('src/contact-prefill.js', root), new URL('assets/contact-prefill.js', dist));
+  await writeFile(new URL('index.html', directory), renderCorrections(correctionsFormId, topics));
 }
 for (const [index, topic] of topics.entries()) {
   const directory = new URL(`topics/${topic.id}/`, dist);
