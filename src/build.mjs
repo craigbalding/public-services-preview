@@ -63,7 +63,7 @@ function renderIndex(topics) {
     prefix: './',
     body: `<div class="home-hero">
       <div class="wrap home-hero-inner">
-        <h1>How public<br>services <em>work.</em></h1>
+        <h1>How public services <em>work in practice</em></h1>
         <p>${escape(site.description)}</p>
       </div>
     </div>

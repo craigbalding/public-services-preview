@@ -34,7 +34,7 @@ section[id], li[id], h3[id], .metric[id], .finding[id], figure[id], .article-det
 
 .home-hero { background: var(--dark-green); color: #f7faf3; }
 .home-hero-inner { min-height: 25rem; display: grid; grid-template-columns: 1.7fr 1fr; align-items: end; gap: 2rem 4rem; padding-block: 4.7rem 5.1rem; }
-.home-hero h1 { font-size: clamp(3.2rem, 8.3vw, 7.1rem); line-height: .96; }
+.home-hero h1 { font-size: clamp(3.2rem, 8.3vw, 7.1rem); line-height: .96; text-wrap: balance; }
 .home-hero em { color: #c3dfc8; font-weight: 400; }
 .home-hero p { color: #e0eae1; max-width: 22rem; font-size: clamp(1.05rem, 2vw, 1.32rem); padding-bottom: .24rem; }
 .topics { padding-block: 4rem 5rem; }
