@@ -100,7 +100,7 @@ function renderCorrections(formId) {
       </div>
     </header>
     <div class="wrap corrections-form">
-      <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive information, such as medical details or case reference numbers. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
+      <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive personal information. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
       <p><a href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
       <iframe title="Send a correction" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
     </div>
