@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "id": "blue-badge-application",
+  "topic": "blue-badge-application",
+  "kind": "new",
+  "status": "ready",
+  "commissionedOn": "2026-11-28",
+  "checkedOn": "2026-11-28",
+  "title": "What happens after you apply for a Blue Badge?",
+  "category": "Local services",
+  "scope": "England, new or renewal Blue Badge applications",
+  "reader": "A disabled person or someone helping them understand eligibility, the council’s assessment, the likely wait and the options after a refusal.",
+  "primaryAngle": "Follow an England application from the national entry point to the council’s evidence check, assessment, decision and issue of a badge.",
+  "secondaryAngle": "Compare council processing and review routes where definitions allow, and show what happens when an applicant cannot get a decision or the reasons behind it.",
+  "lastingValue": "The reader question recurs around first applications, renewal and refusals. The guide can connect national rules to council practice.",
+  "signals": [
+    {
+      "kind": "recurring-need",
+      "observedOn": "2026-11-28",
+      "detail": "The national application service and council guidance distinguish eligibility routes, further assessment and the council’s role.",
+      "sources": [
+        "apply",
+        "councils"
+      ]
+    },
+    {
+      "kind": "scrutiny",
+      "observedOn": "2026-11-28",
+      "detail": "The Ombudsman published a July 2026 case where delays and missing decision records led to a fresh assessment being agreed.",
+      "sources": [
+        "ombudsman"
+      ]
+    }
+  ],
+  "sources": {
+    "apply": {
+      "title": "Apply for or renew a Blue Badge",
+      "publisher": "GOV.UK",
+      "url": "https://www.gov.uk/apply-blue-badge",
+      "role": "process",
+      "locator": "Entry point, local council decision, typical time and fee. Check the jurisdiction of each statement.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "councils": {
+      "title": "Blue Badge scheme local authority guidance (England)",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/publications/the-blue-badge-scheme-local-authority-guidance-england/blue-badge",
+      "role": "process",
+      "locator": "Eligibility with and without further assessment, decision, refusal and local review procedures.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "dis-tables": {
+      "title": "Blue Badge scheme statistics: data tables (DIS)",
+      "publisher": "Department for Transport",
+      "url": "https://www.gov.uk/government/statistical-data-sets/blue-badge-scheme-statistics-data-tables-dis",
+      "role": "delivery",
+      "locator": "DIS0108 for held and issued by local authority and category, and DIS0111 for badges issued in England. These are output counts.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "ombudsman": {
+      "title": "Decision 25 025 874",
+      "publisher": "Local Government and Social Care Ombudsman",
+      "url": "https://www.lgo.org.uk/decisions/transport-and-highways/parking-and-other-penalties/25-025-874",
+      "role": "delivery",
+      "locator": "23 July 2026 decision, paragraphs 5–9 on the delayed application and appeal, missing records and agreed remedy. Indexed copy checked; reopen the original before citing.",
+      "access": "indexed-only",
+      "checkedOn": "2026-11-28"
+    },
+    "council-record": {
+      "title": "Blue Badge applications since 2018",
+      "publisher": "Lincolnshire County Council",
+      "url": "https://www.lincolnshire.gov.uk/directory-record/96154/applications-for-blue-badges-since-2018",
+      "role": "delivery",
+      "locator": "FOI response on application counts and which breakdowns the council holds. Check dates and new and renewal coverage.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    }
+  },
+  "ratings": {
+    "usefulness": {
+      "level": "high",
+      "reason": "Approval, delay or refusal affects access to everyday journeys and services."
+    },
+    "urgency": {
+      "level": "low",
+      "reason": "A standing public service question, with no near-term event verified for this brief."
+    },
+    "coverage": {
+      "level": "high",
+      "reason": "Adds a council-run disability access service and a journey from national front door to local decision."
+    },
+    "evidence": {
+      "level": "medium",
+      "reason": "The service process and national output tables are clear. Comparable application waits and challenge outcomes require more work."
+    }
+  },
+  "evidenceGap": "National held and issued tables do not establish time from application to decision, the share refused or how often local reviews change the decision.",
+  "draftingChecks": [
+    "Check guidance on evidence and the distinct assessment routes, and document the council’s options after a refusal. Confirm any advertised time or fee for the example councils.",
+    "Choose council records using the same cohort and date window where possible. If they are incompatible, explain what each shows and keep them separate.",
+    "Use the Ombudsman case for consequences and remedy. Check for published costs of administering the scheme and review local fees and limits."
+  ],
+  "nextCheck": {
+    "when": "2026-12-05",
+    "what": "Look for comparable council processing and refusal data and check DfT’s release calendar before drafting."
+  },
+  "decisionReason": "Verified guidance, output tables and a case support a useful draft. Keep national and local measures separate where comparability is limited."
+}

@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "id": "adult-disability-payment-scotland",
+  "topic": "adult-disability-payment-scotland",
+  "kind": "new",
+  "status": "ready",
+  "commissionedOn": "2026-11-28",
+  "checkedOn": "2026-11-28",
+  "title": "What happens after you apply for Adult Disability Payment in Scotland?",
+  "category": "Social security",
+  "scope": "Scotland, new applications for Adult Disability Payment",
+  "reader": "An applicant or adviser who wants to know how a new claim is decided, what makes it take longer and how to challenge a decision.",
+  "primaryAngle": "Follow the two parts of a new application, supporting information, a determination, and re-determination and appeal where the applicant disagrees.",
+  "secondaryAngle": "Show which part of the journey the published processing measure covers, how routes and outcomes differ, and how Audit Scotland judged delivery.",
+  "lastingValue": "Applicants need a clear sequence and realistic time measures regardless of the release cycle.",
+  "signals": [
+    {
+      "kind": "recurring-need",
+      "observedOn": "2026-11-28",
+      "detail": "The published application and re-determination routes create recurring questions about evidence, waiting and how to challenge a decision.",
+      "sources": [
+        "apply",
+        "redetermination"
+      ]
+    },
+    {
+      "kind": "release",
+      "observedOn": "2026-11-28",
+      "detail": "The July 2026 statistics, published 15 September, give a recent baseline with linked tables and supplementary analyses.",
+      "sources": [
+        "july-figures"
+      ]
+    }
+  ],
+  "sources": {
+    "apply": {
+      "title": "How to apply for Adult Disability Payment",
+      "publisher": "Scottish Government",
+      "url": "https://www.mygov.scot/adult-disability-payment/how-to-apply",
+      "role": "process",
+      "locator": "Part 1, part 2, supporting information and the decision.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "redetermination": {
+      "title": "Requesting a re-determination or an appeal",
+      "publisher": "Scottish Government",
+      "url": "https://www.mygov.scot/disagree-decision/request-redetermination-or-appeal",
+      "role": "process",
+      "locator": "Application to Social Security Scotland and appeal route. Check eligibility and time limits in force.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "july-figures": {
+      "title": "Adult Disability Payment statistics to 31 July 2026",
+      "publisher": "Social Security Scotland",
+      "url": "https://www.socialsecurity.gov.scot/publications/2026/09/adult-disability-payment-statistics-to-31-july-2026",
+      "role": "delivery",
+      "locator": "New applications, processing times, outcomes and linked tables, including supplementary authorisation rates.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "audit-report": {
+      "title": "Adult Disability Payment",
+      "publisher": "Audit Scotland",
+      "url": "https://audit.scot/publications/adult-disability-payment",
+      "role": "scrutiny",
+      "locator": "Performance audit, application design, implementation, timings and funding. Distinguish report-period estimates from current forecasts.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "forthcoming": {
+      "title": "Forthcoming publications",
+      "publisher": "Social Security Scotland",
+      "url": "https://www.socialsecurity.gov.scot/forthcoming-publications",
+      "role": "calendar",
+      "locator": "Check the next Adult Disability Payment publication date and whether a newer release has superseded July 2026.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    }
+  },
+  "ratings": {
+    "usefulness": {
+      "level": "high",
+      "reason": "The decision and any challenge have clear consequences for a person’s income."
+    },
+    "urgency": {
+      "level": "medium",
+      "reason": "The quarterly release gives a current baseline. There is no immediate release or policy deadline recorded in this brief."
+    },
+    "coverage": {
+      "level": "high",
+      "reason": "Adds a Scottish benefit and separates a new disability claim from the existing Carer’s Allowance debt guide."
+    },
+    "evidence": {
+      "level": "high",
+      "reason": "Current application guidance, official statistics and an independent audit cover the service and how it operates."
+    }
+  },
+  "evidenceGap": "A processing time starting after part 2 leaves out time spent on the initial application. Check whether a linked cohort measure covers receipt of part 1 through decision and first payment.",
+  "draftingChecks": [
+    "Keep transfers from Personal Independence Payment, new applications and special rules cases identifiable. Check which are included in each published figure before comparing time or approval rates.",
+    "Identify the date each measure starts and ends and what the figures say about long waits. Read an appropriate case or audit passage for a documented consequence.",
+    "Trace the most relevant audit recommendations and later evidence. Separate benefit payments, case administration and estimated funding gaps."
+  ],
+  "nextCheck": {
+    "when": "2026-12-05",
+    "what": "Check the latest and forthcoming publications for a newer release and review any updated audit follow-up."
+  },
+  "decisionReason": "The main process, measurement issue and delivery evidence are sufficient for a standalone draft."
+}

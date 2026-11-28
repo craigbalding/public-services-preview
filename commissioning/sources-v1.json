@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "google-trends",
+      "title": "Google Trends UK",
+      "url": "https://trends.google.com/trends/?geo=GB",
+      "kind": "demand",
+      "scope": "United Kingdom",
+      "lookFor": "Use Explore with a UK filter and record the terms, comparison window and geography. Treat the index as relative interest and allow for low-volume gaps."
+    },
+    {
+      "id": "bbc-uk",
+      "title": "BBC News UK",
+      "url": "https://www.bbc.co.uk/news/uk",
+      "kind": "news",
+      "scope": "United Kingdom",
+      "lookFor": "Look for service questions raised by national and regional reporting. Trace significant claims to the named original records."
+    },
+    {
+      "id": "uk-parliament-committees",
+      "title": "UK Parliament committees",
+      "url": "https://committees.parliament.uk/",
+      "kind": "scrutiny",
+      "scope": "United Kingdom Parliament",
+      "lookFor": "Check inquiries, hearing dates, oral and written evidence, reports and government responses. Match the service scope to the committee’s remit."
+    },
+    {
+      "id": "uk-parliament-api",
+      "title": "UK Parliament developer hub",
+      "url": "https://developer.parliament.uk/home",
+      "kind": "scrutiny",
+      "scope": "United Kingdom Parliament",
+      "lookFor": "Use the Committees and Written Questions APIs for discovery where available. Open the underlying evidence or answer when qualifying a candidate."
+    },
+    {
+      "id": "nao-reports",
+      "title": "National Audit Office reports",
+      "url": "https://www.nao.org.uk/reports/",
+      "kind": "audit",
+      "scope": "UK government and bodies within the NAO remit",
+      "lookFor": "Look for delivery investigations, value-for-money studies and evidence about costs, handoffs and outcomes."
+    },
+    {
+      "id": "govuk-research",
+      "title": "GOV.UK research and statistics",
+      "url": "https://www.gov.uk/search/research-and-statistics",
+      "kind": "statistics",
+      "scope": "Varies by release",
+      "lookFor": "Use filters for organisations, subject and publication date. Compare releases with their supporting datasets and revision notes."
+    },
+    {
+      "id": "ons-calendar",
+      "title": "ONS release calendar",
+      "url": "https://www.ons.gov.uk/releasecalendar",
+      "kind": "statistics",
+      "scope": "Varies by release",
+      "lookFor": "Find upcoming releases and revisions. Record the population, reporting date and release date separately."
+    },
+    {
+      "id": "govuk-services",
+      "title": "GOV.UK services and information",
+      "url": "https://www.gov.uk/browse",
+      "kind": "service",
+      "scope": "Varies by service",
+      "lookFor": "Find the real public entry point, eligibility, fees and what the reader should expect. Check which administration or council delivers it."
+    },
+    {
+      "id": "legislation-uk",
+      "title": "Legislation.gov.uk",
+      "url": "https://www.legislation.gov.uk/",
+      "kind": "service",
+      "scope": "United Kingdom legislation",
+      "lookFor": "Check territorial extent, commencement orders and the version in force. Match legislation to current delivery guidance."
+    },
+    {
+      "id": "lgsco-decisions",
+      "title": "Local Government and Social Care Ombudsman decisions",
+      "url": "https://www.lgo.org.uk/decisions",
+      "kind": "casework",
+      "scope": "England",
+      "lookFor": "Find decisions and public-interest reports about local services. Use detail about the consequences and remedy in the case and seek wider data for prevalence."
+    },
+    {
+      "id": "housing-ombudsman",
+      "title": "Housing Ombudsman decisions",
+      "url": "https://www.housing-ombudsman.org.uk/decisions/",
+      "kind": "casework",
+      "scope": "Housing Ombudsman Scheme in England",
+      "lookFor": "Look for repair and complaint-handling failures, remedies and wider learning. Check landlord scope and what case-level evidence supports."
+    },
+    {
+      "id": "scottish-parliament",
+      "title": "Scottish Parliament committees",
+      "url": "https://www.parliament.scot/chamber-and-committees/committees",
+      "kind": "scrutiny",
+      "scope": "Scotland",
+      "lookFor": "Check committee evidence, forward work, reports and follow-up correspondence on devolved services."
+    },
+    {
+      "id": "audit-scotland",
+      "title": "Audit Scotland publications",
+      "url": "https://audit.scot/publications/search",
+      "kind": "audit",
+      "scope": "Scotland",
+      "lookFor": "Find audits of devolved and local services, report recommendations and any follow-up reviews."
+    },
+    {
+      "id": "scotland-statistics",
+      "title": "Scottish Government statistics and research",
+      "url": "https://www.gov.scot/statistics-and-research/",
+      "kind": "statistics",
+      "scope": "Scotland",
+      "lookFor": "Use the statistical calendar and publisher releases, including Social Security Scotland and Public Health Scotland."
+    },
+    {
+      "id": "senedd-business",
+      "title": "Senedd Business",
+      "url": "https://senedd.wales/senedd-business/",
+      "kind": "scrutiny",
+      "scope": "Wales",
+      "lookFor": "Find committee work, statements, Bills and transcripts. Track government responses and commencement separately."
+    },
+    {
+      "id": "audit-wales",
+      "title": "Audit Wales publications",
+      "url": "https://www.audit.wales/publications",
+      "kind": "audit",
+      "scope": "Wales",
+      "lookFor": "Find national and council audits with comparable evidence, spending and follow-up."
+    },
+    {
+      "id": "wales-statistics",
+      "title": "StatsWales",
+      "url": "https://stats.gov.wales/en-GB",
+      "kind": "statistics",
+      "scope": "Wales",
+      "lookFor": "Find Welsh Government datasets and related releases. Check updates, revisions and differences in recording with the publisher."
+    },
+    {
+      "id": "ni-assembly",
+      "title": "Northern Ireland Assembly committees",
+      "url": "https://www.niassembly.gov.uk/assembly-business/committees/",
+      "kind": "scrutiny",
+      "scope": "Northern Ireland",
+      "lookFor": "Look for minutes, reports, evidence and any actions committees asked the Executive to take."
+    },
+    {
+      "id": "ni-audit-office",
+      "title": "Northern Ireland Audit Office publications",
+      "url": "https://www.niauditoffice.gov.uk/publications",
+      "kind": "audit",
+      "scope": "Northern Ireland",
+      "lookFor": "Scan service reviews, the work programme and local government audit evidence."
+    },
+    {
+      "id": "ni-statistics",
+      "title": "NISRA statistics",
+      "url": "https://www.nisra.gov.uk/statistics",
+      "kind": "statistics",
+      "scope": "Northern Ireland",
+      "lookFor": "Find the responsible producer and current releases. For departmental services, follow through to the publisher’s release and methods."
+    }
+  ]
+}

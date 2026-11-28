@@ -7,6 +7,8 @@ description: Research and draft a new public-service topic or update an existing
 
 Read the [editorial playbook](../../../docs/topic-playbook.md) and [topic format](../../../docs/topic-format.md) from this repository. Use the latest template for a new topic. For an update, work from the current topic, its template and its last reviewed evidence.
 
+When starting from a [commissioned brief](../../../commissioning/README.md), confirm its status and then use the reader question, scope, starter records and drafting checks. Recheck current evidence before relying on the brief’s assessment. Record any material change to the framing or scope in the handoff.
+
 For key figures, follow the playbook’s [source release check](../../../docs/topic-playbook.md#verify-the-publishers-release) before relying on an indexed copy.
 
 1. Set the jurisdiction, population, subject and observation period. Write down the public promise and the question the topic needs to answer.

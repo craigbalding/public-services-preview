@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "id": "prisoner-tagging-fitting-figures",
+  "topic": "prisoner-tagging",
+  "kind": "refresh",
+  "status": "hold",
+  "commissionedOn": "2026-11-28",
+  "checkedOn": "2026-11-28",
+  "title": "Are more prisoners leaving with a working electronic tag?",
+  "category": "Justice",
+  "scope": "England and Wales, electronic monitoring after release from prison",
+  "reader": "A reader of the existing tagging guide checking whether prison fitting addresses gaps in monitoring after release.",
+  "primaryAngle": "Follow the promised fitting figures and compare whether people leave with working tags, using matching cohorts and definitions.",
+  "secondaryAngle": "Distinguish announced prison coverage, fitted tags, functioning monitoring and any evidence of the delay between release and monitoring.",
+  "lastingValue": "The existing guide tracks the delivery test, so new comparable information updates an established public record.",
+  "signals": [
+    {
+      "kind": "scrutiny",
+      "observedOn": "2026-11-28",
+      "detail": "The 26 November 2026 PAC hearing is already covered in the guide, which records a commitment to publish updated fitting figures in January 2027.",
+      "sources": [
+        "hearing"
+      ]
+    },
+    {
+      "kind": "policy",
+      "observedOn": "2026-11-28",
+      "detail": "The Ministry of Justice published a staged plan to expand fitting in prisons on 25 November 2026.",
+      "sources": [
+        "rollout"
+      ]
+    }
+  ],
+  "sources": {
+    "hearing": {
+      "title": "Electronic Monitoring: follow-up, oral evidence",
+      "publisher": "House of Commons Public Accounts Committee",
+      "url": "https://committees.parliament.uk/event/28728/formal-meeting-oral-evidence-session",
+      "role": "scrutiny",
+      "locator": "26 November 2026 session. Use the timestamped fitting-figures exchange already recorded in the guide when checking the wording of the promise.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "rollout": {
+      "title": "Thousands more tags to be fitted in prison in major expansion",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/news/thousands-more-tags-to-be-fitted-in-prison-in-major-expansion",
+      "role": "process",
+      "locator": "Rollout timetable and pilot. Treat the timetable as a plan unless delivery is evidenced.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "status-figures": {
+      "title": "Electronic monitoring status statistics, September 2026",
+      "publisher": "Ministry of Justice",
+      "url": "https://www.gov.uk/government/statistics/electronic-monitoring-statistics-publication-september-2026/annex-management-information-electronic-monitoring-status-statistics-september-2026",
+      "role": "delivery",
+      "locator": "Tables 6.1 and 6.2 in the existing guide. Check their populations before using them as a baseline for new fitting data.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    }
+  },
+  "ratings": {
+    "usefulness": {
+      "level": "high",
+      "reason": "Whether monitoring starts at release changes how readers should understand the service’s protection."
+    },
+    "urgency": {
+      "level": "medium",
+      "reason": "The published commitment gives January 2027, with a check planned early in that month."
+    },
+    "coverage": {
+      "level": "medium",
+      "reason": "Deepens an existing part of the justice catalogue."
+    },
+    "evidence": {
+      "level": "medium",
+      "reason": "There is a recorded promise and baseline evidence. The expected fitting release still needs verification."
+    }
+  },
+  "evidenceGap": "A release giving the number of prisons covered or tags fitted may still leave unanswered how many people left prison with a working tag and how long others went unmonitored.",
+  "draftingChecks": [
+    "Reopen the committee publications, transcript or recording and MoJ releases when the check is due.",
+    "Establish the exact cohort, period and stages reported as releases, fittings and monitoring starts. Compare with like-for-like published baseline figures.",
+    "Append a dated entry to the existing fitting-figures follow-up if information is provided or partly provided. Put any actual delivery change beside the fitting finding."
+  ],
+  "nextCheck": {
+    "when": "2027-01-04",
+    "what": "Look for the promised January publication in PAC correspondence and MoJ statistics. The exact day is an editorial check, since the commitment specified a month."
+  },
+  "refresh": {
+    "anchor": "follow-up-fitting-figures",
+    "change": "The current guide already covers the hearing and rollout announcement. Wait for the promised fitting data or another materially relevant record.",
+    "impact": "Readers could see whether the expansion closes the gap between release and effective monitoring, and whether the published evidence can answer the question."
+  },
+  "decisionReason": "Hold until the publisher supplies new evidence. The hearing and announcement by themselves would repeat existing coverage."
+}

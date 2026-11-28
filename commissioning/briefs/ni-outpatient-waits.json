@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "id": "ni-outpatient-waits",
+  "topic": "ni-outpatient-waits",
+  "kind": "new",
+  "status": "ready",
+  "commissionedOn": "2026-11-28",
+  "checkedOn": "2026-11-28",
+  "title": "What happens while you wait for a first hospital outpatient appointment in Northern Ireland?",
+  "category": "Health",
+  "scope": "Northern Ireland, first consultant-led outpatient appointments",
+  "reader": "A patient referred for a first outpatient appointment who wants to know how the queue works, how to check it and what the published waits mean.",
+  "primaryAngle": "Follow a referral from receipt and clinical prioritisation to confirmation and offer of the first appointment.",
+  "secondaryAngle": "Compare the age of the open waiting list over time and by trust or specialty, and explain how that differs from how long people who were seen actually waited.",
+  "lastingValue": "The pathway and public measures answer an ongoing patient question and can be refreshed with each quarterly release.",
+  "signals": [
+    {
+      "kind": "release",
+      "observedOn": "2026-11-28",
+      "detail": "The Department of Health calendar lists the September 2026 outpatient waiting-list bulletin for 3 December 2026.",
+      "sources": [
+        "release-calendar"
+      ]
+    },
+    {
+      "kind": "scrutiny",
+      "observedOn": "2026-11-28",
+      "detail": "The Assembly Committee for Health heard an Elective Care Framework and waiting-list update on 12 November 2026.",
+      "sources": [
+        "health-committee"
+      ]
+    }
+  ],
+  "sources": {
+    "trust-process": {
+      "title": "Waiting times",
+      "publisher": "Northern Health and Social Care Trust",
+      "url": "https://www.northerntrust.hscni.net/waiting-times/",
+      "role": "process",
+      "locator": "Waiting for your appointment, clinical priority and how the trust confirms a referral. Use this as one trust example.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "june-outpatients": {
+      "title": "Northern Ireland waiting time statistics: outpatient waiting times June 2026",
+      "publisher": "Department of Health, Northern Ireland",
+      "url": "https://www.health-ni.gov.uk/publications/northern-ireland-waiting-time-statistics-outpatient-waiting-times-june-2026",
+      "role": "delivery",
+      "locator": "Consultant-led and ICATS bulletin and linked tables. Extract consultant-led age bands and trust populations.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "outpatient-definitions": {
+      "title": "Outpatient waiting times guidance and returns",
+      "publisher": "Department of Health, Northern Ireland",
+      "url": "https://www.health-ni.gov.uk/publications/outpatient-waiting-times-guidance-and-returns",
+      "role": "delivery",
+      "locator": "CH3 and IWT returns and the separation between consultant-led and ICATS appointments.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "release-calendar": {
+      "title": "Statistical releases calendar",
+      "publisher": "Department of Health, Northern Ireland",
+      "url": "https://www.health-ni.gov.uk/articles/statistical-releases-calendar",
+      "role": "calendar",
+      "locator": "Waiting list bulletin for outpatients, September 2026 quarter, scheduled for 3 December.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "health-committee": {
+      "title": "Minutes of proceedings, 12 November 2026",
+      "publisher": "Northern Ireland Assembly Committee for Health",
+      "url": "https://www.niassembly.gov.uk/contentassets/b537737d8aa048f98c046e33a2406710/committee-for-health---12-november-2026.pdf",
+      "role": "scrutiny",
+      "locator": "Item 6, oral briefing on the Elective Care Framework. Find the evidence record before attributing specific questions or promises.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "funding": {
+      "title": "Minister sets out £80million plan to boost elective care",
+      "publisher": "Department of Health, Northern Ireland",
+      "url": "https://www.health-ni.gov.uk/news/minister-sets-out-ps80million-plan-boost-elective-care",
+      "role": "cost",
+      "locator": "1 July 2026 publication, targeted 2026–27 elective spending and the stated focus on ENT outpatient waits. Check outturn before describing it as expenditure.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    }
+  },
+  "ratings": {
+    "usefulness": {
+      "level": "high",
+      "reason": "A patient has a practical need to understand referral, queue position and how to follow up."
+    },
+    "urgency": {
+      "level": "high",
+      "reason": "Recent committee scrutiny and a confirmed early December data release support a timely draft."
+    },
+    "coverage": {
+      "level": "high",
+      "reason": "Adds a Northern Ireland service and the first outpatient referral journey."
+    },
+    "evidence": {
+      "level": "high",
+      "reason": "The patient-facing process, returns and comparable snapshots are available from the responsible bodies."
+    }
+  },
+  "evidenceGap": "Quarter-end returns count people still waiting. They leave open the full referral-to-appointment experience and why an individual case stays in the queue.",
+  "draftingChecks": [
+    "Check one additional trust's guidance before generalising the Northern Trust process. Identify which referral event starts each measure, and what people can do if their condition changes or their referral appears missing.",
+    "Extract ages from the latest consultant-led bulletin and comparable earlier quarters. Preserve the distinction between first appointment, diagnosis and treatment, and check recording changes before comparing trusts.",
+    "Check whether the funding source specifies outputs for first appointments, and follow the committee briefing to any agreed follow-up."
+  ],
+  "nextCheck": {
+    "when": "2026-12-03",
+    "what": "Open the September bulletin and linked CH3 tables. Use the June baseline if drafting before release."
+  },
+  "decisionReason": "The service pathway and June baseline are verified. The dated release gives a concrete follow-up and can be added during drafting."
+}

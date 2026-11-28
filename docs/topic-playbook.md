@@ -28,6 +28,6 @@ Track a request and an official commitment according to what the record establis
 
 ## Draft, review and refresh
 
-The [drafting skill](../.agents/skills/draft-public-service-topic/SKILL.md) prepares the topic, evidence and build. The [review skill](../.agents/skills/review-public-service-topic/SKILL.md) checks the draft independently against the original records and identifies any required revisions. A clean build checks structure and references. Editorial review checks what the cited evidence actually supports.
+The [commissioning workflow](../commissioning/README.md) finds and ranks candidates, and records what each guide should answer and the evidence to start with. The [drafting skill](../.agents/skills/draft-public-service-topic/SKILL.md) prepares the topic, evidence and build. The [review skill](../.agents/skills/review-public-service-topic/SKILL.md) checks the draft independently against the original records and identifies any required revisions. A clean build checks structure and references. Editorial review checks what the cited evidence actually supports.
 
 Handoff includes the topic path, changed claims, relevant source references, unresolved gaps and build result. Use the same handoff for a refresh, with changes since the last review and updates to the follow-up history. A future scheduled workflow can run drafting and review as separate jobs using this handoff. See the [topic format](topic-format.md) for the fields and build commands.

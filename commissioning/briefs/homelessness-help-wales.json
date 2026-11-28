@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "id": "homelessness-help-wales",
+  "topic": "homelessness-help-wales",
+  "kind": "new",
+  "status": "ready",
+  "commissionedOn": "2026-11-28",
+  "checkedOn": "2026-11-28",
+  "title": "What happens when you ask your council for homelessness help in Wales?",
+  "category": "Housing",
+  "scope": "Wales, households who are homeless or threatened with homelessness",
+  "reader": "Someone approaching a Welsh council who needs to understand what help can follow an assessment and what they can do about a decision.",
+  "primaryAngle": "Trace a request through council assessment, prevention or help to secure accommodation, interim help where applicable, and the decision and review route.",
+  "secondaryAngle": "Use published outcomes for each statutory duty to show what help achieved, then track which parts of the 2026 reforms are in force and how new reporting will affect comparisons.",
+  "lastingValue": "Councils remain the front door and people need to know which duty applies to their situation. The guide can retain that journey while the law and series change.",
+  "signals": [
+    {
+      "kind": "policy",
+      "observedOn": "2026-11-28",
+      "detail": "The 2026 Act amends the Welsh homelessness framework. The current guidance and statistical notes distinguish the existing duties from phased commencement.",
+      "sources": [
+        "current-help",
+        "act",
+        "quality"
+      ]
+    },
+    {
+      "kind": "release",
+      "observedOn": "2026-11-28",
+      "detail": "The 2025–26 release gives outcomes for the existing prevention, relief and main duties, with linked local authority data.",
+      "sources": [
+        "annual"
+      ]
+    }
+  ],
+  "sources": {
+    "current-help": {
+      "title": "Homelessness, housing advice and support",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/homelessness-housing-advice-and-support",
+      "role": "process",
+      "locator": "Homelessness and housing advice section, assessment by the local authority and applicable duties.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "annual": {
+      "title": "Homelessness: April 2025 to March 2026",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/homelessness-april-2025-march-2026-html",
+      "role": "delivery",
+      "locator": "Sections 62, 66, 73 and 75 and figures 1, 2, 5 and the linked local authority tables. Check previous-year revisions.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "quality": {
+      "title": "Homelessness: quality report",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/homelessness-quality-report-html",
+      "role": "delivery",
+      "locator": "Definitions, outcomes recording and the 2026 Act transition. Distinguish cases recorded at different duties.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "act": {
+      "title": "Homelessness and Social Housing Allocation (Wales) Act 2026",
+      "publisher": "Welsh Government",
+      "url": "https://www.gov.wales/homelessness-and-social-housing-allocation-wales-act-2026",
+      "role": "process",
+      "locator": "Purpose, Acts amended and implementation. Verify the precise in-force provisions against legislation.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    },
+    "case": {
+      "title": "Wrexham County Borough Council temporary accommodation complaint",
+      "publisher": "Public Services Ombudsman for Wales",
+      "url": "https://www.ombudsman.wales/findings/rudeness-inconsiderate-behaviour-staff-attitude-wrexham-county-borough-council/",
+      "role": "scrutiny",
+      "locator": "Read the facts, remit and disposition of the May 2026 case. Use only to illustrate what the record establishes.",
+      "access": "publisher",
+      "checkedOn": "2026-11-28"
+    }
+  },
+  "ratings": {
+    "usefulness": {
+      "level": "high",
+      "reason": "The circumstances can require immediate action and the duties at each step affect practical options."
+    },
+    "urgency": {
+      "level": "medium",
+      "reason": "The Act introduces a case for current coverage, with commencement dates to check provision by provision."
+    },
+    "coverage": {
+      "level": "high",
+      "reason": "Adds a Welsh council service. The existing social housing repair guide covers a different journey in England."
+    },
+    "evidence": {
+      "level": "high",
+      "reason": "The public entry point, statutory outcomes and methodology are available, with a separate implementation record."
+    }
+  },
+  "evidenceGap": "Published outcomes are recorded by duty. They do not show how long a typical household waited between first asking for help and reaching settled housing.",
+  "draftingChecks": [
+    "Check commencement orders and statutory guidance at publication. Show what applies now and date later changes when the source supports a date.",
+    "Compare like-for-like outcomes within each duty and use revised counts. Keep temporary accommodation snapshots and statutory outcomes identifiable.",
+    "Look for evidence of effects on households and time spent in temporary accommodation. Check council spending and Welsh Government allocations before discussing costs."
+  ],
+  "nextCheck": {
+    "when": "2026-12-07",
+    "what": "Check for commencement orders and any latest temporary accommodation release. This is an editorial check date."
+  },
+  "decisionReason": "There is sufficient evidence to explain the existing service, assess recorded outcomes and establish a baseline for the reform."
+}
