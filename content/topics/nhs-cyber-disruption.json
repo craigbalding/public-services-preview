@@ -4,7 +4,7 @@
   "title": "What happens to patients when a cyber attack disrupts NHS tests?",
   "category": "Health and cyber",
   "scope": "South-east London case study",
-  "summary": "When the June 2024 attack on pathology supplier Synnovis sharply reduced testing capacity, NHS teams prioritised urgent samples, used other laboratories and postponed care that depended on results. By the 26 September update, two London trusts had reported 10,152 acute outpatient appointments and 1,710 elective procedures postponed.",
+  "summary": "When the June 2024 attack on pathology supplier Synnovis sharply reduced testing capacity, NHS teams prioritised urgent samples, used other laboratories and postponed care that depended on results. In the 26 September update, provisional figures showed 10,152 acute outpatient appointments and 1,710 elective procedures postponed at two London trusts.",
   "citations": [
     "incident",
     "early",
@@ -28,7 +28,8 @@
       "publisher": "NHS England",
       "title": "Synnovis cyber incident",
       "url": "https://www.england.nhs.uk/synnovis-cyber-incident/",
-      "reference": "Scope, background and 10 November 2025 update"
+      "date": "2025-11-10",
+      "reference": "Clinical scope, full service restoration by December 2024 and investigation into stolen data"
     },
     "early": {
       "publisher": "NHS England London",
@@ -83,7 +84,7 @@
       "title": "Clinical impact in south-east London, 26 September 2024",
       "url": "https://www.england.nhs.uk/london/2024/09/26/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-26-september-2024/",
       "date": "2024-09-26",
-      "reference": "Cumulative outpatient and procedure postponements"
+      "reference": "Cumulative postponements, week of 16 to 22 September and provisional management information"
     },
     "restore": {
       "publisher": "NHS England London",
@@ -110,6 +111,13 @@
       "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
       "url": "https://bills.parliament.uk/bills/4035/stages",
       "reference": "Legislative stages and further consideration"
+    },
+    "suffolk-notification": {
+      "publisher": "West Suffolk NHS Foundation Trust",
+      "title": "Synnovis data breach affected patients at West Suffolk NHS Foundation Trust",
+      "url": "https://www.wsh.nhs.uk/news/synnovis-data-breach-affected-patients-at-west-suffolk-nhs-foundation-trust",
+      "date": "2026-08-01",
+      "reference": "Trust’s confirmation that it had written to around 70 affected patients"
     }
   },
   "actors": {
@@ -189,10 +197,10 @@
             "synnovis",
             "acute-trusts"
           ],
-          "text": "Rebuild the testing and reporting services and bring back work as capacity returns. NHS England said almost all services were up and running in early October 2024.",
+          "text": "Rebuild the testing and reporting services and bring back work as capacity returns. NHS England reported that nearly all services were operating in early October 2024 and later confirmed full restoration by December 2024.",
           "citations": [
             "restore",
-            "faq"
+            "incident"
           ]
         },
         {
@@ -221,7 +229,7 @@
       "citations": [
         "sept26"
       ],
-      "note": "These figures count appointments and procedures at the two most affected trusts. Some patients may have had more than one affected appointment or procedure."
+      "note": "NHS England labelled these figures provisional and based on unvalidated trust management information. Some patients may have had more than one affected appointment or procedure."
     },
     "recovery": {
       "title": "The cumulative outpatient count rose more slowly in the later updates",
@@ -245,11 +253,12 @@
         "id": "triage"
       },
       "title": "Testing capacity can become the bottleneck for treatment",
-      "text": "With sharply reduced test processing after the attack, trusts had to prioritise urgent work and seek mutual aid from other laboratories. NHS England’s weekly data also recorded diversion of organs for use by other trusts.",
+      "text": "With sharply reduced test processing after the attack, trusts had to prioritise urgent work and seek mutual aid from other laboratories. At the two most affected trusts the provisional weekly figures recorded 814 elective procedures postponed on 3 to 9 June 2024 and five on 16 to 22 September. NHS England also recorded diversion of donated organs for use by other trusts.",
       "citations": [
         "incident",
         "early",
-        "weekly"
+        "weekly",
+        "sept26"
       ],
       "charts": [
         "postponed"
@@ -259,10 +268,11 @@
       "improvement": {
         "owner": "nhs-england",
         "title": "Coordinate mutual aid and restore core testing",
-        "status": "NHS England reported mutual aid with other laboratories in June, then near-complete service restoration in October.",
+        "status": "NHS England reported mutual aid with other laboratories in June, near-complete service restoration in October and full restoration by December 2024.",
         "citations": [
           "early",
-          "restore"
+          "restore",
+          "incident"
         ]
       },
       "consequences": [
@@ -390,11 +400,10 @@
       {
         "id": "care-recovery",
         "heading": "Service recovery and patient recovery",
-        "text": "The October 2024 NHS update documented restoration of nearly all services. That milestone answers whether the service could take work again. A patient outcome measure would follow the individual through to the test result and treatment decision, and record the clinical effect of any delay.",
+        "text": "In September 2024, NHS England reported that GPs could again access the full range of pathology tests. It also said a backlog of non-urgent primary care tests still needed attention. Its later account said services were fully restored by December 2024. To measure recovery for patients, follow each postponed case through to a result and treatment decision, including the clinical effect of the delay.",
         "citations": [
-          "restore",
-          "weekly",
-          "patient-harm"
+          "sept26",
+          "incident"
         ]
       },
       {
@@ -422,6 +431,15 @@
       }
     ],
     "whats-changing": [
+      {
+        "id": "data-notification",
+        "heading": "Patient notifications continued after testing recovered",
+        "text": "In August 2026, West Suffolk NHS Foundation Trust said it had written to around 70 patients whose data was affected. This was a local follow-up to the data breach. It measures notification at one trust and is separate from the figures for delayed care in south-east London.",
+        "citations": [
+          "incident",
+          "suffolk-notification"
+        ]
+      },
       {
         "id": "new-rules",
         "heading": "What to look for after the Bill",

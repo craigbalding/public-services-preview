@@ -8,6 +8,10 @@ Define the population and jurisdiction first. Draw the shortest useful path from
 
 Answer the title question in the opening summary and put the scope and key qualification within reach of that answer. Augment it with three sourced takeaways on the purpose, the main weakness and what to watch. Put the finding, its figure or evidence gap, the consequence and the progress measure together. Use a sentence that can be quoted with its population, dates and source intact. Keep the full process history, datasets, methods and scrutiny exchanges within reach from the main account.
 
+## Verify the publisher’s release
+
+Use search to find the publisher’s release, then check the release date, the period it covers and any linked tables, revisions or newer releases. If a cached copy looks incomplete or a command-line request returns a blank page, check how the original public page opens in the desktop browser where available. An HTTP response code alone cannot establish whether readers can see the data. When the original is still unavailable, look for another primary record and state which claims or dates could only be checked in a cached copy.
+
 ## Choose measures that answer the reader’s question
 
 - **Stage and unit.** Say whether the figure counts requests, people, completed actions or results. In tagging, a visit attempted within the target window, a tag fitted and monitoring started are three events with different meanings.
