@@ -50,7 +50,7 @@ function page({ title, description, prefix, body }) {
     <div class="wrap footer-inner">
       <a class="brand" href="${prefix}"><span class="brand-mark" aria-hidden="true"></span>${escape(site.name)}</a>
       <p>Independent guides to public services.</p>
-      ${correctionsFormId ? `<a class="footer-corrections" href="${prefix}corrections/">Corrections</a>` : ''}
+      ${correctionsFormId ? `<a class="footer-corrections" href="${prefix}corrections/">Send a correction or suggest a topic</a>` : ''}
     </div>
   </footer>
 </body>
@@ -99,22 +99,23 @@ function renderCorrections(formId) {
     transparentBackground: '1',
     dynamicHeight: '1',
   });
-  const prompt = 'Spotted an error or something we’ve missed? Tell us.';
+  const prompt = 'Send a correction, suggest a topic or share a source that could help update a guide.';
 
   return page({
-    title: 'Corrections',
+    title: 'Contact us',
     description: prompt,
     prefix: '../',
     body: `<header class="article-hero article-hero--compact">
       <div class="wrap">
-        <h1>Corrections</h1>
+        <h1>Contact us</h1>
         <p class="article-summary">${escape(prompt)}</p>
       </div>
     </header>
     <div class="wrap corrections-form">
+      <p>To suggest a topic, choose <strong>Question</strong> and enter the proposed topic in <strong>Page or topic</strong>. For a correction or source update, choose <strong>Correction</strong> and give the guide’s title or link.</p>
       <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive personal information. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
       <p><a href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
-      <iframe title="Send a correction" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      <iframe title="Contact form" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
     </div>
     <script src="https://tally.so/widgets/embed.js" defer></script>`,
   });
