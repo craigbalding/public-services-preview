@@ -123,7 +123,7 @@ function renderCorrections(formId, topics) {
       <p><a id="tally-form-link" href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
       <iframe id="tally-form" title="Contact form" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
     </div>
-    <script src="../assets/contact-prefill.js" defer></script>
+    <script src="../assets/contact-prefill.js?v=2" defer></script>
     <script src="https://tally.so/widgets/embed.js" defer></script>`,
   });
 }
