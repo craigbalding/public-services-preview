@@ -516,7 +516,7 @@ async function renderTopic(topic, topicsById) {
         <p class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</p>
         <h1>${escape(topic.title)}</h1>
         <p class="article-summary">${escape(topic.summary)} ${citations(topic.citations)}</p>
-        <p class="review-date">Reviewed <time datetime="${escape(topic.reviewed)}">${dateLabel(topic.reviewed)}</time></p>
+        <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
       </div>
     </header>
     <div class="wrap article-layout${mobileLinks ? ' has-mobile-contents' : ''}">

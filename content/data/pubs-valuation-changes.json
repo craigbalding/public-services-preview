@@ -1,0 +1,22 @@
+{
+  "period": "April 2023 to April 2026 revaluations, England and Wales",
+  "groupLabel": "Property group",
+  "series": [
+    {
+      "label": "Pubs",
+      "value": 32.8
+    },
+    {
+      "label": "Hotels",
+      "value": 32.2
+    },
+    {
+      "label": "Retail, hospitality and leisure",
+      "value": 12.7
+    },
+    {
+      "label": "All sectors",
+      "value": 15.4
+    }
+  ]
+}

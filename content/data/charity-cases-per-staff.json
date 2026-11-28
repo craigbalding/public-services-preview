@@ -1,0 +1,27 @@
+{
+  "dateHeading": "Financial year ending",
+  "valueHeading": "Cases per full-time equivalent",
+  "segments": [
+    {
+      "label": "Regulatory concern cases closed per full-time equivalent",
+      "definition": "Commission productivity measure for regulatory concern casework. Cases closed can differ in complexity and do not show whether a charity improved.",
+      "citations": [
+        "annual"
+      ],
+      "points": [
+        [
+          "2024-03-31",
+          55
+        ],
+        [
+          "2025-03-31",
+          70
+        ],
+        [
+          "2026-03-31",
+          87
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "period": "Frontier Economics evaluation, before and after 7 October 2024",
+  "groupLabel": "Period",
+  "series": [
+    {
+      "label": "Before the requirement",
+      "value": 54
+    },
+    {
+      "label": "After it took effect",
+      "value": 65
+    }
+  ]
+}

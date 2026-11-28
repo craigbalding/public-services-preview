@@ -1,0 +1,437 @@
+{
+  "id": "small-business-late-payments",
+  "template": "topic-v7",
+  "title": "What can a small business do when a big customer pays late?",
+  "category": "Small business",
+  "scope": "United Kingdom",
+  "summary": "Start by checking the payment terms and chasing the invoice in writing. A UK small business with an unresolved payment problem with a larger private-sector customer can ask the Small Business Commissioner for free help. The Commissioner can intervene or make recommendations. Enforcing a debt may require a separate legal route.",
+  "citations": [
+    "chase",
+    "remit",
+    "legal"
+  ],
+  "searchTerms": [
+    "late invoices",
+    "unpaid invoice",
+    "SME",
+    "late payment",
+    "Small Business Commissioner",
+    "trade credit",
+    "debt recovery",
+    "commercial payments"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "chase": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Help with unpaid invoices",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/help-and-guidance/all-advice/help-with-unpaid-invoices/",
+      "reference": "Reminders and how to escalate"
+    },
+    "remit": {
+      "publisher": "GOV.UK",
+      "title": "About the Small Business Commissioner",
+      "url": "https://www.gov.uk/government/organisations/small-business-commissioner/about",
+      "reference": "Scope, independence and free help"
+    },
+    "legal": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Legal action for late payments",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/help-and-guidance/all-advice/legal-action-for-late-payments/",
+      "reference": "Casework and escalation to legal action"
+    },
+    "enquiry": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Make an enquiry",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/help-and-guidance/make-an-enquiry/",
+      "reference": "How to send details of an unresolved payment dispute"
+    },
+    "powers": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "How to complain about the OSBC",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/how-to-complain-about-the-osbc/",
+      "reference": "Remit and non-binding recommendations"
+    },
+    "charges": {
+      "publisher": "GOV.UK",
+      "title": "Late commercial payments: interest and debt recovery",
+      "url": "https://www.gov.uk/late-commercial-payments-interest-debt-recovery",
+      "reference": "Statutory payment rights and fixed recovery costs"
+    },
+    "accounts": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Annual report and accounts 2024 to 2025",
+      "url": "https://assets.publishing.service.gov.uk/media/697a472c005d288bf850df1b/office-small-business-commissioner-annual-report-accounts-2024-2025.pdf",
+      "reference": "Casework measures and net expenditure for 2024–25"
+    },
+    "previous": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Annual report and accounts 2023 to 2024",
+      "url": "https://assets.publishing.service.gov.uk/media/684ad65731f1fc7d0801ab87/small-business-commissioner-annual-report-2023-2024.pdf",
+      "reference": "Casework interventions and earlier financial-year comparison"
+    },
+    "budget": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Operating at pace to year end",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/news/sbc-weekly-update/operating-at-pace-to-year-end/",
+      "reference": "£1.55 million recovered and £1.23 million budget in 2025–26"
+    },
+    "latest-work": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "More than £1 million recovered for small businesses",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/1-5-million-recovered-for-small-businesses-by-small-business-commissioner-2/",
+      "date": "2026-10-16",
+      "reference": "Enquiry service recoveries in the first half of 2026–27"
+    },
+    "research": {
+      "publisher": "Department for Business and Trade",
+      "title": "Late payments research: impact on the UK economy",
+      "url": "https://www.gov.uk/government/publications/late-payments-research-impact-on-the-uk-economy",
+      "date": "2025-07-30",
+      "reference": "Estimated costs, surveys and analysis of business outcomes"
+    },
+    "case": {
+      "publisher": "Office of the Small Business Commissioner",
+      "title": "Self-employed trauma nurse",
+      "url": "https://www.smallbusinesscommissioner.gov.uk/success-stories/self-employed-trauma-nurse/",
+      "reference": "Case example of recovery after five months unpaid"
+    },
+    "response": {
+      "publisher": "Department for Business and Trade",
+      "title": "Late payment consultation: government response",
+      "url": "https://www.gov.uk/government/consultations/late-payments-tackling-poor-payment-practices/outcome/late-payment-consultation-time-to-pay-up-government-response-web-version",
+      "reference": "Proposals after consultation on payment terms and enforcement"
+    },
+    "bill": {
+      "publisher": "UK Parliament",
+      "title": "Commercial Payments Bill [HL]",
+      "url": "https://bills.parliament.uk/bills/4128/stages",
+      "reference": "Progress and first reading in the Commons on 21 October 2026"
+    }
+  },
+  "actors": {
+    "small-business-suppliers": {
+      "role": "Agree terms, submit invoices and decide whether to seek help or enforce a debt.",
+      "citations": [
+        "chase",
+        "legal"
+      ]
+    },
+    "large-business-customers": {
+      "role": "Receive and process the invoice and pay it according to the applicable terms.",
+      "citations": [
+        "chase",
+        "charges"
+      ]
+    },
+    "osbc": {
+      "role": "Advises, investigates eligible complaints and can make non-binding recommendations.",
+      "citations": [
+        "remit",
+        "powers"
+      ]
+    },
+    "dbt": {
+      "role": "Funds the Office and brings forward reforms to commercial payment rules.",
+      "citations": [
+        "accounts",
+        "response",
+        "bill"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From an overdue invoice to payment or enforcement",
+      "steps": [
+        {
+          "id": "agree",
+          "label": "Agree terms and submit an invoice",
+          "actors": [
+            "small-business-suppliers",
+            "large-business-customers"
+          ],
+          "text": "Record the buyer’s payment terms and make sure the invoice reached the right team with the details it requires. Check when payment became due and whether the customer disputes the invoice.",
+          "citations": [
+            "chase",
+            "charges"
+          ]
+        },
+        {
+          "id": "chase",
+          "label": "Chase the outstanding payment",
+          "actors": [
+            "small-business-suppliers"
+          ],
+          "text": "Ask about any blockage, send a written reminder and keep the invoice and responses. A written demand can set out the amount and deadline. Check the rules on interest and recovery charges.",
+          "citations": [
+            "chase",
+            "charges"
+          ]
+        },
+        {
+          "id": "escalate",
+          "label": "Ask the Commissioner for help",
+          "actors": [
+            "small-business-suppliers",
+            "osbc"
+          ],
+          "text": "A UK small business can send an enquiry about an unresolved payment. The office checks eligibility, may advise how to resolve it, or can take up an eligible complaint about a larger private-sector customer.",
+          "citations": [
+            "remit",
+            "enquiry",
+            "accounts"
+          ],
+          "note": {
+            "heading": "Why use a free intermediary",
+            "text": "The office was set up to address poor private-sector payment practices. Its annual report says it tries to help firms resolve problems themselves where possible, recognising the reluctance to start legal action.",
+            "citations": [
+              "remit",
+              "accounts"
+            ]
+          }
+        },
+        {
+          "id": "enforce",
+          "label": "Receive the money or consider enforcement",
+          "actors": [
+            "small-business-suppliers",
+            "large-business-customers"
+          ],
+          "text": "Check what has actually been paid, including any partial payment. A recommendation can help resolve the dispute. A court can issue an enforceable judgment. The guidance explains when legal action may be a separate option.",
+          "citations": [
+            "powers",
+            "legal"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "recovered": {
+      "title": "The amount recovered through casework rose sharply in 2025–26",
+      "type": "trend",
+      "data": "small-business-payments-recovered.json",
+      "description": "Four full financial years of overdue payments recovered with the office’s help.",
+      "citations": [
+        "previous",
+        "accounts",
+        "budget"
+      ],
+      "note": "The final point is reported by the Commissioner, before the annual accounts in this source set. The first half of 2026–27 exceeded £1 million and is a shorter period."
+    }
+  },
+  "issues": {
+    "cash-flow": {
+      "step": {
+        "visual": "journey",
+        "id": "chase"
+      },
+      "title": "The supplier bears the cash-flow cost while the invoice goes unpaid",
+      "text": "The Department for Business and Trade’s research links late payments to time spent chasing, higher costs, forgone investment and business closures. Its UK-wide estimate of almost £11 billion a year is a modelled economic impact, distinct from the value of invoices open at a particular time.",
+      "citations": [
+        "research",
+        "response"
+      ],
+      "evidenceGap": "A selected success story shows what can happen in one case. It cannot establish how often assistance leads to payment or how long other suppliers wait.",
+      "measure": "Track days from due date to payment, unpaid invoices and sums recovered, including cases that cannot use the scheme.",
+      "consequences": [
+        {
+          "text": "In a case published by the Commissioner, a self-employed trauma nurse went unpaid for five months on care provided under a private insurance claim. The office contacted the insurer and reported recovery of £8,500.79. The case shows how a wait can build up debt for a supplier.",
+          "citations": [
+            "case"
+          ]
+        }
+      ]
+    },
+    "casework": {
+      "step": {
+        "visual": "journey",
+        "id": "escalate"
+      },
+      "title": "An enquiry is different from a complaint, and a recovery total hides the mix of cases",
+      "text": "The 2024–25 accounts report 591 casework enquiries and 29 formal complaints identified through casework. The office also advises suppliers outside a formal investigation. Amounts recovered can be concentrated in a small number of large cases.",
+      "citations": [
+        "accounts",
+        "enquiry"
+      ],
+      "charts": [
+        "recovered"
+      ],
+      "evidenceGap": "Published annual totals do not follow the same enquiry cohort to payment in full, partial payment, referral or closure without payment.",
+      "measure": "Show what proportion of eligible cases are paid, amounts, time to resolution and repeat late payment by the same customer.",
+      "improvement": {
+        "owner": "dbt",
+        "title": "Propose stronger investigatory and enforcement powers",
+        "status": "The Government’s response proposed a maximum payment term, mandatory late-payment interest and new powers for the Commissioner. The Commercial Payments Bill entered the Commons in October 2026. Check the final text and dates before relying on these powers.",
+        "citations": [
+          "response",
+          "bill"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "A supplier who receives advice or a non-binding recommendation may still have to spend time chasing or use a legal route if the buyer does not pay.",
+          "citations": [
+            "powers",
+            "legal"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "can-enforce": {
+      "step": {
+        "visual": "journey",
+        "id": "enforce"
+      },
+      "question": "Would stronger powers address problems the existing scheme cannot resolve?",
+      "record": "response",
+      "answer": "The Government’s consultation response sets out the case for mandatory interest, tighter limits on payment terms and stronger investigatory powers. The existing service explains that its recommendations are non-binding. The Bill is the next place to check what powers Parliament agrees to give.",
+      "citations": [
+        "powers",
+        "response",
+        "bill"
+      ],
+      "watch": "Track statutory commencement, investigations started, outcomes delivered and whether suppliers actually get paid sooner."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "First check the invoice",
+            "text": "Find out what the buyer received, what terms apply and why the payment is being held up. Keep the record if you need to escalate.",
+            "citations": [
+              "chase",
+              "charges"
+            ]
+          },
+          {
+            "label": "Free help",
+            "text": "The Commissioner can help qualifying small firms in disputes with larger private-sector customers. Its recommendations do not bind the customer.",
+            "citations": [
+              "remit",
+              "enquiry",
+              "powers"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Compare how many suppliers get paid and how long it takes, alongside legislation proposing stronger powers and tighter payment rules.",
+            "citations": [
+              "accounts",
+              "response",
+              "bill"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "who-qualifies",
+        "heading": "Who can use the complaint scheme",
+        "text": "The Commissioner describes small firms as businesses with fewer than 50 staff. The formal scheme concerns payment problems with larger customers. The enquiry service can check which route applies to a particular dispute. Public contracts and court proceedings have separate rules.",
+        "citations": [
+          "remit",
+          "enquiry",
+          "legal"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "small-business-suppliers",
+                "large-business-customers",
+                "osbc",
+                "dbt"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "cash-flow",
+          "casework"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "recovery-outcomes",
+        "heading": "What recovery figures tell us",
+        "text": "The recovery figures show money returned after the office’s involvement. They give no control group of similar suppliers who did not seek help. The 2025–26 rise can reflect larger invoices, a different mix of cases or higher recovery, and the figure alone cannot separate those explanations.",
+        "citations": [
+          "accounts",
+          "budget",
+          "latest-work"
+        ]
+      },
+      {
+        "id": "test-new-rules",
+        "heading": "How to test whether late payment falls",
+        "text": "The wider research combines surveys and analysis of business outcomes. To test new rules, follow payment behaviour for comparable businesses before and after implementation, along with complaints, cash flow and changes in the share of invoices paid late.",
+        "citations": [
+          "research",
+          "response"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "supplier-costs",
+        "heading": "What the supplier can face",
+        "text": "The Commissioner’s service is free to eligible suppliers. There may be a statutory right to interest and fixed charges for recovering a late payment. Litigation can bring separate court costs and depends on jurisdiction, amount and enforceability.",
+        "citations": [
+          "remit",
+          "charges",
+          "legal"
+        ]
+      },
+      {
+        "id": "office-funding",
+        "heading": "What the Office costs and who gets the money",
+        "text": "The office’s accounts show net expenditure of £1,074,914 in 2024–25. The Commissioner reported a budget of £1.23 million in 2025–26 and £1.55 million recovered that year. Money recovered went to suppliers, and the budget covered work beyond dispute recovery. A cost-benefit calculation would also require the costs and outcomes of the other work, and evidence of what would have happened without the service.",
+        "citations": [
+          "accounts",
+          "budget"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "law-change",
+        "heading": "What to watch as the Bill progresses",
+        "text": "Follow the Bill through Parliament and check when any new powers and duties begin. Compare later payment performance with the current rules using like-for-like periods and company sizes.",
+        "citations": [
+          "bill",
+          "research",
+          "response"
+        ]
+      },
+      {
+        "improvements": [
+          "casework"
+        ]
+      },
+      {
+        "scrutiny": [
+          "can-enforce"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

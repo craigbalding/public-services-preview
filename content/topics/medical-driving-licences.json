@@ -1,0 +1,478 @@
+{
+  "id": "medical-driving-licences",
+  "template": "topic-v7",
+  "title": "What happens to your driving licence when you report a medical condition?",
+  "category": "Driving",
+  "scope": "Great Britain",
+  "summary": "The DVLA checks whether you meet the medical standards for driving and may seek evidence from a clinician. Whether you can drive while waiting depends on your circumstances. If your licence expires during a renewal, check all the conditions under Section 88 before driving. Seek advice if your entitlement is unclear.",
+  "citations": [
+    "after",
+    "section-88",
+    "decide"
+  ],
+  "searchTerms": [
+    "DVLA medical",
+    "medical licence renewal",
+    "fitness to drive",
+    "section 88",
+    "licence revoked",
+    "GP evidence",
+    "driving disability",
+    "medical condition driving"
+  ],
+  "related": [
+    "driving-test-waits"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "reporting": {
+      "publisher": "GOV.UK",
+      "title": "Check if a health condition affects your driving",
+      "url": "https://www.gov.uk/health-conditions-and-driving",
+      "reference": "What to report and condition-specific guidance"
+    },
+    "after": {
+      "publisher": "GOV.UK",
+      "title": "What happens after you tell DVLA",
+      "url": "https://www.gov.uk/driving-medical-conditions/what-happens-after-you-tell-dvla",
+      "reference": "Further evidence, assessments and advice about driving"
+    },
+    "section-88": {
+      "publisher": "DVLA",
+      "title": "Can I drive while my application is with DVLA?",
+      "url": "https://www.gov.uk/government/publications/inf1886-can-i-drive-while-my-application-is-with-dvla",
+      "reference": "INF188/6, full conditions for driving if a licence expires while DVLA considers an application"
+    },
+    "clinicians": {
+      "publisher": "DVLA",
+      "title": "General information: assessing fitness to drive",
+      "url": "https://www.gov.uk/guidance/general-information-assessing-fitness-to-drive",
+      "reference": "Medical enquiries, waiting for reports, standards and Section 88"
+    },
+    "decide": {
+      "publisher": "GOV.UK",
+      "title": "What DVLA will decide",
+      "url": "https://www.gov.uk/driving-medical-conditions/what-dvla-will-decide",
+      "reference": "Licensing outcomes, new evidence and different court appeal routes"
+    },
+    "renew": {
+      "publisher": "GOV.UK",
+      "title": "Renew your short-term medical driving licence",
+      "url": "https://www.gov.uk/renew-medical-driving-licence",
+      "reference": "Renewal routes, fees and possible waits for medical information"
+    },
+    "accounts": {
+      "publisher": "Driver and Vehicle Licensing Agency",
+      "title": "Annual report and accounts 2025 to 2026",
+      "url": "https://assets.publishing.service.gov.uk/media/6a54c7872467584757371df3/DVLA_annual_report_and_accounts_2025_to_2026.pdf",
+      "reference": "Performance measure 1.3 and footnotes, customer complaints, pooled fees and Note 3 medical practitioner costs"
+    },
+    "october-time": {
+      "publisher": "Department for Transport, written answer to Parliament",
+      "title": "Driving licences: health, UIN 33579",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33579/",
+      "date": "2026-10-14",
+      "reference": "Average decision time in 2026–27 to date and renewal reminders"
+    },
+    "october-age": {
+      "publisher": "Department for Transport, written answer to Parliament",
+      "title": "Driving licences: health, UIN 32972",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32972/",
+      "date": "2026-10-19",
+      "reference": "Share of decisions over 50 working days and ages of open cases"
+    },
+    "new-target": {
+      "publisher": "Department for Transport, written answer to Parliament",
+      "title": "Driving licences: health, UIN 41455",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41455/",
+      "date": "2026-11-16",
+      "reference": "Target of 45 working days on average by March 2027"
+    },
+    "digital-route": {
+      "publisher": "DVLA",
+      "title": "Drivers can save up to 10 days by notifying DVLA of a medical condition online",
+      "url": "https://www.gov.uk/government/news/drivers-can-save-up-to-10-days-by-notifying-dvla-of-a-medical-condition-online",
+      "date": "2026-08-17",
+      "reference": "Expanded online service and claimed benefit compared with post"
+    },
+    "service-review": {
+      "publisher": "Government Digital Service",
+      "title": "DVLA and CustomerFirst partnering to improve Drivers Medical service",
+      "url": "https://gds.blog.gov.uk/2026/05/28/putting-customers-first-dvla-and-customerfirst-partnering-to-improve-drivers-medical-service/",
+      "date": "2026-05-28",
+      "reference": "Research into service delays and design"
+    },
+    "complaints": {
+      "publisher": "Department for Transport, Independent Complaints Assessors",
+      "title": "Annual report 2020 to 2021",
+      "url": "https://assets.publishing.service.gov.uk/media/62d6c092d3bf7f2862f26a09/dft-independent-complaints-assessor-report-2020-to-2021.pdf",
+      "reference": "Individual driver cases, including advice following a medical revocation and delays to vocational entitlement"
+    }
+  },
+  "actors": {
+    "drivers": {
+      "role": "Report conditions when required, provide information and check their entitlement while the case is open.",
+      "citations": [
+        "reporting",
+        "section-88"
+      ]
+    },
+    "dvla": {
+      "role": "Applies the medical standards, requests evidence and gives the licensing decision.",
+      "citations": [
+        "after",
+        "decide",
+        "clinicians"
+      ]
+    },
+    "driving-healthcare": {
+      "role": "Provide requested clinical evidence and advise on fitness to drive.",
+      "citations": [
+        "clinicians"
+      ]
+    },
+    "department-for-transport": {
+      "role": "Responds to Parliament on case ages, performance and targets.",
+      "citations": [
+        "october-age",
+        "new-target"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From a medical notification to a licensing decision",
+      "steps": [
+        {
+          "id": "report",
+          "label": "Check the condition and report it when required",
+          "actors": [
+            "drivers",
+            "dvla"
+          ],
+          "text": "Use the condition-specific guidance and notify DVLA in the appropriate way. The service may ask different questions for car and motorcycle licences and vocational licences.",
+          "citations": [
+            "reporting",
+            "clinicians"
+          ]
+        },
+        {
+          "id": "evidence",
+          "label": "Collect further evidence if needed",
+          "actors": [
+            "dvla",
+            "driving-healthcare",
+            "drivers"
+          ],
+          "text": "DVLA may write to a doctor or consultant, arrange an examination, or request a driving assessment, eyesight test or driving test. This makes some cases depend on information held outside the agency.",
+          "citations": [
+            "after",
+            "clinicians"
+          ],
+          "note": {
+            "heading": "Why the decision needs evidence",
+            "text": "Medical licensing has to consider whether someone meets the standards for safe driving. A longer case can involve successive clinical enquiries rather than a single form check.",
+            "citations": [
+              "clinicians"
+            ]
+          }
+        },
+        {
+          "id": "driving",
+          "label": "Check if you can drive while waiting",
+          "actors": [
+            "drivers",
+            "driving-healthcare"
+          ],
+          "text": "If your licence expires while a qualifying application is under consideration, Section 88 can allow some drivers to continue. Read the full DVLA conditions. A prior refusal or revocation on medical grounds, or advice that you are unfit to drive, can prevent you from driving.",
+          "citations": [
+            "after",
+            "section-88",
+            "clinicians"
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Receive the decision and check any conditions",
+          "actors": [
+            "dvla",
+            "drivers"
+          ],
+          "text": "The decision can allow continued driving, issue a licence for a shorter period, require adaptations or stop driving. Read the DVLA letter, which explains the decision and what may happen next. The rules provide routes to submit new evidence or appeal.",
+          "citations": [
+            "decide",
+            "renew"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "late": {
+      "label": "Decisions made after 50 working days",
+      "percentage": 43.3,
+      "population": "DVLA medical licensing decisions made in Great Britain",
+      "period": "April 2025 to March 2026",
+      "type": "Written answer to Parliament",
+      "basis": "The 50-working-day target applies to the average across completed decisions. The figure shows the share of completed decisions beyond that point.",
+      "citations": [
+        "october-age"
+      ]
+    }
+  },
+  "charts": {
+    "wait": {
+      "title": "The mean decision time rose above the 50-day target in 2025–26",
+      "type": "trend",
+      "data": "dvla-medical-decision-time.json",
+      "description": "Working days to a medical licensing decision, including a separately labelled year-to-date update for 2026–27.",
+      "citations": [
+        "accounts",
+        "october-time"
+      ],
+      "note": "DVLA says the 2025–26 system change overlapped with a focus on older, complex cases. A change in the mix of cases closed can move the mean."
+    },
+    "ageing": {
+      "title": "Almost 25,000 applications had been open for six months or more",
+      "type": "bars",
+      "data": "dvla-age-of-open-medical-cases.json",
+      "description": "Applications still open at these ages on 12 October 2026.",
+      "citations": [
+        "october-age"
+      ],
+      "note": "Selected age bands among open cases. Includes applicants whose driving entitlement while waiting may differ."
+    }
+  },
+  "issues": {
+    "evidence": {
+      "step": {
+        "visual": "journey",
+        "id": "evidence"
+      },
+      "title": "Medical evidence can take time to reach the agency",
+      "text": "The DVLA’s process can require reports or tests before a decision. The 2025–26 accounts say the transition to new casework software involved a period with both systems in use, staff training and a focus on resolving older, complex cases.",
+      "citations": [
+        "clinicians",
+        "accounts"
+      ],
+      "metrics": [
+        "late"
+      ],
+      "charts": [
+        "wait"
+      ],
+      "evidenceGap": "The published average does not split waiting time between DVLA queues, obtaining appointments and waiting for evidence.",
+      "measure": "Publish time at each evidence handoff, alongside distributions by route and case complexity.",
+      "improvement": {
+        "owner": "dvla",
+        "title": "Move to a new casework system and expand online reporting",
+        "status": "DVLA introduced a new system and expanded the online route. It says some applicants can save up to ten days by applying online rather than by post. That estimate compares online and postal applications and applies to some applicants.",
+        "citations": [
+          "digital-route",
+          "accounts",
+          "october-age"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "In one vocational licence case the Independent Complaints Assessor found unacceptable delays and poor communication while the DVLA sought medical advice. The decision and the time and information needed to reach it were separate issues for the driver.",
+          "citations": [
+            "complaints"
+          ]
+        }
+      ]
+    },
+    "ageing": {
+      "step": {
+        "visual": "journey",
+        "id": "driving"
+      },
+      "title": "A long open case leaves entitlement uncertain for some applicants",
+      "text": "As of 12 October 2026, the minister reported 49,981 applications open for three to six months and 24,768 open for six months or more. These are cases outstanding on that date, a different population from the cases included in annual decision-time figures.",
+      "citations": [
+        "october-age",
+        "accounts"
+      ],
+      "charts": [
+        "ageing"
+      ],
+      "evidenceGap": "The answer does not show how many people in each age band could legally drive, or how long people unable to drive ultimately waited.",
+      "measure": "Track time to decision and the open caseload by age, with separate information on people unable to drive while awaiting a decision.",
+      "consequences": [
+        {
+          "text": "A driver unable to continue can face a longer period without their usual transport or a licence needed for work. In one published case, a complaints assessor identified incorrect advice suggesting Section 88 might apply after a previous medical revocation.",
+          "citations": [
+            "section-88",
+            "complaints"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "long-case-answers": {
+      "step": {
+        "visual": "journey",
+        "id": "evidence"
+      },
+      "question": "How many medical licensing cases were waiting for months?",
+      "record": "october-age",
+      "answer": "Liz Jarvis asked for the target, the share of decisions exceeding 50 days and the number of cases already open for months. The minister provided the share and two age bands, and reported system and online service changes.",
+      "citations": [
+        "october-age"
+      ],
+      "watch": "Check whether later figures show fewer very old cases as well as a falling mean."
+    },
+    "march-objective": {
+      "step": {
+        "visual": "journey",
+        "id": "decide"
+      },
+      "question": "What target applies to medical licensing decisions in 2026–27?",
+      "record": "new-target",
+      "answer": "Ben Lake asked whether the DVLA had a target. The minister confirmed an average of 45 working days by March 2027.",
+      "citations": [
+        "new-target"
+      ],
+      "watch": "Check the result in the next annual performance report, alongside decision times by case type and the age of applications still open."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Driving while you wait",
+            "text": "Check the official criteria before driving if your licence has expired. The answer depends on your previous entitlement, application and medical fitness.",
+            "citations": [
+              "after",
+              "section-88"
+            ]
+          },
+          {
+            "label": "How long decisions take",
+            "text": "The 2025–26 average was 56.66 working days against a 50-day average target. At 12 October 2026, 24,768 applications had been open for six months or more.",
+            "citations": [
+              "accounts",
+              "october-age"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "The average target for March 2027 is 45 working days. Track older cases and time spent gathering evidence as well as the average.",
+            "citations": [
+              "new-target",
+              "october-age",
+              "clinicians"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "which-service",
+        "heading": "Which rules and timings apply",
+        "text": "A routine online driving licence application and a medical licensing decision use different service measures. A short-period medical licence also has a separate renewal route. If DVLA stopped you driving or your entitlement is unclear, follow its decision or contact the agency before driving.",
+        "citations": [
+          "accounts",
+          "renew",
+          "section-88",
+          "decide"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "drivers",
+                "dvla",
+                "driving-healthcare",
+                "department-for-transport"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "evidence",
+          "ageing"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "safe-decisions",
+        "heading": "What a good outcome looks like",
+        "text": "A decision can be timely and still require a driver to stop for safety reasons. Progress means making the right decision with enough evidence, communicating it clearly, and reducing avoidable time waiting for that evidence or outcome.",
+        "citations": [
+          "after",
+          "decide",
+          "clinicians"
+        ]
+      },
+      {
+        "id": "compare-periods",
+        "heading": "How to read the average over time",
+        "text": "The accounts show the average rose from 44.1 working days in 2024–25 to 56.66 in 2025–26. The October answer gives 62.3 days for 2026–27 to date. It is too early to use that partial-year result to decide whether the March 2027 objective will be met.",
+        "citations": [
+          "accounts",
+          "october-time",
+          "new-target"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "medical-spending",
+        "heading": "What the DVLA accounts show",
+        "text": "DVLA’s 2025–26 accounts include £18.968 million for medical practitioners, compared with £19.774 million in 2024–25. That is one agency operating-cost line. It leaves out parts of the casework journey, and the accounts explain that driver and vehicle fees and costs are pooled for recovery purposes.",
+        "citations": [
+          "accounts"
+        ]
+      },
+      {
+        "id": "cost-to-drivers",
+        "heading": "What the wait can cost a driver",
+        "text": "Check the fee for the particular application route. The short-term medical renewal has its own guidance. The public cost line does not measure the extra travel costs or lost work that a prolonged wait can mean for individual drivers.",
+        "citations": [
+          "renew",
+          "accounts",
+          "complaints"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "march-target",
+        "heading": "What to look for by March 2027",
+        "text": "Compare the next performance report with the 45-working-day average target for March 2027. Use the age of open cases and the time people spend off the road to check whether faster decisions reach people with the longest waits.",
+        "citations": [
+          "new-target",
+          "october-age",
+          "service-review"
+        ]
+      },
+      {
+        "improvements": [
+          "evidence"
+        ]
+      },
+      {
+        "scrutiny": [
+          "long-case-answers",
+          "march-objective"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

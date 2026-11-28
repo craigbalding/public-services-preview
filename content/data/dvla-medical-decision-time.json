@@ -1,0 +1,28 @@
+{
+  "dateHeading": "Reporting period ending or update date",
+  "valueHeading": "Average working days",
+  "segments": [
+    {
+      "label": "Medical licensing decisions",
+      "definition": "The 2024–25 and 2025–26 figures are complete financial years. The October 2026 point is the 2026–27 year to date as reported to Parliament. The measure was not a formal business plan target in 2024–25.",
+      "citations": [
+        "accounts",
+        "october-time"
+      ],
+      "points": [
+        [
+          "2025-03-31",
+          44.1
+        ],
+        [
+          "2026-03-31",
+          56.66
+        ],
+        [
+          "2026-10-14",
+          62.3
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "dateHeading": "Update published",
+  "valueHeading": "Cumulative postponements",
+  "segments": [
+    {
+      "label": "Acute outpatient appointments",
+      "definition": "Cumulative appointments postponed at the two most affected trusts since the 3 June attack. Points are dated by publication. The source releases also give weekly counts. This chart uses only the cumulative figures.",
+      "citations": [
+        "jul11",
+        "jul25",
+        "aug22",
+        "aug29",
+        "sept26"
+      ],
+      "points": [
+        [
+          "2024-07-11",
+          6199
+        ],
+        [
+          "2024-07-25",
+          8349
+        ],
+        [
+          "2024-08-22",
+          10083
+        ],
+        [
+          "2024-08-29",
+          10104
+        ],
+        [
+          "2024-09-26",
+          10152
+        ]
+      ]
+    }
+  ]
+}

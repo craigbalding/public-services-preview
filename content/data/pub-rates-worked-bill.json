@@ -1,0 +1,23 @@
+{
+  "asOf": "2026-04-01",
+  "unit": "Pounds per year",
+  "groupLabel": "Stage",
+  "series": [
+    {
+      "label": "2025–26 after relief",
+      "value": 8982
+    },
+    {
+      "label": "2026–27 before relief",
+      "value": 14898
+    },
+    {
+      "label": "After the transitional cap",
+      "value": 10329
+    },
+    {
+      "label": "After 15% pub relief",
+      "value": 8780
+    }
+  ]
+}

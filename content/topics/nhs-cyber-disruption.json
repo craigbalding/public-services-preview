@@ -1,0 +1,447 @@
+{
+  "id": "nhs-cyber-disruption",
+  "template": "topic-v7",
+  "title": "What happens to patients when a cyber attack disrupts NHS tests?",
+  "category": "Health and cyber",
+  "scope": "South-east London case study",
+  "summary": "When the June 2024 attack on pathology supplier Synnovis sharply reduced testing capacity, NHS teams prioritised urgent samples, used other laboratories and postponed care that depended on results. By the 26 September update, two London trusts had reported 10,152 acute outpatient appointments and 1,710 elective procedures postponed.",
+  "citations": [
+    "incident",
+    "early",
+    "sept26"
+  ],
+  "searchTerms": [
+    "NHS cyber security",
+    "Synnovis",
+    "ransomware",
+    "pathology",
+    "blood tests",
+    "hospital cancellations",
+    "supplier resilience"
+  ],
+  "related": [
+    "ambulance-handover-delays"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "incident": {
+      "publisher": "NHS England",
+      "title": "Synnovis cyber incident",
+      "url": "https://www.england.nhs.uk/synnovis-cyber-incident/",
+      "reference": "Scope, background and 10 November 2025 update"
+    },
+    "early": {
+      "publisher": "NHS England London",
+      "title": "Clinical impact in south-east London, 20 June 2024",
+      "url": "https://www.england.nhs.uk/london/2024/06/20/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-20-june/",
+      "date": "2024-06-20",
+      "reference": "Mutual aid agreements and early disruption"
+    },
+    "faq": {
+      "publisher": "NHS England",
+      "title": "Synnovis cyber incident: public questions and answers",
+      "url": "https://www.england.nhs.uk/synnovis-cyber-incident/questions-and-answers/",
+      "date": "2025-11-10",
+      "reference": "Restoration and scope of the patient data review"
+    },
+    "weekly": {
+      "publisher": "NHS England London",
+      "title": "Weekly data on the impact of the Synnovis cyber attack",
+      "url": "https://www.england.nhs.uk/london/synnovis-ransomware-cyber-attack/weekly-data/",
+      "reference": "Weekly counts, capacity, and diversion of organs"
+    },
+    "jul11": {
+      "publisher": "NHS England",
+      "title": "Clinical impact in south-east London, 11 July 2024",
+      "url": "https://www.england.nhs.uk/2024/07/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-11-july/",
+      "date": "2024-07-11",
+      "reference": "Cumulative and weekly figures for the two most affected trusts"
+    },
+    "jul25": {
+      "publisher": "NHS England London",
+      "title": "Clinical impact in south-east London, 25 July 2024",
+      "url": "https://www.england.nhs.uk/london/2024/07/25/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-25-july/",
+      "date": "2024-07-25",
+      "reference": "Cumulative postponements and restoration steps"
+    },
+    "aug22": {
+      "publisher": "NHS England London",
+      "title": "Clinical impact in south-east London, 22 August 2024",
+      "url": "https://www.england.nhs.uk/london/2024/08/22/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-22-august/",
+      "date": "2024-08-22",
+      "reference": "Cumulative postponements at the two most affected trusts"
+    },
+    "aug29": {
+      "publisher": "NHS England London",
+      "title": "Clinical impact in south-east London, 29 August 2024",
+      "url": "https://www.england.nhs.uk/london/2024/08/29/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-29-august/",
+      "date": "2024-08-29",
+      "reference": "Cumulative postponements at the two most affected trusts"
+    },
+    "sept26": {
+      "publisher": "NHS England London",
+      "title": "Clinical impact in south-east London, 26 September 2024",
+      "url": "https://www.england.nhs.uk/london/2024/09/26/update-on-cyber-incident-clinical-impact-in-south-east-london-thursday-26-september-2024/",
+      "date": "2024-09-26",
+      "reference": "Cumulative outpatient and procedure postponements"
+    },
+    "restore": {
+      "publisher": "NHS England London",
+      "title": "Almost all services back on track after cyber attack hit south-east London",
+      "url": "https://www.england.nhs.uk/london/2024/10/04/almost-all-services-back-on-track-after-cyber-attack-hit-south-east-london/",
+      "date": "2024-10-04",
+      "reference": "Restoration update, with almost all services up and running"
+    },
+    "patient-harm": {
+      "publisher": "Department of Health and Social Care, written answer to Parliament",
+      "title": "NHS: cybercrime",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-26/13479/",
+      "reference": "Minister’s account of impact and contribution to one patient death"
+    },
+    "assurance": {
+      "publisher": "Department of Health and Social Care, written answer to Parliament",
+      "title": "NHS suppliers: cybersecurity",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-06-16/10460",
+      "date": "2026-06-30",
+      "reference": "UIN 10460, response on supplier assurance, dependencies and strategy"
+    },
+    "bill": {
+      "publisher": "UK Parliament",
+      "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
+      "url": "https://bills.parliament.uk/bills/4035/stages",
+      "reference": "Legislative stages and further consideration"
+    }
+  },
+  "actors": {
+    "synnovis": {
+      "role": "Processes samples and provides results for NHS services, primarily in south-east London, and led technical restoration.",
+      "citations": [
+        "incident",
+        "faq"
+      ]
+    },
+    "acute-trusts": {
+      "role": "Prioritise care, arrange tests and alternative provision, review harm and reschedule disrupted appointments.",
+      "citations": [
+        "early",
+        "weekly",
+        "restore"
+      ]
+    },
+    "nhs-england": {
+      "role": "Coordinates the system response and reports on clinical effects and recovery.",
+      "citations": [
+        "early",
+        "sept26",
+        "restore"
+      ]
+    },
+    "dhsc": {
+      "role": "Answers to Parliament on supplier assurance and wider system resilience.",
+      "citations": [
+        "assurance",
+        "patient-harm"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From a test request to a treatment decision during disruption",
+      "steps": [
+        {
+          "id": "request",
+          "label": "Send the specimen for testing",
+          "actors": [
+            "acute-trusts",
+            "synnovis"
+          ],
+          "text": "A clinician orders a pathology test and relies on the result for decisions such as diagnosis, preparation for surgery or blood transfusion. Shared laboratories handle testing for several organisations.",
+          "citations": [
+            "incident",
+            "weekly"
+          ],
+          "note": {
+            "heading": "Why disruption spreads",
+            "text": "Synnovis is a pathology partnership serving more than one trust and other organisations. Shared provision means a supplier outage can affect several clinical pathways at the same time.",
+            "citations": [
+              "incident",
+              "assurance"
+            ]
+          }
+        },
+        {
+          "id": "triage",
+          "label": "Keep urgent care moving",
+          "actors": [
+            "acute-trusts",
+            "nhs-england"
+          ],
+          "text": "Prioritise urgent samples, coordinate spare capacity with other laboratories and divert work where needed. Some operations also depend on a safe match for blood products and may have to be postponed.",
+          "citations": [
+            "early",
+            "weekly"
+          ]
+        },
+        {
+          "id": "restore",
+          "label": "Bring testing and reporting back in stages",
+          "actors": [
+            "synnovis",
+            "acute-trusts"
+          ],
+          "text": "Rebuild the testing and reporting services and bring back work as capacity returns. NHS England said almost all services were up and running in early October 2024.",
+          "citations": [
+            "restore",
+            "faq"
+          ]
+        },
+        {
+          "id": "follow",
+          "label": "Rebook affected patients and review harm",
+          "actors": [
+            "acute-trusts",
+            "nhs-england"
+          ],
+          "text": "Follow each affected appointment or procedure through to treatment or another clinical decision. Clinical harm and the investigation into stolen data require separate follow-up.",
+          "citations": [
+            "sept26",
+            "faq",
+            "patient-harm"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "postponed": {
+      "title": "Two trusts reported 10,152 acute appointments and 1,710 procedures postponed",
+      "type": "bars",
+      "data": "synnovis-postponed-care.json",
+      "description": "Cumulative since 3 June, as reported by NHS England London on 26 September 2024.",
+      "citations": [
+        "sept26"
+      ],
+      "note": "These figures count appointments and procedures at the two most affected trusts. Some patients may have had more than one affected appointment or procedure."
+    },
+    "recovery": {
+      "title": "The cumulative outpatient count rose more slowly in the later updates",
+      "type": "trend",
+      "data": "synnovis-acute-postponements.json",
+      "description": "Selected NHS England updates for the same two trusts from 11 July to 26 September 2024.",
+      "citations": [
+        "jul11",
+        "jul25",
+        "aug22",
+        "aug29",
+        "sept26"
+      ],
+      "note": "Unevenly spaced snapshots. The chart does not show whether previously postponed appointments had taken place."
+    }
+  },
+  "issues": {
+    "testing-capacity": {
+      "step": {
+        "visual": "journey",
+        "id": "triage"
+      },
+      "title": "Testing capacity can become the bottleneck for treatment",
+      "text": "With sharply reduced test processing after the attack, trusts had to prioritise urgent work and seek mutual aid from other laboratories. NHS England’s weekly data also recorded diversion of organs for use by other trusts.",
+      "citations": [
+        "incident",
+        "early",
+        "weekly"
+      ],
+      "charts": [
+        "postponed"
+      ],
+      "evidenceGap": "Published figures capture disruptions at the two main trusts. They do not provide a reconciled count of affected people across the whole system.",
+      "measure": "Measure time from sample to usable result by clinical urgency throughout an outage, including samples diverted to other labs.",
+      "improvement": {
+        "owner": "nhs-england",
+        "title": "Coordinate mutual aid and restore core testing",
+        "status": "NHS England reported mutual aid with other laboratories in June, then near-complete service restoration in October.",
+        "citations": [
+          "early",
+          "restore"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "People waiting for diagnosis, surgery or another procedure could have their care delayed. The minister’s answer records that in one case the attack contributed to a patient’s death. This case documents one severe consequence of the incident. A harm rate would require the number of affected patients and consistent follow-up.",
+          "citations": [
+            "weekly",
+            "patient-harm"
+          ]
+        }
+      ]
+    },
+    "clearance": {
+      "step": {
+        "visual": "journey",
+        "id": "follow"
+      },
+      "title": "Restored testing does not by itself tell patients when postponed care will happen",
+      "text": "The cumulative number of acute outpatient appointments postponed rose from 6,199 in the 11 July update to 10,083 in the 22 August update. It then rose by 69 to 10,152 in the 26 September update. This records the slowing addition of postponements, while the restoration update describes which services were operating.",
+      "citations": [
+        "jul11",
+        "aug22",
+        "sept26",
+        "restore"
+      ],
+      "charts": [
+        "recovery"
+      ],
+      "evidenceGap": "The published totals do not follow the postponed cohort through to completed treatment, quantify the extra waiting time for each patient or establish a rate of lasting harm.",
+      "measure": "Track time from postponement to completed care or changed clinical plan, with harm reviews by clinical priority and affected service.",
+      "consequences": [
+        {
+          "text": "In the weekly updates a number of postponed elective procedures were cancer treatments. For those patients the time to rebook and deliver treatment matters as well as the number of tests the laboratory can run.",
+          "citations": [
+            "weekly",
+            "sept26"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "supplier-assurance": {
+      "step": {
+        "visual": "journey",
+        "id": "request"
+      },
+      "question": "What changed in how the NHS checks supplier resilience after Synnovis?",
+      "record": "assurance",
+      "answer": "Alex Mayer asked what steps had been taken. The Department described the difficulty of tracking dependencies across more than 80,000 suppliers, set out assurance work and linked it to the health and social care cybersecurity strategy and proposed legislation.",
+      "citations": [
+        "assurance"
+      ],
+      "watch": "Look for evidence of supplier coverage and successful continuity exercises, including access to spare laboratory capacity and realistic time to restore critical tests."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The handoff",
+            "text": "A blood test delay can delay a decision in a clinic or operating theatre even when that department stays open.",
+            "citations": [
+              "early",
+              "weekly"
+            ]
+          },
+          {
+            "label": "The disruption",
+            "text": "Two south-east London trusts reported more than 11,000 combined postponements in the September 2024 figures. A minister later confirmed that the incident contributed to the death of a patient.",
+            "citations": [
+              "sept26",
+              "patient-harm"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Ask whether suppliers and trusts can show that urgent testing would keep running if a shared service went down again.",
+            "citations": [
+              "assurance",
+              "bill"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "clinical-and-data",
+        "heading": "Care disruption and data exposure affect different groups",
+        "text": "The NHS’s 2025 questions and answers distinguishes interruption to care from the data breach. Appointment cancellations were confined to south-east London, while the investigation into stolen files could relate to service users beyond those trusts.",
+        "citations": [
+          "faq"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "synnovis",
+                "acute-trusts",
+                "nhs-england",
+                "dhsc"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "testing-capacity",
+          "clearance"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "care-recovery",
+        "heading": "Service recovery and patient recovery",
+        "text": "The October 2024 NHS update documented restoration of nearly all services. That milestone answers whether the service could take work again. A patient outcome measure would follow the individual through to the test result and treatment decision, and record the clinical effect of any delay.",
+        "citations": [
+          "restore",
+          "weekly",
+          "patient-harm"
+        ]
+      },
+      {
+        "id": "outcome-evidence",
+        "heading": "What the incident can establish",
+        "text": "The case establishes that disruption at a shared supplier can cause downstream delays and serious harm. It gives no comparison of patient outcomes in comparable incidents with and without a particular resilience measure.",
+        "citations": [
+          "incident",
+          "patient-harm",
+          "assurance"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "cost-boundary",
+        "heading": "Where recovery costs fall",
+        "text": "Recovery included work at the supplier, mutual aid at other laboratories, clinical rescheduling and follow-up. The NHS updates and parliamentary answers cited here do not provide a reconciled cost across those organisations or a unit cost per affected patient.",
+        "citations": [
+          "early",
+          "weekly",
+          "restore",
+          "assurance"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "new-rules",
+        "heading": "What to look for after the Bill",
+        "text": "Parliament continued considering the Cyber Security and Resilience Bill in November 2026. Track the final requirements and then the results of practical exercises showing whether critical services and their suppliers can maintain care during disruption.",
+        "citations": [
+          "bill",
+          "assurance"
+        ]
+      },
+      {
+        "improvements": [
+          "testing-capacity"
+        ]
+      },
+      {
+        "scrutiny": [
+          "supplier-assurance"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

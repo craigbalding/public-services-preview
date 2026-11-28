@@ -67,7 +67,7 @@ export function renderTrend(chart, data, citations) {
       `${chart.data}: each trend segment needs observations and a definition`);
     const points = segment.points.map(([asOf, value, status]) => {
       const time = parseDate(asOf).getTime();
-      requireCondition(time > previous && (value === null || integer(value)) &&
+      requireCondition(time > previous && (value === null || (Number.isFinite(value) && value >= 0)) &&
         (status === undefined || ['Revised', 'Provisional'].includes(status)),
         `${chart.data}: invalid or out-of-order observation on ${asOf}`);
       previous = time;
@@ -80,7 +80,11 @@ export function renderTrend(chart, data, citations) {
   const first = segments[0].points[0].time;
   const last = segments.at(-1).points.at(-1).time;
   const values = segments.flatMap(segment => segment.points.map(point => point.value ?? 0));
-  const interval = Math.max(1, Math.ceil(Math.max(...values) / 4000)) * 1000;
+  const maximum = Math.max(...values);
+  const magnitude = 10 ** Math.floor(Math.log10(Math.max(1, maximum / 4)));
+  const interval = maximum >= 4000
+    ? Math.ceil(maximum / 4000) * 1000
+    : Math.ceil(Math.max(1, maximum / 4) / magnitude) * magnitude;
   const top = 18;
   const bottom = 181;
   const left = 47;
@@ -97,7 +101,7 @@ export function renderTrend(chart, data, citations) {
   const rules = Array.from({ length: 5 }, (_, i) => {
     const value = i * interval;
     return `<line class="trend-gridline" x1="${left}" x2="${right}" y1="${num(y(value))}" y2="${num(y(value))}"/>
-      <text x="${left - 8}" y="${num(y(value) + 4)}" text-anchor="end">${value ? `${value / 1000}k` : '0'}</text>`;
+      <text x="${left - 8}" y="${num(y(value) + 4)}" text-anchor="end">${value >= 1000 ? `${value / 1000}k` : number.format(value)}</text>`;
   });
   const firstYear = new Date(first).getUTCFullYear();
   const lastYear = new Date(last).getUTCFullYear();
@@ -105,6 +109,12 @@ export function renderTrend(chart, data, citations) {
   const years = [];
   for (let year = firstYear + 1; year <= lastYear; year += yearStep) {
     years.push(`<text x="${num(x(Date.UTC(year, 0, 1)))}" y="205" text-anchor="middle">${year}</text>`);
+  }
+  if (lastYear === firstYear && last > first) {
+    const axisDates = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+    for (const time of [first, last]) {
+      years.push(`<text x="${num(x(time))}" y="205" text-anchor="middle">${axisDates.format(time)}</text>`);
+    }
   }
   const policyLines = events.filter(event => event.kind === 'policy').map(event => {
     const time = parseDate(event.date).getTime();

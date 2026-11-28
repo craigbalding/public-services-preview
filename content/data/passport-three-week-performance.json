@@ -1,0 +1,14 @@
+{
+  "period": "Calendar years 2024 and 2025",
+  "groupLabel": "Year",
+  "series": [
+    {
+      "label": "2024",
+      "value": 99.7
+    },
+    {
+      "label": "2025",
+      "value": 99.7
+    }
+  ]
+}

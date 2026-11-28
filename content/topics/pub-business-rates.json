@@ -1,0 +1,412 @@
+{
+  "id": "pub-business-rates",
+  "template": "topic-v7",
+  "title": "Why has my pub’s business rates bill changed?",
+  "category": "Local tax",
+  "scope": "England",
+  "summary": "A pub’s rates bill in England can change when the Valuation Office reassesses the property, when the tax multiplier changes or when the council applies different reliefs. The April 2026 revaluation raised many pub valuations. The bill depends on all three steps, so the change in rateable value alone does not tell you how much you will pay.",
+  "citations": [
+    "valuation",
+    "relief",
+    "example"
+  ],
+  "searchTerms": [
+    "VOA",
+    "non domestic rates",
+    "pub tax",
+    "business rates relief",
+    "hospitality",
+    "rateable value",
+    "fair maintainable trade",
+    "valuation tribunal"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "valuation": {
+      "publisher": "HMRC Valuation Office",
+      "title": "How pubs are valued for business rates",
+      "url": "https://www.gov.uk/guidance/how-pubs-are-valued-for-business-rates",
+      "reference": "Fair maintainable trade and 2026 revaluation"
+    },
+    "formula": {
+      "publisher": "GOV.UK",
+      "title": "Estimate your business rates",
+      "url": "https://www.gov.uk/estimate-your-business-rates",
+      "reference": "Rateable value, multiplier and reliefs"
+    },
+    "relief": {
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "title": "Pubs and live music venues relief: local authority guidance",
+      "url": "https://www.gov.uk/guidance/business-rates-pubs-and-live-music-venues-relief-local-authority-guidance",
+      "reference": "Eligibility, council discretion, ordering of relief and central reimbursement"
+    },
+    "example": {
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "title": "Pubs and Live Music Venues Relief",
+      "url": "https://www.gov.uk/government/news/pubs-and-live-music-venues-relief",
+      "reference": "Example for an independent pub with rateable value rising from £30,000 to £39,000"
+    },
+    "review": {
+      "publisher": "HMRC Valuation Office",
+      "title": "Review of Valuation Methodology for Public Houses and Hotels",
+      "url": "https://www.gov.uk/government/calls-for-evidence/valuation-methodology-review-for-pubs-and-hotels/business-rates-review-of-valuation-methodology-for-public-houses-and-hotels-call-for-evidence",
+      "reference": "Section 4, Tables 1 and 2, and evidence questions"
+    },
+    "budget": {
+      "publisher": "HM Treasury",
+      "title": "Autumn Budget 2026",
+      "url": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+      "date": "2026-10-28",
+      "reference": "Business rates relief announcements and Table 5.1 measure 12"
+    },
+    "implementing": {
+      "publisher": "Ministry of Housing, Communities and Local Government",
+      "title": "Business rates information letter 8/2026",
+      "url": "https://www.gov.uk/government/publications/82026-details-of-the-budget-package-and-the-multipliers-for-20272028/82026-details-of-the-budget-package-and-the-multipliers-for-20272028",
+      "reference": "2027–28 multipliers and relief package"
+    },
+    "challenge": {
+      "publisher": "HMRC Valuation Office",
+      "title": "Challenging your business rates valuation",
+      "url": "https://www.gov.uk/guidance/challenge-the-valuation",
+      "reference": "Check, challenge and appeal routes"
+    },
+    "local-example": {
+      "publisher": "City of London Corporation",
+      "title": "Business rates reductions",
+      "url": "https://www.cityoflondon.gov.uk/services/business-rates/business-rate-reductions",
+      "reference": "Eligibility and contact for missing pub relief on a bill"
+    }
+  },
+  "actors": {
+    "pub-operators": {
+      "role": "Provide evidence about the premises and trade, and check the valuation and bill.",
+      "citations": [
+        "valuation",
+        "challenge"
+      ]
+    },
+    "valuation-office": {
+      "role": "Assesses rateable value and deals with checks and challenges to the list.",
+      "citations": [
+        "valuation",
+        "challenge"
+      ]
+    },
+    "local-councils": {
+      "role": "Calculate and collect bills and decide and apply qualifying relief.",
+      "citations": [
+        "formula",
+        "relief"
+      ]
+    },
+    "hm-treasury": {
+      "role": "Sets tax policy and announces changes to relief.",
+      "citations": [
+        "budget"
+      ]
+    },
+    "mhclg": {
+      "role": "Issues the billing guidance and details how councils should administer relief.",
+      "citations": [
+        "relief",
+        "implementing"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From pub valuation to the bill",
+      "steps": [
+        {
+          "id": "value",
+          "label": "Assess the premises and its trading potential",
+          "actors": [
+            "valuation-office",
+            "pub-operators"
+          ],
+          "text": "Assess what a reasonably efficient operator could take in, by activity such as drinks, food and accommodation. Convert trading potential to an estimated annual rental value using the valuation approach for pubs.",
+          "citations": [
+            "valuation",
+            "review"
+          ],
+          "note": {
+            "heading": "Why use trading potential",
+            "text": "The Valuation Office describes a trade-based method that reflects the kind of premises and likely trade. The assessment uses the valuation date rather than the business’s takings on the day the bill arrives.",
+            "citations": [
+              "valuation",
+              "review"
+            ]
+          }
+        },
+        {
+          "id": "multiply",
+          "label": "Apply the tax rate",
+          "actors": [
+            "local-councils"
+          ],
+          "text": "The council multiplies the rateable value by the relevant multiplier to get a bill before relief. The appropriate multiplier depends on the property and financial year.",
+          "citations": [
+            "formula",
+            "implementing"
+          ]
+        },
+        {
+          "id": "relief",
+          "label": "Apply caps and discounts",
+          "actors": [
+            "local-councils"
+          ],
+          "text": "The council checks transitional support and other reliefs. For 2026–27 an eligible pub receives a further 15% discount after applicable reliefs, in the order specified by the guidance.",
+          "citations": [
+            "relief",
+            "example"
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Check the bill or challenge the valuation",
+          "actors": [
+            "pub-operators",
+            "local-councils",
+            "valuation-office"
+          ],
+          "text": "For a billing or relief issue contact the council. If the underlying rateable value is at issue, check the property details with the Valuation Office before challenging, with an appeal route after a challenge decision.",
+          "citations": [
+            "challenge",
+            "local-example"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "valuation-comparison": {
+      "title": "Pub rateable values rose faster than the wider sector at the 2026 revaluation",
+      "type": "rates",
+      "data": "pubs-valuation-changes.json",
+      "description": "Median rateable value changes across matched groups, England and Wales. The billing rules below apply to England.",
+      "citations": [
+        "review"
+      ],
+      "note": "The earlier median change for pubs was a 22.4% fall from 2017 to 2023. The published 2017 to 2026 comparison shows a 4.1% rise. These are valuation comparisons."
+    },
+    "bill-example": {
+      "title": "How the same pub can have a higher valuation and a lower bill",
+      "type": "bars",
+      "data": "pub-rates-worked-bill.json",
+      "description": "Illustration published by the Government for an independent pub. The first bar is the previous bill. The remaining bars are steps in the new bill.",
+      "citations": [
+        "example"
+      ],
+      "note": "The example uses the 2025–26 and 2026–27 rules and whole-pound rounding. Bars are amounts at each step and should not be added."
+    }
+  },
+  "issues": {
+    "valuation-jump": {
+      "step": {
+        "visual": "journey",
+        "id": "value"
+      },
+      "title": "An upward revaluation can come as a shock after the COVID-era list",
+      "text": "The Government’s review reports a median pub valuation rise of 32.8% in England and Wales between the 2023 and 2026 lists. It identifies the end of COVID-era adjustments as a factor. The long comparison with 2017 shows a 4.1% rise across that wider period.",
+      "citations": [
+        "review"
+      ],
+      "charts": [
+        "valuation-comparison"
+      ],
+      "evidenceGap": "The published valuation distribution does not show how many operators paid a higher net bill after relief, or how those changes were distributed by type of pub.",
+      "measure": "Publish the distribution of net bill changes for pubs by area and valuation band, and the time taken to resolve checks and challenges.",
+      "improvement": {
+        "owner": "valuation-office",
+        "title": "Review the way pubs are valued",
+        "status": "The call for evidence asks whether the present method properly reflects how pubs and hotels are valued and invites evidence on alternatives. Its publication does not change the current rating list.",
+        "citations": [
+          "review"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "An operator planning cash flow from the old valuation can face a different amount once the council recalculates the bill. If the property information or valuation is in dispute, there is a separate check and challenge process.",
+          "citations": [
+            "review",
+            "challenge",
+            "formula"
+          ]
+        }
+      ]
+    },
+    "bill-complexity": {
+      "step": {
+        "visual": "journey",
+        "id": "relief"
+      },
+      "title": "A valuation figure leaves out the caps and discounts that determine the bill",
+      "text": "In the official example the pub’s rateable value rises from £30,000 to £39,000. The gross bill at the new 38.2p multiplier is £14,898. The eligible transitional cap takes this to £10,329, then the pub relief takes the bill down to £8,780.",
+      "citations": [
+        "example",
+        "relief"
+      ],
+      "charts": [
+        "bill-example"
+      ],
+      "measure": "Check the share of eligible properties receiving the discount, corrected bills and how quickly ratepayers receive them.",
+      "improvement": {
+        "owner": "hm-treasury",
+        "title": "Increase the pub relief from April 2027",
+        "status": "The October Budget announced a 35% discount from April 2027 for eligible pubs and other covered properties, up from 15%. The detailed package includes further changes to support and multipliers.",
+        "citations": [
+          "budget",
+          "implementing"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "One missing relief can materially change what the operator is asked to pay. The City of London directs a pub that appears eligible but has not received the relief to its business rates team.",
+          "citations": [
+            "example",
+            "local-example"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "valuation-method": {
+      "step": {
+        "visual": "journey",
+        "id": "value"
+      },
+      "question": "Does the current valuation method reflect the way pubs trade?",
+      "record": "review",
+      "answer": "The commissioned review published the valuation history and asked for evidence about how the fair maintainable trade approach works in practice. The call for evidence sets out the questions for the review. It does not settle them.",
+      "citations": [
+        "review"
+      ],
+      "watch": "Follow the published conclusions, any decision to change the method, and what that would do to valuations and bills after relief."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The valuation",
+            "text": "The review reports median pub rateable values rose by 32.8% between the 2023 and 2026 revaluations in England and Wales, following a fall between the preceding revaluations.",
+            "citations": [
+              "review"
+            ]
+          },
+          {
+            "label": "The bill",
+            "text": "England’s applicable multiplier and reliefs can offset a valuation rise. In the Government’s worked example, the valuation rose 30% while the bill fell from £8,982 to £8,780.",
+            "citations": [
+              "example",
+              "relief"
+            ]
+          },
+          {
+            "label": "The next change",
+            "text": "The October 2026 Budget announced a move from 15% to 35% pub relief from April 2027 in England. Keep this separate from the current year’s bill.",
+            "citations": [
+              "budget",
+              "implementing"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "valuation-dates",
+        "heading": "Why the 2026 revaluation was different",
+        "text": "The April 2023 list used an April 2021 valuation date, when COVID restrictions severely affected the evidence available from pubs. The Valuation Office adjusted pre-COVID trading evidence for those conditions. The April 2026 list uses an April 2024 valuation date, after restrictions had ended.",
+        "citations": [
+          "review"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "pub-operators",
+                "valuation-office",
+                "local-councils",
+                "hm-treasury",
+                "mhclg"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "valuation-jump",
+          "bill-complexity"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "worked-result",
+        "heading": "What the worked example shows",
+        "text": "In the worked example the finished bill falls by £202, about 2.2%, despite the 30% rise in valuation. What another pub pays depends on its rateable value, multiplier, previous relief and eligibility. The example demonstrates the calculation and gives no estimate of a typical bill change.",
+        "citations": [
+          "example",
+          "relief"
+        ]
+      },
+      {
+        "id": "business-outcome",
+        "heading": "What would show a change for pubs",
+        "text": "Rates are one part of a pub’s costs. To assess the effect of the policy on trading and survival, compare net bills with outcomes for similar businesses and account for other changes in costs and demand. Valuation changes and pub closures alone cannot establish that effect.",
+        "citations": [
+          "review",
+          "budget"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "funding-relief",
+        "heading": "Who bears the cost of relief",
+        "text": "Ratepayers pay the bill to the council. The 2026–27 guidance sets out how central government reimburses councils for qualifying relief through grants. The October 2026 Budget scores the higher relief for pubs, social clubs and eligible live music venues at £160 million in 2027–28 and £115 million in 2028–29. These are forecast Exchequer effects for the combined measure.",
+        "citations": [
+          "relief",
+          "budget"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "next-bills",
+        "heading": "What to check in April 2027",
+        "text": "Check for the outcome of the valuation review and the guidance councils use to apply the 2027–28 package. After bills are issued, look for actual net changes across a spread of pubs and councils.",
+        "citations": [
+          "review",
+          "implementing"
+        ]
+      },
+      {
+        "improvements": [
+          "valuation-jump",
+          "bill-complexity"
+        ]
+      },
+      {
+        "scrutiny": [
+          "valuation-method"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

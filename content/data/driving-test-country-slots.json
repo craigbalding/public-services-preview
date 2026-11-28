@@ -1,0 +1,18 @@
+{
+  "period": "Start of October 2026",
+  "groupLabel": "Country",
+  "series": [
+    {
+      "label": "England",
+      "value": 12.41
+    },
+    {
+      "label": "Scotland",
+      "value": 9.21
+    },
+    {
+      "label": "Wales",
+      "value": 43.85
+    }
+  ]
+}

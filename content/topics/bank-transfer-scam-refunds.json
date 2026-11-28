@@ -1,0 +1,418 @@
+{
+  "id": "bank-transfer-scam-refunds",
+  "template": "topic-v7",
+  "title": "Will my bank refund me if I’m tricked into making a transfer?",
+  "category": "Money and fraud",
+  "scope": "United Kingdom",
+  "summary": "Your payment firm generally has to reimburse eligible UK bank transfer scams for payments made from 7 October 2024. The rules cover Faster Payments and CHAPS, usually up to £85,000 per claim. Report the scam to the firm promptly. It will check the payment, the evidence and any exception before deciding.",
+  "citations": [
+    "rules",
+    "ombudsman"
+  ],
+  "searchTerms": [
+    "APP fraud",
+    "scam refund",
+    "bank transfer fraud",
+    "authorised push payment",
+    "Faster Payments",
+    "CHAPS",
+    "Financial Ombudsman",
+    "impersonation scam"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "rules": {
+      "publisher": "Payment Systems Regulator",
+      "title": "APP fraud reimbursement protections",
+      "url": "https://www.psr.org.uk/information-for-consumers/app-fraud-reimbursement-protections/",
+      "reference": "Reporting, deadlines, cap, excess and consumer protections"
+    },
+    "policy": {
+      "publisher": "Payment Systems Regulator",
+      "title": "Fighting authorised push payment fraud: a new reimbursement requirement",
+      "url": "https://www.psr.org.uk/publications/policy-statements/ps233-fighting-authorised-push-payment-fraud-a-new-reimbursement-requirement/",
+      "reference": "Policy aim and split between payment firms"
+    },
+    "dashboard": {
+      "publisher": "Payment Systems Regulator",
+      "title": "APP scams reimbursement dashboard for Q1 2026",
+      "url": "https://www.psr.org.uk/information-for-consumers/app-scams-reimbursement-dashboard/",
+      "date": "2026-07-30",
+      "reference": "18-month headline figures, chart definitions and reporting exclusions"
+    },
+    "review": {
+      "publisher": "Frontier Economics",
+      "title": "Payment scam policies reduce fraud and improve consumer protection",
+      "url": "https://www.frontier-economics.com/uk/en/news-and-insights/news/news-article-i22383-app-payment-scam-policies-reducing-fraud/",
+      "reference": "Evaluation of scam losses, reimbursement, estimated costs and limits on attribution"
+    },
+    "review-programme": {
+      "publisher": "Payment Systems Regulator",
+      "title": "APP scams independent review",
+      "url": "https://www.psr.org.uk/our-work/app-scams/app-scams-independent-review/",
+      "reference": "Terms of reference and independent review"
+    },
+    "ombudsman": {
+      "publisher": "Financial Ombudsman Service",
+      "title": "Scams where you’ve been tricked into making a payment",
+      "url": "https://www.financial-ombudsman.org.uk/consumers/complaints-can-help/fraud-scams/scams-youve-tricked-making-payment",
+      "reference": "Complaint, route to the Ombudsman and different payment routes"
+    },
+    "case": {
+      "publisher": "Financial Ombudsman Service",
+      "title": "Decision DRN-5677203",
+      "url": "https://www.financial-ombudsman.org.uk/decision/DRN-5677203.pdf",
+      "reference": "Individual dispute about a payment to a trader and an APP scam refund"
+    }
+  },
+  "actors": {
+    "payment-customers": {
+      "role": "Report the scam and supply information about how the payment was made.",
+      "citations": [
+        "rules"
+      ]
+    },
+    "sending-payment-firm": {
+      "role": "Receives the claim, investigates and makes the reimbursement decision.",
+      "citations": [
+        "rules",
+        "policy"
+      ]
+    },
+    "receiving-payment-firm": {
+      "role": "Cooperates with the sending firm and shares the cost of qualifying reimbursement.",
+      "citations": [
+        "policy"
+      ]
+    },
+    "psr": {
+      "role": "Sets and monitors Faster Payments reimbursement requirements.",
+      "citations": [
+        "policy",
+        "dashboard"
+      ]
+    },
+    "financial-ombudsman": {
+      "role": "Can consider individual complaints about how a firm handled a scam or refund claim.",
+      "citations": [
+        "ombudsman"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From reporting a scam to a refund decision",
+      "steps": [
+        {
+          "id": "report",
+          "label": "Report it to the firm that sent the money",
+          "actors": [
+            "payment-customers",
+            "sending-payment-firm"
+          ],
+          "text": "Contact the sending bank or payment firm as soon as possible. There is a 13-month reporting limit under the rules. Explain what happened and keep evidence such as payment details and messages.",
+          "citations": [
+            "rules",
+            "ombudsman"
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Check the payment and claim",
+          "actors": [
+            "sending-payment-firm"
+          ],
+          "text": "The firm checks whether this was a scam, which payment system was used, the recipient and other scope rules. An ordinary dispute about goods or services follows a different route. Older payments, card payments and some other transfers have other routes for complaints.",
+          "citations": [
+            "rules",
+            "dashboard",
+            "ombudsman"
+          ]
+        },
+        {
+          "id": "decide",
+          "label": "Make the decision and reimburse if appropriate",
+          "actors": [
+            "sending-payment-firm",
+            "receiving-payment-firm"
+          ],
+          "text": "Eligible claims usually have a five-business-day timetable. The firm can pause the clock to gather information within the rules, with an overall decision limit of 35 business days. It should consider vulnerability when applying the rules.",
+          "citations": [
+            "rules",
+            "policy"
+          ],
+          "note": {
+            "heading": "Why both firms bear the cost",
+            "text": "The rules split qualifying reimbursement costs between sending and receiving firms, giving each a financial reason to prevent scams.",
+            "citations": [
+              "policy"
+            ]
+          }
+        },
+        {
+          "id": "challenge",
+          "label": "Challenge a refusal, delay or short payment",
+          "actors": [
+            "payment-customers",
+            "financial-ombudsman"
+          ],
+          "text": "Complain to the firm first and ask why it refused or limited the refund. If dissatisfied after the firm has had its chance to respond, the customer can take the case to the Financial Ombudsman Service.",
+          "citations": [
+            "ombudsman",
+            "rules"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "five-day": {
+      "label": "Closed within five business days",
+      "percentage": 82,
+      "population": "Reported consumer Faster Payments scam claims that firms closed",
+      "period": "January to March 2026",
+      "type": "Regulator dashboard",
+      "basis": "Includes decisions to reimburse and decisions to reject a claim. It measures closure rather than when money arrived.",
+      "citations": [
+        "dashboard"
+      ]
+    },
+    "amount": {
+      "label": "Share of reimbursable loss returned",
+      "percentage": 88,
+      "population": "Value of reported and closed reimbursable consumer Faster Payments scam claims in the UK",
+      "period": "7 October 2024 to 31 March 2026",
+      "type": "Regulator dashboard",
+      "basis": "The regulator reports £316 million reimbursed. The percentage measures the share of money returned to claimants.",
+      "citations": [
+        "dashboard"
+      ]
+    }
+  },
+  "charts": {
+    "reimbursement": {
+      "title": "The evaluation estimated a higher share of losses reimbursed after the rules took effect",
+      "type": "rates",
+      "data": "app-fraud-review-reimbursement.json",
+      "description": "Frontier Economics comparison of Faster Payments losses.",
+      "citations": [
+        "review"
+      ],
+      "note": "Use this pair together. The dashboard’s 88% uses a different denominator limited to reimbursable claims."
+    }
+  },
+  "issues": {
+    "decision-time": {
+      "step": {
+        "visual": "journey",
+        "id": "decide"
+      },
+      "title": "A quick decision can still leave the customer out of pocket",
+      "text": "The PSR’s January to March 2026 figure shows 82% of closed claims decided within five business days. A firm can reject a claim as outside the policy or approve a refund subject to the cap or excess.",
+      "citations": [
+        "dashboard",
+        "rules"
+      ],
+      "metrics": [
+        "five-day"
+      ],
+      "evidenceGap": "The decision-time dataset leaves out claims still open at the end of the reporting period. It does not report the date the customer could actually use a refund.",
+      "measure": "Publish time from report to money returned by outcome, alongside open claims and time spent waiting for evidence.",
+      "consequences": [
+        {
+          "text": "If a decision arrives quickly but a refund is refused or limited, the customer can remain without the money while pursuing a complaint. The Ombudsman can examine whether the firm’s treatment was fair in the circumstances.",
+          "citations": [
+            "ombudsman",
+            "rules"
+          ]
+        }
+      ]
+    },
+    "eligibility": {
+      "step": {
+        "visual": "journey",
+        "id": "check"
+      },
+      "title": "Coverage depends on which payments and claims reach the measure",
+      "text": "In the first 18 months the regulator reported around 438,300 consumer Faster Payments claims and 301,500 in scope for reimbursement. The dashboard excludes internal book transfers within the same firm. Its reimbursement share uses money lost in reimbursable claims, which makes it a narrower measure than all fraud losses.",
+      "citations": [
+        "dashboard"
+      ],
+      "metrics": [
+        "amount"
+      ],
+      "charts": [
+        "reimbursement"
+      ],
+      "evidenceGap": "The claims dataset cannot count people who never reported a scam or compare all losses across payment channels.",
+      "measure": "Track refusals by reason, Ombudsman outcomes, amounts returned and whether losses change in payment channels outside the dashboard.",
+      "improvement": {
+        "owner": "psr",
+        "title": "Monitor outcomes and commission an independent review",
+        "status": "The regulator publishes the claims dashboard and commissioned Frontier Economics to evaluate reimbursement and prevention. The two sources serve different purposes and use different populations.",
+        "citations": [
+          "dashboard",
+          "review-programme",
+          "review"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "People can lose money when a transfer falls outside the main rules. A refusal may still be challengeable, and the Ombudsman has a separate assessment of what the firm should reasonably have done.",
+          "citations": [
+            "rules",
+            "ombudsman",
+            "case"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "independent-review": {
+      "step": {
+        "visual": "journey",
+        "id": "decide"
+      },
+      "question": "Did the new rules reduce losses as well as increase reimbursement?",
+      "record": "review",
+      "answer": "The regulator commissioned an independent evaluation. Frontier reported lower Faster Payments scam losses, higher reimbursement and higher costs for firms. Its findings distinguish the outcomes studied from the wider fraud market.",
+      "citations": [
+        "review-programme",
+        "review"
+      ],
+      "watch": "Check whether the estimated change persists in later years and whether losses shift to other payment types or channels."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The claim",
+            "text": "For an eligible UK bank transfer scam, report it to the sending firm as soon as possible and within 13 months. Keep the evidence of what persuaded you to send the money.",
+            "citations": [
+              "rules"
+            ]
+          },
+          {
+            "label": "The decision",
+            "text": "The five-business-day measure includes refusals as well as reimbursements. Read the decision and check both the reason and the amount.",
+            "citations": [
+              "rules",
+              "dashboard"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Check how quickly refunds actually reach victims, how often refusals are overturned and whether losses fall as the rules bed in.",
+            "citations": [
+              "dashboard",
+              "review",
+              "ombudsman"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "what-is-app",
+        "heading": "Which scams this covers",
+        "text": "Authorised push payment fraud is the regulator’s name for a scam in which someone is tricked into sending the payment themselves. Raising a claim with the firm starts the reimbursement process. The Ombudsman’s guide explains separate routes for unauthorised payments and cards.",
+        "citations": [
+          "rules",
+          "ombudsman"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "payment-customers",
+                "sending-payment-firm",
+                "receiving-payment-firm",
+                "psr",
+                "financial-ombudsman"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "decision-time",
+          "eligibility"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "review-results",
+        "heading": "What changed after the rules took effect",
+        "text": "Frontier Economics estimated Faster Payments APP losses fell by about 21% following the reimbursement requirement, equivalent to around £73 million a year, and estimated reimbursement rose from 54% to 65% on its comparison basis. The evaluation considered the reimbursement requirement and the publication of firms’ performance data. Its findings cover the payment system studied.",
+        "citations": [
+          "review"
+        ]
+      },
+      {
+        "id": "comparison-bases",
+        "heading": "How to compare refund figures",
+        "text": "The PSR notes that its dashboard reimbursement share is hard to compare directly with the earlier UK Finance series because they cover different firms and definitions. The evaluation provides a separate before-and-after comparison. Individual refund decisions still depend on the scope and circumstances of the claim.",
+        "citations": [
+          "dashboard",
+          "review"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "refund-cost",
+        "heading": "What the customer can be left to bear",
+        "text": "Firms may charge an excess of up to £100 on eligible claims. The PSR guidance excludes vulnerable consumers from that excess. The standard cap is £85,000 per claim, although firms can choose to reimburse more. The Ombudsman service is free for consumers.",
+        "citations": [
+          "rules",
+          "ombudsman"
+        ]
+      },
+      {
+        "id": "firm-cost",
+        "heading": "What the firms pay for",
+        "text": "Frontier Economics estimated the reimbursement policy increased firms’ costs by £44 million to £56 million a year, including prevention, claims handling, disputes, reporting and compliance. Those costs measure work and systems. Money reimbursed is a transfer back to victims and should be shown separately.",
+        "citations": [
+          "policy",
+          "review"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "next-data",
+        "heading": "The next evidence to look for",
+        "text": "As new dashboard periods appear, compare closed claims with amounts returned and look for published evidence on firm-level refusals and delays. Check whether the independent review is followed by changes to how firms report or handle claims.",
+        "citations": [
+          "dashboard",
+          "review-programme"
+        ]
+      },
+      {
+        "improvements": [
+          "eligibility"
+        ]
+      },
+      {
+        "scrutiny": [
+          "independent-review"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

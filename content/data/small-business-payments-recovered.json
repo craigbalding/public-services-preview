@@ -1,0 +1,33 @@
+{
+  "dateHeading": "Financial year ending",
+  "valueHeading": "Pounds recovered",
+  "segments": [
+    {
+      "label": "Overdue payments recovered with Commissioner casework",
+      "definition": "Each point covers a complete financial year. The final figure comes from the Commissioner’s update and is rounded. Amounts are nominal pounds recovered, with no adjustment for inflation or case mix.",
+      "citations": [
+        "accounts",
+        "previous",
+        "budget"
+      ],
+      "points": [
+        [
+          "2023-03-31",
+          283458
+        ],
+        [
+          "2024-03-31",
+          390900
+        ],
+        [
+          "2025-03-31",
+          320316
+        ],
+        [
+          "2026-03-31",
+          1550000
+        ]
+      ]
+    }
+  ]
+}

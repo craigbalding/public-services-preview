@@ -1,0 +1,390 @@
+{
+  "id": "charity-concerns",
+  "template": "topic-v7",
+  "title": "What happens when you raise a concern about a charity?",
+  "category": "Charities and voluntary organisations",
+  "scope": "England and Wales",
+  "summary": "The Charity Commission assesses whether a concern about a charity points to a serious risk to beneficiaries, assets or the way trustees run it. It can offer guidance, take regulatory action or open a statutory inquiry. Everyday complaints often go to the charity itself, and fundraising or criminal concerns can have their own routes.",
+  "citations": [
+    "report",
+    "framework",
+    "quarter"
+  ],
+  "searchTerms": [
+    "NGO",
+    "nonprofit",
+    "charity complaint",
+    "charity watchdog",
+    "Charity Commission",
+    "trustee",
+    "fundraising complaint",
+    "statutory inquiry"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "report": {
+      "publisher": "GOV.UK",
+      "title": "Complain about a charity",
+      "url": "https://www.gov.uk/complain-about-charity",
+      "reference": "Routes for different types of complaint"
+    },
+    "framework": {
+      "publisher": "Charity Commission",
+      "title": "Raising a concern with the Charity Commission (CC47)",
+      "url": "https://www.gov.uk/government/publications/raising-a-concern-with-the-charity-commission-cc47/raising-a-concern-with-the-charity-commission-cc47",
+      "reference": "Regulatory and risk framework, what to report and proportionality"
+    },
+    "quarter": {
+      "publisher": "Charity Commission",
+      "title": "Casework and registrations data: July to September 2026",
+      "url": "https://www.gov.uk/government/publications/charity-commission-casework-and-registrations-data-2026-to-2027/casework-and-registrations-data-july-to-september-2026",
+      "reference": "Regulatory concerns, serious incidents and statutory inquiries tables"
+    },
+    "annual": {
+      "publisher": "Charity Commission",
+      "title": "Annual report and accounts 2025 to 2026",
+      "url": "https://www.gov.uk/government/publications/charity-commission-annual-report-and-accounts-2025-to-2026/charity-commission-annual-report-and-accounts-2025-to-2026",
+      "reference": "Strategic objective 1 and analysis of gross and net expenditure"
+    },
+    "case": {
+      "publisher": "Charity Commission",
+      "title": "Charity Inquiry: The Captain Tom Foundation",
+      "url": "https://www.gov.uk/government/publications/charity-inquiry-the-captain-tom-foundation/charity-inquiry-the-captain-tom-foundation",
+      "date": "2024-11-21",
+      "reference": "Opening, conclusions, use of powers and regulatory action"
+    },
+    "risk": {
+      "publisher": "Charity Commission",
+      "title": "Charity Sector Risk Assessment 2026",
+      "url": "https://www.gov.uk/government/publications/charity-sector-risk-assessment-2026/charity-sector-risk-assessment-2026",
+      "reference": "Sector risk, reporting data and sources"
+    },
+    "disputes": {
+      "publisher": "Charity Commission",
+      "title": "Charity disputes",
+      "url": "https://www.gov.uk/government/publications/how-we-ensure-charities-meet-their-legal-requirements/charity-disputes",
+      "reference": "When the Commission can get involved in a dispute"
+    }
+  },
+  "actors": {
+    "charity-public": {
+      "role": "Provide details of the charity, the issue, any steps already taken and supporting evidence.",
+      "citations": [
+        "framework",
+        "report"
+      ]
+    },
+    "charity-trustees": {
+      "role": "Run the charity in its interests, manage risk and report significant incidents.",
+      "citations": [
+        "framework",
+        "quarter"
+      ]
+    },
+    "charity-commission": {
+      "role": "Assesses concerns, provides guidance and can investigate and use regulatory powers.",
+      "citations": [
+        "framework",
+        "quarter"
+      ]
+    },
+    "fundraising-regulator": {
+      "role": "Handles concerns within the fundraising complaints route.",
+      "citations": [
+        "report"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From a concern to an assessment and possible intervention",
+      "steps": [
+        {
+          "id": "route",
+          "label": "Choose the right route for the concern",
+          "actors": [
+            "charity-public",
+            "fundraising-regulator"
+          ],
+          "text": "Check what the organisation is and whether the issue concerns a service complaint, a fundraising practice, suspected crime or serious charity misconduct. The reporting guide directs those matters to different bodies.",
+          "citations": [
+            "report",
+            "framework"
+          ]
+        },
+        {
+          "id": "report",
+          "label": "Send facts and evidence through the right channel",
+          "actors": [
+            "charity-public",
+            "charity-trustees"
+          ],
+          "text": "Members of the public can raise serious concerns about a charity. Trustees use the serious incident route for significant risks or harm. Supply the facts, dates and any steps the charity has already taken.",
+          "citations": [
+            "framework",
+            "report",
+            "quarter"
+          ]
+        },
+        {
+          "id": "assess",
+          "label": "Assess risk and decide whether to act",
+          "actors": [
+            "charity-commission"
+          ],
+          "text": "The Commission checks what is within its powers and assesses actual or potential harm, the available evidence and whether trustees or another body are already dealing with it. It can give advice or consider stronger intervention.",
+          "citations": [
+            "framework",
+            "disputes"
+          ],
+          "note": {
+            "heading": "Why decisions depend on risk",
+            "text": "The Commission’s framework describes a proportionate approach. It focuses its regulatory resources where there is serious harm or risk and where its intervention can make a difference.",
+            "citations": [
+              "framework",
+              "annual"
+            ]
+          }
+        },
+        {
+          "id": "act",
+          "label": "Use powers or close the case",
+          "actors": [
+            "charity-commission",
+            "charity-trustees"
+          ],
+          "text": "A statutory inquiry allows formal investigation and protective powers. Other cases can be dealt with through guidance or other action. Trustees may have to make changes, and inquiry reports can explain the findings and action taken.",
+          "citations": [
+            "quarter",
+            "annual",
+            "case"
+          ]
+        }
+      ]
+    }
+  },
+  "charts": {
+    "casework": {
+      "title": "New regulatory concern cases exceeded closures in both recent quarters",
+      "type": "bars",
+      "data": "charity-concern-cases.json",
+      "description": "England and Wales, April to September 2026, regulatory concern casework only.",
+      "citations": [
+        "quarter"
+      ],
+      "note": "Serious incident reports, matters of material significance and statutory inquiries are published separately. Closures can relate to cases opened before the quarter."
+    },
+    "throughput": {
+      "title": "More concern cases closed per full-time equivalent",
+      "type": "trend",
+      "data": "charity-cases-per-staff.json",
+      "description": "Charity Commission annual productivity measure, 2023–24 to 2025–26.",
+      "citations": [
+        "annual"
+      ],
+      "note": "Uses the Commission’s published figures and does not adjust for the mix or complexity of cases."
+    }
+  },
+  "issues": {
+    "triage": {
+      "step": {
+        "visual": "journey",
+        "id": "assess"
+      },
+      "title": "A concern can be real and still fall outside this regulator’s powers",
+      "text": "The Commission’s concern framework distinguishes risk to the charity, its assets and its beneficiaries from complaints another body should handle. A serious incident report, a member of the public raising a concern and an auditor’s statutory report are different ways in.",
+      "citations": [
+        "framework",
+        "report",
+        "quarter"
+      ],
+      "evidenceGap": "The quarterly release does not follow all people who report a concern, including people redirected elsewhere, through to a resolution.",
+      "measure": "Track time to triage, the reasons for signposting elsewhere and whether the person can reach the right service.",
+      "improvement": {
+        "owner": "charity-commission",
+        "title": "Make reporting routes clearer",
+        "status": "The Commission says it updated CC47 during 2025–26 to clarify when a concern should come to it, what evidence helps and where other routes are more appropriate.",
+        "citations": [
+          "annual",
+          "framework"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "A donor or beneficiary can spend time reporting to a body that cannot resolve their problem. The route matters when someone needs a service complaint heard or possible wrongdoing investigated.",
+          "citations": [
+            "report",
+            "framework",
+            "disputes"
+          ]
+        }
+      ]
+    },
+    "progress": {
+      "step": {
+        "visual": "journey",
+        "id": "act"
+      },
+      "title": "Productivity can rise while more cases remain active",
+      "text": "There were 2,415 active regulatory concern cases at the end of June 2026 and 2,999 at the end of September. The annual report also shows rising closures per full-time equivalent through 2025–26, a different measure and period.",
+      "citations": [
+        "quarter",
+        "annual"
+      ],
+      "charts": [
+        "casework",
+        "throughput"
+      ],
+      "evidenceGap": "The casework release does not show duration by risk group or pair each closure with a measure of whether the identified harm stopped.",
+      "measure": "Track age of active cases by risk, time to protective action and whether the charity follows through on action required.",
+      "consequences": [
+        {
+          "text": "If a case involves risk to beneficiaries or assets, time to protective action matters. The Commission can use formal powers in an inquiry, as the Captain Tom Foundation report documents. A closure count cannot show how long any particular risk lasted.",
+          "citations": [
+            "framework",
+            "case"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "published-inquiry": {
+      "step": {
+        "visual": "journey",
+        "id": "act"
+      },
+      "question": "What did the formal investigation establish, and what powers followed?",
+      "record": "case",
+      "answer": "The inquiry considered how the charity was run, including conflicts of interest. The report explains the Commission’s findings and the statutory basis for disqualification. The case shows what a published inquiry can establish after an investigation.",
+      "citations": [
+        "case"
+      ],
+      "watch": "Check published decisions for the action taken and, where reported, what happened to the charity and its beneficiaries afterwards."
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Check the route",
+            "text": "This guide concerns the Charity Commission for England and Wales. Other regulators cover Scotland and Northern Ireland. The word NGO is wider than the bodies regulated as charities.",
+            "citations": [
+              "report",
+              "framework"
+            ]
+          },
+          {
+            "label": "What the numbers mean",
+            "text": "In July to September 2026 the Commission opened 1,530 regulatory concern cases and closed 814. The counts describe work coming in and going out. They do not follow the same cases.",
+            "citations": [
+              "quarter"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Check whether intervention protects beneficiaries or assets and whether trustees act on findings. A closed case or a published inquiry report is one milestone.",
+            "citations": [
+              "framework",
+              "annual",
+              "case"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "which-route",
+        "heading": "Where to take different concerns",
+        "text": "A concern about how a particular service was delivered may need the charity’s complaints procedure. If it is about serious harm or misconduct, the Commission’s reporting guidance explains what evidence to provide. The Commission’s disputes guidance describes when it considers intervening in disputes inside a charity.",
+        "citations": [
+          "report",
+          "framework",
+          "disputes"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "charity-public",
+                "charity-trustees",
+                "charity-commission",
+                "fundraising-regulator"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "triage",
+          "progress"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "case-outcome",
+        "heading": "What formal action looks like in one inquiry",
+        "text": "The Captain Tom Foundation inquiry found misconduct or mismanagement and published the reasons for its decisions. The Commission disqualified two individuals from acting as charity trustees and holding senior management functions in charities. This shows a use of powers in one case. The quarterly figures do not show how frequently other cases reach a comparable outcome.",
+        "citations": [
+          "case",
+          "quarter"
+        ]
+      },
+      {
+        "id": "separate-categories",
+        "heading": "Why the published stages cannot be turned into a conversion rate",
+        "text": "In July to September 2026, the same release shows 1,186 serious incident reports opened and 55 statutory inquiries opened. They are separate categories. Dividing one count by the other would not tell you the chance that a report becomes an inquiry.",
+        "citations": [
+          "quarter"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "regulator-cost",
+        "heading": "What the regulator spends",
+        "text": "The Commission reported £34.591 million gross expenditure and £33.132 million net expenditure in 2025–26. The figures cover wider functions including registration, guidance and regulation. Dividing expenditure by closed concerns would not give the cost of a concern investigation.",
+        "citations": [
+          "annual",
+          "quarter"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "next-data",
+        "heading": "What to look for in the next releases",
+        "text": "Read quarterly activity alongside the published inquiry findings and the regulator’s risk assessment. Look for time to act in higher-risk cases, and for evidence that corrective action was carried out.",
+        "citations": [
+          "quarter",
+          "annual",
+          "risk",
+          "case"
+        ]
+      },
+      {
+        "improvements": [
+          "triage"
+        ]
+      },
+      {
+        "scrutiny": [
+          "published-inquiry"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

@@ -1,0 +1,475 @@
+{
+  "id": "passport-application-waits",
+  "template": "topic-v7",
+  "title": "How long should it take to get a UK passport?",
+  "category": "Passports",
+  "scope": "Applications from the United Kingdom",
+  "summary": "HM Passport Office says you will usually get a passport within three weeks of it receiving your documents. It may take longer if it needs more information or an interview. In 2025 it processed 99.7% of standard UK applications that needed no further information within three weeks.",
+  "citations": [
+    "standard",
+    "performance"
+  ],
+  "searchTerms": [
+    "HMPO",
+    "passport renewal",
+    "passport waiting time",
+    "passport delay",
+    "Fast Track",
+    "passport interview",
+    "travel documents",
+    "Passport Adviceline"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "standard": {
+      "publisher": "HM Passport Office",
+      "title": "About our services",
+      "url": "https://www.gov.uk/government/organisations/hm-passport-office/about/about-our-services",
+      "reference": "UK guidance, start of processing time and exceptions"
+    },
+    "performance": {
+      "publisher": "Home Office",
+      "title": "New fees for passport applications",
+      "url": "https://www.gov.uk/government/news/new-fees-for-passport-applications",
+      "reference": "Calendar 2025 performance and fees from April 2026"
+    },
+    "performance-2024": {
+      "publisher": "Home Office",
+      "title": "Changes to passport application fees",
+      "url": "https://www.gov.uk/government/news/changes-to-passport-application-fees",
+      "reference": "Calendar 2024 standard applications needing no additional information"
+    },
+    "urgent": {
+      "publisher": "GOV.UK",
+      "title": "Get a passport urgently",
+      "url": "https://www.gov.uk/get-a-passport-urgently",
+      "reference": "Urgent appointments, fees and guidance when already applied"
+    },
+    "contact": {
+      "publisher": "HM Passport Office",
+      "title": "Complaints procedure",
+      "url": "https://www.gov.uk/government/organisations/hm-passport-office/about/complaints-procedure",
+      "reference": "Contact centre and how to complain"
+    },
+    "compassionate": {
+      "publisher": "HM Passport Office",
+      "title": "Urgent government business or compassionate reasons: processing the application",
+      "url": "https://www.gov.uk/government/publications/urgent-government-business-or-compassionate-reasons-processing-the-application/urgent-government-business-or-compassionate-reasons-processing-the-application-accessible",
+      "reference": "Evidence and escalation routes for urgent cases"
+    },
+    "audit": {
+      "publisher": "National Audit Office",
+      "title": "Investigation into the performance of HM Passport Office",
+      "url": "https://www.nao.org.uk/reports/investigation-into-the-performance-of-hm-passport-office/",
+      "reference": "Application surge, processing and waits in January to September 2022"
+    },
+    "pac": {
+      "publisher": "House of Commons Public Accounts Committee",
+      "title": "Investigation into the UK Passport Office",
+      "url": "https://committees.parliament.uk/publications/34721/documents/191142/default/",
+      "date": "2023-04-06",
+      "reference": "Recommendations 1A and 1B, transferred applications and effects on applicants"
+    },
+    "response": {
+      "publisher": "HM Treasury",
+      "title": "Treasury Minutes, June 2023",
+      "url": "https://www.gov.uk/government/publications/treasury-minutes-june-2023",
+      "date": "2023-06-22",
+      "reference": "CP 847, Home Office response to PAC recommendation 1B"
+    },
+    "update": {
+      "publisher": "HM Treasury",
+      "title": "Treasury Minutes progress report, December 2023",
+      "url": "https://assets.publishing.service.gov.uk/media/6568b6f82ee693001360cbb5/E03022635_CP_987_Treasury_Minutes_Progress_Report_Accessible.pdf",
+      "date": "2023-12-04",
+      "reference": "Recommendation 1B, paragraphs 1.1 to 1.6, and 2022 and 2023 performance"
+    },
+    "fees": {
+      "publisher": "GOV.UK",
+      "title": "Passport fees",
+      "url": "https://www.gov.uk/passport-fees",
+      "reference": "Application fees by passport and channel"
+    },
+    "cost-data": {
+      "publisher": "Home Office",
+      "title": "UK passport fees transparency data, 30 June 2026",
+      "url": "https://www.gov.uk/government/publications/uk-passport-fees-transparency-data/uk-passport-fees-transparency-data-30-june-2026-accessible",
+      "date": "2026-06-30",
+      "reference": "Fees, estimated full unit costs and allocation method"
+    }
+  },
+  "actors": {
+    "passport-applicants": {
+      "role": "Submit the application, supporting documents and any additional evidence required.",
+      "citations": [
+        "standard"
+      ]
+    },
+    "hmpo": {
+      "role": "Checks eligibility and identity, issues passport documents and handles queries and complaints.",
+      "citations": [
+        "standard",
+        "contact"
+      ]
+    },
+    "home-office": {
+      "role": "Oversees HM Passport Office and responds on performance.",
+      "citations": [
+        "pac",
+        "update"
+      ]
+    },
+    "public-accounts-committee": {
+      "role": "Examines service performance and followed up the 2022 delays.",
+      "citations": [
+        "pac",
+        "update"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From application to receipt of a passport",
+      "steps": [
+        {
+          "id": "apply",
+          "label": "Apply and supply the documents",
+          "actors": [
+            "passport-applicants",
+            "hmpo"
+          ],
+          "text": "Choose the application route, pay the fee and send the requested documents. HM Passport Office’s stated processing time starts when it receives the documents.",
+          "citations": [
+            "standard",
+            "fees"
+          ]
+        },
+        {
+          "id": "check",
+          "label": "Check identity and entitlement",
+          "actors": [
+            "hmpo"
+          ],
+          "text": "Examine the submitted evidence. The Passport Office may ask for more information or for an interview, which can make the application take longer.",
+          "citations": [
+            "standard",
+            "audit"
+          ],
+          "note": {
+            "heading": "Why the headline measure has a qualification",
+            "text": "The Home Office’s three-week performance measure covers standard UK applications where no further information is needed. Cases that need extra checks have a different processing path.",
+            "citations": [
+              "performance",
+              "update"
+            ]
+          }
+        },
+        {
+          "id": "issue",
+          "label": "Issue and deliver the passport",
+          "actors": [
+            "hmpo"
+          ],
+          "text": "Once checks are complete, issue the passport and arrange delivery. Supporting documents may arrive separately. A processing measure and the applicant’s receipt of a usable document are different milestones.",
+          "citations": [
+            "standard",
+            "contact",
+            "audit"
+          ]
+        },
+        {
+          "id": "follow",
+          "label": "Chase or escalate if it is taking longer",
+          "actors": [
+            "passport-applicants",
+            "hmpo"
+          ],
+          "text": "Contact HM Passport Office about an application in progress. Its urgent services page says buying a second urgent application will not speed up the first one. Passport Office staff have a separate process for evidenced compassionate or urgent government grounds.",
+          "citations": [
+            "urgent",
+            "contact",
+            "compassionate"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "three-week": {
+      "label": "Processed within three weeks",
+      "percentage": 99.7,
+      "population": "Standard applications from the UK that needed no further information",
+      "period": "Calendar year 2025",
+      "type": "Home Office published performance",
+      "basis": "Coverage excludes applications requiring more information. The published figure refers to processing.",
+      "citations": [
+        "performance"
+      ]
+    }
+  },
+  "charts": {
+    "current": {
+      "title": "99.7% within three weeks in both 2024 and 2025 for the straightforward group",
+      "type": "rates",
+      "data": "passport-three-week-performance.json",
+      "description": "Standard applications from within the UK where the Passport Office required no further information.",
+      "citations": [
+        "performance-2024",
+        "performance"
+      ],
+      "note": "These are annual results with the same published definition. The figures do not show seasonal variation or the longest waits."
+    },
+    "historic": {
+      "title": "Ten-week processing improved after the 2022 surge",
+      "type": "rates",
+      "data": "passport-historic-ten-week-performance.json",
+      "description": "Standard UK applications measured against the earlier ten-week threshold.",
+      "citations": [
+        "update"
+      ],
+      "note": "The 2023 value is the year-to-date figure reported in the December progress report. Compare these with each other, rather than with the later three-week measure."
+    }
+  },
+  "issues": {
+    "complex-cases": {
+      "step": {
+        "visual": "journey",
+        "id": "check"
+      },
+      "title": "The headline processing figure leaves complex cases out",
+      "text": "The fee announcements show 99.7% processed within three weeks in each of 2024 and 2025, where no further information was required. Additional evidence, interviews or other checks can change how long an application takes.",
+      "citations": [
+        "standard",
+        "performance",
+        "performance-2024"
+      ],
+      "metrics": [
+        "three-week"
+      ],
+      "charts": [
+        "current"
+      ],
+      "evidenceGap": "The figures shown here do not give the share of all applicants who needed additional checks or how long they waited from sending the application to delivery.",
+      "measure": "Publish waiting-time bands for straightforward and complex cases, with times to ask for evidence, make a decision and deliver the document.",
+      "consequences": [
+        {
+          "text": "Someone waiting to demonstrate identity or travel may be affected even when the overall straightforward performance is high. The Passport Office’s published complaint process gives applicants a route to seek a response.",
+          "citations": [
+            "pac",
+            "contact"
+          ]
+        }
+      ]
+    },
+    "demand-surge": {
+      "step": {
+        "visual": "journey",
+        "id": "issue"
+      },
+      "title": "A seasonal surge can expose gaps between systems",
+      "text": "About 360,000 customers waited more than ten weeks in January to September 2022. The Public Accounts Committee found that 134,000 cases transferred from the digital system to the legacy system were treated as new cases, resetting the recorded wait in the legacy system.",
+      "citations": [
+        "audit",
+        "pac"
+      ],
+      "charts": [
+        "historic"
+      ],
+      "evidenceGap": "The published 2022 experience shows what can happen under stress. The recent headline rate alone gives limited evidence on how well the service would handle a new surge.",
+      "measure": "Follow the oldest applications, follow-up contact and delivery through peak weeks. Keep the original receipt date when a case transfers.",
+      "improvement": {
+        "owner": "hmpo",
+        "title": "Keep transferred cases in the correct queue",
+        "status": "The Home Office’s June 2023 response said its workflow changes returned transferred cases to the correct place in the legacy queue. The later progress report cited stronger performance and more flexible capacity.",
+        "citations": [
+          "response",
+          "update"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "The Committee heard that waits affected family emergencies, jobs requiring overseas travel and people needing to prove their identity. The contact system also came under pressure.",
+          "citations": [
+            "pac",
+            "audit"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "pac-service-recovery": {
+      "step": {
+        "visual": "journey",
+        "id": "check"
+      },
+      "question": "What did HM Passport Office change after the 2022 delays?",
+      "record": "pac",
+      "answer": "The Public Accounts Committee asked for a six-month report on how well the actions had maintained service. The Home Office agreed to report back. The December Treasury progress report published the response and described changes to workflow, capacity and the performance standard.",
+      "citations": [
+        "pac",
+        "response",
+        "update"
+      ],
+      "watch": "Check how far the published service measures cover long-running cases and how performance holds during peak demand.",
+      "followUp": {
+        "title": "Evidence on the effect of the Passport Office’s recovery actions",
+        "history": [
+          {
+            "date": "2023-04-06",
+            "status": "requested",
+            "text": "Recommendation 1B asked the Department to report back within six months on the effectiveness of its actions.",
+            "citations": [
+              "pac"
+            ]
+          },
+          {
+            "date": "2023-06-22",
+            "status": "promised",
+            "text": "The government agreed and said the Department would write back within six months of the report.",
+            "citations": [
+              "response"
+            ]
+          },
+          {
+            "date": "2023-12-04",
+            "status": "provided",
+            "text": "The December Treasury progress report gave an update on measures and performance and marked the recommendation implemented. This is the date of the published progress report.",
+            "citations": [
+              "update"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "The clock",
+            "text": "The standard UK guidance is usually within three weeks, starting when the Passport Office receives the documents. Extra information or an interview can lengthen the wait.",
+            "citations": [
+              "standard"
+            ]
+          },
+          {
+            "label": "Who is counted",
+            "text": "The 99.7% figure for 2025 covers standard UK applications needing no further information. It cannot tell an applicant how long a more complex case will take.",
+            "citations": [
+              "performance"
+            ]
+          },
+          {
+            "label": "If travel is approaching",
+            "text": "Use the application contact route for a case already under way. Fast Track and Online Premium are advertised routes for eligible urgent applications, with separate fees and appointment conditions.",
+            "citations": [
+              "urgent",
+              "contact"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "service-standard",
+        "heading": "How the service standard changed",
+        "text": "The current three-week guidance came after a period when applicants were asked to allow ten weeks. The Government introduced the formal three-week indicator in October 2023 for standard UK applications requiring no further information, with a target of at least 98.5%.",
+        "citations": [
+          "standard",
+          "update"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "passport-applicants",
+                "hmpo",
+                "home-office",
+                "public-accounts-committee"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "complex-cases",
+          "demand-surge"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "ten-week-change",
+        "heading": "What the 2023 follow-up showed",
+        "text": "The Treasury progress report gave 95.4% within ten weeks in 2022 and 99.3% in 2023 to the reporting point for standard UK applications. It attributed improvement to several changes, including processes, digital systems, flexible resources and a second contact-service supplier. The figures do not isolate the effect of any one change.",
+        "citations": [
+          "update"
+        ]
+      },
+      {
+        "id": "delivery-outcome",
+        "heading": "Which outcome matters to applicants",
+        "text": "Time to a usable passport is the outcome for the applicant. The available headline statistic is a processing measure for a defined cohort. The 2022 audit and committee findings show why records of late cases, delivery and missed travel matter alongside it.",
+        "citations": [
+          "performance",
+          "audit",
+          "pac"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "fees-by-route",
+        "heading": "What applicants pay",
+        "text": "A standard online adult passport application from the UK costs £102. For an eligible adult applying for a standard-size passport the urgent fees are £192 for one-week Fast Track and £239.50 for Online Premium. The urgent route has appointment conditions. A duplicate application while waiting can incur a £34.50 administration fee.",
+        "citations": [
+          "fees",
+          "urgent"
+        ]
+      },
+      {
+        "id": "unit-cost",
+        "heading": "What the Home Office estimates it costs to deliver",
+        "text": "The Home Office’s June 2026 transparency tables put the estimated full financial cost of a standard online adult UK passport at £121.66 against the £102 fee. That estimate includes attributable processing, overheads and other allocated costs. It is an estimate at service level, and a single fee-minus-cost comparison does not show the overall balance across passport products.",
+        "citations": [
+          "cost-data"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "next-measures",
+        "heading": "What to watch through the next travel peak",
+        "text": "Use the next like-for-like annual performance release alongside any detail on cases that need more evidence. During peak travel periods the clearest check is whether long waits and failed deliveries stay low across the whole service.",
+        "citations": [
+          "standard",
+          "performance",
+          "pac"
+        ]
+      },
+      {
+        "improvements": [
+          "demand-surge"
+        ]
+      },
+      {
+        "scrutiny": [
+          "pac-service-recovery"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}

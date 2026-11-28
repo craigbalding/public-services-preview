@@ -1,0 +1,15 @@
+{
+  "asOf": "2026-10-12",
+  "unit": "Open applications",
+  "groupLabel": "Age of open application",
+  "series": [
+    {
+      "label": "Three to six months",
+      "value": 49981
+    },
+    {
+      "label": "Six months or more",
+      "value": 24768
+    }
+  ]
+}

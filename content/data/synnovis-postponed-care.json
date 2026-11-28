@@ -1,0 +1,15 @@
+{
+  "asOf": "2024-09-26",
+  "unit": "Postponements",
+  "groupLabel": "Type of scheduled care",
+  "series": [
+    {
+      "label": "Acute outpatient appointments",
+      "value": 10152
+    },
+    {
+      "label": "Elective procedures",
+      "value": 1710
+    }
+  ]
+}

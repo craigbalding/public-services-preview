@@ -1,0 +1,23 @@
+{
+  "asOf": "2026-09-30",
+  "unit": "Regulatory concern cases",
+  "groupLabel": "Quarter and action",
+  "series": [
+    {
+      "label": "Apr–Jun opened",
+      "value": 1552
+    },
+    {
+      "label": "Apr–Jun closed",
+      "value": 934
+    },
+    {
+      "label": "Jul–Sep opened",
+      "value": 1530
+    },
+    {
+      "label": "Jul–Sep closed",
+      "value": 814
+    }
+  ]
+}

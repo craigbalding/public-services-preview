@@ -1,0 +1,472 @@
+{
+  "id": "driving-test-waits",
+  "template": "topic-v7",
+  "title": "Why is it so hard to book a driving test?",
+  "category": "Driving",
+  "scope": "Great Britain",
+  "summary": "Practical car tests are hard to book where demand outstrips examiner time. In October 2026 the Great Britain booking measure was 19.2 weeks. People who actually took a test that month had waited a median of 10.3 weeks from booking, a measure that starts once they have secured a slot.",
+  "citations": [
+    "audit",
+    "stats"
+  ],
+  "searchTerms": [
+    "DVSA",
+    "test centre backlog",
+    "practical driving test slots",
+    "driving lesson",
+    "driving instructor",
+    "test cancellation",
+    "learners",
+    "licence"
+  ],
+  "related": [
+    "medical-driving-licences"
+  ],
+  "reviewed": "2026-11-28",
+  "sources": {
+    "book": {
+      "publisher": "GOV.UK",
+      "title": "Book your driving test",
+      "url": "https://www.gov.uk/book-driving-test",
+      "reference": "Who can book, release timetable and finding a test"
+    },
+    "rules": {
+      "publisher": "DVSA",
+      "title": "Changes to driving test booking rules in 2026",
+      "url": "https://www.gov.uk/guidance/changes-to-driving-test-booking-rules-in-2026",
+      "reference": "Test management, limits and centre changes"
+    },
+    "audit": {
+      "publisher": "National Audit Office",
+      "title": "Investigation into car driving test waiting times",
+      "url": "https://www.nao.org.uk/press-releases/watchdog-urges-dvsa-to-address-driving-test-delay-backlog-and-cut-waiting-times/",
+      "date": "2025-12-17",
+      "reference": "Demand, examiner retention, use of resellers and learner survey"
+    },
+    "stats": {
+      "publisher": "DVSA",
+      "title": "Driving test and theory test data: cars",
+      "url": "https://www.gov.uk/government/statistical-data-sets/driving-test-and-theory-test-data-cars",
+      "date": "2026-11-13",
+      "reference": "Waiting time and availability tables DRT121G (country and region) and DRT122F (test centre)"
+    },
+    "minister": {
+      "publisher": "Department for Transport, letter to the Transport Committee",
+      "title": "Update on efforts to reduce practical driving test waits",
+      "url": "https://committees.parliament.uk/publications/55797/documents/311230/default/",
+      "date": "2026-11-03",
+      "reference": "Measures, capacity, regional variation and commitment to regular updates"
+    },
+    "committee": {
+      "publisher": "House of Commons Transport Committee",
+      "title": "Letter to Minister highlights slow progress on driving test delays",
+      "url": "https://committees.parliament.uk/committee/153/transport-committee/news/213093/letter-to-minister-highlights-slow-progress-on-driving-test-delays/",
+      "reference": "Committee’s challenge on slow progress, mitigation and the recovery plan"
+    },
+    "definitions": {
+      "publisher": "DVSA",
+      "title": "Giving you a clearer picture of driving test waiting times",
+      "url": "https://despatch.blog.gov.uk/2026/06/18/giving-you-a-clearer-picture-of-driving-test-waiting-times/",
+      "date": "2026-06-18",
+      "reference": "10% availability, completed-test median and available slot share"
+    },
+    "calendar": {
+      "publisher": "DVSA",
+      "title": "Statistics at DVSA",
+      "url": "https://www.gov.uk/government/organisations/driver-and-vehicle-standards-agency/about/statistics",
+      "reference": "Release calendar for car driving test availability and waiting times"
+    },
+    "fees": {
+      "publisher": "GOV.UK",
+      "title": "Driving test costs",
+      "url": "https://www.gov.uk/driving-test-cost",
+      "reference": "Official car theory, practical test and rebooking fees"
+    },
+    "learn": {
+      "publisher": "GOV.UK",
+      "title": "Learn to drive a car: step by step",
+      "url": "https://www.gov.uk/learn-to-drive-a-car",
+      "reference": "Provisional licence, theory test and practical test sequence"
+    }
+  },
+  "actors": {
+    "learners": {
+      "role": "Prepare, book their own practical car test and attend it when ready.",
+      "citations": [
+        "book",
+        "learn"
+      ]
+    },
+    "dvsa": {
+      "role": "Allocates examiner time, books and conducts practical tests and publishes performance data.",
+      "citations": [
+        "book",
+        "stats"
+      ]
+    },
+    "department-for-transport": {
+      "role": "Oversees the agency and reports on recovery to Parliament.",
+      "citations": [
+        "minister",
+        "audit"
+      ]
+    },
+    "transport-committee": {
+      "role": "Questions ministers on waits and recovery.",
+      "citations": [
+        "committee",
+        "minister"
+      ]
+    }
+  },
+  "visuals": {
+    "journey": {
+      "title": "From theory pass to practical test",
+      "steps": [
+        {
+          "id": "qualify",
+          "label": "Get ready to book",
+          "actors": [
+            "learners"
+          ],
+          "text": "Get a provisional licence, prepare to drive and pass the theory test before booking a practical car test. A learner still needs time with a car and instructor or supervisor to get ready for the test.",
+          "citations": [
+            "learn",
+            "book"
+          ]
+        },
+        {
+          "id": "release",
+          "label": "Release appointments",
+          "actors": [
+            "dvsa"
+          ],
+          "text": "DVSA releases a new week of appointments each Monday at 6am. Slots can also appear as people cancel or examiner availability changes. The online service shows appointments up to 24 weeks ahead.",
+          "citations": [
+            "book",
+            "minister"
+          ],
+          "note": {
+            "heading": "Why slots are scarce",
+            "text": "The audit found that the pandemic built up deferred demand. More people passing theory tests and difficulty recruiting and retaining examiners sustained pressure even as DVSA delivered more tests.",
+            "citations": [
+              "audit"
+            ]
+          }
+        },
+        {
+          "id": "book",
+          "label": "Book or change the test",
+          "actors": [
+            "learners",
+            "dvsa"
+          ],
+          "text": "The learner books through GOV.UK and manages changes themselves. The limits on changes and rules on moving centres are intended to restrict the resale of bookings and leave more slots available to learners.",
+          "citations": [
+            "book",
+            "rules",
+            "minister"
+          ]
+        },
+        {
+          "id": "take",
+          "label": "Attend, pass or try again",
+          "actors": [
+            "learners",
+            "dvsa"
+          ],
+          "text": "An examiner conducts the test and gives the result. Someone who needs another practical attempt has to book another slot. The published median starts at booking and ends at the test, so somebody still searching for a slot is outside that measure.",
+          "citations": [
+            "learn",
+            "fees",
+            "definitions"
+          ]
+        }
+      ]
+    }
+  },
+  "metrics": {
+    "availability": {
+      "label": "Share of appointments still bookable",
+      "percentage": 13.72,
+      "population": "Practical car test slots in the 24-week booking window in Great Britain",
+      "period": "Start of October 2026",
+      "type": "DVSA booking snapshot",
+      "basis": "Includes slots left to book at the snapshot. The country breakdown uses the same window.",
+      "citations": [
+        "minister"
+      ]
+    }
+  },
+  "charts": {
+    "booking-wait": {
+      "title": "The booking measure fell to 19.2 weeks by October 2026",
+      "type": "trend",
+      "data": "driving-test-slot-wait.json",
+      "description": "Monthly Great Britain booking measure from October 2024, using the 10% availability threshold.",
+      "citations": [
+        "stats",
+        "definitions"
+      ]
+    },
+    "completed-wait": {
+      "title": "The typical wait after booking follows a different pattern",
+      "type": "trend",
+      "data": "driving-test-completed-wait.json",
+      "description": "Median time between booking and taking a test among people tested in each month, Great Britain.",
+      "citations": [
+        "stats",
+        "definitions"
+      ]
+    },
+    "local-slots": {
+      "title": "The share of slots still available varied across Great Britain",
+      "type": "rates",
+      "data": "driving-test-country-slots.json",
+      "description": "Practical car tests in the 24-week window at the start of October 2026.",
+      "citations": [
+        "minister"
+      ],
+      "note": "Each rate uses the slots available in that country as its own base. A country average can mask differences between neighbouring test centres."
+    }
+  },
+  "issues": {
+    "local-queue": {
+      "step": {
+        "visual": "journey",
+        "id": "release"
+      },
+      "title": "More tests can be delivered while learners still struggle to find a slot",
+      "text": "DVSA delivered more than 2.16 million practical car tests in the 12 months to September 2026. The number of centres at the 24-week maximum fell from 212 on 5 May 2025 to 116 on 1 October 2026. The national measures still obscure where individual learners can book.",
+      "citations": [
+        "minister",
+        "stats"
+      ],
+      "metrics": [
+        "availability"
+      ],
+      "charts": [
+        "booking-wait",
+        "completed-wait",
+        "local-slots"
+      ],
+      "evidenceGap": "The completed-test measure excludes learners who have yet to secure a slot. A comparable record of time from first attempt to book would show the part of the wait that is missing.",
+      "measure": "Track the distribution of booking waits by centre, the share of slots available and the median completed wait. Check whether long waits fall alongside higher test volumes.",
+      "improvement": {
+        "owner": "dvsa",
+        "title": "Add examiner capacity where queues are longest",
+        "status": "In November 2026 the minister reported 138 more examiners in post in September than a year earlier, and said agreement had been reached to continue an overtime incentive.",
+        "citations": [
+          "minister"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "In the evidence reported by the NAO, 30% of respondents to a DVSA survey said they needed to drive for their jobs. A test delay can keep people waiting for work or promotion that needs a licence.",
+          "citations": [
+            "audit"
+          ]
+        }
+      ]
+    },
+    "resale": {
+      "step": {
+        "visual": "journey",
+        "id": "book"
+      },
+      "title": "The official fee can turn into a much higher price when slots are resold",
+      "text": "Of 21,656 people who answered DVSA’s question about third-party resellers in a call for evidence, 31% said they had used one. Some people reported paying as much as £500 in total to book. This was a respondent survey before the booking changes.",
+      "citations": [
+        "audit"
+      ],
+      "evidenceGap": "The pre-change survey does not establish the proportion of all learners paying third parties or what happened to their total costs after the rules changed.",
+      "measure": "Measure the share of learners booking at the official fee, the reported cost of resale and the time it takes to get a suitable slot.",
+      "improvement": {
+        "owner": "dvsa",
+        "title": "Put booking and changes in the learner’s hands",
+        "status": "The rules introduced in 2026 require learners to manage their own car test appointments and restrict how appointments can be changed. The November update reports around 63% fewer swaps and enforcement against bookings made in breach of terms.",
+        "citations": [
+          "rules",
+          "minister"
+        ]
+      },
+      "consequences": [
+        {
+          "text": "Someone who cannot find a suitable slot directly can face paying more, travelling to another centre or waiting longer. The £500 example illustrates the upper price reported to the audit, with no estimate of how common that price was.",
+          "citations": [
+            "audit",
+            "minister"
+          ]
+        }
+      ]
+    }
+  },
+  "scrutiny": {
+    "recovery-updates": {
+      "step": {
+        "visual": "journey",
+        "id": "release"
+      },
+      "question": "What is the recovery plan doing to reduce long waits?",
+      "record": "minister",
+      "answer": "The Transport Committee warned that progress was slow. In the 3 November letter the minister reported a fall in the booking measure, more tests and increased examiner capacity. The same letter said the typical completed wait had risen on the previous month.",
+      "citations": [
+        "committee",
+        "minister"
+      ],
+      "watch": "Check whether the longest local queues and the median completed-test wait fall together, with more tests delivered and enough local slots to book.",
+      "followUp": {
+        "title": "Regular updates to the Transport Committee on test waiting times",
+        "history": [
+          {
+            "date": "2026-11-03",
+            "status": "promised",
+            "text": "The minister said the Committee would receive regular updates on the effect of the measures. The letter gives no interval or exact next date.",
+            "citations": [
+              "minister"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sections": {
+    "at-a-glance": [
+      {
+        "takeaways": [
+          {
+            "label": "Two clocks",
+            "text": "The availability measure looks forward to when slots are sufficiently available. The typical wait after booking looks back at tests that took place. The two can move in different directions.",
+            "citations": [
+              "definitions",
+              "minister"
+            ]
+          },
+          {
+            "label": "Local pressure",
+            "text": "At the start of October 2026, 116 test centres were still at the 24-week maximum on DVSA’s booking measure.",
+            "citations": [
+              "minister"
+            ]
+          },
+          {
+            "label": "What to watch",
+            "text": "Check local availability, delivered tests and time from booking to test together as booking reforms and extra examiner capacity take effect.",
+            "citations": [
+              "rules",
+              "minister",
+              "stats"
+            ]
+          }
+        ]
+      }
+    ],
+    "how-it-works": [
+      {
+        "visual": "journey"
+      },
+      {
+        "id": "local-choices",
+        "heading": "What counts as a usable slot",
+        "text": "The same booking rule can have different effects in different places. Where a learner can use several centres, a late cancellation may help. Where local options are thin, the next suitable appointment can mean a longer wait or a journey further from home.",
+        "citations": [
+          "book",
+          "minister"
+        ]
+      },
+      {
+        "id": "centre-examples",
+        "heading": "How waits varied between test centres",
+        "text": "In October 2026 the DVSA booking measure was 4 weeks at Bristol Kingswood and 11.5 weeks at Bristol Avonmouth. At Cambridge Brookmount Court it was 24 weeks. These are examples from the latest centre table, rather than a ranking or a live slot check.",
+        "citations": [
+          "stats"
+        ]
+      },
+      {
+        "details": {
+          "title": "Who is responsible",
+          "blocks": [
+            {
+              "actors": [
+                "learners",
+                "dvsa",
+                "department-for-transport",
+                "transport-committee"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "what-needs-fixing": [
+      {
+        "issues": [
+          "local-queue",
+          "resale"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "two-waits",
+        "heading": "Why the two waits can move in different directions",
+        "text": "The November tables put the booking measure at 20.0 weeks in August 2026 and 19.7 weeks in September. Among people who took a test, the median rose from 11.1 to 11.6 weeks over that period. In October both measures fell, and 27.5% of completed tests had still taken more than 21 weeks from booking. Compare the two measures and local availability when judging progress.",
+        "citations": [
+          "stats",
+          "definitions"
+        ]
+      },
+      {
+        "id": "attribution",
+        "heading": "What the figures can tell us about the reforms",
+        "text": "The changes to booking rules, overtime and examiner recruitment overlap. Fewer swaps and more available slots are encouraging delivery signals. They leave open how much each change caused, how easily learners could find a local slot and what people paid to get through the process.",
+        "citations": [
+          "minister",
+          "audit"
+        ]
+      }
+    ],
+    "cost-and-funding": [
+      {
+        "id": "official-cost",
+        "heading": "What the learner pays",
+        "text": "The official Great Britain car test fees are £23 for theory and £62 for a weekday practical test, or £75 at weekends, evenings and bank holidays. On those rates, one theory test and one practical test cost £85 or £98 before lessons, vehicle use and any repeat tests.",
+        "citations": [
+          "fees"
+        ]
+      },
+      {
+        "id": "capacity-cost",
+        "heading": "What extra capacity costs",
+        "text": "The November update confirms the overtime incentive will continue. It gives no matched breakdown of extra spending, tests delivered by the scheme and the effect on waiting times. The test fee gives a price to the learner, and the cost of delivering the service also includes training, staff time and running the booking system.",
+        "citations": [
+          "minister",
+          "audit"
+        ]
+      }
+    ],
+    "whats-changing": [
+      {
+        "id": "next-release",
+        "heading": "Next figures to check",
+        "text": "DVSA’s published schedule lists the November 2026 availability and waiting figures for 9 December. Compare them with the latest centre tables, alongside the next ministerial update.",
+        "citations": [
+          "stats",
+          "calendar"
+        ]
+      },
+      {
+        "improvements": [
+          "local-queue",
+          "resale"
+        ]
+      },
+      {
+        "scrutiny": [
+          "recovery-updates"
+        ]
+      }
+    ],
+    "sources": []
+  }
+}
