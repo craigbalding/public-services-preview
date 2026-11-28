@@ -28,7 +28,7 @@ function permalink(id, label) {
 function page({ title, description, prefix, body, guideId }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
   const contactPath = `${prefix}corrections/`;
-  const correctionPath = guideId ? `${contactPath}?guide=${encodeURIComponent(guideId)}` : contactPath;
+  const correctionPath = guideId ? `${contactPath}?guide=${encodeURIComponent(guideId)}` : `${contactPath}?enquiry=correction`;
   return `<!doctype html>
 <html lang="en-GB">
 <head>
@@ -54,7 +54,7 @@ function page({ title, description, prefix, body, guideId }) {
       <p>Independent guides to public services.</p>
       ${correctionsFormId ? `<div class="footer-corrections">
         <a href="${correctionPath}">Send a correction or update</a> <span aria-hidden="true">·</span>
-        <a href="${contactPath}">Suggest a topic</a>
+        <a href="${contactPath}?enquiry=suggestion">Suggest a topic</a>
       </div>` : ''}
     </div>
   </footer>
@@ -118,7 +118,7 @@ function renderCorrections(formId, topics) {
       </div>
     </header>
     <div class="wrap corrections-form" data-guide-titles="${escape(JSON.stringify(guideTitles))}">
-      <p>To suggest a topic, choose <strong>Question</strong> and enter the proposed topic in <strong>Page or topic</strong>. For a correction or source update, choose <strong>Correction</strong> and give the guide’s title or link. You can edit any title already filled in.</p>
+      <p>For a topic suggestion, use <strong>Question</strong> and enter the proposed topic in <strong>Page or topic</strong>. For a correction or source update, use <strong>Correction</strong> and give the guide’s title or link. You can change any prefilled answers.</p>
       <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive personal information. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
       <p><a id="tally-form-link" href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
       <iframe id="tally-form" title="Contact form" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
