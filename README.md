@@ -1,6 +1,6 @@
 # Public services site
 
-Use Node.js 24. Run `npm ci` to install the share card renderer, then `node src/build.mjs` to build. The generated site lives in `dist/`. For local review, serve that directory with a static HTTP server, for example `python3 -m http.server 3000 --directory dist`.
+Use Node.js 24. Run `npm ci` to install the build dependencies, then `node src/build.mjs` to build. The generated site lives in `dist/`. For local review, serve that directory with a static HTTP server, for example `python3 -m http.server 3000 --directory dist`.
 
 For new topics, start with the [editorial playbook](docs/topic-playbook.md) and the [v7 topic format](docs/topic-format.md). The repository includes skills to [draft a topic](.agents/skills/draft-public-service-topic/SKILL.md) and [review a topic](.agents/skills/review-public-service-topic/SKILL.md).
 
@@ -9,6 +9,7 @@ For new topics, start with the [editorial playbook](docs/topic-playbook.md) and 
 - `content/actors.json` gives actors a shared ID and display name.
 - `content/data/` holds the snapshots used by charts.
 - `content/share-cards.json` holds each guide’s share fact, question, source ID and answer anchor. Optional images in `content/share-images/` are illustrative. The build renders PNGs from these records. Use the [share-card skill](.agents/skills/create-public-service-share-cards/SKILL.md) when creating or refreshing a record.
+- The build uses [atannex/share](https://github.com/atannex/share-js) to generate the social and email links as HTML anchors.
 
 The build validates required sections and resolves actor, citation, chart and visual references before writing HTML. Pull requests run the same build. To enable publication, select **Settings → Pages → Source → GitHub Actions** in the project repository. Pushes to `main` and manual runs on `main` deploy the generated site. Relative links support a repository Pages path and a later custom domain. The preview requests search-engine exclusion using a robots meta tag. GitHub Pages serves the published pages publicly.
 

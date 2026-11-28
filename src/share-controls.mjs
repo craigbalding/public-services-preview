@@ -1,5 +1,15 @@
+import { createShare } from '@atannex/share';
 import { faBluesky, faFacebookF, faLinkedinIn, faWhatsapp, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { escape } from './html.mjs';
+
+const networks = [
+  ['whatsapp', 'WhatsApp', faWhatsapp],
+  ['facebook', 'Facebook', faFacebookF],
+  ['x', 'X', faXTwitter],
+  ['bluesky', 'Bluesky', faBluesky],
+  ['linkedin', 'LinkedIn', faLinkedinIn],
+];
+const platforms = [...networks.map(([id]) => id), 'email'];
 
 function brandIcon({ icon: [width, height, , , path] }) {
   return `<svg aria-hidden="true" viewBox="0 0 ${width} ${height}" fill="currentColor"><path d="${path}"/></svg>`;
@@ -11,22 +21,15 @@ function actionIcon(content) {
 }
 
 export function shareControl({ title, description, url }) {
-  const post = `${title}\n\n${url}`;
-  const networks = [
-    ['whatsapp', 'WhatsApp', faWhatsapp, 'https://wa.me/', { text: post }],
-    ['facebook', 'Facebook', faFacebookF, 'https://www.facebook.com/sharer/sharer.php', { u: url }],
-    ['x', 'X', faXTwitter, 'https://x.com/intent/tweet', { url, text: title }],
-    ['bluesky', 'Bluesky', faBluesky, 'https://bsky.app/intent/compose', { text: post }],
-    ['linkedin', 'LinkedIn', faLinkedinIn, 'https://www.linkedin.com/sharing/share-offsite/', { url }],
-  ];
-  const links = networks.map(([id, name, icon, endpoint, params]) => {
-    const href = new URL(endpoint);
-    href.search = new URLSearchParams(params);
+  const sharing = createShare({ title, text: description, url }, { platforms, utm: false });
+  const links = networks.map(([id, name, icon]) => {
+    const href = sharing.href(id);
     const label = `Share on ${name}`;
-    return `<a class="share-${id}" href="${escape(href.href)}" target="_blank" rel="noopener noreferrer"
+    return `<a class="share-${id}" href="${escape(href)}" target="_blank" rel="noopener noreferrer"
       aria-label="${label}" title="${label}">${brandIcon(icon)}</a>`;
   }).join('\n      ');
-  const email = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${description}\r\n\r\n${url}`)}`;
+  // RFC 6068 represents line breaks in mailto message bodies as CRLF.
+  const email = sharing.href('email').replace(/(?:%0D)?%0A/g, '%0D%0A');
   return `<nav class="guide-share" data-guide-share aria-label="Share this guide">
     <span class="share-label">Share</span>
     <div class="share-options">
