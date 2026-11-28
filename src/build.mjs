@@ -3,6 +3,7 @@ import { basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderBars, renderStatus, renderTrend } from './charts.mjs';
 import { dateLabel, escape, number, requireCondition } from './html.mjs';
+import { imageHeight, imageWidth, prepareTopicShare } from './share-cards.mjs';
 
 const root = new URL('../', import.meta.url);
 const content = new URL('content/', root);
@@ -11,7 +12,12 @@ const dist = new URL('dist/', root);
 const readJson = async (base, path) => JSON.parse(await readFile(new URL(path, base), 'utf8'));
 const site = await readJson(root, 'site.json');
 const actors = await readJson(content, 'actors.json');
+const shareCards = await readJson(content, 'share-cards.json');
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const publicBase = URL.parse(site.publicBaseUrl);
+requireCondition(publicBase?.protocol === 'https:' && publicBase.pathname.endsWith('/') &&
+  !publicBase.search && !publicBase.hash && !publicBase.username && !publicBase.password,
+  'site.json: publicBaseUrl must be an HTTPS URL ending in a slash');
 const correctionsFormId = site.correctionsFormId ?? null;
 requireCondition(correctionsFormId === null ||
   (typeof correctionsFormId === 'string' && /^[a-z0-9]+$/i.test(correctionsFormId)),
@@ -25,7 +31,41 @@ function permalink(id, label) {
   return `<a class="permalink" href="#${escape(id)}" aria-label="Link to ${escape(label)}" title="Link to this passage">#</a>`;
 }
 
-function page({ title, description, prefix, body, guideId }) {
+function shareMetadata(share) {
+  const { title, description, url, image } = share;
+  return `<link rel="canonical" href="${escape(url)}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="${escape(site.name)}">
+  <meta property="og:title" content="${escape(title)}">
+  <meta property="og:description" content="${escape(description)}">
+  <meta property="og:url" content="${escape(url)}">
+  <meta name="twitter:title" content="${escape(title)}">
+  <meta name="twitter:description" content="${escape(description)}">
+  <meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">${image ? `
+  <meta property="og:image" content="${escape(image.url)}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="${imageWidth}">
+  <meta property="og:image:height" content="${imageHeight}">
+  <meta property="og:image:alt" content="${escape(image.alt)}">
+  <meta name="twitter:image" content="${escape(image.url)}">
+  <meta name="twitter:image:alt" content="${escape(image.alt)}">` : ''}`;
+}
+
+function shareControl({ title, description, url }) {
+  const email = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${description}\r\n\r\n${url}`)}`;
+  return `<details class="guide-share" data-guide-share data-share-title="${escape(title)}" data-share-text="${escape(description)}">
+    <summary>Share this guide</summary>
+    <div class="share-options">
+      <button type="button" data-share-native hidden>Share to an app</button>
+      <button type="button" data-share-copy hidden>Copy link</button>
+      <a href="${escape(email)}">Email link</a>
+    </div>
+    <label data-share-manual hidden>Link to this guide <input type="url" value="${escape(url)}" readonly></label>
+    <p role="status" class="share-status"></p>
+  </details>`;
+}
+
+function page({ title, description, prefix, body, guideId, share }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
   const contactPath = `${prefix}corrections/`;
   const correctionPath = guideId ? `${contactPath}?guide=${encodeURIComponent(guideId)}` : `${contactPath}?enquiry=correction`;
@@ -36,6 +76,7 @@ function page({ title, description, prefix, body, guideId }) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escape(description)}">
   ${site.indexable ? '' : '<meta name="robots" content="noindex, nofollow">'}
+  ${share ? shareMetadata(share) : ''}
   <title>${escape(fullTitle)}</title>
   <link rel="stylesheet" href="${prefix}assets/site.css">
 </head>
@@ -170,7 +211,7 @@ async function loadTopic(filename) {
   };
 }
 
-async function renderTopic(topic, topicsById) {
+async function renderTopic(topic, topicsById, share) {
   const allBlocks = contentBlocks(Object.values(topic.sections).flat());
   const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
   const visualIds = listed('visual');
@@ -514,18 +555,22 @@ async function renderTopic(topic, topicsById) {
     return `<li><a href="../${escape(id)}/">${escape(topicsById.get(id).title)}</a></li>`;
   });
 
-  return page({
+  const html = page({
     title: topic.title,
     description: topic.summary,
     prefix: '../../',
     guideId: topic.id,
+    share,
     body: `<header class="article-hero${mobileLinks ? ' article-hero--compact' : ''}">
       <div class="wrap">
         <a class="back" href="../../#topics"><span aria-hidden="true">←</span> All topics</a>
         <p class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</p>
         <h1>${escape(topic.title)}</h1>
         <p class="article-summary">${escape(topic.summary)} ${citations(topic.citations)}</p>
-        <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
+        <div class="guide-tools">
+          <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
+          ${shareControl(share)}
+        </div>
       </div>
     </header>
     <div class="wrap article-layout${mobileLinks ? ' has-mobile-contents' : ''}">
@@ -537,20 +582,34 @@ async function renderTopic(topic, topicsById) {
         ${includesSources ? '' : `<section class="article-section sources" id="sources"><h2>Sources</h2>${sourceList}</section>`}
         ${relatedLinks.length ? `<nav class="article-section related-topics" aria-label="Related topics"><h2>Related topics</h2><ul>${relatedLinks.join('')}</ul></nav>` : ''}
       </article>
-    </div>`,
+    </div>
+    <script src="../../assets/share.js" defer></script>`,
   });
+  requireCondition(!share.answerAt || html.includes(` id="${share.answerAt}"`),
+    `${topic.id}: share card answer anchor #${share.answerAt} is missing`);
+  return html;
 }
 
 const files = (await readdir(new URL('topics/', content))).filter(file => file.endsWith('.json')).sort();
 requireCondition(files.length, 'Add at least one topic in content/topics');
 const topics = await Promise.all(files.map(loadTopic));
 const topicsById = new Map(topics.map(topic => [topic.id, topic]));
-const topicPages = await Promise.all(topics.map(topic => renderTopic(topic, topicsById)));
+requireCondition(shareCards && typeof shareCards === 'object' && !Array.isArray(shareCards),
+  'share-cards.json must contain an object keyed by topic ID');
+for (const id of Object.keys(shareCards)) {
+  requireCondition(topicsById.has(id), `share-cards.json: unknown topic ${id}`);
+}
+const imageDirectory = new URL('share-images/', content);
+const shares = await Promise.all(topics.map(topic => prepareTopicShare(topic, shareCards[topic.id], site, imageDirectory)));
+const topicPages = await Promise.all(topics.map((topic, index) => renderTopic(topic, topicsById, shares[index])));
 
 await rm(dist, { recursive: true, force: true });
-await mkdir(new URL('assets/', dist), { recursive: true });
+await mkdir(new URL('assets/share/', dist), { recursive: true });
 await copyFile(new URL('src/site.css', root), new URL('assets/site.css', dist));
 await copyFile(new URL('src/topic-search.js', root), new URL('assets/topic-search.js', dist));
+await copyFile(new URL('src/share.js', root), new URL('assets/share.js', dist));
+await Promise.all(shares.filter(share => share.image).map(({ image }) =>
+  writeFile(new URL(`assets/share/${image.filename}`, dist), image.png)));
 await writeFile(new URL('.nojekyll', dist), '');
 await writeFile(new URL('index.html', dist), renderIndex(topics));
 if (correctionsFormId) {

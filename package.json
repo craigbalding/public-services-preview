@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "dependencies": {
+    "@napi-rs/canvas": "1.2.1"
+  }
+}

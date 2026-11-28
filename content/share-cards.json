@@ -1,0 +1,186 @@
+{
+  "ambulance-handover-delays": {
+    "fact": "87.6%",
+    "label": "of ambulance handovers took 45 minutes or less",
+    "period": "2025/26",
+    "source": "cqc",
+    "credit": "Care Quality Commission",
+    "question": "What happens when a handover takes longer?",
+    "answerAt": "finding-ambulance-availability"
+  },
+  "asylum-refusals": {
+    "fact": "46%",
+    "label": "of refused asylum applicants who first applied in 2013–22 had a recorded return",
+    "period": "By March 2026",
+    "source": "oxford-returns",
+    "credit": "Migration Observatory",
+    "question": "What can returns records tell us about who stayed?",
+    "answerAt": "finding-presence-unknown"
+  },
+  "bank-transfer-scam-refunds": {
+    "fact": "82%",
+    "label": "of closed Faster Payments scam claims were decided within five business days",
+    "period": "Jan–Mar 2026",
+    "source": "dashboard",
+    "credit": "Payment Systems Regulator",
+    "question": "How does a payment firm decide whether to refund you?",
+    "answerAt": "how-it-works"
+  },
+  "carers-allowance-overpayments": {
+    "fact": "About 200",
+    "label": "original Carer’s Allowance decisions changed out of 2,400 reassessments cleared",
+    "period": "Five months to 13 Sep 2026",
+    "source": "reassessment-progress",
+    "credit": "DWP",
+    "question": "What happens if DWP changes a decision?",
+    "answerAt": "outcomes"
+  },
+  "charity-concerns": {
+    "fact": "1,186",
+    "label": "serious incident reports opened by the Charity Commission in one quarter",
+    "period": "Jul–Sep 2026",
+    "source": "quarter",
+    "credit": "Charity Commission",
+    "question": "How does the Commission decide what to investigate?",
+    "answerAt": "how-it-works"
+  },
+  "crown-court-waits": {
+    "fact": "25%",
+    "label": "of Crown Court trials in the effectiveness measure needed another date",
+    "period": "Apr–Jun 2026",
+    "source": "statistics",
+    "credit": "Ministry of Justice",
+    "question": "Why do trial dates slip?",
+    "answerAt": "finding-lost-dates"
+  },
+  "driving-test-waits": {
+    "fact": "10.3 weeks",
+    "label": "median wait after booking, for car tests taken that month",
+    "period": "Oct 2026 · provisional",
+    "source": "stats",
+    "credit": "DVSA",
+    "question": "Are driving test waits getting shorter?",
+    "answerAt": "two-waits",
+    "image": "driving.jpg"
+  },
+  "education-health-and-care-plans": {
+    "fact": "46.1%",
+    "label": "of new education, health and care plans in the timeliness measure were issued within 20 weeks",
+    "period": "2025",
+    "source": "stats",
+    "credit": "Department for Education",
+    "question": "How often do EHC plans take over a year?",
+    "answerAt": "finding-long-waits"
+  },
+  "involuntary-energy-prepayment": {
+    "fact": "36% fall",
+    "label": "in smart prepayment disconnections lasting over three hours, an indicative estimate",
+    "period": "Oct 2026 evaluation",
+    "source": "evaluation",
+    "credit": "Ofgem",
+    "question": "How much do we know about the effect of the new rules?",
+    "answerAt": "outcomes"
+  },
+  "medical-driving-licences": {
+    "fact": "24,768",
+    "label": "DVLA medical driving licence applications had been open six months or more",
+    "period": "12 Oct 2026",
+    "source": "october-age",
+    "credit": "DfT written answer",
+    "question": "What can hold up a decision?",
+    "answerAt": "finding-evidence"
+  },
+  "nhs-cyber-disruption": {
+    "fact": "10,152",
+    "label": "acute outpatient appointments postponed at two London trusts after the Synnovis attack",
+    "period": "26 Sep 2024 update · provisional",
+    "source": "sept26",
+    "credit": "NHS England London",
+    "question": "How did the NHS restore testing?",
+    "answerAt": "care-recovery"
+  },
+  "passport-application-waits": {
+    "fact": "99.7%",
+    "label": "of standard UK passport applications needing no further information were processed within three weeks",
+    "period": "2025",
+    "source": "performance",
+    "credit": "Home Office",
+    "question": "What can make a passport take longer?",
+    "answerAt": "finding-complex-cases"
+  },
+  "pothole-repairs": {
+    "fact": "About 24%",
+    "label": "of pothole repairs in Redbridge were estimated to be temporary",
+    "scope": "Redbridge",
+    "period": "2025/26",
+    "source": "redbridge",
+    "credit": "Redbridge Council",
+    "question": "Why might a council use a temporary repair?",
+    "answerAt": "finding-temporary-repairs"
+  },
+  "prisoner-tagging": {
+    "fact": "55%",
+    "label": "of GPS or curfew tags in the cases reviewed by inspectors were fitted promptly",
+    "period": "Sentenced or released Sep–Nov 2025",
+    "source": "inspection",
+    "credit": "Joint inspectorates",
+    "question": "What happens while someone waits for a tag?",
+    "answerAt": "finding-fitting-delay",
+    "image": "tagging.jpg"
+  },
+  "pub-business-rates": {
+    "fact": "£202 less",
+    "label": "on the annual pub rates bill in an official worked example, despite a higher valuation",
+    "period": "2026 revaluation",
+    "source": "example",
+    "credit": "MHCLG worked example",
+    "question": "How can a pub’s valuation rise and its bill fall?",
+    "answerAt": "worked-result"
+  },
+  "rail-delay-compensation": {
+    "fact": "51%",
+    "label": "of survey respondents with an eligible delay of at least 30 minutes claimed or received automatic compensation",
+    "period": "2025",
+    "source": "survey",
+    "credit": "DfT survey",
+    "question": "What stops passengers claiming?",
+    "answerAt": "finding-missing-claims"
+  },
+  "sewage-overflow-enforcement": {
+    "fact": "About 35% fewer",
+    "label": "recorded storm overflow spills in 2025 than in 2024",
+    "period": "2025 compared with 2024",
+    "source": "rainfall",
+    "credit": "Environment Agency",
+    "question": "What does a fall in the spill count tell us?",
+    "answerAt": "finding-spill-counts"
+  },
+  "small-business-late-payments": {
+    "fact": "Almost £11bn",
+    "label": "estimated annual cost to the UK economy of businesses paying suppliers late",
+    "period": "2025 research",
+    "source": "research",
+    "credit": "Department for Business and Trade",
+    "question": "What can a supplier do about a late invoice?",
+    "answerAt": "how-it-works"
+  },
+  "social-housing-repairs": {
+    "fact": "24 hours",
+    "label": "under Awaab’s Law to investigate a potential emergency and make a confirmed emergency hazard safe",
+    "period": "From Oct 2025",
+    "source": "phase-one",
+    "credit": "Housing ministry guidance",
+    "question": "When does the clock start?",
+    "answerAt": "step-hazard-response--assess-risk",
+    "image": "housing.jpg"
+  },
+  "unpaid-child-maintenance": {
+    "fact": "77%",
+    "label": "of parents due to pay child maintenance through Collect and Pay paid something",
+    "period": "Quarter to Jun 2026",
+    "source": "statistics",
+    "credit": "DWP",
+    "question": "What happens when a payment is missed?",
+    "answerAt": "how-it-works"
+  }
+}

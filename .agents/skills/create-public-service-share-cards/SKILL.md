@@ -23,6 +23,8 @@ Use one prominent fact and a short, open question that leads naturally to the an
 
 Hand off the proposed copy, the answer and guide anchor, and the source or dataset reference for [independent review](../review-public-service-topic/SKILL.md). Recheck the fact and question whenever the underlying release or guide is refreshed. Regenerate the card if the change affects what it says.
 
+Put approved copy in [share-cards.json](../../../content/share-cards.json) under the topic ID. Use `source` for the topic’s citation ID and `answerAt` for the published guide anchor without the hash. Add an optional illustrative JPEG in `content/share-images/` and reference its filename in `image`. Run `node src/build.mjs` and check the card in `dist/assets/share/` and the preview text in the built guide.
+
 ## Worked example
 
 The driving-test pilot pairs **10.3 weeks** with **Are driving test waits getting shorter?** The figure is the provisional October 2026 median from booking to test among people who took a practical car test in Great Britain that month. The guide’s answer compares that series with DVSA’s separate booking availability measure. Both fell in October, after moving in different directions between August and September. The card can lead to that answer, with the observation period and provisional status visible beside the number. [Guide answer](https://craigbalding.github.io/public-services-preview/topics/driving-test-waits/#two-waits) · [Completed-test wait series](../../../content/data/driving-test-completed-wait.json)
