@@ -12,6 +12,10 @@ const readJson = async (base, path) => JSON.parse(await readFile(new URL(path, b
 const site = await readJson(root, 'site.json');
 const actors = await readJson(content, 'actors.json');
 const slug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const correctionsFormId = site.correctionsFormId ?? null;
+requireCondition(correctionsFormId === null ||
+  (typeof correctionsFormId === 'string' && /^[a-z0-9]+$/i.test(correctionsFormId)),
+  'site.json: correctionsFormId must be a published Tally form ID or null');
 
 function contentBlocks(blocks) {
   return blocks.flatMap(block => block.details ? [block, ...contentBlocks(block.details.blocks)] : [block]);
@@ -42,6 +46,7 @@ function page({ title, description, prefix, body }) {
     <div class="wrap footer-inner">
       <a class="brand" href="${prefix}"><span class="brand-mark" aria-hidden="true"></span>${escape(site.name)}</a>
       <p>Independent guides to public services.</p>
+      ${correctionsFormId ? `<a class="footer-corrections" href="${prefix}corrections/">Corrections</a>` : ''}
     </div>
   </footer>
 </body>
@@ -71,6 +76,35 @@ function renderIndex(topics) {
       <h2>Explore topics</h2>
       <ul class="topic-list">${cards}</ul>
     </section>`,
+  });
+}
+
+function renderCorrections(formId) {
+  const embed = new URL(`https://tally.so/embed/${formId}`);
+  embed.search = new URLSearchParams({
+    alignLeft: '1',
+    hideTitle: '1',
+    transparentBackground: '1',
+    dynamicHeight: '1',
+  });
+  const prompt = 'Spotted an error or something we’ve missed? Tell us.';
+
+  return page({
+    title: 'Corrections',
+    description: prompt,
+    prefix: '../',
+    body: `<header class="article-hero article-hero--compact">
+      <div class="wrap">
+        <h1>Corrections</h1>
+        <p class="article-summary">${escape(prompt)}</p>
+      </div>
+    </header>
+    <div class="wrap corrections-form">
+      <p>This form uses Tally, a third-party service, to email us your message. Please leave out sensitive information, such as medical details or case reference numbers. <a href="https://tally.so/help/privacy-policy">Read Tally’s privacy policy</a>.</p>
+      <p><a href="https://tally.so/r/${escape(formId)}">Open the form on Tally</a></p>
+      <iframe title="Send a correction" src="${escape(embed.href)}" height="720" loading="lazy" referrerpolicy="no-referrer"></iframe>
+    </div>
+    <script src="https://tally.so/widgets/embed.js" defer></script>`,
   });
 }
 
@@ -486,6 +520,11 @@ await mkdir(new URL('assets/', dist), { recursive: true });
 await copyFile(new URL('src/site.css', root), new URL('assets/site.css', dist));
 await writeFile(new URL('.nojekyll', dist), '');
 await writeFile(new URL('index.html', dist), renderIndex(topics));
+if (correctionsFormId) {
+  const directory = new URL('corrections/', dist);
+  await mkdir(directory, { recursive: true });
+  await writeFile(new URL('index.html', directory), renderCorrections(correctionsFormId));
+}
 for (const [index, topic] of topics.entries()) {
   const directory = new URL(`topics/${topic.id}/`, dist);
   await mkdir(directory, { recursive: true });

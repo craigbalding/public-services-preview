@@ -179,7 +179,11 @@ section[id], li[id], h3[id], .metric[id], .finding[id], figure[id], .article-det
 .sources li + li { margin-top: .8rem; }
 .sources :target { background: var(--light-green); }
 .footer { border-top: 1px solid var(--line); }
-.footer-inner p { color: var(--muted); font-size: .84rem; }
+.footer-inner p, .footer-corrections { font-size: .84rem; }
+.footer-inner p { color: var(--muted); }
+.corrections-form { max-width: 46rem; padding-block: 2rem 3rem; }
+.corrections-form p + p { margin-top: .6rem; }
+.corrections-form iframe { display: block; width: 100%; margin-block: 1.25rem; border: 0; }
 
 @media (max-width: 48rem) {
   .home-hero-inner { min-height: 0; grid-template-columns: 1fr; padding-block: 3rem; }
