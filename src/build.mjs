@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { renderBars, renderStatus, renderTrend } from './charts.mjs';
 import { dateLabel, escape, number, requireCondition } from './html.mjs';
 import { imageHeight, imageWidth, prepareTopicShare } from './share-cards.mjs';
+import { shareControl } from './share-controls.mjs';
 
 const root = new URL('../', import.meta.url);
 const content = new URL('content/', root);
@@ -51,20 +52,6 @@ function shareMetadata(share) {
   <meta name="twitter:image:alt" content="${escape(image.alt)}">` : ''}`;
 }
 
-function shareControl({ title, description, url }) {
-  const email = `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(`${description}\r\n\r\n${url}`)}`;
-  return `<details class="guide-share" data-guide-share data-share-title="${escape(title)}" data-share-text="${escape(description)}">
-    <summary>Share this guide</summary>
-    <div class="share-options">
-      <button type="button" data-share-native hidden>Share to an app</button>
-      <button type="button" data-share-copy hidden>Copy link</button>
-      <a href="${escape(email)}">Email link</a>
-    </div>
-    <label data-share-manual hidden>Link to this guide <input type="url" value="${escape(url)}" readonly></label>
-    <p role="status" class="share-status"></p>
-  </details>`;
-}
-
 function page({ title, description, prefix, body, guideId, share }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
   const contactPath = `${prefix}corrections/`;
@@ -78,7 +65,7 @@ function page({ title, description, prefix, body, guideId, share }) {
   ${site.indexable ? '' : '<meta name="robots" content="noindex, nofollow">'}
   ${share ? shareMetadata(share) : ''}
   <title>${escape(fullTitle)}</title>
-  <link rel="stylesheet" href="${prefix}assets/site.css">
+  <link rel="stylesheet" href="${prefix}assets/site.css?v=2">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -583,7 +570,7 @@ async function renderTopic(topic, topicsById, share) {
         ${relatedLinks.length ? `<nav class="article-section related-topics" aria-label="Related topics"><h2>Related topics</h2><ul>${relatedLinks.join('')}</ul></nav>` : ''}
       </article>
     </div>
-    <script src="../../assets/share.js" defer></script>`,
+    <script src="../../assets/share.js?v=2" defer></script>`,
   });
   requireCondition(!share.answerAt || html.includes(` id="${share.answerAt}"`),
     `${topic.id}: share card answer anchor #${share.answerAt} is missing`);
