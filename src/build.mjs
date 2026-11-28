@@ -65,7 +65,7 @@ function page({ title, description, prefix, body, guideId, share }) {
   ${site.indexable ? '' : '<meta name="robots" content="noindex, nofollow">'}
   ${share ? shareMetadata(share) : ''}
   <title>${escape(fullTitle)}</title>
-  <link rel="stylesheet" href="${prefix}assets/site.css?v=2">
+  <link rel="stylesheet" href="${prefix}assets/site.css?v=3">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -527,10 +527,13 @@ async function renderTopic(topic, topicsById, share) {
   });
   const sourceList = `<ol>${sources.join('')}</ol>`;
   const includesSources = topic.sectionOrder.some(section => section.id === 'sources');
+  const hasTakeaways = topic.sectionOrder.some(section => section.id === 'at-a-glance');
+  const shareLinks = shareControl(share);
   const sections = await Promise.all(topic.sectionOrder.map(async ({ id, title }) => {
     const blocks = await Promise.all(topic.sections[id].map(renderBlock));
     const references = id === 'sources' ? `<div class="sources"><h3>References</h3>${sourceList}</div>` : '';
-    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)} ${permalink(id, title)}</h2>${blocks.join('')}${references}</section>`;
+    const sharing = id === 'at-a-glance' ? shareLinks : '';
+    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)} ${permalink(id, title)}</h2>${blocks.join('')}${references}${sharing}</section>`;
   }));
   const navigationLinks = entries => entries.map(({ id, title }) =>
     `<li><a href="#${escape(id)}">${escape(title)}</a></li>`).join('');
@@ -554,10 +557,8 @@ async function renderTopic(topic, topicsById, share) {
         <p class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</p>
         <h1>${escape(topic.title)}</h1>
         <p class="article-summary">${escape(topic.summary)} ${citations(topic.citations)}</p>
-        <div class="guide-tools">
-          <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
-          ${shareControl(share)}
-        </div>
+        <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
+        ${hasTakeaways ? '' : shareLinks}
       </div>
     </header>
     <div class="wrap article-layout${mobileLinks ? ' has-mobile-contents' : ''}">

@@ -61,8 +61,8 @@ section[id], li[id], h3[id], .metric[id], .finding[id], figure[id], .article-det
 .article-hero--compact h1 { max-width: 21ch; font-size: clamp(3.1rem, 6vw, 5.1rem); }
 .article-summary { max-width: 42rem; font-size: clamp(1.06rem, 2vw, 1.29rem); }
 .review-date, .chart-date, .source-detail { color: var(--muted); font-size: .86rem; }
-.guide-tools { margin-top: 1.1rem; }
-.guide-share { display: flex; flex-wrap: wrap; align-items: center; column-gap: .4rem; margin-top: .35rem; font-size: .86rem; }
+.review-date { margin-top: 1.1rem; }
+.guide-share { display: flex; flex-wrap: wrap; align-items: center; column-gap: .4rem; margin-top: .8rem; font-size: .86rem; }
 .share-label { color: var(--muted); font-weight: 650; }
 .share-options { display: flex; flex-wrap: wrap; align-items: center; }
 .share-options a, .share-options button:not([hidden]) {
