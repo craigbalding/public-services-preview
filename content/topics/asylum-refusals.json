@@ -4,9 +4,11 @@
   "title": "What happens after the Home Office refuses an asylum claim?",
   "category": "Immigration",
   "scope": "United Kingdom",
-  "summary": "How many people are still in the UK after a final refusal, and how long do they stay? Follow the decision through appeals, Immigration Enforcement and departure, and see where the public record runs out.",
+  "summary": "A first asylum refusal can be appealed. Once appeal rights end, people with no other permission to stay are expected to leave the UK. Published figures give some historic counts, but leave unanswered how many remain after a final refusal and for how long.",
   "reviewed": "2026-11-27",
-  "citations": ["asylum-guide", "asylum-system", "october-letter"],
+  "citations": ["asylum-guide", "appeal-rights", "asylum-system", "october-letter"],
+  "searchTerms": ["refused asylum seekers", "failed asylum", "asylum appeals", "removals", "returns", "immigration enforcement"],
+  "related": ["prisoner-tagging"],
   "sources": {
     "asylum-guide": {
       "title": "Information booklet about your asylum application",

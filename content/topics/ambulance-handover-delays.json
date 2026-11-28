@@ -4,13 +4,10 @@
   "title": "Why does an ambulance wait outside A&E?",
   "category": "Health",
   "scope": "England",
-  "summary": "Follow the patient from arrival at hospital through clinical handover and the crew’s return to service. The same wait can delay care for the patient on board and leave the next caller waiting for an ambulance.",
+  "summary": "An ambulance waits outside A&E when the hospital cannot take handover promptly. The hospital is responsible for the patient from arrival, but the crew can remain tied up until staff can take over. That can delay care for the person on board and the next caller.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "initial",
-    "winter",
-    "safety"
-  ],
+  "citations": ["initial", "winter", "safety"],
+  "searchTerms": ["ambulance queues", "hospital handover", "emergency department", "999 delays"],
   "sources": {
     "initial": {
       "title": "Guidance for emergency departments: initial assessment",

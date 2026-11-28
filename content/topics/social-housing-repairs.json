@@ -4,9 +4,10 @@
   "title": "How do social landlords deal with unsafe homes?",
   "category": "Housing",
   "scope": "England",
-  "summary": "Follow a hazard report from the first call to a safe home. See when Awaab’s Law applies, what repairs data can tell us, and who pays when a repair takes longer or needs repeating.",
+  "summary": "In England, Awaab’s Law requires a social landlord to investigate a potential emergency and make a confirmed emergency hazard safe within the same 24 hours. Job records show how soon repairs are marked complete. Repeat reports and follow-up checks can show whether the home stayed safe.",
   "reviewed": "2026-11-27",
-  "citations": ["phase-one", "phase-two", "repair-performance"],
+  "citations": ["phase-one", "phase-two", "repair-performance", "peabody-decision"],
+  "searchTerms": ["Awaabs Law", "damp and mould", "housing association repairs", "council housing", "emergency repairs"],
   "sources": {
     "phase-one": {
       "title": "Awaab’s Law guidance for social landlords",

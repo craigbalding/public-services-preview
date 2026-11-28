@@ -4,13 +4,10 @@
   "title": "When can an energy supplier put a household on prepayment?",
   "category": "Energy",
   "scope": "Great Britain",
-  "summary": "Follow an overdue energy bill from repayment options to a possible prepayment switch. See which safeguards apply, what happens when credit runs out and what Ofgem has found about the rules.",
+  "summary": "In Great Britain, an energy supplier must try other repayment options and assess household risk before moving a customer in debt to prepayment without consent. If credit runs out after the switch, the household can lose heat or power until it tops up or receives support.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "guide",
-    "evaluation",
-    "debt"
-  ],
+  "citations": ["guide", "code", "help"],
+  "searchTerms": ["prepayment meter", "forced meter", "energy debt", "self disconnection", "Ofgem"],
   "sources": {
     "guide": {
       "title": "Installing a prepayment meter without your permission",

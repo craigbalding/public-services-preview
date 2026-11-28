@@ -4,13 +4,10 @@
   "title": "What happens when child maintenance goes unpaid?",
   "category": "Family support",
   "scope": "Great Britain",
-  "summary": "Follow a missed payment from Direct Pay to collection and enforcement. See what the Child Maintenance Service knows about unpaid amounts and when the money reaches the receiving parent.",
+  "summary": "If a Direct Pay payment is missed, the receiving parent may need to tell the Child Maintenance Service, which can move the case to Collect and Pay. There, the service tracks payments and can take enforcement action. Recovery can still be partial, leaving some or all of the money unpaid.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "payments",
-    "statistics",
-    "audit"
-  ],
+  "citations": ["payments", "statistics", "audit"],
+  "searchTerms": ["child support", "CMS", "maintenance arrears", "Direct Pay", "Collect and Pay"],
   "sources": {
     "payments": {
       "title": "Child Maintenance Service: making and receiving payments",

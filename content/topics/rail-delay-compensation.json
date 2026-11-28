@@ -4,13 +4,10 @@
   "title": "Do passengers get the rail delay compensation they’re owed?",
   "category": "Rail",
   "scope": "Great Britain",
-  "summary": "Follow a delayed journey through eligibility, claim and payment. Compare how quickly claims are processed with how often passengers who qualify get as far as claiming.",
+  "summary": "Passengers in Great Britain can claim compensation for qualifying rail delays, with thresholds and amounts depending on the operator’s scheme. In DfT’s 2025 survey, 51% of respondents asked about an eligible delay of at least 30 minutes claimed or received automatic compensation.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "guide",
-    "claims",
-    "survey"
-  ],
+  "citations": ["guide", "payouts", "survey"],
+  "searchTerms": ["Delay Repay", "train refund", "delayed train", "rail compensation", "missed connections"],
   "sources": {
     "guide": {
       "title": "Rail compensation",

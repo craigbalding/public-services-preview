@@ -21,6 +21,10 @@ function contentBlocks(blocks) {
   return blocks.flatMap(block => block.details ? [block, ...contentBlocks(block.details.blocks)] : [block]);
 }
 
+function permalink(id, label) {
+  return `<a class="permalink" href="#${escape(id)}" aria-label="Link to ${escape(label)}" title="Link to this passage">#</a>`;
+}
+
 function page({ title, description, prefix, body }) {
   const fullTitle = title ? `${title} | ${site.name}` : site.name;
   return `<!doctype html>
@@ -55,7 +59,9 @@ function page({ title, description, prefix, body }) {
 }
 
 function renderIndex(topics) {
-  const cards = topics.map(topic => `<li>
+  const cards = topics.map(topic => `<li data-topic-search="${escape([
+    topic.title, topic.summary, topic.category, topic.scope, ...(topic.searchTerms ?? []),
+  ].join(' '))}">
     <a class="topic-card" href="topics/${topic.id}/">
       <span class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</span>
       <span class="card-title">${escape(topic.title)}</span>
@@ -74,8 +80,14 @@ function renderIndex(topics) {
     </div>
     <section class="wrap topics" id="topics">
       <h2>Explore topics</h2>
-      <ul class="topic-list">${cards}</ul>
-    </section>`,
+      <div class="topic-search" hidden>
+        <label for="topic-query">Search topics</label>
+        <input id="topic-query" type="search" aria-controls="topic-results" placeholder="For example, potholes or Delay Repay">
+        <p class="search-status" role="status"></p>
+      </div>
+      <ul class="topic-list" id="topic-results">${cards}</ul>
+    </section>
+    <script src="./assets/topic-search.js" defer></script>`,
   });
 }
 
@@ -115,6 +127,11 @@ async function loadTopic(filename) {
   }
   requireCondition(basename(filename, '.json') === topic.id, `${filename}: filename must match topic ID`);
   const template = await readJson(content, `templates/${topic.template}.json`);
+  for (const field of ['searchTerms', 'related']) {
+    requireCondition(topic[field] === undefined || (Array.isArray(topic[field]) &&
+      topic[field].every(value => typeof value === 'string' && value.trim()) &&
+      new Set(topic[field]).size === topic[field].length), `${filename}: invalid ${field}`);
+  }
   const sectionIds = template.sections.map(section => section.id);
   requireCondition(new Set(sectionIds).size === sectionIds.length, `${filename}: duplicate template section`);
   const sectionOrder = template.sections.filter(({ id, optional }) => !optional || Object.hasOwn(topic.sections, id));
@@ -145,7 +162,7 @@ async function loadTopic(filename) {
   };
 }
 
-async function renderTopic(topic) {
+async function renderTopic(topic, topicsById) {
   const allBlocks = contentBlocks(Object.values(topic.sections).flat());
   const listed = kind => allBlocks.flatMap(block => block[kind] ?? []);
   const visualIds = listed('visual');
@@ -267,7 +284,7 @@ async function renderTopic(topic) {
         throw new Error(`${topic.id}: unknown chart type ${chart.type}`);
     }
     return `<figure class="figure chart${chart.type === 'rates' ? ' rate-chart' : ''}" id="chart-${id}">
-      <figcaption>${escape(chart.title)} ${citations(chart.citations)}</figcaption>
+      <figcaption>${escape(chart.title)} ${citations(chart.citations)} ${permalink(`chart-${id}`, chart.title)}</figcaption>
       ${chart.description ? `<p class="chart-description">${escape(chart.description)}</p>` : ''}
       ${body}
       ${chart.note ? `<p class="chart-note">${escape(chart.note)}</p>` : ''}
@@ -292,7 +309,7 @@ async function renderTopic(topic) {
       }
       const value = reportedPercentage ? `${number.format(percentage)}%` : `${number.format(count)} of ${number.format(denominator)}`;
       return `<div class="metric" id="metric-${id}">
-        <dt>${escape(metric.label)}</dt>
+        <dt>${escape(metric.label)} ${permalink(`metric-${id}`, metric.label)}</dt>
         <dd><strong class="metric-value">${value}</strong>
           <p class="metric-source">${escape(metric.type)}${metric.asOf ? ` · ${dateLabel(metric.asOf)}` : ''}${metric.period ? ` · ${escape(metric.period)}` : ''} ${citations(metric.citations)}</p>
           ${metric.population ? `<p class="metric-population">${escape(metric.population)}.</p>` : ''}
@@ -335,7 +352,7 @@ async function renderTopic(topic) {
       requireCondition(!inline || (typeof measure === 'string' && measure.trim()), `${topic.id}: issue ${id} needs a measure of progress`);
       const progress = inline ? `<p class="finding-measure"><strong>What would show progress.</strong> ${escape(measure)}</p>` : '';
       return `<div class="finding"${inline ? ` id="finding-${id}"` : ''}>
-        <h3>${escape(issue.title)}</h3>
+        <h3>${escape(issue.title)}${inline ? ` ${permalink(`finding-${id}`, issue.title)}` : ''}</h3>
         <p class="finding-step">${step}</p>
         <p>${escape(issue.text)} ${citations(issue.citations)}</p>
         ${metrics}
@@ -360,7 +377,7 @@ async function renderTopic(topic) {
       requireCondition(typeof measure === 'string' && measure.trim(), `${topic.id}: improvement ${id} needs a measure of progress`);
       getActor(improvement.owner);
       return `<div class="finding" id="improvement-${id}">
-        <h3>${escape(improvement.title)}</h3>
+        <h3>${escape(improvement.title)} ${permalink(`improvement-${id}`, improvement.title)}</h3>
         <p><strong>${escape(actors[improvement.owner])}.</strong> ${escape(improvement.status)} ${citations(improvement.citations)}</p>
         ${inlineIssues.includes(id)
           ? `<p class="finding-next"><a href="#finding-${id}">See how to measure progress</a></p>`
@@ -406,12 +423,12 @@ async function renderTopic(topic) {
           const status = event.status === 'requested' && !exchange.recording ? 'Requested' : statusLabels[event.status];
           return `<li>${dateLabel(event.date)} · <strong>${status}</strong>. ${escape(event.text)} ${citations(event.citations)}</li>`;
         });
-        followUps.push(`<li id="follow-up-${id}"><h4>${escape(followUp.title)}</h4>
+        followUps.push(`<li id="follow-up-${id}"><h4>${escape(followUp.title)} ${permalink(`follow-up-${id}`, followUp.title)}</h4>
           <ol class="follow-up-history">${history.join('')}</ol>
           <p class="finding-next"><a href="#scrutiny-${id}">Read the exchange</a></p></li>`);
       }
       return `<div class="finding" id="scrutiny-${id}">
-        <h3>${escape(exchange.question)}</h3>
+        <h3>${escape(exchange.question)} ${permalink(`scrutiny-${id}`, exchange.question)}</h3>
         <p class="finding-step">${step} <span aria-hidden="true">·</span> <a href="${escape(record.url)}">${escape(recordLabel)}</a></p>
         <p>${escape(exchange.answer)} ${citations(exchange.citations)}</p>
         <p><strong>What to watch for.</strong> ${escape(exchange.watch)}</p>
@@ -432,7 +449,7 @@ async function renderTopic(topic) {
     const anchor = block.id ? ` id="${escape(block.id)}"` : '';
     switch (blockKinds[0]) {
       case 'text':
-        return `${block.heading ? `<h3${anchor}>${escape(block.heading)}</h3>` : ''}<p${block.heading ? '' : anchor}>${escape(block.text)} ${citations(block.citations)}</p>`;
+        return `${block.heading ? `<h3${anchor}>${escape(block.heading)}${block.id ? ` ${permalink(block.id, block.heading)}` : ''}</h3>` : ''}<p${block.heading ? '' : anchor}>${escape(block.text)} ${citations(block.citations)}</p>`;
       case 'visual':
         return renderFlow(block.visual);
       case 'chart':
@@ -477,13 +494,17 @@ async function renderTopic(topic) {
   const sections = await Promise.all(topic.sectionOrder.map(async ({ id, title }) => {
     const blocks = await Promise.all(topic.sections[id].map(renderBlock));
     const references = id === 'sources' ? `<div class="sources"><h3>References</h3>${sourceList}</div>` : '';
-    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)}</h2>${blocks.join('')}${references}</section>`;
+    return `<section class="article-section" id="${escape(id)}"><h2>${escape(title)} ${permalink(id, title)}</h2>${blocks.join('')}${references}</section>`;
   }));
   const navigationLinks = entries => entries.map(({ id, title }) =>
     `<li><a href="#${escape(id)}">${escape(title)}</a></li>`).join('');
   const links = navigationLinks(topic.sectionOrder);
   const mobileLinks = topic.mobileLinks.length ? `<nav class="mobile-contents" aria-label="Jump to a section">
     <ul>${navigationLinks(topic.mobileLinks)}</ul></nav>` : '';
+  const relatedLinks = (topic.related ?? []).map(id => {
+    requireCondition(id !== topic.id && topicsById.has(id), `${topic.id}: invalid related topic ${id}`);
+    return `<li><a href="../${escape(id)}/">${escape(topicsById.get(id).title)}</a></li>`;
+  });
 
   return page({
     title: topic.title,
@@ -495,7 +516,7 @@ async function renderTopic(topic) {
         <p class="meta">${escape(topic.category)} <span aria-hidden="true">·</span> ${escape(topic.scope)}</p>
         <h1>${escape(topic.title)}</h1>
         <p class="article-summary">${escape(topic.summary)} ${citations(topic.citations)}</p>
-        <p class="review-date">Reviewed ${dateLabel(topic.reviewed)}</p>
+        <p class="review-date">Reviewed <time datetime="${escape(topic.reviewed)}">${dateLabel(topic.reviewed)}</time></p>
       </div>
     </header>
     <div class="wrap article-layout${mobileLinks ? ' has-mobile-contents' : ''}">
@@ -505,6 +526,7 @@ async function renderTopic(topic) {
       <article>
         ${sections.join('')}
         ${includesSources ? '' : `<section class="article-section sources" id="sources"><h2>Sources</h2>${sourceList}</section>`}
+        ${relatedLinks.length ? `<nav class="article-section related-topics" aria-label="Related topics"><h2>Related topics</h2><ul>${relatedLinks.join('')}</ul></nav>` : ''}
       </article>
     </div>`,
   });
@@ -513,11 +535,13 @@ async function renderTopic(topic) {
 const files = (await readdir(new URL('topics/', content))).filter(file => file.endsWith('.json')).sort();
 requireCondition(files.length, 'Add at least one topic in content/topics');
 const topics = await Promise.all(files.map(loadTopic));
-const topicPages = await Promise.all(topics.map(renderTopic));
+const topicsById = new Map(topics.map(topic => [topic.id, topic]));
+const topicPages = await Promise.all(topics.map(topic => renderTopic(topic, topicsById)));
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(new URL('assets/', dist), { recursive: true });
 await copyFile(new URL('src/site.css', root), new URL('assets/site.css', dist));
+await copyFile(new URL('src/topic-search.js', root), new URL('assets/topic-search.js', dist));
 await writeFile(new URL('.nojekyll', dist), '');
 await writeFile(new URL('index.html', dist), renderIndex(topics));
 if (correctionsFormId) {

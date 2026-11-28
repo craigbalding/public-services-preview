@@ -6,7 +6,7 @@ Follow a public promise through delivery and show what evidence would establish 
 
 Define the population and jurisdiction first. Draw the shortest useful path from the trigger to the result. At each handoff, capture who owns it, what they receive and what has to happen before the next step. Show why the service was designed that way where a decision, report or accountable official supplies the reason. Attribute retrospective explanations as such.
 
-Open the page with three sourced takeaways on the purpose, the main weakness and what to watch. Put the finding, its figure or evidence gap, the consequence and the progress measure together. Keep the full process history, datasets, methods and scrutiny exchanges within reach from the main account.
+Answer the title question in the opening summary and put the scope and key qualification within reach of that answer. Augment it with three sourced takeaways on the purpose, the main weakness and what to watch. Put the finding, its figure or evidence gap, the consequence and the progress measure together. Use a sentence that can be quoted with its population, dates and source intact. Keep the full process history, datasets, methods and scrutiny exchanges within reach from the main account.
 
 ## Choose measures that answer the reader’s question
 

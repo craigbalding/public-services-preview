@@ -4,13 +4,10 @@
   "title": "Why does a Crown Court case take so long to reach trial?",
   "category": "Justice",
   "scope": "England and Wales",
-  "summary": "Follow a case from the magistrates’ court to a Crown Court trial. See how many cases have been waiting more than a year, why scheduled trials can fall through and what more court time might change.",
+  "summary": "Cases wait for court time and for the people needed for a trial to be ready on the same date. In England and Wales, 25% of trials in the April to June 2026 effectiveness measure did not start as scheduled and needed another date.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "cps",
-    "statistics",
-    "audit"
-  ],
+  "citations": ["statistics", "definitions", "audit"],
+  "searchTerms": ["court backlog", "trial delays", "ineffective trials", "criminal cases"],
   "sources": {
     "cps": {
       "title": "How a criminal case works",

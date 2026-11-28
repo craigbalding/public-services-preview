@@ -4,13 +4,10 @@
   "title": "How long does it take a child to get an education, health and care plan?",
   "category": "Education",
   "scope": "England",
-  "summary": "Follow a request for an education, health and care plan from assessment to support in school. See how many plans miss the 20-week deadline and how to tell whether issuing a plan changes what a child receives.",
+  "summary": "In England, a council normally has 20 weeks from an assessment request to issue a final education, health and care plan if one is needed. In 2025, 46.1% of new plans covered by the timeliness measure met that deadline. The start of the child’s support is a separate milestone.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "guide",
-    "stats",
-    "law"
-  ],
+  "citations": ["guide", "rules", "stats", "law"],
+  "searchTerms": ["EHCP", "SEND", "special educational needs", "school support", "council assessment"],
   "sources": {
     "guide": {
       "title": "Children with special educational needs and disabilities: extra help",

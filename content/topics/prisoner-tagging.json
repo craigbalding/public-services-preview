@@ -4,9 +4,11 @@
   "title": "How does prisoner tagging work?",
   "category": "Justice",
   "scope": "England and Wales",
-  "summary": "An electronic tag can help check conditions such as a curfew after release from prison. The same monitoring service is also used for court orders and immigration bail.",
-  "citations": ["guidance", "statistics"],
+  "summary": "Probation can use an electronic tag to check curfews and exclusion zones after someone leaves prison in England and Wales. Protection depends on fitting a working tag in time and acting on any alerts. Monitoring can start late, leaving a period when conditions cannot be checked electronically.",
   "reviewed": "2026-11-27",
+  "citations": ["guidance", "audit", "inspection"],
+  "searchTerms": ["electronic monitoring", "ankle tag", "curfew", "prison release", "probation"],
+  "related": ["asylum-refusals"],
   "sources": {
     "guidance": {
       "publisher": "GOV.UK",

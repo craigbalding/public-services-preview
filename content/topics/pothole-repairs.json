@@ -4,13 +4,10 @@
   "title": "What happens after you report a pothole?",
   "category": "Local infrastructure",
   "scope": "England",
-  "summary": "Follow a pothole report from the right highway authority to inspection, risk assessment and repair. Then check whether more repair work is improving the condition of local roads.",
+  "summary": "The highway authority inspects a reported pothole and prioritises it according to the risk it poses to road users. A temporary patch can make the road safe while a permanent repair is arranged. Repair counts tell us how much work was done, while condition surveys show what happened to the road network.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "report",
-    "kent",
-    "condition"
-  ],
+  "citations": ["report", "kent", "redbridge", "condition"],
+  "searchTerms": ["road defects", "council potholes", "highway maintenance", "temporary repair"],
   "sources": {
     "report": {
       "title": "Report a pothole",

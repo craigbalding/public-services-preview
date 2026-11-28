@@ -4,13 +4,10 @@
   "title": "What happens after a sewage overflow is recorded?",
   "category": "Environment",
   "scope": "England",
-  "summary": "A monitor records when a storm overflow spills. Follow what the water company and the Environment Agency do with that information, and how to tell whether action has made the river or coast cleaner.",
+  "summary": "A storm overflow monitor records when a spill starts and stops. In England, the water company and Environment Agency use that evidence alongside permit conditions and other information to determine whether enforcement or corrective work is needed.",
   "reviewed": "2026-11-27",
-  "citations": [
-    "rules",
-    "performance",
-    "committee"
-  ],
+  "citations": ["rules", "performance", "committee"],
+  "searchTerms": ["sewage spills", "storm overflows", "river pollution", "water companies", "Environment Agency"],
   "sources": {
     "rules": {
       "title": "Storm overflows: policy and guidance",

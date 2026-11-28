@@ -4,9 +4,10 @@
   "title": "How are Carer’s Allowance overpayments corrected?",
   "category": "Social security",
   "scope": "England and Wales",
-  "summary": "A small change in earnings can turn weeks of Carer’s Allowance into debt. Follow how the department spots a possible overpayment, decides what is owed and reviews past decisions.",
+  "summary": "DWP is reassessing past Carer’s Allowance earnings decisions where it may have applied the rules incorrectly. Going over the earnings limit can cost a carer the whole week’s allowance, so finding an error late can mean reviewing weeks of debt and any recovery already made.",
   "reviewed": "2026-11-27",
   "citations": ["eligibility", "sayce-review", "reassessment-progress"],
+  "searchTerms": ["DWP debt", "unpaid carers", "benefits overpayment", "earnings limit"],
   "sources": {
     "eligibility": {
       "title": "Carer’s Allowance eligibility",

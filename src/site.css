@@ -38,6 +38,11 @@ section[id], li[id], h3[id], .metric[id], .finding[id], figure[id], .article-det
 .home-hero em { color: #c3dfc8; font-weight: 400; }
 .home-hero p { color: #e0eae1; max-width: 22rem; font-size: clamp(1.05rem, 2vw, 1.32rem); padding-bottom: .24rem; }
 .topics { padding-block: 4rem 5rem; }
+.topic-search { margin-top: 1.25rem; max-width: 28rem; }
+.topic-search label { display: block; margin-bottom: .35rem; font-weight: 650; }
+.topic-search input { width: 100%; min-height: 2.8rem; padding: .45rem .75rem; color: var(--ink); background: #fcfcf8; border: 1px solid var(--muted); border-radius: .25rem; font: inherit; }
+.search-status { color: var(--muted); font-size: .9rem; }
+.search-status:not(:empty) { margin-top: .45rem; }
 .topic-list { margin: 1.45rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .topic-card { position: relative; display: grid; gap: .55rem; padding: 1.45rem 3.5rem 1.65rem .2rem; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
 .topic-card:hover .card-title { color: var(--green); text-decoration: underline; text-decoration-thickness: 1px; }
@@ -67,6 +72,10 @@ section[id], li[id], h3[id], .metric[id], .finding[id], figure[id], .article-det
 .article-section + .article-section { margin-top: 3rem; padding-top: 2.1rem; border-top: 1px solid var(--line); }
 .article-section h2 { margin-bottom: 1rem; }
 .article-section h3 { font-size: 1.15rem; line-height: 1.35; margin: 1.45rem 0 .45rem; }
+.permalink { display: inline-block; padding-inline: .22em; color: var(--muted); font: 600 .8rem var(--sans); text-decoration: none; vertical-align: middle; }
+.permalink:hover, .permalink:focus-visible { color: var(--green); text-decoration: underline; }
+.related-topics ul { padding-left: 1.3rem; }
+.related-topics li + li { margin-top: .45rem; }
 .article-section > p { font-size: 1.0625rem; max-width: 68ch; }
 .article-section > p + p { margin-top: .72rem; }
 .citations { font-family: var(--sans); white-space: nowrap; font-size: .7em; font-weight: 630; line-height: 0; }
